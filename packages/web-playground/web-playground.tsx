@@ -1,5 +1,5 @@
 import { FC, useState } from 'react';
-import { FaceIcon, SunIcon, StarIcon, HeartIcon, MoonIcon, MagicWandIcon } from "@radix-ui/react-icons";
+import { FaceIcon, SunIcon, StarIcon, HeartIcon, MoonIcon, MagicWandIcon, RocketIcon } from "@radix-ui/react-icons";
 import { ThemePanel } from '@sea-lion/react-theme-panel';
 import { Theme } from '@sea-lion/react-theme';
 import { Flex } from '@sea-lion/react-flex';
@@ -85,7 +85,7 @@ const WebPlayground: FC<WebPlaygroundProps> = ({ mode }) => {
                                 <Badge color="sky"><MoonIcon /></Badge><strong>在组件自定义上有天然优势</strong>，基于Radix优秀的样式系统和无头组件思想，大量使用where作为css选择器，在React层面选择把状态交给开发者。
                             </Text>
                             <Text as="p">
-                                <Badge color="sky"><MoonIcon /></Badge><strong>在规范和技术栈上和团队习惯保持一致</strong>，选择Less+css自定义属性开发样式系统，并集成eslint-config-ali和iconfont。
+                                <Badge color="grass"><RocketIcon /></Badge><strong>在规范和技术栈上和团队习惯保持一致</strong>，选择Less+css自定义属性开发样式系统，并集成eslint-config-ali和iconfont。
                             </Text>
 
                         </div>
@@ -105,7 +105,7 @@ const WebPlayground: FC<WebPlaygroundProps> = ({ mode }) => {
                                         <Table.ColumnHeaderCell>headless</Table.ColumnHeaderCell>
                                         <Table.ColumnHeaderCell>覆盖场景</Table.ColumnHeaderCell>
                                         <Table.ColumnHeaderCell>组价修改难度</Table.ColumnHeaderCell>
-                                        <Table.ColumnHeaderCell><Badge color="gold" size="3">综合评分</Badge></Table.ColumnHeaderCell>
+                                        <Table.ColumnHeaderCell><Badge color="amber" size="3">综合评分</Badge></Table.ColumnHeaderCell>
                                     </Table.Row>
                                 </Table.Header>
 
@@ -187,13 +187,13 @@ const WebPlayground: FC<WebPlaygroundProps> = ({ mode }) => {
                                 <Heading as="h5">安装</Heading>
                                 <div>
                                     x目前不支持全量安装，仅支持按需安装，即选择自己需要的组件安装，
-                                    例如安装Button组件：<Code variant="soft">pnpm install @sealion/react-button</Code>
+                                    例如安装Button组件：<Code variant="soft">pnpm install @sea-lion/react-button</Code>
                                 </div>
                                 <div>
                                     x目前支持带主题和headless两种模式，当使用theme组件时直接使用Button组件是没有样式的，
                                 </div>
                                 <div>
-                                    安装theme组件：<Code variant="soft">pnpm install @sealion/react-theme</Code>
+                                    安装theme组件：<Code variant="soft">pnpm install @sea-lion/react-theme</Code>
                                 </div>
                             </div>
                         </div>

@@ -14,8 +14,6 @@ import { Heading } from '@sea-lion/react-heading';
 import { Text } from '@sea-lion/react-text';
 import { Tooltip } from '@sea-lion/react-tooltip';
 import { Kbd } from '@sea-lion/react-kbd';
-import * as Popover from '@sea-lion/react-popover';
-import { AccessibleIcon } from '@radix-ui/react-accessible-icon';
 
 import type { ComponentPropsWithout, RemovedProps } from '@sea-lion/react-helpers';
 import type { GetPropDefTypes } from '@sea-lion/react-props';
@@ -53,7 +51,7 @@ const ThemePanelImpl = React.forwardRef<ThemePanelImplElement, ThemePanelImplPro
       grayColor,
       onGrayColorChange,
       panelBackground,
-      onPanelBackgroundChange,
+      // onPanelBackgroundChange,
       radius,
       onRadiusChange,
       scaling,
