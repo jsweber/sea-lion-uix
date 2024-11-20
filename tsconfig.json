@@ -123,6 +123,9 @@
             "@sea-lion/react-icon": [
                 "./packages/react/icon/src"
             ],
+            "@sea-lion/react-slider": [
+                "./packages/react/slider/src"
+            ],
             "@sea-lion/react-tab": [
                 "./packages/react/tab/src"
             ],

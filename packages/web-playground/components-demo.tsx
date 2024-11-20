@@ -14,6 +14,7 @@ import { TextArea } from '@sea-lion/react-text-area';
 import { Radio } from '@sea-lion/react-radio';
 import { Grid } from '@sea-lion/react-grid';
 import * as Input from '@sea-lion/react-input';
+import { Slider } from '@sea-lion/react-slider';
 
 import AvatarImage from './images/avatar.jpg';
 import NazaImage from './images/naza.jpg';
@@ -103,7 +104,7 @@ const ComponentsDemo: FC<ComponentsDemoProps> = ({ mode }) => {
                 <Tabs.Root defaultValue="1">
                     <Tabs.List>
                         <Tabs.Trigger value="1">不同尺寸的按钮</Tabs.Trigger>
-                        <Tabs.Trigger value="2">不同尺寸的按钮</Tabs.Trigger>
+                        <Tabs.Trigger value="2">不同颜色的按钮</Tabs.Trigger>
                         <Tabs.Trigger value="3">不同圆角的按钮</Tabs.Trigger>
                         <Tabs.Trigger value="4">disabled按钮</Tabs.Trigger>
                     </Tabs.List>
@@ -152,6 +153,26 @@ const ComponentsDemo: FC<ComponentsDemoProps> = ({ mode }) => {
                 </div>
                 <Flex gap="5" align="center" >
                     <Box maxWidth="240px">
+                        <Card size="2">
+                            <Inset clip="padding-box" side="top" pb="current">
+                                <img
+                                    src={NazaImage}
+                                    alt="Bold typography"
+                                    style={{
+                                        display: "block",
+                                        objectFit: "cover",
+                                        width: "100%",
+                                        height: 140,
+                                        backgroundColor: "var(--gray-5)",
+                                    }}
+                                />
+                            </Inset>
+                            <Text as="p" size="3">
+                                <strong>哪吒</strong> 生性善良，行侠仗义，见义勇为。
+                            </Text>
+                        </Card>
+                    </Box>
+                    <Box maxWidth="240px">
                         <Card>
                             <Flex gap="3" align="center">
                                 <Avatar
@@ -171,28 +192,14 @@ const ComponentsDemo: FC<ComponentsDemoProps> = ({ mode }) => {
                             </Flex>
                         </Card>
                     </Box>
-                    <Box maxWidth="240px">
-                        <Card size="2">
-                            <Inset clip="padding-box" side="top" pb="current">
-                                <img
-                                    src={NazaImage}
-                                    alt="Bold typography"
-                                    style={{
-                                        display: "block",
-                                        objectFit: "cover",
-                                        width: "100%",
-                                        height: 140,
-                                        backgroundColor: "var(--gray-5)",
-                                    }}
-                                />
-                            </Inset>
-                            <Text as="p" size="3">
-                                <strong>哪吒</strong> 生性善良，行侠仗义，见义勇为。
-                                他勇敢善良，真诚友好，热心快肠，重情重义，爱恨分明，顽强正义。
-                                同时，他也具有不屈不挠的精神，面对邪恶势力时毫不畏惧，坚决斗争.
-                            </Text>
-                        </Card>
-                    </Box>
+                    <Card variant="surface">
+                        <Text as="div" size="2" weight="bold">
+                            哪吒
+                        </Text>
+                        <Text as="div" color="gray" size="2">
+                            生性善良，行侠仗义，见义勇为。
+                        </Text>
+                    </Card>
                 </Flex>
             </div>
             <div className="wp-comp-section">
@@ -291,6 +298,47 @@ const ComponentsDemo: FC<ComponentsDemoProps> = ({ mode }) => {
                                 <TextArea resize="vertical" placeholder="Search the docs…" />
                                 <TextArea resize="horizontal" placeholder="Search the docs…" />
                                 <TextArea resize="both" placeholder="Search the docs…" />
+                            </Flex>
+                        </Tabs.Content>
+                    </Box>
+                </Tabs.Root>
+            </div>
+            <div className="wp-comp-section">
+                <Tabs.Root defaultValue="1">
+                    <Tabs.List>
+                        <Tabs.Trigger value="1">不同尺寸的Slider</Tabs.Trigger>
+                        <Tabs.Trigger value="2">不同颜色的Slider</Tabs.Trigger>
+                        <Tabs.Trigger value="3">不同圆角的Slider</Tabs.Trigger>
+                        <Tabs.Trigger value="4">范围选择Slider</Tabs.Trigger>
+                    </Tabs.List>
+                    <Box pt="3">
+                        <Tabs.Content value="1">
+                            <Flex direction="column" gap="4" maxWidth="300px">
+                                <Slider defaultValue={[25]} size="1" />
+                                <Slider defaultValue={[50]} size="2" />
+                                <Slider defaultValue={[75]} size="3" />
+                            </Flex>
+                        </Tabs.Content>
+
+                        <Tabs.Content value="2">
+                            <Flex direction="column" gap="4" maxWidth="300px">
+                                <Slider defaultValue={[20]} color="indigo" />
+                                <Slider defaultValue={[40]} color="cyan" />
+                                <Slider defaultValue={[60]} color="orange" />
+                                <Slider defaultValue={[80]} color="crimson" />
+                            </Flex>
+                        </Tabs.Content>
+
+                        <Tabs.Content value="3">
+                            <Flex direction="column" gap="4" maxWidth="300px">
+                                <Slider defaultValue={[25]} radius="none" />
+                                <Slider defaultValue={[50]} radius="small" />
+                                <Slider defaultValue={[75]} radius="full" />
+                            </Flex>
+                        </Tabs.Content>
+                        <Tabs.Content value="4">
+                            <Flex gap="20px">
+                                <Slider defaultValue={[25, 75]} />
                             </Flex>
                         </Tabs.Content>
                     </Box>

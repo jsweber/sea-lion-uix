@@ -3,28 +3,21 @@ import { FaceIcon, SunIcon, StarIcon, HeartIcon, MoonIcon, MagicWandIcon, Rocket
 import { ThemePanel } from '@sea-lion/react-theme-panel';
 import { Theme } from '@sea-lion/react-theme';
 import { Flex } from '@sea-lion/react-flex';
-import { Avatar } from '@sea-lion/react-avatar';
 import { Badge } from '@sea-lion/react-badge';
-import { Box } from '@sea-lion/react-box';
 import { Button } from '@sea-lion/react-button';
 import { Blockquote } from '@sea-lion/react-blockquote';
 import { Container } from '@sea-lion/react-container';
 import { Code } from '@sea-lion/react-code';
-import { Card } from '@sea-lion/react-card';
-import { Grid } from '@sea-lion/react-grid';
 import { Checkbox } from '@sea-lion/react-checkbox';
 import { Heading } from '@sea-lion/react-heading';
 import { Text } from '@sea-lion/react-text';
 import * as Table from '@sea-lion/react-table';
-import * as Tabs from '@sea-lion/react-tab';
 import { ComponentsDemo } from './components-demo';
 
 import AntdImage from './images/antd.jpg';
 import ArcoImage from './images/arco.jpg';
-import shadeImage from './images/shadecn.jpg';
 import radixImage from './images/radix.jpg';
 import varleftImage from './images/varleft.jpg';
-import logoImage from './images/logo.svg';
 
 import "./index.less";
 
@@ -47,9 +40,9 @@ const WebPlayground: FC<WebPlaygroundProps> = ({ mode }) => {
                         <Heading>Sea-lion-uix</Heading>
 
                         <Flex gap="3" justify="center" className="wp-bage-wrapper">
-                            <Badge color="orange">单一组件安装</Badge>
+                            <Badge color="orange">独立组件包</Badge>
                             <Badge color="blue">Theme & headless</Badge>
-                            <Badge color="green">提供主题编辑器</Badge>
+                            <Badge color="green">Theme面板</Badge>
                             <Badge color="sky">组件易于修改</Badge>
                             <Badge color="red">符合团队技术栈</Badge>
                         </Flex>
@@ -100,7 +93,7 @@ const WebPlayground: FC<WebPlaygroundProps> = ({ mode }) => {
                                     <Table.Row className="wp-table-row">
                                         <Table.ColumnHeaderCell>组件库名称</Table.ColumnHeaderCell>
                                         <Table.ColumnHeaderCell>全量安装</Table.ColumnHeaderCell>
-                                        <Table.ColumnHeaderCell>单独安装组件</Table.ColumnHeaderCell>
+                                        <Table.ColumnHeaderCell>独立组件包</Table.ColumnHeaderCell>
                                         <Table.ColumnHeaderCell>theme</Table.ColumnHeaderCell>
                                         <Table.ColumnHeaderCell>headless</Table.ColumnHeaderCell>
                                         <Table.ColumnHeaderCell>覆盖场景</Table.ColumnHeaderCell>
