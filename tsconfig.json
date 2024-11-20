@@ -1,0 +1,155 @@
+{
+    "include": [
+        "packages",
+        "types",
+        "scripts"
+    ],
+    "compilerOptions": {
+        "allowJs": false,
+        "allowSyntheticDefaultImports": true,
+        "alwaysStrict": true,
+        "baseUrl": ".",
+        "declaration": true,
+        "emitDecoratorMetadata": false,
+        "esModuleInterop": true,
+        "experimentalDecorators": false,
+        "forceConsistentCasingInFileNames": true,
+        "importHelpers": true,
+        "isolatedModules": true,
+        "jsx": "react-jsx",
+        "lib": [
+            "DOM",
+            "ESNext",
+            "DOM.Iterable"
+        ],
+        "moduleResolution": "node",
+        "noEmit": true,
+        "noFallthroughCasesInSwitch": false,
+        "noImplicitAny": true,
+        "noImplicitReturns": false,
+        "noImplicitThis": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": false,
+        "pretty": true,
+        "resolveJsonModule": true,
+        "skipLibCheck": true,
+        "sourceMap": true,
+        "strict": true,
+        "strictFunctionTypes": true,
+        "strictNullChecks": true,
+        "strictPropertyInitialization": true,
+        "stripInternal": true,
+        "target": "ES2022",
+        "types": [
+            "node"
+        ],
+        "typeRoots": [
+            "./node_modules/@types",
+            "./types"
+        ],
+        "paths": {
+            "@components/*": [
+                "packages/react/*"
+            ],
+            "@ui-lib-monorepo-template/react-theme-style": [
+                "./packages/react/theme/dist"
+            ],
+            "@ui-lib-monorepo-template/react-alert-dialog": [
+                "./packages/react/alert-dialog/src"
+            ],
+            "@ui-lib-monorepo-template/react-avatar": [
+                "./packages/react/avatar/src"
+            ],
+            "@ui-lib-monorepo-template/react-badge": [
+                "./packages/react/badge/src"
+            ],
+            "@ui-lib-monorepo-template/react-blockquote": [
+                "./packages/react/blockquote/src"
+            ],
+            "@ui-lib-monorepo-template/react-button": [
+                "./packages/react/button/src"
+            ],
+            "@ui-lib-monorepo-template/react-card": [
+                "./packages/react/card/src"
+            ],
+            "@ui-lib-monorepo-template/react-checkbox": [
+                "./packages/react/checkbox/src"
+            ],
+            "@ui-lib-monorepo-template/react-code": [
+                "./packages/react/code/src"
+            ],
+            "@ui-lib-monorepo-template/react-container": [
+                "./packages/react/container/src"
+            ],
+            "@ui-lib-monorepo-template/react-dialog": [
+                "./packages/react/dialog/src"
+            ],
+            "@ui-lib-monorepo-template/react-dropdown-menu": [
+                "./packages/react/dropdown-menu/src"
+            ],
+            "@ui-lib-monorepo-template/react-kbd": [
+                "./packages/react/kbd/src"
+            ],
+            "@ui-lib-monorepo-template/react-flex": [
+                "./packages/react/flex/src"
+            ],
+            "@ui-lib-monorepo-template/react-box": [
+                "./packages/react/box/src"
+            ],
+            "@ui-lib-monorepo-template/react-grid": [
+                "./packages/react/grid/src"
+            ],
+            "@ui-lib-monorepo-template/react-select": [
+                "./packages/react/select/src"
+            ],
+            "@ui-lib-monorepo-template/react-heading": [
+                "./packages/react/heading/src"
+            ],
+            "@ui-lib-monorepo-template/react-inset": [
+                "./packages/react/inset/src"
+            ],
+            "@ui-lib-monorepo-template/react-popover": [
+                "./packages/react/popover/src"
+            ],
+            "@ui-lib-monorepo-template/react-icon": [
+                "./packages/react/icon/src"
+            ],
+            "@ui-lib-monorepo-template/react-tab": [
+                "./packages/react/tab/src"
+            ],
+            "@ui-lib-monorepo-template/react-table": [
+                "./packages/react/table/src"
+            ],
+            "@ui-lib-monorepo-template/react-text": [
+                "./packages/react/text/src"
+            ],
+            "@ui-lib-monorepo-template/react-text-area": [
+                "./packages/react/text-area/src"
+            ],
+            "@ui-lib-monorepo-template/react-tooltip": [
+                "./packages/react/tooltip/src"
+            ],
+            "@ui-lib-monorepo-template/react-theme": [
+                "./packages/react/theme/src"
+            ],
+            "@ui-lib-monorepo-template/react-theme-panel": [
+                "./packages/react/theme-panel/src"
+            ],
+            "@ui-lib-monorepo-template/react-scroll-area": [
+                "./packages/react/scroll-area/src"
+            ],
+            "@ui-lib-monorepo-template/react-spinner": [
+                "./packages/react/spinner/src"
+            ],
+            "@ui-lib-monorepo-template/react-switch": [
+                "./packages/react/switch/src"
+            ],
+            "@ui-lib-monorepo-template/react-props": [
+                "./packages/react/props/src"
+            ],
+            "@ui-lib-monorepo-template/react-helpers": [
+                "./packages/react/helpers/src"
+            ]
+        }
+    }
+}

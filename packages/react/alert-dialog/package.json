@@ -1,0 +1,60 @@
+{
+  "name": "@ui-lib-monorepo-template/react-alert-dialog",
+  "version": "0.1.0",
+  "keywords": [],
+  "author": "jsweber",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    },
+    "./*": "./*"
+  },
+  "source": "./src/index.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "dependencies": {
+    "@radix-ui/react-alert-dialog": "^1.1.2",
+    "@ui-lib-monorepo-template/react-dialog": "workspace:*",
+    "@ui-lib-monorepo-template/react-heading": "workspace:*",
+    "@ui-lib-monorepo-template/react-text": "workspace:*",
+    "@ui-lib-monorepo-template/react-theme": "workspace:*",
+    "@ui-lib-monorepo-template/react-helpers": "workspace:*",
+    "@ui-lib-monorepo-template/react-props": "workspace:*"
+  },
+  "peerDependencies": {
+    "@types/react": "*",
+    "@types/react-dom": "*",
+    "classnames": "*",
+    "react": "^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc",
+    "react-dom": "^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc"
+  },
+  "peerDependenciesMeta": {
+    "@types/react": {
+      "optional": true
+    },
+    "@types/react-dom": {
+      "optional": true
+    }
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "sideEffects": true,
+  "scripts": {
+    "clean": "rm -rf dist"
+  }
+}

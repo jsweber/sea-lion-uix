@@ -1,0 +1,25 @@
+.story-book-flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+.story-book-margin-top-20 {
+    margin-top: 20px;
+}
+
+.story-book-full-width {
+    width: 100%;
+}
+
+.story-book-container {
+    box-sizing: border-box;
+    padding: 20px 30px;
+}
+
+.story-book-label {
+    padding: 12px 0;
+}
+
+.story-book-border {
+    border: 1px solid #777;
+}
