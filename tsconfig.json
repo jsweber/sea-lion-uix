@@ -63,6 +63,9 @@
             "@sea-lion/react-badge": [
                 "./packages/react/badge/src"
             ],
+            "@sea-lion/react-base-radio": [
+                "./packages/react/base-radio/src"
+            ],
             "@sea-lion/react-blockquote": [
                 "./packages/react/blockquote/src"
             ],
@@ -105,11 +108,17 @@
             "@sea-lion/react-heading": [
                 "./packages/react/heading/src"
             ],
+            "@sea-lion/react-input": [
+                "./packages/react/input/src"
+            ],
             "@sea-lion/react-inset": [
                 "./packages/react/inset/src"
             ],
             "@sea-lion/react-popover": [
                 "./packages/react/popover/src"
+            ],
+            "@sea-lion/react-radio": [
+                "./packages/react/radio/src"
             ],
             "@sea-lion/react-icon": [
                 "./packages/react/icon/src"

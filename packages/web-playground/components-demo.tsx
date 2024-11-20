@@ -11,6 +11,9 @@ import { Inset } from '@sea-lion/react-inset';
 import { Checkbox } from '@sea-lion/react-checkbox';
 import { Switch } from '@sea-lion/react-switch';
 import { TextArea } from '@sea-lion/react-text-area';
+import { Radio } from '@sea-lion/react-radio';
+import { Grid } from '@sea-lion/react-grid';
+import * as Input from '@sea-lion/react-input';
 
 import AvatarImage from './images/avatar.jpg';
 import NazaImage from './images/naza.jpg';
@@ -191,6 +194,254 @@ const ComponentsDemo: FC<ComponentsDemoProps> = ({ mode }) => {
                         </Card>
                     </Box>
                 </Flex>
+            </div>
+            <div className="wp-comp-section">
+                <Tabs.Root defaultValue="1">
+                    <Tabs.List>
+                        <Tabs.Trigger value="1">不同大小的Input</Tabs.Trigger>
+                        <Tabs.Trigger value="2">不同颜色的Input</Tabs.Trigger>
+                        <Tabs.Trigger value="3">不同圆角的Input</Tabs.Trigger>
+                        <Tabs.Trigger value="4">disabled Input</Tabs.Trigger>
+                    </Tabs.List>
+                    <Box pt="3">
+                        <Tabs.Content value="1">
+                            <Flex direction="column" gap="3">
+                                <Box maxWidth="200px">
+                                    <Input.Root size="1" placeholder="Search the docs…" />
+                                </Box>
+                                <Box maxWidth="250px">
+                                    <Input.Root size="2" placeholder="Search the docs…" />
+                                </Box>
+                                <Box maxWidth="300px">
+                                    <Input.Root size="3" placeholder="Search the docs…" />
+                                </Box>
+                            </Flex>
+                        </Tabs.Content>
+
+                        <Tabs.Content value="2">
+                            <Flex direction="column" gap="3" maxWidth="250px">
+                                <Input.Root
+                                    color="indigo"
+                                    variant="soft"
+                                    placeholder="Search the docs…"
+                                />
+                                <Input.Root color="green" variant="soft" placeholder="Search the docs…" />
+                                <Input.Root color="red" variant="soft" placeholder="Search the docs…" />
+                            </Flex>
+                        </Tabs.Content>
+
+                        <Tabs.Content value="3">
+                            <Flex direction="column" gap="3" maxWidth="250px">
+                                <Input.Root radius="none" placeholder="Search the docs…" />
+                                <Input.Root radius="large" placeholder="Search the docs…" />
+                                <Input.Root radius="full" placeholder="Search the docs…" />
+                            </Flex>
+                        </Tabs.Content>
+                        <Tabs.Content value="4">
+                            <Flex direction="column" gap="3">
+                                <Box maxWidth="250px">
+                                    <Input.Root size="2" placeholder="Search the docs…" disabled />
+                                </Box>
+                            </Flex>
+                        </Tabs.Content>
+                    </Box>
+                </Tabs.Root>
+            </div>
+            <div className="wp-comp-section">
+                <Tabs.Root defaultValue="1">
+                    <Tabs.List>
+                        <Tabs.Trigger value="1">不同大小的TextArea</Tabs.Trigger>
+                        <Tabs.Trigger value="2">不同颜色的TextArea</Tabs.Trigger>
+                        <Tabs.Trigger value="3">不同圆角的TextArea</Tabs.Trigger>
+                        <Tabs.Trigger value="4">可拖拽大小的TextArea</Tabs.Trigger>
+                    </Tabs.List>
+                    <Box pt="3">
+                        <Tabs.Content value="1">
+                            <Flex direction="column" gap="3">
+                                <Box maxWidth="200px">
+                                    <TextArea size="1" placeholder="Reply to comment…" />
+                                </Box>
+                                <Box maxWidth="250px">
+                                    <TextArea size="2" placeholder="Reply to comment…" />
+                                </Box>
+                                <Box maxWidth="300px">
+                                    <TextArea size="3" placeholder="Reply to comment…" />
+                                </Box>
+                            </Flex>
+                        </Tabs.Content>
+
+                        <Tabs.Content value="2">
+                            <Flex direction="column" gap="3" maxWidth="250px">
+                                <TextArea color="blue" variant="soft" placeholder="Reply to comment…" />
+                                <TextArea color="green" variant="soft" placeholder="Reply to comment…" />
+                                <TextArea color="red" variant="soft" placeholder="Reply to comment…" />
+                            </Flex>
+                        </Tabs.Content>
+
+                        <Tabs.Content value="3">
+                            <Flex direction="column" gap="3" maxWidth="250px">
+                                <TextArea radius="none" placeholder="Search the docs…" />
+                                <TextArea radius="large" placeholder="Search the docs…" />
+                                <TextArea radius="full" placeholder="Search the docs…" />
+                            </Flex>
+                        </Tabs.Content>
+                        <Tabs.Content value="4">
+                            <Flex direction="column" gap="3" maxWidth="250px">
+                                <TextArea resize="none" placeholder="Search the docs…" />
+                                <TextArea resize="vertical" placeholder="Search the docs…" />
+                                <TextArea resize="horizontal" placeholder="Search the docs…" />
+                                <TextArea resize="both" placeholder="Search the docs…" />
+                            </Flex>
+                        </Tabs.Content>
+                    </Box>
+                </Tabs.Root>
+            </div>
+            <div className="wp-comp-section">
+                <Tabs.Root defaultValue="1">
+                    <Tabs.List>
+                        <Tabs.Trigger value="1">不同大小的Radio</Tabs.Trigger>
+                        <Tabs.Trigger value="2">不同变化的Radio</Tabs.Trigger>
+                        <Tabs.Trigger value="3">不同颜色的Radio</Tabs.Trigger>
+                        <Tabs.Trigger value="4">Radio&Text排版</Tabs.Trigger>
+                        <Tabs.Trigger value="5">disabled Radio</Tabs.Trigger>
+                    </Tabs.List>
+                    <Box pt="3">
+                        <Tabs.Content value="1">
+                            <Flex align="center" gap="4">
+                                <Flex gap="2">
+                                    <Radio size="1" name="size-1" value="1" defaultChecked />
+                                    <Radio size="1" name="size-1" value="2" />
+                                </Flex>
+
+                                <Flex gap="2">
+                                    <Radio size="2" name="size-2" value="1" defaultChecked />
+                                    <Radio size="2" name="size-2" value="2" />
+                                </Flex>
+
+                                <Flex gap="2">
+                                    <Radio size="3" name="size-3" value="1" defaultChecked />
+                                    <Radio size="3" name="size-3" value="2" />
+                                </Flex>
+                            </Flex>
+                        </Tabs.Content>
+
+                        <Tabs.Content value="2">
+                            <Flex align="center" gap="4">
+                                <Flex gap="2">
+                                    <Radio variant="surface" name="surface" value="1" defaultChecked />
+                                    <Radio variant="surface" name="surface" value="2" />
+                                </Flex>
+
+                                <Flex gap="2">
+                                    <Radio variant="classic" name="classic" value="1" defaultChecked />
+                                    <Radio variant="classic" name="classic" value="2" />
+                                </Flex>
+
+                                <Flex gap="2">
+                                    <Radio variant="soft" name="soft" value="1" defaultChecked />
+                                    <Radio variant="soft" name="soft" value="2" />
+                                </Flex>
+                            </Flex>
+                        </Tabs.Content>
+
+                        <Tabs.Content value="3">
+                            <Grid columns="5" display="inline-grid" gap="2">
+                                <Radio color="indigo" defaultChecked value="1" />
+                                <Radio color="cyan" defaultChecked value="1" />
+                                <Radio color="orange" defaultChecked value="1" />
+                                <Radio color="crimson" defaultChecked value="1" />
+                                <Radio color="gray" defaultChecked value="1" />
+
+                                <Radio color="indigo" defaultChecked highContrast value="1" />
+                                <Radio color="cyan" defaultChecked highContrast value="1" />
+                                <Radio color="orange" defaultChecked highContrast value="1" />
+                                <Radio color="crimson" defaultChecked highContrast value="1" />
+                                <Radio color="gray" defaultChecked highContrast value="1" />
+                            </Grid>
+                        </Tabs.Content>
+                        <Tabs.Content value="4">
+                            <Flex direction="column" gap="3">
+                                <Flex align="start" direction="column" gap="1">
+                                    <Flex asChild gap="2">
+                                        <Text as="label" size="2">
+                                            <Radio size="1" name="alignment-1" value="1" defaultChecked />
+                                            Default
+                                        </Text>
+                                    </Flex>
+                                    <Flex asChild gap="2">
+                                        <Text as="label" size="2">
+                                            <Radio size="1" name="alignment-1" value="2" />
+                                            Compact
+                                        </Text>
+                                    </Flex>
+                                </Flex>
+
+                                <Flex align="start" direction="column" gap="1">
+                                    <Flex asChild gap="2">
+                                        <Text as="label" size="3">
+                                            <Radio size="2" name="alignment-2" value="1" defaultChecked />
+                                            Default
+                                        </Text>
+                                    </Flex>
+                                    <Flex asChild gap="2">
+                                        <Text as="label" size="3">
+                                            <Radio size="2" name="alignment-2" value="2" />
+                                            Compact
+                                        </Text>
+                                    </Flex>
+                                </Flex>
+
+                                <Flex align="start" direction="column" gap="1">
+                                    <Flex asChild gap="2">
+                                        <Text as="label" size="4">
+                                            <Radio size="3" name="alignment-3" value="1" defaultChecked />
+                                            Default
+                                        </Text>
+                                    </Flex>
+                                    <Flex asChild gap="2">
+                                        <Text as="label" size="4">
+                                            <Radio size="3" name="alignment-3" value="2" />
+                                            Compact
+                                        </Text>
+                                    </Flex>
+                                </Flex>
+                            </Flex>
+                        </Tabs.Content>
+                        <Tabs.Content value="5">
+                            <Flex direction="column" gap="3">
+                                <Flex align="start" direction="column" gap="1">
+                                    <Flex asChild gap="2">
+                                        <Text as="label" size="2">
+                                            <Radio name="enabled" value="1" defaultChecked />
+                                            On
+                                        </Text>
+                                    </Flex>
+                                    <Flex asChild gap="2">
+                                        <Text as="label" size="2">
+                                            <Radio name="enabled" value="2" />
+                                            Off
+                                        </Text>
+                                    </Flex>
+                                </Flex>
+
+                                <Flex align="start" direction="column" gap="1">
+                                    <Flex asChild gap="2">
+                                        <Text as="label" size="2" color="gray">
+                                            <Radio disabled name="disabled" value="1" defaultChecked />
+                                            On
+                                        </Text>
+                                    </Flex>
+                                    <Flex asChild gap="2">
+                                        <Text as="label" size="2" color="gray">
+                                            <Radio disabled name="disabled" value="2" />
+                                            Off
+                                        </Text>
+                                    </Flex>
+                                </Flex>
+                            </Flex>
+                        </Tabs.Content>
+                    </Box>
+                </Tabs.Root>
             </div>
             <div className="wp-comp-section">
                 <Tabs.Root defaultValue="1">
@@ -456,55 +707,6 @@ const ComponentsDemo: FC<ComponentsDemoProps> = ({ mode }) => {
                         </DropdownMenu.Content>
                     </DropdownMenu.Root>
                 </Flex>
-            </div>
-            <div className="wp-comp-section">
-                <Tabs.Root defaultValue="1">
-                    <Tabs.List>
-                        <Tabs.Trigger value="1">不同大小的Switch</Tabs.Trigger>
-                        <Tabs.Trigger value="2">不同颜色的TextArea</Tabs.Trigger>
-                        <Tabs.Trigger value="3">不同圆角的TextArea</Tabs.Trigger>
-                        <Tabs.Trigger value="4">可拖拽大小的TextArea</Tabs.Trigger>
-                    </Tabs.List>
-                    <Box pt="3">
-                        <Tabs.Content value="1">
-                            <Flex direction="column" gap="3">
-                                <Box maxWidth="200px">
-                                    <TextArea size="1" placeholder="Reply to comment…" />
-                                </Box>
-                                <Box maxWidth="250px">
-                                    <TextArea size="2" placeholder="Reply to comment…" />
-                                </Box>
-                                <Box maxWidth="300px">
-                                    <TextArea size="3" placeholder="Reply to comment…" />
-                                </Box>
-                            </Flex>
-                        </Tabs.Content>
-
-                        <Tabs.Content value="2">
-                            <Flex direction="column" gap="3" maxWidth="250px">
-                                <TextArea color="blue" variant="soft" placeholder="Reply to comment…" />
-                                <TextArea color="green" variant="soft" placeholder="Reply to comment…" />
-                                <TextArea color="red" variant="soft" placeholder="Reply to comment…" />
-                            </Flex>
-                        </Tabs.Content>
-
-                        <Tabs.Content value="3">
-                            <Flex direction="column" gap="3" maxWidth="250px">
-                                <TextArea radius="none" placeholder="Search the docs…" />
-                                <TextArea radius="large" placeholder="Search the docs…" />
-                                <TextArea radius="full" placeholder="Search the docs…" />
-                            </Flex>
-                        </Tabs.Content>
-                        <Tabs.Content value="4">
-                            <Flex direction="column" gap="3" maxWidth="250px">
-                                <TextArea resize="none" placeholder="Search the docs…" />
-                                <TextArea resize="vertical" placeholder="Search the docs…" />
-                                <TextArea resize="horizontal" placeholder="Search the docs…" />
-                                <TextArea resize="both" placeholder="Search the docs…" />
-                            </Flex>
-                        </Tabs.Content>
-                    </Box>
-                </Tabs.Root>
             </div>
         </>
     );

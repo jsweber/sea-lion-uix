@@ -68,24 +68,24 @@ const WebPlayground: FC<WebPlaygroundProps> = ({ mode }) => {
                             介绍
                         </Blockquote>
                         <div className="block-section">
-                            <Text as="p">
-                                <Badge color="amber"><SunIcon /></Badge><strong>Sea-lion-uix</strong>是sea-lion-ui的下一个版本，由于基于Radix/primitives无样式组件库进行重构，
-                                所以新版本在原名后增加“x”，以下简称x。
+                            <Text as="p" className="wp-descr-item">
+                                <Badge color="amber"><SunIcon /></Badge><strong>Sea-lion-uix</strong>是sea-lion-ui的下一个版本，由于基于<Code color="gray" variant="soft">Radix/primitives</Code>无样式组件库进行重构，
+                                所以新版本在原名后增加“x”，以下简称 <strong>x</strong>。
                             </Text>
-                            <Text as="p">
-                                <Badge color="yellow"><StarIcon /></Badge><strong>在组件数量上</strong>，力求在有限的开发时间内提供更多的组件，组件数量从一代的19个增加到目前的40+（<i>截止2024.12月为41</i>）。
+                            <Text as="p" className="wp-descr-item">
+                                <Badge color="yellow"><StarIcon /></Badge><strong>在组件数量上</strong>，力求在有限的开发时间内提供更多的组件，组件数量从一代的19个增加到 <strong>40</strong>（<i>截止2024.11月末为33</i>）。
                             </Text>
-                            <Text as="p">
-                                <Badge color="red"><HeartIcon /></Badge><strong>在全局功能上</strong>，x在使用上会更灵活，组件支持无样式和有样式两种使用模式，并且每个组件对使用开放更多参数，尽量避免产生难以更改的情况。
+                            <Text as="p" className="wp-descr-item">
+                                <Badge color="red"><HeartIcon /></Badge><strong>在全局功能上</strong>，x在使用上会更灵活，组件支持 主题样式 和 headless 两种使用模式，并且每个组件开放更多参数，尽量避免产生难以更改的情况。
                             </Text>
-                            <Text as="p">
+                            <Text as="p" className="wp-descr-item">
                                 <Badge color="bronze"><FaceIcon /></Badge><strong>每个组件都是独立的包</strong>，在使用时避免和其他组件库同时使用产生大量冗余代码，在开发和维护时可以进行单独的升级和发布。
                             </Text>
-                            <Text as="p">
-                                <Badge color="sky"><MoonIcon /></Badge><strong>在组件自定义上有天然优势</strong>，基于Radix优秀的样式系统和无头组件思想，大量使用where作为css选择器，在React层面选择把状态交给开发者。
+                            <Text as="p" className="wp-descr-item">
+                                <Badge color="sky"><MoonIcon /></Badge><strong>在组件自定义上有天然优势</strong>，基于Radix优秀的样式系统和无头组件思想，大量使用where作为css选择器，提供独特的asChild和Slot功能，开放state。
                             </Text>
-                            <Text as="p">
-                                <Badge color="grass"><RocketIcon /></Badge><strong>在规范和技术栈上和团队习惯保持一致</strong>，选择Less+css自定义属性开发样式系统，并集成eslint-config-ali和iconfont。
+                            <Text as="p" className="wp-descr-item">
+                                <Badge color="grass"><RocketIcon /></Badge><strong>在规范和技术栈上和团队习惯保持一致</strong>，选择<Code color="gray" variant="soft">Less + css</Code>自定义属性开发样式系统，并集成<Code color="gray" variant="soft">eslint-config-ali</Code>和<Code color="gray" variant="soft">iconfont</Code>。
                             </Text>
 
                         </div>
@@ -104,8 +104,8 @@ const WebPlayground: FC<WebPlaygroundProps> = ({ mode }) => {
                                         <Table.ColumnHeaderCell>theme</Table.ColumnHeaderCell>
                                         <Table.ColumnHeaderCell>headless</Table.ColumnHeaderCell>
                                         <Table.ColumnHeaderCell>覆盖场景</Table.ColumnHeaderCell>
-                                        <Table.ColumnHeaderCell>组价修改难度</Table.ColumnHeaderCell>
-                                        <Table.ColumnHeaderCell><Badge color="amber" size="3">综合评分</Badge></Table.ColumnHeaderCell>
+                                        <Table.ColumnHeaderCell>组件修改难度</Table.ColumnHeaderCell>
+                                        <Table.ColumnHeaderCell><Badge color="amber" size="3">优势项</Badge></Table.ColumnHeaderCell>
                                     </Table.Row>
                                 </Table.Header>
 
@@ -114,15 +114,13 @@ const WebPlayground: FC<WebPlaygroundProps> = ({ mode }) => {
                                         <Table.RowHeaderCell>
                                             <img src={AntdImage} alt="antd-logo" className="wp-ui-logo" />
                                         </Table.RowHeaderCell>
-                                        <Table.Cell>
-                                            <Checkbox defaultChecked />
-                                        </Table.Cell>
-                                        <Table.Cell><Checkbox /></Table.Cell>
+                                        <Table.Cell><Checkbox defaultChecked /></Table.Cell>
                                         <Table.Cell><Checkbox /></Table.Cell>
                                         <Table.Cell><Checkbox defaultChecked /></Table.Cell>
+                                        <Table.Cell><Checkbox /></Table.Cell>
                                         <Table.Cell>全面</Table.Cell>
                                         <Table.Cell>困难</Table.Cell>
-                                        <Table.Cell>6</Table.Cell>
+                                        <Table.Cell>3</Table.Cell>
                                     </Table.Row>
                                     <Table.Row>
                                         <Table.RowHeaderCell>
@@ -131,11 +129,11 @@ const WebPlayground: FC<WebPlaygroundProps> = ({ mode }) => {
 
                                         <Table.Cell><Checkbox defaultChecked /></Table.Cell>
                                         <Table.Cell><Checkbox /></Table.Cell>
-                                        <Table.Cell><Checkbox /></Table.Cell>
                                         <Table.Cell><Checkbox defaultChecked /></Table.Cell>
+                                        <Table.Cell><Checkbox /></Table.Cell>
                                         <Table.Cell>全面</Table.Cell>
                                         <Table.Cell>困难</Table.Cell>
-                                        <Table.Cell>6</Table.Cell>
+                                        <Table.Cell>3</Table.Cell>
                                     </Table.Row>
                                     <Table.Row>
                                         <Table.RowHeaderCell>
@@ -143,36 +141,36 @@ const WebPlayground: FC<WebPlaygroundProps> = ({ mode }) => {
 
                                         </Table.RowHeaderCell>
                                         <Table.Cell><Checkbox defaultChecked /></Table.Cell>
-                                        <Table.Cell><Checkbox defaultChecked /></Table.Cell>
                                         <Table.Cell><Checkbox /></Table.Cell>
                                         <Table.Cell><Checkbox defaultChecked /></Table.Cell>
+                                        <Table.Cell><Checkbox /></Table.Cell>
                                         <Table.Cell>较好</Table.Cell>
                                         <Table.Cell>一般</Table.Cell>
-                                        <Table.Cell>6</Table.Cell>
+                                        <Table.Cell>3</Table.Cell>
                                     </Table.Row>
                                     <Table.Row>
                                         <Table.RowHeaderCell>
                                             <img src={radixImage} alt="radix-logo" className="wp-ui-logo" />
                                         </Table.RowHeaderCell>
-                                        <Table.Cell><Checkbox /></Table.Cell>
                                         <Table.Cell><Checkbox defaultChecked /></Table.Cell>
+                                        <Table.Cell><Checkbox /></Table.Cell>
                                         <Table.Cell><Checkbox defaultChecked /></Table.Cell>
                                         <Table.Cell><Checkbox /></Table.Cell>
                                         <Table.Cell>一般</Table.Cell>
                                         <Table.Cell>容易</Table.Cell>
-                                        <Table.Cell>6</Table.Cell>
+                                        <Table.Cell>3</Table.Cell>
                                     </Table.Row>
                                     <Table.Row>
                                         <Table.RowHeaderCell>
                                             Sea-lion-uix
                                         </Table.RowHeaderCell>
-                                        <Table.Cell><Checkbox defaultChecked /></Table.Cell>
                                         <Table.Cell><Checkbox /></Table.Cell>
+                                        <Table.Cell><Checkbox defaultChecked /></Table.Cell>
                                         <Table.Cell><Checkbox defaultChecked /></Table.Cell>
                                         <Table.Cell><Checkbox defaultChecked /></Table.Cell>
                                         <Table.Cell>一般</Table.Cell>
                                         <Table.Cell>容易</Table.Cell>
-                                        <Table.Cell>6</Table.Cell>
+                                        <Table.Cell>4</Table.Cell>
                                     </Table.Row>
                                 </Table.Body>
                             </Table.Root>
