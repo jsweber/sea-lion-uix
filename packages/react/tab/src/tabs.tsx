@@ -3,12 +3,12 @@ import classNames from 'classnames';
 import * as TabsPrimitive from '@radix-ui/react-tabs';
 
 import { tabsListPropDefs } from './tabs.props';
-import { extractProps } from '@ui-lib-monorepo-template/react-helpers';
-import { marginPropDefs } from '@ui-lib-monorepo-template/react-props';
+import { extractProps } from '@sea-lion/react-helpers';
+import { marginPropDefs } from '@sea-lion/react-props';
 
 import type { tabsContentPropDefs, tabsRootPropDefs } from './tabs.props';
-import type { MarginProps, GetPropDefTypes } from '@ui-lib-monorepo-template/react-props';
-import type { ComponentPropsWithout, RemovedProps } from '@ui-lib-monorepo-template/react-helpers';
+import type { MarginProps, GetPropDefTypes } from '@sea-lion/react-props';
+import type { ComponentPropsWithout, RemovedProps } from '@sea-lion/react-helpers';
 
 type TabsRootElement = React.ElementRef<typeof TabsPrimitive.Root>;
 type TabsRootOwnProps = GetPropDefTypes<typeof tabsRootPropDefs>;

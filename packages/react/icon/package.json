@@ -1,5 +1,5 @@
 {
-  "name": "@ui-lib-monorepo-template/react-icon",
+  "name": "@sea-lion/react-icon",
   "version": "0.1.0",
   "keywords": [],
   "author": "jsweber",
@@ -22,7 +22,7 @@
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "dependencies": {
-    "@ui-lib-monorepo-template/react-helpers": "workspace:*"
+    "@sea-lion/react-helpers": "workspace:*"
   },
   "peerDependencies": {
     "@types/react": "*",

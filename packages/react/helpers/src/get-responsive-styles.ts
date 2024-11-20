@@ -1,8 +1,8 @@
-import { breakpoints } from '@ui-lib-monorepo-template/react-props';
+import { breakpoints } from '@sea-lion/react-props';
 import { hasOwnProperty } from './has-own-property';
 import { isResponsiveObject } from './is-responsive-object';
 
-import type { Responsive, Union } from '@ui-lib-monorepo-template/react-props';
+import type { Responsive, Union } from '@sea-lion/react-props';
 
 interface GetResponsiveStylesOptions {
   className: string;

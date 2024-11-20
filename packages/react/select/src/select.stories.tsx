@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Select } from '@ui-lib-monorepo-template/react-select';
+import { Select } from '@sea-lion/react-select';
 
 const meta: Meta<typeof Select> = {
     component: Select,

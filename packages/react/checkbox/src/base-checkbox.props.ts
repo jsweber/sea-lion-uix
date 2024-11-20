@@ -1,6 +1,6 @@
-import { colorPropDef, highContrastPropDef } from '@ui-lib-monorepo-template/react-props';
+import { colorPropDef, highContrastPropDef } from '@sea-lion/react-props';
 
-import type { PropDef } from '@ui-lib-monorepo-template/react-props';
+import type { PropDef } from '@sea-lion/react-props';
 
 const sizes = ['1', '2', '3'] as const;
 const variants = ['classic', 'surface', 'soft'] as const;

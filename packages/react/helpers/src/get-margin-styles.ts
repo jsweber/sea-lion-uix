@@ -2,9 +2,9 @@ import classNames from 'classnames';
 
 import { getResponsiveStyles } from './get-responsive-styles';
 import { mergeStyles } from './merge-styles';
-import { marginPropDefs } from '@ui-lib-monorepo-template/react-props';
+import { marginPropDefs } from '@sea-lion/react-props';
 
-import type { MarginProps } from '@ui-lib-monorepo-template/react-props';
+import type { MarginProps } from '@sea-lion/react-props';
 
 const marginValues = marginPropDefs.m.values;
 

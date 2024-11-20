@@ -3,14 +3,14 @@ import classNames from 'classnames';
 import { Slot } from '@radix-ui/react-slot';
 
 import { baseButtonPropDefs, mapButtonSizeToSpinnerSize } from './base-button.props';
-import { Flex } from '@ui-lib-monorepo-template/react-flex';
-import { Spinner } from '@ui-lib-monorepo-template/react-spinner';
+import { Flex } from '@sea-lion/react-flex';
+import { Spinner } from '@sea-lion/react-spinner';
 import { VisuallyHidden } from '@radix-ui/react-visually-hidden';
-import { extractProps, mapResponsiveProp } from '@ui-lib-monorepo-template/react-helpers';
-import { marginPropDefs } from '@ui-lib-monorepo-template/react-props';
+import { extractProps, mapResponsiveProp } from '@sea-lion/react-helpers';
+import { marginPropDefs } from '@sea-lion/react-props';
 
-import type { MarginProps, GetPropDefTypes } from '@ui-lib-monorepo-template/react-props';
-import type { ComponentPropsWithout, RemovedProps } from '@ui-lib-monorepo-template/react-helpers';
+import type { MarginProps, GetPropDefTypes } from '@sea-lion/react-props';
+import type { ComponentPropsWithout, RemovedProps } from '@sea-lion/react-helpers';
 
 type BaseButtonElement = React.ElementRef<'button'>;
 type BaseButtonOwnProps = GetPropDefTypes<typeof baseButtonPropDefs>;

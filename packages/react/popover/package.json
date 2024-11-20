@@ -1,5 +1,5 @@
 {
-  "name": "@ui-lib-monorepo-template/react-popover",
+  "name": "@sea-lion/react-popover",
   "version": "0.1.0",
   "keywords": [],
   "author": "jsweber",
@@ -23,9 +23,9 @@
   "types": "./dist/index.d.ts",
   "dependencies": {
     "@radix-ui/react-popover": "^1.1.2",
-    "@ui-lib-monorepo-template/react-helpers": "workspace:*",
-    "@ui-lib-monorepo-template/react-props": "workspace:*",
-    "@ui-lib-monorepo-template/react-theme": "workspace:*"
+    "@sea-lion/react-helpers": "workspace:*",
+    "@sea-lion/react-props": "workspace:*",
+    "@sea-lion/react-theme": "workspace:*"
   },
   "peerDependencies": {
     "@types/react": "*",

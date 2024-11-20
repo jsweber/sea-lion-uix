@@ -1,6 +1,6 @@
-import { asChildPropDef } from '@ui-lib-monorepo-template/react-props';
+import { asChildPropDef } from '@sea-lion/react-props';
 
-import type { PropDef, GetPropDefTypes } from '@ui-lib-monorepo-template/react-props';
+import type { PropDef, GetPropDefTypes } from '@sea-lion/react-props';
 
 const sizes = ['1', '2', '3', '4'] as const;
 const displayValues = ['none', 'initial'] as const;

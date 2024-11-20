@@ -1,5 +1,5 @@
 {
-  "name": "@ui-lib-monorepo-template/react-theme",
+  "name": "@sea-lion/react-theme",
   "version": "0.1.0",
   "keywords": [],
   "author": "jsweber",
@@ -49,7 +49,7 @@
     "@radix-ui/react-direction": "^1.1.0",
     "@radix-ui/react-slot": "^1.1.0",
     "@radix-ui/react-tooltip": "^1.1.3",
-    "@ui-lib-monorepo-template/react-props": "workspace:*",
+    "@sea-lion/react-props": "workspace:*",
     "autoprefixer": "^10.4.20",
     "classnames": "*",
     "postcss": "8.4.33",

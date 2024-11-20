@@ -1,5 +1,5 @@
 {
-  "name": "@ui-lib-monorepo-template/react-scroll-area",
+  "name": "@sea-lion/react-scroll-area",
   "version": "0.1.1",
   "keywords": [],
   "author": "jsweber",
@@ -24,8 +24,8 @@
   "dependencies": {
     "@radix-ui/react-scroll-area": "^1.2.0",
     "@radix-ui/react-use-callback-ref": "^1.1.0",
-    "@ui-lib-monorepo-template/react-props": "workspace:*",
-    "@ui-lib-monorepo-template/react-helpers": "workspace:*"
+    "@sea-lion/react-props": "workspace:*",
+    "@sea-lion/react-helpers": "workspace:*"
   },
   "peerDependencies": {
     "@types/react": "*",

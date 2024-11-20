@@ -1,4 +1,4 @@
-import { asChildPropDef } from '@ui-lib-monorepo-template/react-props';
+import { asChildPropDef } from '@sea-lion/react-props';
 
 const tabsRootPropDefs = {
   ...asChildPropDef,

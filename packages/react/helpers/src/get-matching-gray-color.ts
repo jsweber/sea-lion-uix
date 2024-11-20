@@ -1,4 +1,4 @@
-import type { accentColors } from '@ui-lib-monorepo-template/react-props';
+import type { accentColors } from '@sea-lion/react-props';
 
 type ThemeAccentColor = (typeof accentColors)[number];
 

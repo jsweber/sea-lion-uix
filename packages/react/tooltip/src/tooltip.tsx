@@ -2,13 +2,13 @@ import * as React from 'react';
 import classNames from 'classnames';
 import * as TooltipPrimitive from '@radix-ui/react-tooltip';
 
-import { Text } from '@ui-lib-monorepo-template/react-text';
-import { Theme } from '@ui-lib-monorepo-template/react-theme';
-import { extractProps } from '@ui-lib-monorepo-template/react-helpers';
+import { Text } from '@sea-lion/react-text';
+import { Theme } from '@sea-lion/react-theme';
+import { extractProps } from '@sea-lion/react-helpers';
 import { tooltipPropDefs } from './tooltip.props';
 
-import type { ComponentPropsWithout, RemovedProps } from '@ui-lib-monorepo-template/react-helpers';
-import type { GetPropDefTypes } from '@ui-lib-monorepo-template/react-props';
+import type { ComponentPropsWithout, RemovedProps } from '@sea-lion/react-helpers';
+import type { GetPropDefTypes } from '@sea-lion/react-props';
 
 type TooltipElement = React.ElementRef<typeof TooltipPrimitive.Content>;
 type TooltipOwnProps = GetPropDefTypes<typeof tooltipPropDefs>;

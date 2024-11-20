@@ -2,12 +2,12 @@ import * as React from 'react';
 import classNames from 'classnames';
 import * as SwitchPrimitive from '@radix-ui/react-switch';
 
-import { extractProps } from '@ui-lib-monorepo-template/react-helpers';
-import { marginPropDefs } from '@ui-lib-monorepo-template/react-props';
+import { extractProps } from '@sea-lion/react-helpers';
+import { marginPropDefs } from '@sea-lion/react-props';
 import { switchPropDefs } from './switch.props';
 
-import type { MarginProps, GetPropDefTypes } from '@ui-lib-monorepo-template/react-props';
-import type { ComponentPropsWithout } from '@ui-lib-monorepo-template/react-helpers';
+import type { MarginProps, GetPropDefTypes } from '@sea-lion/react-props';
+import type { ComponentPropsWithout } from '@sea-lion/react-helpers';
 
 type SwitchElement = React.ElementRef<typeof SwitchPrimitive.Root>;
 type SwitchOwnProps = GetPropDefTypes<typeof switchPropDefs>;

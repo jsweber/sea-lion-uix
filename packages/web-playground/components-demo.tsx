@@ -1,16 +1,16 @@
 import { FC } from 'react';
-import { Box } from '@ui-lib-monorepo-template/react-box';
-import * as Tabs from '@ui-lib-monorepo-template/react-tab';
-import { Flex } from '@ui-lib-monorepo-template/react-flex';
-import { Avatar } from '@ui-lib-monorepo-template/react-avatar';
-import { Button } from '@ui-lib-monorepo-template/react-button';
-import * as DropdownMenu from '@ui-lib-monorepo-template/react-dropdown-menu';
-import { Text } from '@ui-lib-monorepo-template/react-text';
-import { Card } from '@ui-lib-monorepo-template/react-card';
-import { Inset } from '@ui-lib-monorepo-template/react-inset';
-import { Checkbox } from '@ui-lib-monorepo-template/react-checkbox';
-import { Switch } from '@ui-lib-monorepo-template/react-switch';
-import { TextArea } from '@ui-lib-monorepo-template/react-text-area';
+import { Box } from '@sea-lion/react-box';
+import * as Tabs from '@sea-lion/react-tab';
+import { Flex } from '@sea-lion/react-flex';
+import { Avatar } from '@sea-lion/react-avatar';
+import { Button } from '@sea-lion/react-button';
+import * as DropdownMenu from '@sea-lion/react-dropdown-menu';
+import { Text } from '@sea-lion/react-text';
+import { Card } from '@sea-lion/react-card';
+import { Inset } from '@sea-lion/react-inset';
+import { Checkbox } from '@sea-lion/react-checkbox';
+import { Switch } from '@sea-lion/react-switch';
+import { TextArea } from '@sea-lion/react-text-area';
 
 import AvatarImage from './images/avatar.jpg';
 import NazaImage from './images/naza.jpg';

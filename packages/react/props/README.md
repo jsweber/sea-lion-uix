@@ -3,9 +3,9 @@
 ## Installation
 
 ```sh
-$ yarn add @ui-lib-monorepo-template/react-props
+$ yarn add @sea-lion/react-props
 # or
-$ npm install @ui-lib-monorepo-template/react-props
+$ npm install @sea-lion/react-props
 ```
 
 ## Usage

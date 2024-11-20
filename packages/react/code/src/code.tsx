@@ -3,11 +3,11 @@ import classNames from 'classnames';
 import { Slot } from '@radix-ui/react-slot';
 
 import { codePropDefs } from './code.props';
-import { extractProps } from '@ui-lib-monorepo-template/react-helpers';
-import { marginPropDefs } from '@ui-lib-monorepo-template/react-props';
+import { extractProps } from '@sea-lion/react-helpers';
+import { marginPropDefs } from '@sea-lion/react-props';
 
-import type { MarginProps, GetPropDefTypes } from '@ui-lib-monorepo-template/react-props';
-import type { ComponentPropsWithout, RemovedProps } from '@ui-lib-monorepo-template/react-helpers';
+import type { MarginProps, GetPropDefTypes } from '@sea-lion/react-props';
+import type { ComponentPropsWithout, RemovedProps } from '@sea-lion/react-helpers';
 
 type CodeElement = React.ElementRef<'code'>;
 type CodeOwnProps = GetPropDefTypes<typeof codePropDefs>;

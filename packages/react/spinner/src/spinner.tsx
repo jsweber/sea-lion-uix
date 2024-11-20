@@ -1,13 +1,13 @@
 import * as React from 'react';
 import classNames from 'classnames';
 
-import { Flex } from '@ui-lib-monorepo-template/react-flex';
+import { Flex } from '@sea-lion/react-flex';
 import { spinnerPropDefs } from './spinner.props';
-import { extractProps } from '@ui-lib-monorepo-template/react-helpers';
-import { marginPropDefs } from '@ui-lib-monorepo-template/react-props';
+import { extractProps } from '@sea-lion/react-helpers';
+import { marginPropDefs } from '@sea-lion/react-props';
 
-import type { MarginProps, GetPropDefTypes } from '@ui-lib-monorepo-template/react-props';
-import type { ComponentPropsWithout, RemovedProps } from '@ui-lib-monorepo-template/react-helpers';
+import type { MarginProps, GetPropDefTypes } from '@sea-lion/react-props';
+import type { ComponentPropsWithout, RemovedProps } from '@sea-lion/react-helpers';
 
 type SpinnerElement = React.ElementRef<'span'>;
 type SpinnerOwnProps = GetPropDefTypes<typeof spinnerPropDefs>;

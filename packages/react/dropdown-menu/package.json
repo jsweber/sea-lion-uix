@@ -1,5 +1,5 @@
 {
-  "name": "@ui-lib-monorepo-template/react-dropdown-menu",
+  "name": "@sea-lion/react-dropdown-menu",
   "version": "0.1.0",
   "keywords": [],
   "author": "jsweber",
@@ -24,11 +24,11 @@
   "dependencies": {
     "@radix-ui/react-dropdown-menu": "^2.1.2",
     "@radix-ui/react-slot": "^1.1.0",
-    "@ui-lib-monorepo-template/react-helpers": "workspace:*",
-    "@ui-lib-monorepo-template/react-icon": "workspace:*",
-    "@ui-lib-monorepo-template/react-props": "workspace:*",
-    "@ui-lib-monorepo-template/react-scroll-area": "workspace:*",
-    "@ui-lib-monorepo-template/react-theme": "workspace:*"
+    "@sea-lion/react-helpers": "workspace:*",
+    "@sea-lion/react-icon": "workspace:*",
+    "@sea-lion/react-props": "workspace:*",
+    "@sea-lion/react-scroll-area": "workspace:*",
+    "@sea-lion/react-theme": "workspace:*"
   },
   "peerDependencies": {
     "@types/react": "*",

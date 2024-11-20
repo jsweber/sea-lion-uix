@@ -6,11 +6,11 @@ import * as TooltipPrimitive from '@radix-ui/react-tooltip';
 import { DirectionProvider } from '@radix-ui/react-direction';
 import { Slot } from '@radix-ui/react-slot';
 
-import { getMatchingGrayColor } from '@ui-lib-monorepo-template/react-helpers';
+import { getMatchingGrayColor } from '@sea-lion/react-helpers';
 import { themePropDefs } from './theme.props';
 
 import type { ThemeOwnProps } from './theme.props';
-import type { ComponentPropsWithout, RemovedProps } from '@ui-lib-monorepo-template/react-helpers';
+import type { ComponentPropsWithout, RemovedProps } from '@sea-lion/react-helpers';
 
 const noop = () => { };
 

@@ -17,7 +17,7 @@ const build = async (path) => {
 
     const esbuildConfig = {
         entryPoints: [file],
-        external: ['@ui-lib-monorepo-template/*'],
+        external: ['@sea-lion/*'],
         packages: 'external',
         bundle: true,
         sourcemap: true,
@@ -50,7 +50,7 @@ const build = async (path) => {
         format: ['cjs', 'esm'],
         dts: { only: true },
         outDir: dist,
-        external: [/@ui-lib-monorepo-template\/.+/],
+        external: [/@sea-lion\/.+/],
         clean: true,
     });
     console.log(`Built ${path}/dist/index.d.ts`);

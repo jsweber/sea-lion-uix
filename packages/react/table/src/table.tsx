@@ -2,12 +2,12 @@ import * as React from 'react';
 import classNames from 'classnames';
 
 import { tableRootPropDefs, tableRowPropDefs, tableCellPropDefs } from './table.props';
-import { getResponsiveClassNames, extractProps } from '@ui-lib-monorepo-template/react-helpers';
-import { marginPropDefs } from '@ui-lib-monorepo-template/react-props';
-import { ScrollArea } from '@ui-lib-monorepo-template/react-scroll-area';
+import { getResponsiveClassNames, extractProps } from '@sea-lion/react-helpers';
+import { marginPropDefs } from '@sea-lion/react-props';
+import { ScrollArea } from '@sea-lion/react-scroll-area';
 
-import type { ComponentPropsWithout, RemovedProps } from '@ui-lib-monorepo-template/react-helpers';
-import type { MarginProps, GetPropDefTypes } from '@ui-lib-monorepo-template/react-props';
+import type { ComponentPropsWithout, RemovedProps } from '@sea-lion/react-helpers';
+import type { MarginProps, GetPropDefTypes } from '@sea-lion/react-props';
 
 type TableRootElement = React.ElementRef<'div'>;
 type TableRootOwnProps = GetPropDefTypes<typeof tableRootPropDefs>;

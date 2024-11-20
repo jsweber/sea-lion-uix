@@ -1,5 +1,5 @@
 {
-  "name": "@ui-lib-monorepo-template/react-helpers",
+  "name": "@sea-lion/react-helpers",
   "version": "0.1.1",
   "keywords": [],
   "author": "jsweber",
@@ -22,7 +22,7 @@
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "dependencies": {
-    "@ui-lib-monorepo-template/react-props": "workspace:*",
+    "@sea-lion/react-props": "workspace:*",
     "classnames": "^2.5.1"
   },
   "peerDependencies": {

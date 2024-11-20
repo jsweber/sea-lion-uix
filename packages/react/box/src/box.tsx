@@ -3,12 +3,12 @@ import classNames from 'classnames';
 
 import { Slot } from '@radix-ui/react-slot';
 import { boxPropDefs } from './box.props';
-import { extractProps } from '@ui-lib-monorepo-template/react-helpers';
-import { marginPropDefs, layoutPropDefs } from '@ui-lib-monorepo-template/react-props';
+import { extractProps } from '@sea-lion/react-helpers';
+import { marginPropDefs, layoutPropDefs } from '@sea-lion/react-props';
 
-import type { LayoutProps, MarginProps } from '@ui-lib-monorepo-template/react-props';
+import type { LayoutProps, MarginProps } from '@sea-lion/react-props';
 import type { BoxOwnProps } from './box.props';
-import type { ComponentPropsWithout, RemovedProps } from '@ui-lib-monorepo-template/react-helpers';
+import type { ComponentPropsWithout, RemovedProps } from '@sea-lion/react-helpers';
 
 type BoxElement = React.ElementRef<'div'>;
 interface CommonBoxProps extends MarginProps, LayoutProps, BoxOwnProps { }

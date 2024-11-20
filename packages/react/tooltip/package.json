@@ -1,5 +1,5 @@
 {
-  "name": "@ui-lib-monorepo-template/react-tooltip",
+  "name": "@sea-lion/react-tooltip",
   "version": "0.1.0",
   "keywords": [],
   "author": "jsweber",
@@ -23,10 +23,10 @@
   "types": "./dist/index.d.ts",
   "dependencies": {
     "@radix-ui/react-tooltip": "^1.1.3",
-    "@ui-lib-monorepo-template/react-helpers": "workspace:*",
-    "@ui-lib-monorepo-template/react-props": "workspace:*",
-    "@ui-lib-monorepo-template/react-text": "workspace:*",
-    "@ui-lib-monorepo-template/react-theme": "workspace:*"
+    "@sea-lion/react-helpers": "workspace:*",
+    "@sea-lion/react-props": "workspace:*",
+    "@sea-lion/react-text": "workspace:*",
+    "@sea-lion/react-theme": "workspace:*"
   },
   "peerDependencies": {
     "@types/react": "*",

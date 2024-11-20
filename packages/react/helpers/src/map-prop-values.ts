@@ -1,7 +1,7 @@
 // import type { calloutRootPropDefs } from '../components/callout.props.js';
 // import type { spinnerPropDefs } from '../components/spinner.props.js';
 // import type { textPropDefs } from '../components/text.props.js';
-import type { Responsive } from '@ui-lib-monorepo-template/react-props';
+import type { Responsive } from '@sea-lion/react-props';
 
 function mapResponsiveProp<Input extends string, Output>(
     propValue: Responsive<Input> | undefined,

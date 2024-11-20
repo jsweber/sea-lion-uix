@@ -7,11 +7,11 @@ import {
   getResponsiveClassNames,
   getSubtree,
   mergeStyles
-} from '@ui-lib-monorepo-template/react-helpers';
+} from '@sea-lion/react-helpers';
 import { scrollAreaPropDefs } from './scroll-area.props';
 
-import type { ComponentPropsWithout, RemovedProps } from '@ui-lib-monorepo-template/react-helpers';
-import type { MarginProps, GetPropDefTypes } from '@ui-lib-monorepo-template/react-props';
+import type { ComponentPropsWithout, RemovedProps } from '@sea-lion/react-helpers';
+import type { MarginProps, GetPropDefTypes } from '@sea-lion/react-props';
 
 type ScrollAreaElement = React.ElementRef<typeof ScrollAreaPrimitive.Viewport>;
 type ScrollAreaOwnProps = GetPropDefTypes<typeof scrollAreaPropDefs>;

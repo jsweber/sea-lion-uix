@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Theme } from '../../theme/src';
 
-import { Flex } from '@ui-lib-monorepo-template/react-flex';
-import { Button } from '@ui-lib-monorepo-template/react-button';
+import { Flex } from '@sea-lion/react-flex';
+import { Button } from '@sea-lion/react-button';
 
 const meta: Meta<typeof Button> = {
     component: Button,

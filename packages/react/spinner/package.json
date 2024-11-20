@@ -1,5 +1,5 @@
 {
-  "name": "@ui-lib-monorepo-template/react-spinner",
+  "name": "@sea-lion/react-spinner",
   "version": "0.1.0",
   "keywords": [],
   "author": "jsweber",
@@ -22,9 +22,9 @@
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "dependencies": {
-    "@ui-lib-monorepo-template/react-flex": "workspace:*",
-    "@ui-lib-monorepo-template/react-helpers": "workspace:*",
-    "@ui-lib-monorepo-template/react-props": "workspace:*"
+    "@sea-lion/react-flex": "workspace:*",
+    "@sea-lion/react-helpers": "workspace:*",
+    "@sea-lion/react-props": "workspace:*"
   },
   "peerDependencies": {
     "@types/react": "*",

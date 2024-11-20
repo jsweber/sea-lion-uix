@@ -1,6 +1,6 @@
-import { asChildPropDef } from '@ui-lib-monorepo-template/react-props';
+import { asChildPropDef } from '@sea-lion/react-props';
 
-import type { PropDef } from '@ui-lib-monorepo-template/react-props';
+import type { PropDef } from '@sea-lion/react-props';
 
 const sides = ['all', 'x', 'y', 'top', 'bottom', 'left', 'right'] as const;
 const clipValues = ['border-box', 'padding-box'] as const;

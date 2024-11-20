@@ -3,17 +3,17 @@ import classNames from 'classnames';
 import * as AlertDialogPrimitive from '@radix-ui/react-alert-dialog';
 
 import { alertDialogContentPropDefs } from './alert-dialog.props.js';
-import { Heading } from '@ui-lib-monorepo-template/react-heading';
-import { Text } from '@ui-lib-monorepo-template/react-text';
-import { Theme } from '@ui-lib-monorepo-template/react-theme';
-import { extractProps, requireReactElement } from '@ui-lib-monorepo-template/react-helpers';
+import { Heading } from '@sea-lion/react-heading';
+import { Text } from '@sea-lion/react-text';
+import { Theme } from '@sea-lion/react-theme';
+import { extractProps, requireReactElement } from '@sea-lion/react-helpers';
 
 import type { AlertDialogContentOwnProps } from './alert-dialog.props';
 import type {
   ComponentPropsWithout,
   RemovedProps,
   ComponentPropsAs,
-} from '@ui-lib-monorepo-template/react-helpers';
+} from '@sea-lion/react-helpers';
 
 interface AlertDialogRootProps
   extends React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive.Root> { }

@@ -1,6 +1,6 @@
-import { heightPropDefs, asChildPropDef, widthPropDefs } from '@ui-lib-monorepo-template/react-props';
+import { heightPropDefs, asChildPropDef, widthPropDefs } from '@sea-lion/react-props';
 
-import type { PropDef, GetPropDefTypes } from '@ui-lib-monorepo-template/react-props';
+import type { PropDef, GetPropDefTypes } from '@sea-lion/react-props';
 
 const contentSizes = ['1', '2', '3', '4'] as const;
 

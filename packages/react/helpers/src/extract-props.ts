@@ -5,7 +5,7 @@ import { isResponsiveObject } from './is-responsive-object';
 import { mergeStyles } from './merge-styles';
 
 import type * as React from 'react';
-import type { PropDef } from '@ui-lib-monorepo-template/react-props';
+import type { PropDef } from '@sea-lion/react-props';
 
 type PropDefsWithClassName<T> = T extends Record<string, PropDef>
   ? { [K in keyof T]: T[K] extends { className: string } ? K : never }[keyof T]

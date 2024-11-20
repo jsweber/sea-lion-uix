@@ -1,6 +1,6 @@
-import { gapPropDefs, asChildPropDef } from '@ui-lib-monorepo-template/react-props';
+import { gapPropDefs, asChildPropDef } from '@sea-lion/react-props';
 
-import type { PropDef, GetPropDefTypes } from '@ui-lib-monorepo-template/react-props';
+import type { PropDef, GetPropDefTypes } from '@sea-lion/react-props';
 
 const as = ['div', 'span'] as const;
 const displayValues = ['none', 'inline-flex', 'flex'] as const;

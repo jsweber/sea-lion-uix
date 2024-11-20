@@ -1,6 +1,6 @@
-import { asChildPropDef, colorPropDef, highContrastPropDef } from '@ui-lib-monorepo-template/react-props';
+import { asChildPropDef, colorPropDef, highContrastPropDef } from '@sea-lion/react-props';
 
-import type { PropDef } from '@ui-lib-monorepo-template/react-props';
+import type { PropDef } from '@sea-lion/react-props';
 
 const contentSizes = ['1', '2'] as const;
 const contentVariants = ['solid', 'soft'] as const;

@@ -5,11 +5,11 @@ import classNames from 'classnames';
 import * as AvatarPrimitive from '@radix-ui/react-avatar';
 
 import { avatarPropDefs } from './avatar.props';
-import { extractProps, getSubtree } from '@ui-lib-monorepo-template/react-helpers';
-import { marginPropDefs } from '@ui-lib-monorepo-template/react-props';
+import { extractProps, getSubtree } from '@sea-lion/react-helpers';
+import { marginPropDefs } from '@sea-lion/react-props';
 
-import type { MarginProps, GetPropDefTypes } from '@ui-lib-monorepo-template/react-props';
-import type { ComponentPropsWithout, RemovedProps } from '@ui-lib-monorepo-template/react-helpers';
+import type { MarginProps, GetPropDefTypes } from '@sea-lion/react-props';
+import type { ComponentPropsWithout, RemovedProps } from '@sea-lion/react-helpers';
 
 interface AvatarProps extends MarginProps, AvatarImplProps { }
 const Avatar = React.forwardRef<AvatarImplElement, AvatarProps>((props, forwardedRef) => {

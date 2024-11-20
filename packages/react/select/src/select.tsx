@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { Button } from '@ui-lib-monorepo-template/react-button';
+import { Button } from '@sea-lion/react-button';
 
 const Name = 'Select';
 

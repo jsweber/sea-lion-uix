@@ -1,6 +1,6 @@
-import { asChildPropDef, widthPropDefs, heightPropDefs } from '@ui-lib-monorepo-template/react-props';
+import { asChildPropDef, widthPropDefs, heightPropDefs } from '@sea-lion/react-props';
 
-import type { PropDef, GetPropDefTypes } from '@ui-lib-monorepo-template/react-props';
+import type { PropDef, GetPropDefTypes } from '@sea-lion/react-props';
 
 const alignValues = ['start', 'center'] as const;
 const contentSizes = ['1', '2', '3', '4'] as const;

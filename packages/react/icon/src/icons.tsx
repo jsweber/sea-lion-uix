@@ -1,6 +1,6 @@
 import React from 'react';
 
-import type { ComponentPropsWithout, RemovedProps } from '@ui-lib-monorepo-template/react-helpers';
+import type { ComponentPropsWithout, RemovedProps } from '@sea-lion/react-helpers';
 
 type IconElement = React.ElementRef<'svg'>;
 interface IconProps extends ComponentPropsWithout<'svg', RemovedProps | 'children'> { }

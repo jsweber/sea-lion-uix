@@ -3,9 +3,9 @@
 ## Installation
 
 ```sh
-$ yarn add @ui-lib-monorepo-template/react-button
+$ yarn add @sea-lion/react-button
 # or
-$ npm install @ui-lib-monorepo-template/react-button
+$ npm install @sea-lion/react-button
 ```
 
 ## Usage

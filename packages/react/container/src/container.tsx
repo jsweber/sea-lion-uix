@@ -3,12 +3,12 @@ import classNames from 'classnames';
 import { Slot } from '@radix-ui/react-slot';
 
 import { containerPropDefs } from './container.props';
-import { extractProps, getSubtree } from '@ui-lib-monorepo-template/react-helpers';
-import { heightPropDefs, layoutPropDefs, marginPropDefs, widthPropDefs } from '@ui-lib-monorepo-template/react-props';
+import { extractProps, getSubtree } from '@sea-lion/react-helpers';
+import { heightPropDefs, layoutPropDefs, marginPropDefs, widthPropDefs } from '@sea-lion/react-props';
 
-import type { LayoutProps, MarginProps } from '@ui-lib-monorepo-template/react-props';
+import type { LayoutProps, MarginProps } from '@sea-lion/react-props';
 import type { ContainerOwnProps } from './container.props';
-import type { ComponentPropsWithout, RemovedProps } from '@ui-lib-monorepo-template/react-helpers';
+import type { ComponentPropsWithout, RemovedProps } from '@sea-lion/react-helpers';
 
 type ContainerElement = React.ElementRef<'div'>;
 interface ContainerProps

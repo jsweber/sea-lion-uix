@@ -3,9 +3,9 @@
 ## Installation
 
 ```sh
-$ yarn add @ui-lib-monorepo-template/react-select
+$ yarn add @sea-lion/react-select
 # or
-$ npm install @ui-lib-monorepo-template/react-select
+$ npm install @sea-lion/react-select
 ```
 
 ## Usage

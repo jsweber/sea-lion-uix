@@ -3,22 +3,22 @@
 import * as React from 'react';
 import { useCallbackRef } from '@radix-ui/react-use-callback-ref';
 
-import { Button } from '@ui-lib-monorepo-template/react-button';
-import { Theme, useThemeContext, themePropDefs } from '@ui-lib-monorepo-template/react-theme';
-import { inert, getMatchingGrayColor } from '@ui-lib-monorepo-template/react-helpers';
-import { Flex } from '@ui-lib-monorepo-template/react-flex';
-import { ScrollArea } from '@ui-lib-monorepo-template/react-scroll-area';
-import { Box } from '@ui-lib-monorepo-template/react-box';
-import { Grid } from '@ui-lib-monorepo-template/react-grid';
-import { Heading } from '@ui-lib-monorepo-template/react-heading';
-import { Text } from '@ui-lib-monorepo-template/react-text';
-import { Tooltip } from '@ui-lib-monorepo-template/react-tooltip';
-import { Kbd } from '@ui-lib-monorepo-template/react-kbd';
-import * as Popover from '@ui-lib-monorepo-template/react-popover';
+import { Button } from '@sea-lion/react-button';
+import { Theme, useThemeContext, themePropDefs } from '@sea-lion/react-theme';
+import { inert, getMatchingGrayColor } from '@sea-lion/react-helpers';
+import { Flex } from '@sea-lion/react-flex';
+import { ScrollArea } from '@sea-lion/react-scroll-area';
+import { Box } from '@sea-lion/react-box';
+import { Grid } from '@sea-lion/react-grid';
+import { Heading } from '@sea-lion/react-heading';
+import { Text } from '@sea-lion/react-text';
+import { Tooltip } from '@sea-lion/react-tooltip';
+import { Kbd } from '@sea-lion/react-kbd';
+import * as Popover from '@sea-lion/react-popover';
 import { AccessibleIcon } from '@radix-ui/react-accessible-icon';
 
-import type { ComponentPropsWithout, RemovedProps } from '@ui-lib-monorepo-template/react-helpers';
-import type { GetPropDefTypes } from '@ui-lib-monorepo-template/react-props';
+import type { ComponentPropsWithout, RemovedProps } from '@sea-lion/react-helpers';
+import type { GetPropDefTypes } from '@sea-lion/react-props';
 
 interface ThemePanelProps extends Omit<ThemePanelImplProps, keyof ThemePanelImplPrivateProps> {
   open: boolean;

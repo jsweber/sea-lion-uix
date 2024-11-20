@@ -1,5 +1,5 @@
 {
-  "name": "@ui-lib-monorepo-template/react-theme-panel",
+  "name": "@sea-lion/react-theme-panel",
   "version": "0.1.1",
   "keywords": [],
   "author": "jsweber",
@@ -24,14 +24,14 @@
   "dependencies": {
     "@radix-ui/react-accessible-icon": "^1.1.0",
     "@radix-ui/react-use-callback-ref": "^1.1.0",
-    "@ui-lib-monorepo-template/react-box": "workspace:*",
-    "@ui-lib-monorepo-template/react-button": "workspace:*",
-    "@ui-lib-monorepo-template/react-flex": "workspace:*",
-    "@ui-lib-monorepo-template/react-grid": "workspace:*",
-    "@ui-lib-monorepo-template/react-helpers": "workspace:*",
-    "@ui-lib-monorepo-template/react-props": "workspace:*",
-    "@ui-lib-monorepo-template/react-theme": "workspace:*",
-    "@ui-lib-monorepo-template/react-tooltip": "workspace:*"
+    "@sea-lion/react-box": "workspace:*",
+    "@sea-lion/react-button": "workspace:*",
+    "@sea-lion/react-flex": "workspace:*",
+    "@sea-lion/react-grid": "workspace:*",
+    "@sea-lion/react-helpers": "workspace:*",
+    "@sea-lion/react-props": "workspace:*",
+    "@sea-lion/react-theme": "workspace:*",
+    "@sea-lion/react-tooltip": "workspace:*"
   },
   "peerDependencies": {
     "@types/react": "*",

@@ -1,6 +1,6 @@
-import { asChildPropDef, accentColorPropDef, highContrastPropDef, radiusPropDef } from '@ui-lib-monorepo-template/react-props';
-import { spinnerPropDefs } from '@ui-lib-monorepo-template/react-spinner';
-import type { PropDef } from '@ui-lib-monorepo-template/react-props';
+import { asChildPropDef, accentColorPropDef, highContrastPropDef, radiusPropDef } from '@sea-lion/react-props';
+import { spinnerPropDefs } from '@sea-lion/react-spinner';
+import type { PropDef } from '@sea-lion/react-props';
 
 const sizes = ['1', '2', '3', '4'] as const;
 const variants = ['classic', 'solid', 'soft', 'surface', 'outline', 'ghost'] as const;

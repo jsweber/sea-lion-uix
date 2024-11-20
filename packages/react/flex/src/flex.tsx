@@ -1,15 +1,15 @@
 import * as React from 'react';
 import classNames from 'classnames';
 
-import { marginPropDefs, layoutPropDefs } from '@ui-lib-monorepo-template/react-props';
-import { extractProps } from '@ui-lib-monorepo-template/react-helpers';
+import { marginPropDefs, layoutPropDefs } from '@sea-lion/react-props';
+import { extractProps } from '@sea-lion/react-helpers';
 import { Slot } from '@radix-ui/react-slot';
 
 import { flexPropDefs } from './flex.props';
 
 import type { FlexOwnProps } from './flex.props.js';
-import type { MarginProps, LayoutProps } from '@ui-lib-monorepo-template/react-props';
-import type { ComponentPropsWithout, RemovedProps } from '@ui-lib-monorepo-template/react-helpers';
+import type { MarginProps, LayoutProps } from '@sea-lion/react-props';
+import type { ComponentPropsWithout, RemovedProps } from '@sea-lion/react-helpers';
 
 type FlexElement = React.ElementRef<'div'>;
 interface CommonFlexProps extends MarginProps, LayoutProps, FlexOwnProps { }

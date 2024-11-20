@@ -3,12 +3,12 @@ import classNames from 'classnames';
 
 import { Slot } from '@radix-ui/react-slot';
 import { gridPropDefs } from './grid.props';
-import { extractProps } from '@ui-lib-monorepo-template/react-helpers';
-import { layoutPropDefs, marginPropDefs } from '@ui-lib-monorepo-template/react-props';
+import { extractProps } from '@sea-lion/react-helpers';
+import { layoutPropDefs, marginPropDefs } from '@sea-lion/react-props';
 
-import type { LayoutProps, MarginProps } from '@ui-lib-monorepo-template/react-props';
+import type { LayoutProps, MarginProps } from '@sea-lion/react-props';
 import type { GridOwnProps } from './grid.props';
-import type { ComponentPropsWithout, RemovedProps } from '@ui-lib-monorepo-template/react-helpers';
+import type { ComponentPropsWithout, RemovedProps } from '@sea-lion/react-helpers';
 
 type GridElement = React.ElementRef<'div'>;
 interface CommonGridProps extends MarginProps, LayoutProps, GridOwnProps { }

@@ -5,9 +5,9 @@ import {
   textWrapPropDef,
   truncatePropDef,
   weightPropDef,
-} from '@ui-lib-monorepo-template/react-props';
+} from '@sea-lion/react-props';
 
-import type { PropDef } from '@ui-lib-monorepo-template/react-props';
+import type { PropDef } from '@sea-lion/react-props';
 
 const sizes = ['1', '2', '3', '4', '5', '6', '7', '8', '9'] as const;
 const variants = ['solid', 'soft', 'outline', 'ghost'] as const;

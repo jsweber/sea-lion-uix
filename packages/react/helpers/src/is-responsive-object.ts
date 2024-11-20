@@ -1,6 +1,6 @@
-import { breakpoints } from '@ui-lib-monorepo-template/react-props';
+import { breakpoints } from '@sea-lion/react-props';
 
-import type { Responsive, Breakpoint } from '@ui-lib-monorepo-template/react-props';
+import type { Responsive, Breakpoint } from '@sea-lion/react-props';
 
 export function isResponsiveObject<Value extends string>(
   obj: Responsive<Value | Omit<string, Value>> | undefined

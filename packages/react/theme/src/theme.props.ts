@@ -1,8 +1,8 @@
-import { asChildPropDef } from '@ui-lib-monorepo-template/react-props';
-import { accentColors, grayColors } from '@ui-lib-monorepo-template/react-props';
-import { radii } from '@ui-lib-monorepo-template/react-props';
+import { asChildPropDef } from '@sea-lion/react-props';
+import { accentColors, grayColors } from '@sea-lion/react-props';
+import { radii } from '@sea-lion/react-props';
 
-import type { GetPropDefTypes, PropDef } from '@ui-lib-monorepo-template/react-props';
+import type { GetPropDefTypes, PropDef } from '@sea-lion/react-props';
 
 const appearances = ['inherit', 'light', 'dark'] as const;
 const panelBackgrounds = ['solid', 'translucent'] as const;

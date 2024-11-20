@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Theme } from '@ui-lib-monorepo-template/react-theme';
-// import '@ui-lib-monorepo-template/react-button/button.css'
+import { Theme } from '@sea-lion/react-theme';
+// import '@sea-lion/react-button/button.css'
 
 const meta: Meta<typeof Theme> = {
     component: Theme,

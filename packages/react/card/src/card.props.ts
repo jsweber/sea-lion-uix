@@ -1,6 +1,6 @@
-import { asChildPropDef } from '@ui-lib-monorepo-template/react-props';
+import { asChildPropDef } from '@sea-lion/react-props';
 
-import type { PropDef } from '@ui-lib-monorepo-template/react-props';
+import type { PropDef } from '@sea-lion/react-props';
 
 const sizes = ['1', '2', '3', '4', '5'] as const;
 const variants = ['surface', 'classic', 'ghost'] as const;

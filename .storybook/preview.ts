@@ -1,6 +1,6 @@
 import type { Preview } from "@storybook/react";
 import './style.css';
-import '@ui-lib-monorepo-template/react-theme-style/index.css';
+import '@sea-lion/react-theme-style/index.css';
 
 const preview: Preview = {
   parameters: {

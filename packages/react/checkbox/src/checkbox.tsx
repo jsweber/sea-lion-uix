@@ -6,12 +6,12 @@ import * as CheckboxPrimitive from '@radix-ui/react-checkbox';
 import { useControllableState } from '@radix-ui/react-use-controllable-state';
 
 import { checkboxPropDefs } from './checkbox.props';
-import { ThickCheckIcon, ThickDividerHorizontalIcon } from '@ui-lib-monorepo-template/react-icon';
-import { extractProps } from '@ui-lib-monorepo-template/react-helpers';
-import { marginPropDefs } from '@ui-lib-monorepo-template/react-props';
+import { ThickCheckIcon, ThickDividerHorizontalIcon } from '@sea-lion/react-icon';
+import { extractProps } from '@sea-lion/react-helpers';
+import { marginPropDefs } from '@sea-lion/react-props';
 
-import type { MarginProps, GetPropDefTypes } from '@ui-lib-monorepo-template/react-props';
-import type { ComponentPropsWithout } from '@ui-lib-monorepo-template/react-helpers';
+import type { MarginProps, GetPropDefTypes } from '@sea-lion/react-props';
+import type { ComponentPropsWithout } from '@sea-lion/react-helpers';
 
 type CheckboxElement = React.ElementRef<typeof CheckboxPrimitive.Root>;
 type CheckboxOwnProps = GetPropDefTypes<typeof checkboxPropDefs>;

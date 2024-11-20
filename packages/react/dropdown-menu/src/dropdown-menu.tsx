@@ -5,20 +5,20 @@ import classNames from 'classnames';
 import * as DropdownMenuPrimitive from '@radix-ui/react-dropdown-menu';
 import { Slottable } from '@radix-ui/react-slot';
 
-import { ScrollArea } from '@ui-lib-monorepo-template/react-scroll-area';
+import { ScrollArea } from '@sea-lion/react-scroll-area';
 import {
   dropdownMenuContentPropDefs,
   dropdownMenuItemPropDefs,
   dropdownMenuCheckboxItemPropDefs,
   dropdownMenuRadioItemPropDefs,
 } from './dropdown-menu.props';
-import { Theme, useThemeContext } from '@ui-lib-monorepo-template/react-theme';
-import { ChevronDownIcon, ThickCheckIcon, ThickChevronRightIcon } from '@ui-lib-monorepo-template/react-icon';
-import { extractProps, requireReactElement } from '@ui-lib-monorepo-template/react-helpers';
+import { Theme, useThemeContext } from '@sea-lion/react-theme';
+import { ChevronDownIcon, ThickCheckIcon, ThickChevronRightIcon } from '@sea-lion/react-icon';
+import { extractProps, requireReactElement } from '@sea-lion/react-helpers';
 
-import type { IconProps } from '@ui-lib-monorepo-template/react-icon';
-import type { ComponentPropsWithout, RemovedProps } from '@ui-lib-monorepo-template/react-helpers';
-import type { GetPropDefTypes } from '@ui-lib-monorepo-template/react-props';
+import type { IconProps } from '@sea-lion/react-icon';
+import type { ComponentPropsWithout, RemovedProps } from '@sea-lion/react-helpers';
+import type { GetPropDefTypes } from '@sea-lion/react-props';
 
 interface DropdownMenuRootProps
   extends React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Root> { }

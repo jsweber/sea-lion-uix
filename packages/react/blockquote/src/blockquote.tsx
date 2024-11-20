@@ -2,11 +2,11 @@ import * as React from 'react';
 import classNames from 'classnames';
 import { Slot } from '@radix-ui/react-slot';
 
-import { Text } from '@ui-lib-monorepo-template/react-text';
+import { Text } from '@sea-lion/react-text';
 
 import type { blockquotePropDefs } from './blockquote.props';
-import type { ComponentPropsWithout, RemovedProps } from '@ui-lib-monorepo-template/react-helpers';
-import type { MarginProps, GetPropDefTypes } from '@ui-lib-monorepo-template/react-props';
+import type { ComponentPropsWithout, RemovedProps } from '@sea-lion/react-helpers';
+import type { MarginProps, GetPropDefTypes } from '@sea-lion/react-props';
 
 type BlockquoteElement = React.ElementRef<'blockquote'>;
 type BlockQuoteOwnProps = GetPropDefTypes<typeof blockquotePropDefs>;

@@ -1,5 +1,5 @@
 {
-  "name": "@ui-lib-monorepo-template/react-table",
+  "name": "@sea-lion/react-table",
   "version": "0.1.0",
   "keywords": [],
   "author": "jsweber",
@@ -22,12 +22,12 @@
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "dependencies": {
-    "@ui-lib-monorepo-template/react-helpers": "workspace:*",
-    "@ui-lib-monorepo-template/react-props": "workspace:*",
-    "@ui-lib-monorepo-template/react-heading": "workspace:*",
-    "@ui-lib-monorepo-template/react-text": "workspace:*",
-    "@ui-lib-monorepo-template/react-theme": "workspace:*",
-    "@ui-lib-monorepo-template/react-scroll-area": "workspace:*"
+    "@sea-lion/react-helpers": "workspace:*",
+    "@sea-lion/react-props": "workspace:*",
+    "@sea-lion/react-heading": "workspace:*",
+    "@sea-lion/react-text": "workspace:*",
+    "@sea-lion/react-theme": "workspace:*",
+    "@sea-lion/react-scroll-area": "workspace:*"
   },
   "peerDependencies": {
     "@types/react": "*",

@@ -3,9 +3,9 @@
 ## Installation
 
 ```sh
-$ yarn add @ui-lib-monorepo-template/react-flex
+$ yarn add @sea-lion/react-flex
 # or
-$ npm install @ui-lib-monorepo-template/react-flex
+$ npm install @sea-lion/react-flex
 ```
 
 ## Usage

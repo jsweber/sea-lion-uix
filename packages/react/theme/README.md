@@ -3,9 +3,9 @@
 ## Installation
 
 ```sh
-$ yarn add @ui-lib-monorepo-template/react-theme
+$ yarn add @sea-lion/react-theme
 # or
-$ npm install @ui-lib-monorepo-template/react-theme
+$ npm install @sea-lion/react-theme
 ```
 
 ## Usage
