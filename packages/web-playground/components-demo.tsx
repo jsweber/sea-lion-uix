@@ -15,6 +15,7 @@ import { Radio } from '@sea-lion/react-radio';
 import { Grid } from '@sea-lion/react-grid';
 import * as Input from '@sea-lion/react-input';
 import { Slider } from '@sea-lion/react-slider';
+import * as RadioCards from '@sea-lion/react-radio-card';
 
 import AvatarImage from './images/avatar.jpg';
 import NazaImage from './images/naza.jpg';
@@ -486,6 +487,95 @@ const ComponentsDemo: FC<ComponentsDemoProps> = ({ mode }) => {
                                         </Text>
                                     </Flex>
                                 </Flex>
+                            </Flex>
+                        </Tabs.Content>
+                    </Box>
+                </Tabs.Root>
+            </div>
+            <div className="wp-comp-section">
+                <Tabs.Root defaultValue="1">
+                    <Tabs.List>
+                        <Tabs.Trigger value="1">默认样式Radio card</Tabs.Trigger>
+                        <Tabs.Trigger value="2">不同尺寸的Radio card</Tabs.Trigger>
+                        <Tabs.Trigger value="3">不同颜色的Radio card</Tabs.Trigger>
+                        <Tabs.Trigger value="4">disabled Radio card</Tabs.Trigger>
+                    </Tabs.List>
+                    <Box pt="3">
+                        <Tabs.Content value="1">
+                            <Box maxWidth="600px">
+                                <RadioCards.Root defaultValue="1" columns={{ initial: "1", sm: "3" }}>
+                                    <RadioCards.Item value="1">
+                                        <Flex direction="column" width="100%">
+                                            <Text weight="bold">8-core CPU</Text>
+                                            <Text>32 GB RAM</Text>
+                                        </Flex>
+                                    </RadioCards.Item>
+                                    <RadioCards.Item value="2">
+                                        <Flex direction="column" width="100%">
+                                            <Text weight="bold">6-core CPU</Text>
+                                            <Text>24 GB RAM</Text>
+                                        </Flex>
+                                    </RadioCards.Item>
+                                    <RadioCards.Item value="3">
+                                        <Flex direction="column" width="100%">
+                                            <Text weight="bold">4-core CPU</Text>
+                                            <Text>16 GB RAM</Text>
+                                        </Flex>
+                                    </RadioCards.Item>
+                                </RadioCards.Root>
+                            </Box>
+                        </Tabs.Content>
+
+                        <Tabs.Content value="2">
+                            <Flex align="center" gap="3">
+                                <RadioCards.Root size="1">
+                                    <RadioCards.Item value="1">8-core CPU</RadioCards.Item>
+                                </RadioCards.Root>
+
+                                <RadioCards.Root size="2">
+                                    <RadioCards.Item value="1">8-core CPU</RadioCards.Item>
+                                </RadioCards.Root>
+
+                                <RadioCards.Root size="3">
+                                    <RadioCards.Item value="1">8-core CPU</RadioCards.Item>
+                                </RadioCards.Root>
+                            </Flex>
+                        </Tabs.Content>
+
+                        <Tabs.Content value="3">
+                            <Flex direction="column" gap="3" maxWidth="200px">
+                                <RadioCards.Root defaultValue="1" color="indigo">
+                                    <RadioCards.Item value="1">8-core CPU</RadioCards.Item>
+                                </RadioCards.Root>
+
+                                <RadioCards.Root defaultValue="1" color="cyan">
+                                    <RadioCards.Item value="1">8-core CPU</RadioCards.Item>
+                                </RadioCards.Root>
+
+                                <RadioCards.Root defaultValue="1" color="orange">
+                                    <RadioCards.Item value="1">8-core CPU</RadioCards.Item>
+                                </RadioCards.Root>
+
+                                <RadioCards.Root defaultValue="1" color="crimson">
+                                    <RadioCards.Item value="1">8-core CPU</RadioCards.Item>
+                                </RadioCards.Root>
+                            </Flex>
+                        </Tabs.Content>
+                        <Tabs.Content value="4">
+                            <Flex direction="column" gap="4" maxWidth="450px">
+                                <RadioCards.Root columns="2" defaultValue="2">
+                                    <RadioCards.Item value="1">Off</RadioCards.Item>
+                                    <RadioCards.Item value="2">On</RadioCards.Item>
+                                </RadioCards.Root>
+
+                                <RadioCards.Root columns="2" defaultValue="2">
+                                    <RadioCards.Item value="1" disabled>
+                                        Off
+                                    </RadioCards.Item>
+                                    <RadioCards.Item value="2" disabled>
+                                        On
+                                    </RadioCards.Item>
+                                </RadioCards.Root>
                             </Flex>
                         </Tabs.Content>
                     </Box>

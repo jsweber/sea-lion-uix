@@ -22,6 +22,7 @@
 @import "../../slider/src/style/index.less";
 @import "../../popover/src/style/index.less";
 @import "../../radio/src/style/index.less";
+@import "../../radio-card/src/style/index.less";
 @import "../../tab/src/style/index.less";
 @import "../../table/src/style/index.less";
 @import "../../text/src/style/index.less";

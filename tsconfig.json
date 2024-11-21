@@ -120,6 +120,9 @@
             "@sea-lion/react-radio": [
                 "./packages/react/radio/src"
             ],
+            "@sea-lion/react-radio-card": [
+                "./packages/react/radio-card/src"
+            ],
             "@sea-lion/react-icon": [
                 "./packages/react/icon/src"
             ],
