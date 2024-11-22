@@ -13,13 +13,18 @@ import { Heading } from '@sea-lion/react-heading';
 import { Text } from '@sea-lion/react-text';
 import * as Table from '@sea-lion/react-table';
 import { ComponentsDemo } from './components-demo';
+import { App } from './v0-dev/preview';
+import { TextArea } from '@sea-lion/react-text-area';
 
 import AntdImage from './images/antd.jpg';
 import ArcoImage from './images/arco.jpg';
 import radixImage from './images/radix.jpg';
 import varleftImage from './images/varleft.jpg';
+import v0Image from './images/v0.jpg';
 
 import "./index.less";
+
+console.log(App);
 
 interface WebPlaygroundProps {
     mode?: 'development' | 'production';
@@ -227,7 +232,48 @@ const WebPlayground: FC<WebPlaygroundProps> = ({ mode }) => {
                             <ComponentsDemo mode={mode} />
                         </div>
                     </div>
-
+                    <div style={{
+                        height: 300,
+                        paddingBottom: 100
+                    }}>
+                        <Heading align="center">V0.dev</Heading>
+                        <Container>
+                            <App />
+                            <TextArea rows={30} value={
+                                `
+    <div className="cascader-container">
+      <h2 className="cascader-title">Cascader Component</h2>
+      <Popover.Root open={isOpen} onOpenChange={setIsOpen}>
+        <Popover.Trigger className="cascader-trigger">
+          {selectedOptions.length > 0
+            ? selectedOptions.map(opt => opt.label).join(' > ')
+            : 'Select options'}
+          <ChevronDownIcon />
+        </Popover.Trigger>
+        <Popover.Portal>
+          <Popover.Content className="cascader-content" sideOffset={5}>
+            {renderLevels().map((levelOptions, index) => (
+              <div key={index} className="cascader-level">
+                {levelOptions.map((option) => (
+                  <div
+                    key={option.value}
+                    onClick={() => handleSelect(option, index)}
+                  >
+                    {option.label}
+                    {option.children && <ChevronRightIcon />}
+                  </div>
+                ))}
+              </div>
+            ))}
+          </Popover.Content>
+        </Popover.Portal>
+      </Popover.Root>
+    </div>
+                                `
+                            } />
+                            <img src={v0Image} width="100%" />
+                        </Container>
+                    </div>
                 </Container>
             </div>
         </Theme>

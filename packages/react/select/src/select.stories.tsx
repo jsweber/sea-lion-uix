@@ -1,14 +1,14 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Select } from '@sea-lion/react-select';
+import { Root } from '@sea-lion/react-select';
 
-const meta: Meta<typeof Select> = {
-    component: Select,
+const meta: Meta<typeof Root> = {
+    component: Root,
     title: 'Select'
 };
 
 export default meta;
-type Story = StoryObj<typeof Select>;
-
+type Story = StoryObj<typeof Root>;
+Root
 export const Primary: Story = {
     args: {
     },

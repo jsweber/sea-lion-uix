@@ -20,6 +20,7 @@
 @import "../../inset/src/style/index.less";
 @import "../../input/src/style/index.less";
 @import "../../slider/src/style/index.less";
+@import "../../select/src/style/index.less";
 @import "../../popover/src/style/index.less";
 @import "../../radio/src/style/index.less";
 @import "../../radio-card/src/style/index.less";

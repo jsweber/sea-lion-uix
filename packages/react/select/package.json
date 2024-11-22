@@ -22,7 +22,12 @@
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "dependencies": {
-    "@sea-lion/react-button": "workspace:*"
+    "@radix-ui/react-scroll-area": "^1.2.0",
+    "@radix-ui/react-select": "^2.1.2",
+    "@sea-lion/react-helpers": "workspace:*",
+    "@sea-lion/react-icon": "workspace:*",
+    "@sea-lion/react-props": "workspace:*",
+    "@sea-lion/react-theme": "workspace:*"
   },
   "peerDependencies": {
     "@types/react": "*",
