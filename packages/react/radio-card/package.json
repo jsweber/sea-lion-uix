@@ -22,8 +22,6 @@
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "dependencies": {
-    "@radix-ui/primitive": "^1.1.0",
-    "@radix-ui/react-compose-refs": "^1.1.0",
     "@radix-ui/react-radio-group": "^1.2.1",
     "@sea-lion/react-base-radio": "workspace:*",
     "@sea-lion/react-helpers": "workspace:*",

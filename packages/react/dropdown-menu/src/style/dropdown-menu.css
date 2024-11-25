@@ -1,4 +1,4 @@
-@import './base-menu.css';
+@import '../../../base-menu/src/style/index.less';
 
 .rt-DropdownMenuContent {
   max-height: var(--radix-dropdown-menu-content-available-height);

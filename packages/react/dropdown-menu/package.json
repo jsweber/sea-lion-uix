@@ -24,6 +24,7 @@
   "dependencies": {
     "@radix-ui/react-dropdown-menu": "^2.1.2",
     "@radix-ui/react-slot": "^1.1.0",
+    "@sea-lion/react-base-menu": "workspace:*",
     "@sea-lion/react-helpers": "workspace:*",
     "@sea-lion/react-icon": "workspace:*",
     "@sea-lion/react-props": "workspace:*",

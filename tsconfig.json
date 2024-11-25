@@ -63,8 +63,26 @@
             "@sea-lion/react-badge": [
                 "./packages/react/badge/src"
             ],
+            "@sea-lion/react-base-button": [
+                "./packages/react/base-button/src"
+            ],
+            "@sea-lion/react-base-card": [
+                "./packages/react/base-card/src"
+            ],
+            "@sea-lion/react-base-checkbox": [
+                "./packages/react/base-checkbox/src"
+            ],
+            "@sea-lion/react-base-dialog": [
+                "./packages/react/base-dialog/src"
+            ],
+            "@sea-lion/react-base-menu": [
+                "./packages/react/base-menu/src"
+            ],
             "@sea-lion/react-base-radio": [
                 "./packages/react/base-radio/src"
+            ],
+            "@sea-lion/react-base-tab-list": [
+                "./packages/react/base-tab-list/src"
             ],
             "@sea-lion/react-blockquote": [
                 "./packages/react/blockquote/src"
@@ -77,6 +95,12 @@
             ],
             "@sea-lion/react-checkbox": [
                 "./packages/react/checkbox/src"
+            ],
+            "@sea-lion/react-checkbox-cards": [
+                "./packages/react/checkbox-cards/src"
+            ],
+            "@sea-lion/react-checkbox-group": [
+                "./packages/react/checkbox-group/src"
             ],
             "@sea-lion/react-code": [
                 "./packages/react/code/src"
@@ -108,6 +132,9 @@
             "@sea-lion/react-heading": [
                 "./packages/react/heading/src"
             ],
+            "@sea-lion/react-icon-button": [
+                "./packages/react/icon-button/src"
+            ],
             "@sea-lion/react-input": [
                 "./packages/react/input/src"
             ],
@@ -122,6 +149,9 @@
             ],
             "@sea-lion/react-radio-card": [
                 "./packages/react/radio-card/src"
+            ],
+            "@sea-lion/react-radio-group": [
+                "./packages/react/radio-group/src"
             ],
             "@sea-lion/react-icon": [
                 "./packages/react/icon/src"

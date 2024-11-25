@@ -3,4 +3,4 @@ export {
   baseMenuItemPropDefs as dropdownMenuItemPropDefs,
   baseMenuCheckboxItemPropDefs as dropdownMenuCheckboxItemPropDefs,
   baseMenuRadioItemPropDefs as dropdownMenuRadioItemPropDefs,
-} from './base-menu.props';
+} from '@sea-lion/react-base-menu';

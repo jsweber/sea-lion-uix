@@ -24,6 +24,7 @@
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.0",
     "@radix-ui/react-visually-hidden": "^1.1.0",
+    "@sea-lion/react-base-button": "workspace:*",
     "@sea-lion/react-flex": "workspace:*",
     "@sea-lion/react-spinner": "workspace:*",
     "@sea-lion/react-helpers": "workspace:*",

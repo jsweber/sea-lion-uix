@@ -24,6 +24,7 @@
   "dependencies": {
     "@radix-ui/react-checkbox": "^1.1.2",
     "@radix-ui/react-use-controllable-state": "^1.1.0",
+    "@sea-lion/react-base-checkbox": "workspace:*",
     "@sea-lion/react-helpers": "workspace:*",
     "@sea-lion/react-props": "workspace:*"
   },

@@ -1,4 +1,4 @@
-@import './base-card.css';
+@import '../../../base-card/src/style/index.less';
 
 /* stylelint-disable selector-max-type */
 /* Disable selector-max-type rule to target `button` and `a` tags. */

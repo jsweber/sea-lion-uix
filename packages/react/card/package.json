@@ -23,6 +23,7 @@
   "types": "./dist/index.d.ts",
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.0",
+    "@sea-lion/react-base-card": "workspace:*",
     "@sea-lion/react-helpers": "workspace:*",
     "@sea-lion/react-props": "workspace:*"
   },

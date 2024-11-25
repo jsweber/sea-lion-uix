@@ -1,1 +1,1 @@
-export { baseButtonPropDefs as buttonPropDefs } from './base-button.props';
+export { baseButtonPropDefs as buttonPropDefs } from '@sea-lion/react-base-button';
