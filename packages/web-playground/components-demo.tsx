@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { MagnifyingGlassIcon } from "@radix-ui/react-icons";
 import { Box } from '@sea-lion/react-box';
 import * as Tabs from '@sea-lion/react-tab';
 import { Flex } from '@sea-lion/react-flex';
@@ -16,6 +17,8 @@ import { Grid } from '@sea-lion/react-grid';
 import * as Input from '@sea-lion/react-input';
 import { Slider } from '@sea-lion/react-slider';
 import * as RadioCards from '@sea-lion/react-radio-card';
+import { IconButton } from '@sea-lion/react-icon-button';
+import * as CheckboxCards from '@sea-lion/react-checkbox-cards';
 
 import AvatarImage from './images/avatar.jpg';
 import NazaImage from './images/naza.jpg';
@@ -96,6 +99,83 @@ const ComponentsDemo: FC<ComponentsDemoProps> = ({ mode }) => {
                                 <Avatar radius="none" fallback="A" />
                                 <Avatar radius="large" fallback="A" />
                                 <Avatar radius="full" fallback="A" />
+                            </Flex>
+                        </Tabs.Content>
+                    </Box>
+                </Tabs.Root>
+            </div>
+            <div className="wp-comp-section">
+                <Tabs.Root defaultValue="1">
+                    <Tabs.List>
+                        <Tabs.Trigger value="1">不同尺寸的IconButton</Tabs.Trigger>
+                        <Tabs.Trigger value="2">不同颜色的IconButton</Tabs.Trigger>
+                        <Tabs.Trigger value="3">不同圆角的IconButton</Tabs.Trigger>
+                        <Tabs.Trigger value="4">loading的IconButton</Tabs.Trigger>
+                    </Tabs.List>
+                    <Box pt="3">
+                        <Tabs.Content value="1">
+                            <Flex align="center" gap="3">
+                                <IconButton size="1" variant="soft">
+                                    <MagnifyingGlassIcon width="15" height="15" />
+                                </IconButton>
+
+                                <IconButton size="2" variant="soft">
+                                    <MagnifyingGlassIcon width="18" height="18" />
+                                </IconButton>
+
+                                <IconButton size="3" variant="soft">
+                                    <MagnifyingGlassIcon width="22" height="22" />
+                                </IconButton>
+                            </Flex>
+                        </Tabs.Content>
+
+                        <Tabs.Content value="2">
+                            <Flex gap="3">
+                                <IconButton color="crimson" variant="soft">
+                                    <MagnifyingGlassIcon width="18" height="18" />
+                                </IconButton>
+                                <IconButton color="indigo" variant="soft">
+                                    <MagnifyingGlassIcon width="18" height="18" />
+                                </IconButton>
+                                <IconButton color="grass" variant="soft">
+                                    <MagnifyingGlassIcon width="18" height="18" />
+                                </IconButton>
+                                <IconButton color="orange" variant="soft">
+                                    <MagnifyingGlassIcon width="18" height="18" />
+                                </IconButton>
+                            </Flex>
+                        </Tabs.Content>
+
+                        <Tabs.Content value="3">
+                            <Flex gap="3">
+                                <IconButton radius="none" variant="soft">
+                                    <MagnifyingGlassIcon width="18" height="18" />
+                                </IconButton>
+                                <IconButton radius="large" variant="soft">
+                                    <MagnifyingGlassIcon width="18" height="18" />
+                                </IconButton>
+                                <IconButton radius="full" variant="soft">
+                                    <MagnifyingGlassIcon width="18" height="18" />
+                                </IconButton>
+                            </Flex>
+                        </Tabs.Content>
+                        <Tabs.Content value="4">
+                            <Flex gap="3">
+                                <IconButton loading variant="classic">
+                                    <MagnifyingGlassIcon width="18" height="18" />
+                                </IconButton>
+                                <IconButton loading variant="solid">
+                                    <MagnifyingGlassIcon width="18" height="18" />
+                                </IconButton>
+                                <IconButton loading variant="soft">
+                                    <MagnifyingGlassIcon width="18" height="18" />
+                                </IconButton>
+                                <IconButton loading variant="surface">
+                                    <MagnifyingGlassIcon width="18" height="18" />
+                                </IconButton>
+                                <IconButton loading variant="outline">
+                                    <MagnifyingGlassIcon width="18" height="18" />
+                                </IconButton>
                             </Flex>
                         </Tabs.Content>
                     </Box>
@@ -741,6 +821,97 @@ const ComponentsDemo: FC<ComponentsDemoProps> = ({ mode }) => {
                                 <Checkbox size="1" defaultChecked />
                                 <Checkbox size="2" defaultChecked />
                                 <Checkbox size="3" defaultChecked />
+                            </Flex>
+                        </Tabs.Content>
+                    </Box>
+                </Tabs.Root>
+            </div>
+            <div className="wp-comp-section">
+                <Tabs.Root defaultValue="1">
+                    <Tabs.List>
+                        <Tabs.Trigger value="1">默认CheckboxCards</Tabs.Trigger>
+                        <Tabs.Trigger value="2">不同尺寸的CheckboxCards</Tabs.Trigger>
+                        <Tabs.Trigger value="3">不同颜色的CheckboxCard</Tabs.Trigger>
+                        <Tabs.Trigger value="4">disabled CheckboxCard</Tabs.Trigger>
+                    </Tabs.List>
+                    <Box pt="3">
+                        <Tabs.Content value="1">
+                            <Box maxWidth="600px">
+                                <CheckboxCards.Root defaultValue={["1"]} columns={{ initial: "1", sm: "3" }}>
+                                    <CheckboxCards.Item value="1">
+                                        <Flex direction="column" width="100%">
+                                            <Text weight="bold">A1 Keyboard</Text>
+                                            <Text>US Layout</Text>
+                                        </Flex>
+                                    </CheckboxCards.Item>
+                                    <CheckboxCards.Item value="2">
+                                        <Flex direction="column" width="100%">
+                                            <Text weight="bold">Pro Mouse</Text>
+                                            <Text>Zero-lag wireless</Text>
+                                        </Flex>
+                                    </CheckboxCards.Item>
+                                    <CheckboxCards.Item value="3">
+                                        <Flex direction="column" width="100%">
+                                            <Text weight="bold">Lightning Mat</Text>
+                                            <Text>Wireless charging</Text>
+                                        </Flex>
+                                    </CheckboxCards.Item>
+                                </CheckboxCards.Root>
+                            </Box>
+                        </Tabs.Content>
+
+
+                        <Tabs.Content value="2">
+                            <Flex align="center" gap="3">
+                                <CheckboxCards.Root defaultValue={["1"]} size="1">
+                                    <CheckboxCards.Item value="1">Agree to Terms</CheckboxCards.Item>
+                                </CheckboxCards.Root>
+
+                                <CheckboxCards.Root defaultValue={["1"]} size="2">
+                                    <CheckboxCards.Item value="1">Agree to Terms</CheckboxCards.Item>
+                                </CheckboxCards.Root>
+
+                                <CheckboxCards.Root defaultValue={["1"]} size="3">
+                                    <CheckboxCards.Item value="1">Agree to Terms</CheckboxCards.Item>
+                                </CheckboxCards.Root>
+                            </Flex>
+                        </Tabs.Content>
+
+                        <Tabs.Content value="3">
+                            <Flex direction="column" gap="3" maxWidth="200px">
+                                <CheckboxCards.Root defaultValue={["1"]} color="indigo">
+                                    <CheckboxCards.Item value="1">Agree to Terms</CheckboxCards.Item>
+                                </CheckboxCards.Root>
+
+                                <CheckboxCards.Root defaultValue={["1"]} color="cyan">
+                                    <CheckboxCards.Item value="1">Agree to Terms</CheckboxCards.Item>
+                                </CheckboxCards.Root>
+
+                                <CheckboxCards.Root defaultValue={["1"]} color="orange">
+                                    <CheckboxCards.Item value="1">Agree to Terms</CheckboxCards.Item>
+                                </CheckboxCards.Root>
+
+                                <CheckboxCards.Root defaultValue={["1"]} color="crimson">
+                                    <CheckboxCards.Item value="1">Agree to Terms</CheckboxCards.Item>
+                                </CheckboxCards.Root>
+                            </Flex>
+                        </Tabs.Content>
+
+                        <Tabs.Content value="4">
+                            <Flex direction="column" gap="4" maxWidth="450px">
+                                <CheckboxCards.Root columns="2" defaultValue={['2']}>
+                                    <CheckboxCards.Item value="1">Off</CheckboxCards.Item>
+                                    <CheckboxCards.Item value="2">On</CheckboxCards.Item>
+                                </CheckboxCards.Root>
+
+                                <CheckboxCards.Root columns="2" defaultValue={['2']}>
+                                    <CheckboxCards.Item value="1" disabled>
+                                        Off
+                                    </CheckboxCards.Item>
+                                    <CheckboxCards.Item value="2" disabled>
+                                        On
+                                    </CheckboxCards.Item>
+                                </CheckboxCards.Root>
                             </Flex>
                         </Tabs.Content>
                     </Box>
