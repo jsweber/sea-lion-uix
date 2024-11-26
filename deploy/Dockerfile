@@ -19,7 +19,7 @@ RUN pnpm build-storybook
 FROM nginx:1.21-alpine
 COPY --from=builder /build/storybook-static /usr/share/nginx/html
 
-ARG deployDir=deploy
-COPY ./${deployDir}/nginx/conf.d /etc/nginx/conf.d
+ARG deployDir=.
+COPY ./deploy/nginx/conf.d /etc/nginx/conf.d
 RUN /bin/cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo 'Asia/Shanghai' > /etc/timezone
 EXPOSE 80/TCP
