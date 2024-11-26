@@ -1,5 +1,5 @@
 
-FROM dony435/pnpm:20-alpine
+FROM dony435/pnpm:20-alpine AS builder
 WORKDIR /build/
 ADD ./ /build/
 
