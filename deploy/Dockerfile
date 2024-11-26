@@ -6,7 +6,7 @@ ADD ./ /build/
 ARG npm_registry
 # RUN rm package-lock.json
 # RUN rm -rf node_modules
-RUN pnpm install --registry=https://nexus.openxlab.org.cn/repository/npm-all
+RUN pnpm install --registry=https://registry.npmmirror.com/
 
 # RUN rm -rf node_modules
 # RUN npm install
