@@ -12,6 +12,7 @@ RUN pnpm install --registry=https://registry.npmmirror.com/
 # RUN npm install
 ARG env=dev
 #RUN npm run build:${env}
+RUN pnpm build:theme
 RUN pnpm build-storybook
 
 
