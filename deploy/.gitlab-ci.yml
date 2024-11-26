@@ -11,4 +11,4 @@ variables:
 
 include:
   - project: devops/ci-templates
-    file: /templates/aliyun-xlab.yml
+    file: /templates/aliyun-puyu.yml
