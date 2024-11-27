@@ -1,5 +1,6 @@
 
-FROM dony435/pnpm:20-alpine AS builder
+#FROM dony435/pnpm:20-alpine AS builder
+FROM eng-center-registry.cn-shanghai.cr.aliyuncs.com/cloud/nodejs20_pnpm AS builder
 WORKDIR /build/
 ADD ./ /build/
 

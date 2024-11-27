@@ -20,11 +20,11 @@ import AntdImage from './images/antd.jpg';
 import ArcoImage from './images/arco.jpg';
 import radixImage from './images/radix.jpg';
 import varleftImage from './images/varleft.jpg';
+import logoImage from './images/logo.svg';
+import logoStaticImage from './images/logo-static.svg';
 import v0Image from './images/v0.jpg';
 
 import "./index.less";
-
-console.log(App);
 
 interface WebPlaygroundProps {
     mode?: 'development' | 'production';
@@ -42,13 +42,17 @@ const WebPlayground: FC<WebPlaygroundProps> = ({ mode }) => {
                 />
                 <Container>
                     <header className="wp-header">
-                        <Heading>Sea-lion-uix</Heading>
+                        <Heading>
+                            <div>
+                                <img src={logoImage} width="380" />
+                            </div>
+                        </Heading>
 
                         <Flex gap="3" justify="center" className="wp-bage-wrapper">
                             <Badge color="orange">独立组件包</Badge>
                             <Badge color="blue">Theme & headless</Badge>
                             <Badge color="green">Theme面板</Badge>
-                            <Badge color="sky">组件易于修改</Badge>
+                            <Badge color="sky">组件使用灵活</Badge>
                             <Badge color="red">符合团队技术栈</Badge>
                         </Flex>
                         <div className="wp-theme-float">
@@ -160,15 +164,15 @@ const WebPlayground: FC<WebPlaygroundProps> = ({ mode }) => {
                                     </Table.Row>
                                     <Table.Row>
                                         <Table.RowHeaderCell>
-                                            Sea-lion-uix
+                                            <img src={logoStaticImage} alt="sealion-logo" className="wp-ui-logo" width="300" />
                                         </Table.RowHeaderCell>
-                                        <Table.Cell><Checkbox /></Table.Cell>
-                                        <Table.Cell><Checkbox defaultChecked /></Table.Cell>
-                                        <Table.Cell><Checkbox defaultChecked /></Table.Cell>
-                                        <Table.Cell><Checkbox defaultChecked /></Table.Cell>
-                                        <Table.Cell>一般</Table.Cell>
-                                        <Table.Cell>容易</Table.Cell>
-                                        <Table.Cell>4</Table.Cell>
+                                        <Table.Cell className="wp-cell"><Checkbox /></Table.Cell>
+                                        <Table.Cell className="wp-cell"><Checkbox defaultChecked /></Table.Cell>
+                                        <Table.Cell className="wp-cell"><Checkbox defaultChecked /></Table.Cell>
+                                        <Table.Cell className="wp-cell"><Checkbox defaultChecked /></Table.Cell>
+                                        <Table.Cell className="wp-cell">一般</Table.Cell>
+                                        <Table.Cell className="wp-cell">容易</Table.Cell>
+                                        <Table.Cell className="wp-cell">4</Table.Cell>
                                     </Table.Row>
                                 </Table.Body>
                             </Table.Root>
@@ -182,7 +186,7 @@ const WebPlayground: FC<WebPlaygroundProps> = ({ mode }) => {
                             <div className="sub-block-section">
                                 <Heading as="h5">安装</Heading>
                                 <div>
-                                    x目前不支持全量安装，仅支持按需安装，即选择自己需要的组件安装，
+                                    x目前不支持全量安装，仅支持按需安装，即安装自己需要的组件，
                                     例如安装Button组件：<Code variant="soft">pnpm install @sea-lion/react-button</Code>
                                 </div>
                                 <div>
@@ -241,34 +245,34 @@ const WebPlayground: FC<WebPlaygroundProps> = ({ mode }) => {
                             <App />
                             <TextArea rows={30} value={
                                 `
-    <div className="cascader-container">
-      <h2 className="cascader-title">Cascader Component</h2>
-      <Popover.Root open={isOpen} onOpenChange={setIsOpen}>
-        <Popover.Trigger className="cascader-trigger">
-          {selectedOptions.length > 0
-            ? selectedOptions.map(opt => opt.label).join(' > ')
-            : 'Select options'}
-          <ChevronDownIcon />
-        </Popover.Trigger>
-        <Popover.Portal>
-          <Popover.Content className="cascader-content" sideOffset={5}>
-            {renderLevels().map((levelOptions, index) => (
-              <div key={index} className="cascader-level">
-                {levelOptions.map((option) => (
-                  <div
-                    key={option.value}
-                    onClick={() => handleSelect(option, index)}
-                  >
-                    {option.label}
-                    {option.children && <ChevronRightIcon />}
-                  </div>
-                ))}
-              </div>
-            ))}
-          </Popover.Content>
-        </Popover.Portal>
-      </Popover.Root>
-    </div>
+                                    <div className="cascader-container">
+                                        <h2 className="cascader-title">Cascader Component</h2>
+                                        <Popover.Root open={isOpen} onOpenChange={setIsOpen}>
+                                            <Popover.Trigger className="cascader-trigger">
+                                            {selectedOptions.length > 0
+                                                ? selectedOptions.map(opt => opt.label).join(' > ')
+                                                : 'Select options'}
+                                            <ChevronDownIcon />
+                                            </Popover.Trigger>
+                                            <Popover.Portal>
+                                            <Popover.Content className="cascader-content" sideOffset={5}>
+                                                {renderLevels().map((levelOptions, index) => (
+                                                <div key={index} className="cascader-level">
+                                                    {levelOptions.map((option) => (
+                                                    <div
+                                                        key={option.value}
+                                                        onClick={() => handleSelect(option, index)}
+                                                    >
+                                                        {option.label}
+                                                        {option.children && <ChevronRightIcon />}
+                                                    </div>
+                                                    ))}
+                                                </div>
+                                                ))}
+                                            </Popover.Content>
+                                            </Popover.Portal>
+                                        </Popover.Root>
+                                    </div>
                                 `
                             } />
                             <img src={v0Image} width="100%" />

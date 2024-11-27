@@ -105,6 +105,9 @@
             "@sea-lion/react-code": [
                 "./packages/react/code/src"
             ],
+            "@sea-lion/react-context-menu": [
+                "./packages/react/context-menu/src"
+            ],
             "@sea-lion/react-container": [
                 "./packages/react/container/src"
             ],
