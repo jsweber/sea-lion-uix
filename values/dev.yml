@@ -18,5 +18,5 @@ ingress:
   domain: sealionui.dev.openxlab.org.cn
   path: /
   paths: []   # read paths first, if not set or empty, use `path`
-  # https: false
-  # secretName: generic.openxlab.org.cn  # when https=true, use this secret as tls
+  https: true
+  secretName: dev.openxlab.org.cn-https  # when https=true, use this secret as tls
