@@ -1,0 +1,22 @@
+container:
+  port: 80
+  resources: 
+    requests:
+      cpu: 50m
+      memory: 200Mi
+    limits:
+      cpu: 1
+      memory: 1000Mi
+  env: {}
+
+service:
+  port: 8090
+
+ingress:
+  enabled: true
+  ingressClassName: nginx
+  domain: sealionui.dev.openxlab.org.cn
+  path: /
+  paths: []   # read paths first, if not set or empty, use `path`
+  https: true
+  secretName: dev.openxlab.org.cn-https  # when https=true, use this secret as tls

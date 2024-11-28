@@ -1,0 +1,49 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: __service-deploy
+  namespace: cloud-__env
+spec:
+  selector:
+    matchLabels:
+      app: __service
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: __service
+    spec:
+      containers:
+        - name: __service
+          image: __harbor_url_prod/__project/__service:__imagetag
+          ports:
+            - containerPort: __port
+          resources:
+            requests:
+              cpu: 50m
+              memory: 200Mi
+            limits:
+              cpu: 1
+              memory: 1000Mi
+          env:
+            - name: env
+              value: "__env"
+            - name: aliyun_logs_cloud-prod
+              value: stdout
+      imagePullSecrets:
+        - name: __imagesecret
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: __service-service
+  namespace: cloud-__env
+spec:
+  type: ClusterIP
+  selector:
+    app: __service
+  ports:
+    - protocol: TCP
+      name: http
+      port: __port
+      targetPort: __port

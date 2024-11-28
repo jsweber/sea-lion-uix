@@ -1,0 +1,14 @@
+variables:
+  SERVICE_NAME: sea-lion-uix-doc
+  PROJECT: cloud
+  IMAGE_PULL_SECRET: regcred-vpc
+  DOCKERFILE: ./deploy/Dockerfile
+  DEPLOY_DIR: .
+
+  PROD_NAMESPACE: cloud  # cloud-prod/cloud
+
+  RUNNER_TAG: ecs
+
+include:
+  - project: devops/ci-templates
+    file: /templates/aliyun-puyu.yml

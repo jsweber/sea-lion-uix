@@ -1,0 +1,1030 @@
+import { FC } from 'react';
+import { MagnifyingGlassIcon } from "@radix-ui/react-icons";
+import { Box } from '@sea-lion/react-box';
+import * as Tabs from '@sea-lion/react-tab';
+import { Flex } from '@sea-lion/react-flex';
+import { Avatar } from '@sea-lion/react-avatar';
+import { Button } from '@sea-lion/react-button';
+import * as DropdownMenu from '@sea-lion/react-dropdown-menu';
+import { Text } from '@sea-lion/react-text';
+import { Card } from '@sea-lion/react-card';
+import { Inset } from '@sea-lion/react-inset';
+import { Checkbox } from '@sea-lion/react-checkbox';
+import { Switch } from '@sea-lion/react-switch';
+import { TextArea } from '@sea-lion/react-text-area';
+import { Radio } from '@sea-lion/react-radio';
+import { Grid } from '@sea-lion/react-grid';
+import * as Input from '@sea-lion/react-input';
+import { Slider } from '@sea-lion/react-slider';
+import * as RadioCards from '@sea-lion/react-radio-card';
+import { IconButton } from '@sea-lion/react-icon-button';
+import * as CheckboxCards from '@sea-lion/react-checkbox-cards';
+
+import AvatarImage from './images/avatar.jpg';
+import NazaImage from './images/naza.jpg';
+
+interface ComponentsDemoProps {
+    mode?: 'development' | 'production';
+}
+
+const ComponentsDemo: FC<ComponentsDemoProps> = ({ mode }) => {
+
+
+    return (
+        <>
+            <div className="wp-comp-section">
+                <Tabs.Root defaultValue="1">
+                    <Tabs.List>
+                        <Tabs.Trigger value="1">不同尺寸的头像</Tabs.Trigger>
+                        <Tabs.Trigger value="2">不同颜色主题的头像</Tabs.Trigger>
+                        <Tabs.Trigger value="3">不同圆角的头像</Tabs.Trigger>
+                    </Tabs.List>
+                    <Box pt="3">
+                        <Tabs.Content value="1">
+                            <Flex gap="20px">
+                                <Avatar
+                                    size="1"
+                                    src={AvatarImage}
+                                    fallback="A"
+                                />
+                                <Avatar
+                                    size="2"
+                                    src={AvatarImage}
+                                    fallback="A"
+                                />
+                                <Avatar
+                                    size="3"
+                                    src={AvatarImage}
+                                    fallback="A"
+                                />
+                                <Avatar
+                                    size="4"
+                                    src={AvatarImage}
+                                    fallback="A"
+                                />
+                                <Avatar
+                                    size="5"
+                                    src={AvatarImage}
+                                    fallback="A"
+                                />
+                                <Avatar
+                                    size="6"
+                                    src={AvatarImage}
+                                    fallback="A"
+                                />
+                                <Avatar
+                                    size="7"
+                                    src={AvatarImage}
+                                    fallback="A"
+                                />
+                                <Avatar
+                                    size="8"
+                                    src={AvatarImage}
+                                    fallback="A"
+                                />
+                            </Flex>
+                        </Tabs.Content>
+
+                        <Tabs.Content value="2">
+                            <Flex gap="20px">
+                                <Avatar variant="solid" color="indigo" fallback="A" />
+                                <Avatar variant="solid" color="cyan" fallback="A" />
+                                <Avatar variant="solid" color="orange" fallback="A" />
+                                <Avatar variant="solid" color="crimson" fallback="A" />
+                            </Flex>
+                        </Tabs.Content>
+
+                        <Tabs.Content value="3">
+                            <Flex gap="20px">
+                                <Avatar radius="none" fallback="A" />
+                                <Avatar radius="large" fallback="A" />
+                                <Avatar radius="full" fallback="A" />
+                            </Flex>
+                        </Tabs.Content>
+                    </Box>
+                </Tabs.Root>
+            </div>
+            <div className="wp-comp-section">
+                <Tabs.Root defaultValue="1">
+                    <Tabs.List>
+                        <Tabs.Trigger value="1">不同尺寸的IconButton</Tabs.Trigger>
+                        <Tabs.Trigger value="2">不同颜色的IconButton</Tabs.Trigger>
+                        <Tabs.Trigger value="3">不同圆角的IconButton</Tabs.Trigger>
+                        <Tabs.Trigger value="4">loading的IconButton</Tabs.Trigger>
+                    </Tabs.List>
+                    <Box pt="3">
+                        <Tabs.Content value="1">
+                            <Flex align="center" gap="3">
+                                <IconButton size="1" variant="soft">
+                                    <MagnifyingGlassIcon width="15" height="15" />
+                                </IconButton>
+
+                                <IconButton size="2" variant="soft">
+                                    <MagnifyingGlassIcon width="18" height="18" />
+                                </IconButton>
+
+                                <IconButton size="3" variant="soft">
+                                    <MagnifyingGlassIcon width="22" height="22" />
+                                </IconButton>
+                            </Flex>
+                        </Tabs.Content>
+
+                        <Tabs.Content value="2">
+                            <Flex gap="3">
+                                <IconButton color="crimson" variant="soft">
+                                    <MagnifyingGlassIcon width="18" height="18" />
+                                </IconButton>
+                                <IconButton color="indigo" variant="soft">
+                                    <MagnifyingGlassIcon width="18" height="18" />
+                                </IconButton>
+                                <IconButton color="grass" variant="soft">
+                                    <MagnifyingGlassIcon width="18" height="18" />
+                                </IconButton>
+                                <IconButton color="orange" variant="soft">
+                                    <MagnifyingGlassIcon width="18" height="18" />
+                                </IconButton>
+                            </Flex>
+                        </Tabs.Content>
+
+                        <Tabs.Content value="3">
+                            <Flex gap="3">
+                                <IconButton radius="none" variant="soft">
+                                    <MagnifyingGlassIcon width="18" height="18" />
+                                </IconButton>
+                                <IconButton radius="large" variant="soft">
+                                    <MagnifyingGlassIcon width="18" height="18" />
+                                </IconButton>
+                                <IconButton radius="full" variant="soft">
+                                    <MagnifyingGlassIcon width="18" height="18" />
+                                </IconButton>
+                            </Flex>
+                        </Tabs.Content>
+                        <Tabs.Content value="4">
+                            <Flex gap="3">
+                                <IconButton loading variant="classic">
+                                    <MagnifyingGlassIcon width="18" height="18" />
+                                </IconButton>
+                                <IconButton loading variant="solid">
+                                    <MagnifyingGlassIcon width="18" height="18" />
+                                </IconButton>
+                                <IconButton loading variant="soft">
+                                    <MagnifyingGlassIcon width="18" height="18" />
+                                </IconButton>
+                                <IconButton loading variant="surface">
+                                    <MagnifyingGlassIcon width="18" height="18" />
+                                </IconButton>
+                                <IconButton loading variant="outline">
+                                    <MagnifyingGlassIcon width="18" height="18" />
+                                </IconButton>
+                            </Flex>
+                        </Tabs.Content>
+                    </Box>
+                </Tabs.Root>
+            </div>
+            <div className="wp-comp-section">
+                <Tabs.Root defaultValue="1">
+                    <Tabs.List>
+                        <Tabs.Trigger value="1">不同尺寸的按钮</Tabs.Trigger>
+                        <Tabs.Trigger value="2">不同颜色的按钮</Tabs.Trigger>
+                        <Tabs.Trigger value="3">不同圆角的按钮</Tabs.Trigger>
+                        <Tabs.Trigger value="4">disabled按钮</Tabs.Trigger>
+                    </Tabs.List>
+                    <Box pt="3">
+                        <Tabs.Content value="1">
+                            <Flex gap="20px">
+                                <Button size="1" color="pink">size 1</Button>
+                                <Button size="2">size 2</Button>
+                                <Button size="3">size 3</Button>
+                                <Button size="4">size 4</Button>
+                            </Flex>
+                        </Tabs.Content>
+
+                        <Tabs.Content value="2">
+                            <Flex gap="20px">
+                                <Button>default</Button>
+                                <Button color="cyan">cyan</Button>
+                                <Button color="pink">pink</Button>
+                                <Button color="brown">brown</Button>
+                            </Flex>
+                        </Tabs.Content>
+
+                        <Tabs.Content value="3">
+                            <Flex gap="20px">
+                                <Button radius="none" size="2">none</Button>
+                                <Button radius="small" size="2">small</Button>
+                                <Button radius="medium" size="2">medium</Button>
+                                <Button radius="large" size="2">large</Button>
+                                <Button radius="full" size="2">full</Button>
+                            </Flex>
+                        </Tabs.Content>
+                        <Tabs.Content value="4">
+                            <Flex gap="20px">
+                                <Button disabled onClick={() => { alert('click'); }}>disabled</Button>
+                                <Button disabled variant="classic">
+                                    disabled classic
+                                </Button>
+                            </Flex>
+                        </Tabs.Content>
+                    </Box>
+                </Tabs.Root>
+            </div>
+            <div className="wp-comp-section">
+                <div className="wp-comp-section-title">
+                    <Text>Card 使用</Text>
+                </div>
+                <Flex gap="5" align="center" >
+                    <Box maxWidth="240px">
+                        <Card size="2">
+                            <Inset clip="padding-box" side="top" pb="current">
+                                <img
+                                    src={NazaImage}
+                                    alt="Bold typography"
+                                    style={{
+                                        display: "block",
+                                        objectFit: "cover",
+                                        width: "100%",
+                                        height: 140,
+                                        backgroundColor: "var(--gray-5)",
+                                    }}
+                                />
+                            </Inset>
+                            <Text as="p" size="3">
+                                <strong>哪吒</strong> 生性善良，行侠仗义，见义勇为。
+                            </Text>
+                        </Card>
+                    </Box>
+                    <Box maxWidth="240px">
+                        <Card>
+                            <Flex gap="3" align="center">
+                                <Avatar
+                                    size="3"
+                                    src={NazaImage}
+                                    radius="full"
+                                    fallback="T"
+                                />
+                                <Box>
+                                    <Text as="div" size="2" weight="bold">
+                                        哪吒
+                                    </Text>
+                                    <Text as="div" size="2" color="gray">
+                                        一个狠人
+                                    </Text>
+                                </Box>
+                            </Flex>
+                        </Card>
+                    </Box>
+                    <Card variant="surface">
+                        <Text as="div" size="2" weight="bold">
+                            哪吒
+                        </Text>
+                        <Text as="div" color="gray" size="2">
+                            生性善良，行侠仗义，见义勇为。
+                        </Text>
+                    </Card>
+                </Flex>
+            </div>
+            <div className="wp-comp-section">
+                <Tabs.Root defaultValue="1">
+                    <Tabs.List>
+                        <Tabs.Trigger value="1">不同大小的Input</Tabs.Trigger>
+                        <Tabs.Trigger value="2">不同颜色的Input</Tabs.Trigger>
+                        <Tabs.Trigger value="3">不同圆角的Input</Tabs.Trigger>
+                        <Tabs.Trigger value="4">disabled Input</Tabs.Trigger>
+                    </Tabs.List>
+                    <Box pt="3">
+                        <Tabs.Content value="1">
+                            <Flex direction="column" gap="3">
+                                <Box maxWidth="200px">
+                                    <Input.Root size="1" placeholder="Search the docs…" />
+                                </Box>
+                                <Box maxWidth="250px">
+                                    <Input.Root size="2" placeholder="Search the docs…" />
+                                </Box>
+                                <Box maxWidth="300px">
+                                    <Input.Root size="3" placeholder="Search the docs…" />
+                                </Box>
+                            </Flex>
+                        </Tabs.Content>
+
+                        <Tabs.Content value="2">
+                            <Flex direction="column" gap="3" maxWidth="250px">
+                                <Input.Root
+                                    color="indigo"
+                                    variant="soft"
+                                    placeholder="Search the docs…"
+                                />
+                                <Input.Root color="green" variant="soft" placeholder="Search the docs…" />
+                                <Input.Root color="red" variant="soft" placeholder="Search the docs…" />
+                            </Flex>
+                        </Tabs.Content>
+
+                        <Tabs.Content value="3">
+                            <Flex direction="column" gap="3" maxWidth="250px">
+                                <Input.Root radius="none" placeholder="Search the docs…" />
+                                <Input.Root radius="large" placeholder="Search the docs…" />
+                                <Input.Root radius="full" placeholder="Search the docs…" />
+                            </Flex>
+                        </Tabs.Content>
+                        <Tabs.Content value="4">
+                            <Flex direction="column" gap="3">
+                                <Box maxWidth="250px">
+                                    <Input.Root size="2" placeholder="Search the docs…" disabled />
+                                </Box>
+                            </Flex>
+                        </Tabs.Content>
+                    </Box>
+                </Tabs.Root>
+            </div>
+            <div className="wp-comp-section">
+                <Tabs.Root defaultValue="1">
+                    <Tabs.List>
+                        <Tabs.Trigger value="1">不同大小的TextArea</Tabs.Trigger>
+                        <Tabs.Trigger value="2">不同颜色的TextArea</Tabs.Trigger>
+                        <Tabs.Trigger value="3">不同圆角的TextArea</Tabs.Trigger>
+                        <Tabs.Trigger value="4">可拖拽大小的TextArea</Tabs.Trigger>
+                    </Tabs.List>
+                    <Box pt="3">
+                        <Tabs.Content value="1">
+                            <Flex direction="column" gap="3">
+                                <Box maxWidth="200px">
+                                    <TextArea size="1" placeholder="Reply to comment…" />
+                                </Box>
+                                <Box maxWidth="250px">
+                                    <TextArea size="2" placeholder="Reply to comment…" />
+                                </Box>
+                                <Box maxWidth="300px">
+                                    <TextArea size="3" placeholder="Reply to comment…" />
+                                </Box>
+                            </Flex>
+                        </Tabs.Content>
+
+                        <Tabs.Content value="2">
+                            <Flex direction="column" gap="3" maxWidth="250px">
+                                <TextArea color="blue" variant="soft" placeholder="Reply to comment…" />
+                                <TextArea color="green" variant="soft" placeholder="Reply to comment…" />
+                                <TextArea color="red" variant="soft" placeholder="Reply to comment…" />
+                            </Flex>
+                        </Tabs.Content>
+
+                        <Tabs.Content value="3">
+                            <Flex direction="column" gap="3" maxWidth="250px">
+                                <TextArea radius="none" placeholder="Search the docs…" />
+                                <TextArea radius="large" placeholder="Search the docs…" />
+                                <TextArea radius="full" placeholder="Search the docs…" />
+                            </Flex>
+                        </Tabs.Content>
+                        <Tabs.Content value="4">
+                            <Flex direction="column" gap="3" maxWidth="250px">
+                                <TextArea resize="none" placeholder="Search the docs…" />
+                                <TextArea resize="vertical" placeholder="Search the docs…" />
+                                <TextArea resize="horizontal" placeholder="Search the docs…" />
+                                <TextArea resize="both" placeholder="Search the docs…" />
+                            </Flex>
+                        </Tabs.Content>
+                    </Box>
+                </Tabs.Root>
+            </div>
+            <div className="wp-comp-section">
+                <Tabs.Root defaultValue="1">
+                    <Tabs.List>
+                        <Tabs.Trigger value="1">不同尺寸的Slider</Tabs.Trigger>
+                        <Tabs.Trigger value="2">不同颜色的Slider</Tabs.Trigger>
+                        <Tabs.Trigger value="3">不同圆角的Slider</Tabs.Trigger>
+                        <Tabs.Trigger value="4">范围选择Slider</Tabs.Trigger>
+                    </Tabs.List>
+                    <Box pt="3">
+                        <Tabs.Content value="1">
+                            <Flex direction="column" gap="4" maxWidth="300px">
+                                <Slider defaultValue={[25]} size="1" />
+                                <Slider defaultValue={[50]} size="2" />
+                                <Slider defaultValue={[75]} size="3" />
+                            </Flex>
+                        </Tabs.Content>
+
+                        <Tabs.Content value="2">
+                            <Flex direction="column" gap="4" maxWidth="300px">
+                                <Slider defaultValue={[20]} color="indigo" />
+                                <Slider defaultValue={[40]} color="cyan" />
+                                <Slider defaultValue={[60]} color="orange" />
+                                <Slider defaultValue={[80]} color="crimson" />
+                            </Flex>
+                        </Tabs.Content>
+
+                        <Tabs.Content value="3">
+                            <Flex direction="column" gap="4" maxWidth="300px">
+                                <Slider defaultValue={[25]} radius="none" />
+                                <Slider defaultValue={[50]} radius="small" />
+                                <Slider defaultValue={[75]} radius="full" />
+                            </Flex>
+                        </Tabs.Content>
+                        <Tabs.Content value="4">
+                            <Flex gap="20px">
+                                <Slider defaultValue={[25, 75]} />
+                            </Flex>
+                        </Tabs.Content>
+                    </Box>
+                </Tabs.Root>
+            </div>
+            <div className="wp-comp-section">
+                <Tabs.Root defaultValue="1">
+                    <Tabs.List>
+                        <Tabs.Trigger value="1">不同大小的Radio</Tabs.Trigger>
+                        <Tabs.Trigger value="2">不同变化的Radio</Tabs.Trigger>
+                        <Tabs.Trigger value="3">不同颜色的Radio</Tabs.Trigger>
+                        <Tabs.Trigger value="4">Radio&Text排版</Tabs.Trigger>
+                        <Tabs.Trigger value="5">disabled Radio</Tabs.Trigger>
+                    </Tabs.List>
+                    <Box pt="3">
+                        <Tabs.Content value="1">
+                            <Flex align="center" gap="4">
+                                <Flex gap="2">
+                                    <Radio size="1" name="size-1" value="1" defaultChecked />
+                                    <Radio size="1" name="size-1" value="2" />
+                                </Flex>
+
+                                <Flex gap="2">
+                                    <Radio size="2" name="size-2" value="1" defaultChecked />
+                                    <Radio size="2" name="size-2" value="2" />
+                                </Flex>
+
+                                <Flex gap="2">
+                                    <Radio size="3" name="size-3" value="1" defaultChecked />
+                                    <Radio size="3" name="size-3" value="2" />
+                                </Flex>
+                            </Flex>
+                        </Tabs.Content>
+
+                        <Tabs.Content value="2">
+                            <Flex align="center" gap="4">
+                                <Flex gap="2">
+                                    <Radio variant="surface" name="surface" value="1" defaultChecked />
+                                    <Radio variant="surface" name="surface" value="2" />
+                                </Flex>
+
+                                <Flex gap="2">
+                                    <Radio variant="classic" name="classic" value="1" defaultChecked />
+                                    <Radio variant="classic" name="classic" value="2" />
+                                </Flex>
+
+                                <Flex gap="2">
+                                    <Radio variant="soft" name="soft" value="1" defaultChecked />
+                                    <Radio variant="soft" name="soft" value="2" />
+                                </Flex>
+                            </Flex>
+                        </Tabs.Content>
+
+                        <Tabs.Content value="3">
+                            <Grid columns="5" display="inline-grid" gap="2">
+                                <Radio color="indigo" defaultChecked value="1" />
+                                <Radio color="cyan" defaultChecked value="1" />
+                                <Radio color="orange" defaultChecked value="1" />
+                                <Radio color="crimson" defaultChecked value="1" />
+                                <Radio color="gray" defaultChecked value="1" />
+
+                                <Radio color="indigo" defaultChecked highContrast value="1" />
+                                <Radio color="cyan" defaultChecked highContrast value="1" />
+                                <Radio color="orange" defaultChecked highContrast value="1" />
+                                <Radio color="crimson" defaultChecked highContrast value="1" />
+                                <Radio color="gray" defaultChecked highContrast value="1" />
+                            </Grid>
+                        </Tabs.Content>
+                        <Tabs.Content value="4">
+                            <Flex direction="column" gap="3">
+                                <Flex align="start" direction="column" gap="1">
+                                    <Flex asChild gap="2">
+                                        <Text as="label" size="2">
+                                            <Radio size="1" name="alignment-1" value="1" defaultChecked />
+                                            Default
+                                        </Text>
+                                    </Flex>
+                                    <Flex asChild gap="2">
+                                        <Text as="label" size="2">
+                                            <Radio size="1" name="alignment-1" value="2" />
+                                            Compact
+                                        </Text>
+                                    </Flex>
+                                </Flex>
+
+                                <Flex align="start" direction="column" gap="1">
+                                    <Flex asChild gap="2">
+                                        <Text as="label" size="3">
+                                            <Radio size="2" name="alignment-2" value="1" defaultChecked />
+                                            Default
+                                        </Text>
+                                    </Flex>
+                                    <Flex asChild gap="2">
+                                        <Text as="label" size="3">
+                                            <Radio size="2" name="alignment-2" value="2" />
+                                            Compact
+                                        </Text>
+                                    </Flex>
+                                </Flex>
+
+                                <Flex align="start" direction="column" gap="1">
+                                    <Flex asChild gap="2">
+                                        <Text as="label" size="4">
+                                            <Radio size="3" name="alignment-3" value="1" defaultChecked />
+                                            Default
+                                        </Text>
+                                    </Flex>
+                                    <Flex asChild gap="2">
+                                        <Text as="label" size="4">
+                                            <Radio size="3" name="alignment-3" value="2" />
+                                            Compact
+                                        </Text>
+                                    </Flex>
+                                </Flex>
+                            </Flex>
+                        </Tabs.Content>
+                        <Tabs.Content value="5">
+                            <Flex direction="column" gap="3">
+                                <Flex align="start" direction="column" gap="1">
+                                    <Flex asChild gap="2">
+                                        <Text as="label" size="2">
+                                            <Radio name="enabled" value="1" defaultChecked />
+                                            On
+                                        </Text>
+                                    </Flex>
+                                    <Flex asChild gap="2">
+                                        <Text as="label" size="2">
+                                            <Radio name="enabled" value="2" />
+                                            Off
+                                        </Text>
+                                    </Flex>
+                                </Flex>
+
+                                <Flex align="start" direction="column" gap="1">
+                                    <Flex asChild gap="2">
+                                        <Text as="label" size="2" color="gray">
+                                            <Radio disabled name="disabled" value="1" defaultChecked />
+                                            On
+                                        </Text>
+                                    </Flex>
+                                    <Flex asChild gap="2">
+                                        <Text as="label" size="2" color="gray">
+                                            <Radio disabled name="disabled" value="2" />
+                                            Off
+                                        </Text>
+                                    </Flex>
+                                </Flex>
+                            </Flex>
+                        </Tabs.Content>
+                    </Box>
+                </Tabs.Root>
+            </div>
+            <div className="wp-comp-section">
+                <Tabs.Root defaultValue="1">
+                    <Tabs.List>
+                        <Tabs.Trigger value="1">默认样式Radio card</Tabs.Trigger>
+                        <Tabs.Trigger value="2">不同尺寸的Radio card</Tabs.Trigger>
+                        <Tabs.Trigger value="3">不同颜色的Radio card</Tabs.Trigger>
+                        <Tabs.Trigger value="4">disabled Radio card</Tabs.Trigger>
+                    </Tabs.List>
+                    <Box pt="3">
+                        <Tabs.Content value="1">
+                            <Box maxWidth="600px">
+                                <RadioCards.Root defaultValue="1" columns={{ initial: "1", sm: "3" }}>
+                                    <RadioCards.Item value="1">
+                                        <Flex direction="column" width="100%">
+                                            <Text weight="bold">8-core CPU</Text>
+                                            <Text>32 GB RAM</Text>
+                                        </Flex>
+                                    </RadioCards.Item>
+                                    <RadioCards.Item value="2">
+                                        <Flex direction="column" width="100%">
+                                            <Text weight="bold">6-core CPU</Text>
+                                            <Text>24 GB RAM</Text>
+                                        </Flex>
+                                    </RadioCards.Item>
+                                    <RadioCards.Item value="3">
+                                        <Flex direction="column" width="100%">
+                                            <Text weight="bold">4-core CPU</Text>
+                                            <Text>16 GB RAM</Text>
+                                        </Flex>
+                                    </RadioCards.Item>
+                                </RadioCards.Root>
+                            </Box>
+                        </Tabs.Content>
+
+                        <Tabs.Content value="2">
+                            <Flex align="center" gap="3">
+                                <RadioCards.Root size="1">
+                                    <RadioCards.Item value="1">8-core CPU</RadioCards.Item>
+                                </RadioCards.Root>
+
+                                <RadioCards.Root size="2">
+                                    <RadioCards.Item value="1">8-core CPU</RadioCards.Item>
+                                </RadioCards.Root>
+
+                                <RadioCards.Root size="3">
+                                    <RadioCards.Item value="1">8-core CPU</RadioCards.Item>
+                                </RadioCards.Root>
+                            </Flex>
+                        </Tabs.Content>
+
+                        <Tabs.Content value="3">
+                            <Flex direction="column" gap="3" maxWidth="200px">
+                                <RadioCards.Root defaultValue="1" color="indigo">
+                                    <RadioCards.Item value="1">8-core CPU</RadioCards.Item>
+                                </RadioCards.Root>
+
+                                <RadioCards.Root defaultValue="1" color="cyan">
+                                    <RadioCards.Item value="1">8-core CPU</RadioCards.Item>
+                                </RadioCards.Root>
+
+                                <RadioCards.Root defaultValue="1" color="orange">
+                                    <RadioCards.Item value="1">8-core CPU</RadioCards.Item>
+                                </RadioCards.Root>
+
+                                <RadioCards.Root defaultValue="1" color="crimson">
+                                    <RadioCards.Item value="1">8-core CPU</RadioCards.Item>
+                                </RadioCards.Root>
+                            </Flex>
+                        </Tabs.Content>
+                        <Tabs.Content value="4">
+                            <Flex direction="column" gap="4" maxWidth="450px">
+                                <RadioCards.Root columns="2" defaultValue="2">
+                                    <RadioCards.Item value="1">Off</RadioCards.Item>
+                                    <RadioCards.Item value="2">On</RadioCards.Item>
+                                </RadioCards.Root>
+
+                                <RadioCards.Root columns="2" defaultValue="2">
+                                    <RadioCards.Item value="1" disabled>
+                                        Off
+                                    </RadioCards.Item>
+                                    <RadioCards.Item value="2" disabled>
+                                        On
+                                    </RadioCards.Item>
+                                </RadioCards.Root>
+                            </Flex>
+                        </Tabs.Content>
+                    </Box>
+                </Tabs.Root>
+            </div>
+            <div className="wp-comp-section">
+                <Tabs.Root defaultValue="1">
+                    <Tabs.List>
+                        <Tabs.Trigger value="1">不同颜色的Switch</Tabs.Trigger>
+                        <Tabs.Trigger value="2">不同圆角的Switch</Tabs.Trigger>
+                        <Tabs.Trigger value="3">Switch & Text</Tabs.Trigger>
+                        <Tabs.Trigger value="4">disabled Switch</Tabs.Trigger>
+                        <Tabs.Trigger value="5">不同大小的Switch</Tabs.Trigger>
+                    </Tabs.List>
+                    <Box pt="3">
+                        <Tabs.Content value="1">
+                            <Flex align="center" gap="2">
+                                <Switch color="indigo" defaultChecked />
+                                <Switch color="indigo" defaultChecked highContrast />
+                                <Switch color="cyan" defaultChecked />
+                                <Switch color="cyan" defaultChecked highContrast />
+                                <Switch color="orange" defaultChecked />
+                                <Switch color="orange" defaultChecked highContrast />
+                                <Switch color="crimson" defaultChecked />
+                                <Switch color="crimson" defaultChecked highContrast />
+                                <Switch color="gray" defaultChecked />
+                                <Switch color="gray" defaultChecked highContrast />
+                            </Flex>
+                        </Tabs.Content>
+
+                        <Tabs.Content value="2">
+                            <Flex gap="20px">
+                                <Switch radius="none" defaultChecked />
+                                <Switch radius="small" defaultChecked />
+                                <Switch radius="full" defaultChecked />
+                            </Flex>
+                        </Tabs.Content>
+
+                        <Tabs.Content value="3">
+                            <Flex gap="20px">
+                                <Text as="label" size="2">
+                                    <Flex gap="2">
+                                        <Switch size="1" defaultChecked /> Sync settings
+                                    </Flex>
+                                </Text>
+
+                                <Text as="label" size="3">
+                                    <Flex gap="2">
+                                        <Switch size="2" defaultChecked /> Sync settings
+                                    </Flex>
+                                </Text>
+
+                                <Text as="label" size="4">
+                                    <Flex gap="2">
+                                        <Switch size="3" defaultChecked /> Sync settings
+                                    </Flex>
+                                </Text>
+                            </Flex>
+                        </Tabs.Content>
+                        <Tabs.Content value="4">
+                            <Flex gap="20px">
+                                <Text as="label" size="2">
+                                    <Flex gap="2">
+                                        <Switch size="1" />
+                                        Off
+                                    </Flex>
+                                </Text>
+
+                                <Text as="label" size="2">
+                                    <Flex gap="2">
+                                        <Switch size="1" defaultChecked />
+                                        On
+                                    </Flex>
+                                </Text>
+
+                                <Text as="label" size="2" color="gray">
+                                    <Flex gap="2">
+                                        <Switch size="1" disabled />
+                                        On
+                                    </Flex>
+                                </Text>
+
+                                <Text as="label" size="2" color="gray">
+                                    <Flex gap="2">
+                                        <Switch size="1" disabled defaultChecked />
+                                        Off
+                                    </Flex>
+                                </Text>
+                            </Flex>
+                        </Tabs.Content>
+                        <Tabs.Content value="5">
+                            <Flex gap="20px">
+                                <Switch size="1" defaultChecked />
+                                <Switch size="2" defaultChecked />
+                                <Switch size="3" defaultChecked />
+                            </Flex>
+                        </Tabs.Content>
+                    </Box>
+                </Tabs.Root>
+            </div>
+            <div className="wp-comp-section">
+                <Tabs.Root defaultValue="1">
+                    <Tabs.List>
+                        <Tabs.Trigger value="1">不同尺寸的Checkbox&Text</Tabs.Trigger>
+                        <Tabs.Trigger value="2">不同风格的Checkbox</Tabs.Trigger>
+                        <Tabs.Trigger value="3">不同颜色的Checkbox</Tabs.Trigger>
+                        <Tabs.Trigger value="4">不同尺寸的Checkbox</Tabs.Trigger>
+                    </Tabs.List>
+                    <Box pt="3">
+                        <Tabs.Content value="1">
+                            <Flex direction="column" gap="3">
+                                <Text as="label" size="2">
+                                    <Flex as="span" gap="2">
+                                        <Checkbox size="1" defaultChecked /> Agree to Terms and Conditions
+                                    </Flex>
+                                </Text>
+
+                                <Text as="label" size="3">
+                                    <Flex as="span" gap="2">
+                                        <Checkbox size="2" defaultChecked /> Agree to Terms and Conditions
+                                    </Flex>
+                                </Text>
+
+                                <Text as="label" size="4">
+                                    <Flex as="span" gap="2">
+                                        <Checkbox size="3" defaultChecked /> Agree to Terms and Conditions
+                                    </Flex>
+                                </Text>
+                            </Flex>
+                        </Tabs.Content>
+
+
+                        <Tabs.Content value="2">
+                            <Flex align="center" gap="4">
+                                <Flex gap="2">
+                                    <Checkbox variant="surface" defaultChecked />
+                                    <Checkbox variant="surface" />
+                                </Flex>
+
+                                <Flex gap="2">
+                                    <Checkbox variant="classic" defaultChecked />
+                                    <Checkbox variant="classic" />
+                                </Flex>
+
+                                <Flex gap="2">
+                                    <Checkbox variant="soft" defaultChecked />
+                                    <Checkbox variant="soft" />
+                                </Flex>
+                            </Flex>
+                        </Tabs.Content>
+
+                        <Tabs.Content value="3">
+                            <Flex gap="2">
+                                <Checkbox color="indigo" defaultChecked />
+                                <Checkbox color="cyan" defaultChecked />
+                                <Checkbox color="orange" defaultChecked />
+                                <Checkbox color="crimson" defaultChecked />
+                            </Flex>
+                        </Tabs.Content>
+
+                        <Tabs.Content value="4">
+                            <Flex align="center" gap="2">
+                                <Checkbox size="1" defaultChecked />
+                                <Checkbox size="2" defaultChecked />
+                                <Checkbox size="3" defaultChecked />
+                            </Flex>
+                        </Tabs.Content>
+                    </Box>
+                </Tabs.Root>
+            </div>
+            <div className="wp-comp-section">
+                <Tabs.Root defaultValue="1">
+                    <Tabs.List>
+                        <Tabs.Trigger value="1">默认CheckboxCards</Tabs.Trigger>
+                        <Tabs.Trigger value="2">不同尺寸的CheckboxCards</Tabs.Trigger>
+                        <Tabs.Trigger value="3">不同颜色的CheckboxCard</Tabs.Trigger>
+                        <Tabs.Trigger value="4">disabled CheckboxCard</Tabs.Trigger>
+                    </Tabs.List>
+                    <Box pt="3">
+                        <Tabs.Content value="1">
+                            <Box maxWidth="600px">
+                                <CheckboxCards.Root defaultValue={["1"]} columns={{ initial: "1", sm: "3" }}>
+                                    <CheckboxCards.Item value="1">
+                                        <Flex direction="column" width="100%">
+                                            <Text weight="bold">A1 Keyboard</Text>
+                                            <Text>US Layout</Text>
+                                        </Flex>
+                                    </CheckboxCards.Item>
+                                    <CheckboxCards.Item value="2">
+                                        <Flex direction="column" width="100%">
+                                            <Text weight="bold">Pro Mouse</Text>
+                                            <Text>Zero-lag wireless</Text>
+                                        </Flex>
+                                    </CheckboxCards.Item>
+                                    <CheckboxCards.Item value="3">
+                                        <Flex direction="column" width="100%">
+                                            <Text weight="bold">Lightning Mat</Text>
+                                            <Text>Wireless charging</Text>
+                                        </Flex>
+                                    </CheckboxCards.Item>
+                                </CheckboxCards.Root>
+                            </Box>
+                        </Tabs.Content>
+
+
+                        <Tabs.Content value="2">
+                            <Flex align="center" gap="3">
+                                <CheckboxCards.Root defaultValue={["1"]} size="1">
+                                    <CheckboxCards.Item value="1">Agree to Terms</CheckboxCards.Item>
+                                </CheckboxCards.Root>
+
+                                <CheckboxCards.Root defaultValue={["1"]} size="2">
+                                    <CheckboxCards.Item value="1">Agree to Terms</CheckboxCards.Item>
+                                </CheckboxCards.Root>
+
+                                <CheckboxCards.Root defaultValue={["1"]} size="3">
+                                    <CheckboxCards.Item value="1">Agree to Terms</CheckboxCards.Item>
+                                </CheckboxCards.Root>
+                            </Flex>
+                        </Tabs.Content>
+
+                        <Tabs.Content value="3">
+                            <Flex direction="column" gap="3" maxWidth="200px">
+                                <CheckboxCards.Root defaultValue={["1"]} color="indigo">
+                                    <CheckboxCards.Item value="1">Agree to Terms</CheckboxCards.Item>
+                                </CheckboxCards.Root>
+
+                                <CheckboxCards.Root defaultValue={["1"]} color="cyan">
+                                    <CheckboxCards.Item value="1">Agree to Terms</CheckboxCards.Item>
+                                </CheckboxCards.Root>
+
+                                <CheckboxCards.Root defaultValue={["1"]} color="orange">
+                                    <CheckboxCards.Item value="1">Agree to Terms</CheckboxCards.Item>
+                                </CheckboxCards.Root>
+
+                                <CheckboxCards.Root defaultValue={["1"]} color="crimson">
+                                    <CheckboxCards.Item value="1">Agree to Terms</CheckboxCards.Item>
+                                </CheckboxCards.Root>
+                            </Flex>
+                        </Tabs.Content>
+
+                        <Tabs.Content value="4">
+                            <Flex direction="column" gap="4" maxWidth="450px">
+                                <CheckboxCards.Root columns="2" defaultValue={['2']}>
+                                    <CheckboxCards.Item value="1">Off</CheckboxCards.Item>
+                                    <CheckboxCards.Item value="2">On</CheckboxCards.Item>
+                                </CheckboxCards.Root>
+
+                                <CheckboxCards.Root columns="2" defaultValue={['2']}>
+                                    <CheckboxCards.Item value="1" disabled>
+                                        Off
+                                    </CheckboxCards.Item>
+                                    <CheckboxCards.Item value="2" disabled>
+                                        On
+                                    </CheckboxCards.Item>
+                                </CheckboxCards.Root>
+                            </Flex>
+                        </Tabs.Content>
+                    </Box>
+                </Tabs.Root>
+            </div>
+            <div className="wp-comp-section">
+                <div className="wp-comp-section-title">
+                    <Text>Dropdown Menu 使用</Text>
+                </div>
+                <Flex gap="3" align="center" >
+                    <DropdownMenu.Root>
+                        <DropdownMenu.Trigger>
+                            <Button variant="soft">
+                                嵌套使用
+                                <DropdownMenu.TriggerIcon />
+                            </Button>
+                        </DropdownMenu.Trigger>
+                        <DropdownMenu.Content>
+                            <DropdownMenu.Item shortcut="⌘ E">Edit</DropdownMenu.Item>
+                            <DropdownMenu.Item shortcut="⌘ D">Duplicate</DropdownMenu.Item>
+                            <DropdownMenu.Separator />
+                            <DropdownMenu.Item shortcut="⌘ N">Archive</DropdownMenu.Item>
+
+                            <DropdownMenu.Sub>
+                                <DropdownMenu.SubTrigger>More</DropdownMenu.SubTrigger>
+                                <DropdownMenu.SubContent>
+                                    <DropdownMenu.Item>Move to project…</DropdownMenu.Item>
+                                    <DropdownMenu.Item>Move to folder…</DropdownMenu.Item>
+
+                                    <DropdownMenu.Separator />
+                                    <DropdownMenu.Item>Advanced options…</DropdownMenu.Item>
+                                </DropdownMenu.SubContent>
+                            </DropdownMenu.Sub>
+
+                            <DropdownMenu.Separator />
+                            <DropdownMenu.Item>Share</DropdownMenu.Item>
+                            <DropdownMenu.Item>Add to favorites</DropdownMenu.Item>
+                            <DropdownMenu.Separator />
+                            <DropdownMenu.Item shortcut="⌘ ⌫" color="red">
+                                Delete
+                            </DropdownMenu.Item>
+                        </DropdownMenu.Content>
+                    </DropdownMenu.Root>
+
+                    <DropdownMenu.Root>
+                        <DropdownMenu.Trigger>
+                            <Button variant="soft" color="indigo">
+                                indigo color
+                                <DropdownMenu.TriggerIcon />
+                            </Button>
+                        </DropdownMenu.Trigger>
+                        <DropdownMenu.Content variant="soft" color="indigo">
+                            <DropdownMenu.Item shortcut="⌘ E">Edit</DropdownMenu.Item>
+                            <DropdownMenu.Item shortcut="⌘ D">Duplicate</DropdownMenu.Item>
+                            <DropdownMenu.Separator />
+                            <DropdownMenu.Item shortcut="⌘ N">Archive</DropdownMenu.Item>
+                        </DropdownMenu.Content>
+                    </DropdownMenu.Root>
+
+                    <DropdownMenu.Root>
+                        <DropdownMenu.Trigger>
+                            <Button variant="soft" color="cyan">
+                                cyan color
+                                <DropdownMenu.TriggerIcon />
+                            </Button>
+                        </DropdownMenu.Trigger>
+                        <DropdownMenu.Content variant="soft" color="cyan">
+                            <DropdownMenu.Item shortcut="⌘ E">Edit</DropdownMenu.Item>
+                            <DropdownMenu.Item shortcut="⌘ D">Duplicate</DropdownMenu.Item>
+                            <DropdownMenu.Separator />
+                            <DropdownMenu.Item shortcut="⌘ N">Archive</DropdownMenu.Item>
+                        </DropdownMenu.Content>
+                    </DropdownMenu.Root>
+
+                    <DropdownMenu.Root>
+                        <DropdownMenu.Trigger>
+                            <Button variant="soft" color="orange">
+                                orange color
+                                <DropdownMenu.TriggerIcon />
+                            </Button>
+                        </DropdownMenu.Trigger>
+                        <DropdownMenu.Content variant="soft" color="orange">
+                            <DropdownMenu.Item shortcut="⌘ E">Edit</DropdownMenu.Item>
+                            <DropdownMenu.Item shortcut="⌘ D">Duplicate</DropdownMenu.Item>
+                            <DropdownMenu.Separator />
+                            <DropdownMenu.Item shortcut="⌘ N">Archive</DropdownMenu.Item>
+                        </DropdownMenu.Content>
+                    </DropdownMenu.Root>
+
+                    <DropdownMenu.Root>
+                        <DropdownMenu.Trigger>
+                            <Button variant="soft" color="crimson">
+                                crimson color
+                                <DropdownMenu.TriggerIcon />
+                            </Button>
+                        </DropdownMenu.Trigger>
+                        <DropdownMenu.Content variant="soft" color="crimson">
+                            <DropdownMenu.Item shortcut="⌘ E">Edit</DropdownMenu.Item>
+                            <DropdownMenu.Item shortcut="⌘ D">Duplicate</DropdownMenu.Item>
+                            <DropdownMenu.Separator />
+                            <DropdownMenu.Item shortcut="⌘ N">Archive</DropdownMenu.Item>
+                        </DropdownMenu.Content>
+                    </DropdownMenu.Root>
+                </Flex>
+            </div>
+        </>
+    );
+}
+
+export {
+    ComponentsDemo
+}
+
+export type {
+    ComponentsDemoProps
+}

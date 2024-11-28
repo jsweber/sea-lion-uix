@@ -1,0 +1,89 @@
+{
+  "name": "@sea-lion/react-theme",
+  "version": "0.1.0",
+  "keywords": [],
+  "author": "jsweber",
+  "license": "MIT",
+  "scripts": {
+    "dev:css": "postcss src/index.css -o dist/styles.css --watch",
+    "build:css": "pnpm build:component && pnpm build:css:index && pnpm build:css:tokens && pnpm build:css:utilities && pnpm build:css:layout",
+    "build:css:index": "postcss src/index.css -o dist/index.css",
+    "build:css:utilities": "postcss src/utilities/index.css -o dist/utilities.css",
+    "build:css:tokens": "pnpm build:css:tokens:index && pnpm build:css:tokens:base && pnpm build:css:tokens:colors",
+    "build:css:tokens:index": "postcss src/tokens/index.css -o dist/tokens.css",
+    "build:css:tokens:base": "postcss src/tokens/base.css -o dist/tokens/base.css",
+    "build:css:tokens:colors": "postcss src/tokens/colors/*.css --dir dist/tokens/colors",
+    "build:css:layout": "pnpm build:css:layout:index && pnpm build:css:layout:tokens && pnpm build:css:layout:utilities",
+    "build:css:layout:index": "postcss src/layout.css -o dist/layout.css",
+    "build:css:layout:tokens": "postcss src/tokens/layout.css -o dist/layout/tokens.css",
+    "build:css:layout:utilities": "postcss src/utilities/layout.css -o dist/layout/utilities.css",
+    "build:component": "lessc ./src/components.css ./dist/components.css"
+  },
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    },
+    "./style": {
+      "import": {
+        "default": "./dist/styles.css"
+      },
+      "require": {
+        "default": "./dist/styles.css"
+      }
+    },
+    "./*": "./*"
+  },
+  "source": "./src/index.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "dependencies": {
+    "@radix-ui/colors": "^3.0.0",
+    "@radix-ui/react-direction": "^1.1.0",
+    "@radix-ui/react-slot": "^1.1.0",
+    "@radix-ui/react-tooltip": "^1.1.3",
+    "@sea-lion/react-props": "workspace:*",
+    "autoprefixer": "^10.4.20",
+    "classnames": "*",
+    "postcss": "8.4.33",
+    "postcss-cli": "11.0.0",
+    "postcss-combine-duplicated-selectors": "10.0.3",
+    "postcss-custom-media": "10.0.2",
+    "postcss-discard-empty": "6.0.1",
+    "postcss-import": "16.0.0",
+    "postcss-nesting": "12.0.2"
+  },
+  "peerDependencies": {
+    "@types/react": "*",
+    "@types/react-dom": "*",
+    "react": "^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc",
+    "react-dom": "^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc"
+  },
+  "peerDependenciesMeta": {
+    "@types/react": {
+      "optional": true
+    },
+    "@types/react-dom": {
+      "optional": true
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "sideEffects": true,
+  "devDependencies": {
+    "less": "^4.2.0"
+  }
+}

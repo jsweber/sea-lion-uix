@@ -1,0 +1,203 @@
+{
+    "include": [
+        "packages",
+        "types",
+        "scripts"
+    ],
+    "compilerOptions": {
+        "allowJs": false,
+        "allowSyntheticDefaultImports": true,
+        "alwaysStrict": true,
+        "baseUrl": ".",
+        "declaration": true,
+        "emitDecoratorMetadata": false,
+        "esModuleInterop": true,
+        "experimentalDecorators": false,
+        "forceConsistentCasingInFileNames": true,
+        "importHelpers": true,
+        "isolatedModules": true,
+        "jsx": "react-jsx",
+        "lib": [
+            "DOM",
+            "ESNext",
+            "DOM.Iterable"
+        ],
+        "moduleResolution": "node",
+        "noEmit": true,
+        "noFallthroughCasesInSwitch": false,
+        "noImplicitAny": true,
+        "noImplicitReturns": false,
+        "noImplicitThis": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": false,
+        "pretty": true,
+        "resolveJsonModule": true,
+        "skipLibCheck": true,
+        "sourceMap": true,
+        "strict": true,
+        "strictFunctionTypes": true,
+        "strictNullChecks": true,
+        "strictPropertyInitialization": true,
+        "stripInternal": true,
+        "target": "ES2022",
+        "types": [
+            "node"
+        ],
+        "typeRoots": [
+            "./node_modules/@types",
+            "./types"
+        ],
+        "paths": {
+            "@components/*": [
+                "packages/react/*"
+            ],
+            "@sea-lion/react-theme-style": [
+                "./packages/react/theme/dist"
+            ],
+            "@sea-lion/react-alert-dialog": [
+                "./packages/react/alert-dialog/src"
+            ],
+            "@sea-lion/react-avatar": [
+                "./packages/react/avatar/src"
+            ],
+            "@sea-lion/react-badge": [
+                "./packages/react/badge/src"
+            ],
+            "@sea-lion/react-base-button": [
+                "./packages/react/base-button/src"
+            ],
+            "@sea-lion/react-base-card": [
+                "./packages/react/base-card/src"
+            ],
+            "@sea-lion/react-base-checkbox": [
+                "./packages/react/base-checkbox/src"
+            ],
+            "@sea-lion/react-base-dialog": [
+                "./packages/react/base-dialog/src"
+            ],
+            "@sea-lion/react-base-menu": [
+                "./packages/react/base-menu/src"
+            ],
+            "@sea-lion/react-base-radio": [
+                "./packages/react/base-radio/src"
+            ],
+            "@sea-lion/react-base-tab-list": [
+                "./packages/react/base-tab-list/src"
+            ],
+            "@sea-lion/react-blockquote": [
+                "./packages/react/blockquote/src"
+            ],
+            "@sea-lion/react-button": [
+                "./packages/react/button/src"
+            ],
+            "@sea-lion/react-card": [
+                "./packages/react/card/src"
+            ],
+            "@sea-lion/react-checkbox": [
+                "./packages/react/checkbox/src"
+            ],
+            "@sea-lion/react-checkbox-cards": [
+                "./packages/react/checkbox-cards/src"
+            ],
+            "@sea-lion/react-checkbox-group": [
+                "./packages/react/checkbox-group/src"
+            ],
+            "@sea-lion/react-code": [
+                "./packages/react/code/src"
+            ],
+            "@sea-lion/react-context-menu": [
+                "./packages/react/context-menu/src"
+            ],
+            "@sea-lion/react-container": [
+                "./packages/react/container/src"
+            ],
+            "@sea-lion/react-dialog": [
+                "./packages/react/dialog/src"
+            ],
+            "@sea-lion/react-dropdown-menu": [
+                "./packages/react/dropdown-menu/src"
+            ],
+            "@sea-lion/react-kbd": [
+                "./packages/react/kbd/src"
+            ],
+            "@sea-lion/react-flex": [
+                "./packages/react/flex/src"
+            ],
+            "@sea-lion/react-box": [
+                "./packages/react/box/src"
+            ],
+            "@sea-lion/react-grid": [
+                "./packages/react/grid/src"
+            ],
+            "@sea-lion/react-select": [
+                "./packages/react/select/src"
+            ],
+            "@sea-lion/react-heading": [
+                "./packages/react/heading/src"
+            ],
+            "@sea-lion/react-icon-button": [
+                "./packages/react/icon-button/src"
+            ],
+            "@sea-lion/react-input": [
+                "./packages/react/input/src"
+            ],
+            "@sea-lion/react-inset": [
+                "./packages/react/inset/src"
+            ],
+            "@sea-lion/react-popover": [
+                "./packages/react/popover/src"
+            ],
+            "@sea-lion/react-radio": [
+                "./packages/react/radio/src"
+            ],
+            "@sea-lion/react-radio-card": [
+                "./packages/react/radio-card/src"
+            ],
+            "@sea-lion/react-radio-group": [
+                "./packages/react/radio-group/src"
+            ],
+            "@sea-lion/react-icon": [
+                "./packages/react/icon/src"
+            ],
+            "@sea-lion/react-slider": [
+                "./packages/react/slider/src"
+            ],
+            "@sea-lion/react-tab": [
+                "./packages/react/tab/src"
+            ],
+            "@sea-lion/react-table": [
+                "./packages/react/table/src"
+            ],
+            "@sea-lion/react-text": [
+                "./packages/react/text/src"
+            ],
+            "@sea-lion/react-text-area": [
+                "./packages/react/text-area/src"
+            ],
+            "@sea-lion/react-tooltip": [
+                "./packages/react/tooltip/src"
+            ],
+            "@sea-lion/react-theme": [
+                "./packages/react/theme/src"
+            ],
+            "@sea-lion/react-theme-panel": [
+                "./packages/react/theme-panel/src"
+            ],
+            "@sea-lion/react-scroll-area": [
+                "./packages/react/scroll-area/src"
+            ],
+            "@sea-lion/react-spinner": [
+                "./packages/react/spinner/src"
+            ],
+            "@sea-lion/react-switch": [
+                "./packages/react/switch/src"
+            ],
+            "@sea-lion/react-props": [
+                "./packages/react/props/src"
+            ],
+            "@sea-lion/react-helpers": [
+                "./packages/react/helpers/src"
+            ]
+        }
+    }
+}

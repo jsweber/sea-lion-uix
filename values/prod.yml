@@ -1,0 +1,20 @@
+container:
+  port: 80
+  resources:
+    requests:
+      cpu: 50m
+      memory: 200Mi
+    limits:
+      cpu: 1
+      memory: 1000Mi
+  env: {}
+
+service:
+  port: 8090
+
+ingress:
+  enabled: true
+  domain: xdev.openxlab.org.cn
+  path: /
+  https: true
+  secretName: generic.openxlab.org.cn-https

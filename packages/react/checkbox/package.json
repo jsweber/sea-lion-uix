@@ -1,0 +1,58 @@
+{
+  "name": "@sea-lion/react-checkbox",
+  "version": "0.1.0",
+  "keywords": [],
+  "author": "jsweber",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    },
+    "./*": "./*"
+  },
+  "source": "./src/index.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "dependencies": {
+    "@radix-ui/react-checkbox": "^1.1.2",
+    "@radix-ui/react-use-controllable-state": "^1.1.0",
+    "@sea-lion/react-base-checkbox": "workspace:*",
+    "@sea-lion/react-helpers": "workspace:*",
+    "@sea-lion/react-props": "workspace:*"
+  },
+  "peerDependencies": {
+    "@types/react": "*",
+    "@types/react-dom": "*",
+    "classnames": "*",
+    "react": "^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc",
+    "react-dom": "^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc"
+  },
+  "peerDependenciesMeta": {
+    "@types/react": {
+      "optional": true
+    },
+    "@types/react-dom": {
+      "optional": true
+    }
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "sideEffects": true,
+  "scripts": {
+    "clean": "rm -rf dist"
+  }
+}
