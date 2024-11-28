@@ -15,7 +15,7 @@ service:
 ingress:
   enabled: true
   ingressClassName: nginx
-  domain: sealionui.dev.openxlab.org.cn
+  domain: xdev.openxlab.org.cn
   path: /
   paths: []   # read paths first, if not set or empty, use `path`
   https: true

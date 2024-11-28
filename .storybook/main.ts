@@ -15,6 +15,10 @@ function convertTsConfigPathsToWebpackAliases() {
 
 const config: StorybookConfig = {
   stories: ['../packages/react/**/*.stories.tsx', '../packages/web-playground/*.stories.tsx'],
+  docs: {
+    //👇 See the table below for the list of supported options
+    defaultName: 'Documentation',
+  },
   addons: [
     "@storybook/addon-webpack5-compiler-swc",
     "@storybook/addon-onboarding",
