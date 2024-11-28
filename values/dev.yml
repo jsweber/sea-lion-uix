@@ -19,4 +19,4 @@ ingress:
   path: /
   paths: []   # read paths first, if not set or empty, use `path`
   https: true
-  secretName: dev.openxlab.org.cn-https  # when https=true, use this secret as tls
+  secretName: generic.openxlab.org.cn-https  # when https=true, use this secret as tls
