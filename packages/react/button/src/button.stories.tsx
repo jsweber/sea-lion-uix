@@ -7,6 +7,7 @@ import { Button } from '@sea-lion/react-button';
 const meta: Meta<typeof Button> = {
     component: Button,
     title: 'Button', // 不加title就会出现文件夹，如src
+    tags: ['autodocs']
 };
 
 export default meta;
@@ -15,12 +16,85 @@ type Story = StoryObj<typeof Button>;
 
 export const ButtonWithProps: Story = {
     name: 'Button Props',
+    argTypes: {
+        asChild: {
+            control: 'boolean',
+            description: '使用chidren根元素作为组件元素，并且自身props和children props合并',
+            type: 'boolean'
+        },
+        size: {
+            control: 'inline-radio',
+            options: ['1', '2', '3', '4'],
+            description: '按钮尺寸："1" | "2" | "3" | "4"',
+        },
+        variant: {
+            control: 'inline-radio',
+            options: ['classic', 'solid', 'soft', 'surface', 'outline', 'ghost'],
+            description: '视觉变量："classic" | "solid" | "soft" | "surface" | "outline" | "ghost"',
+        },
+        // 
+        color: {
+            control: 'inline-radio',
+            options: [
+                "gray",
+                "gold",
+                "bronze",
+                "brown",
+                "yellow",
+                "amber",
+                "orange",
+                "tomato",
+                "red",
+                "ruby",
+                "crimson",
+                "pink",
+                "plum",
+                "purple",
+                "violet",
+                "iris",
+                "indigo",
+                "blue",
+                "cyan",
+                "teal",
+                "jade",
+                "green",
+                "grass",
+                "lime",
+                "mint",
+                "sky"
+            ],
+            description: '颜色："gray" | "gold" | "brown"...',
+        },
+        radius: {
+            control: 'inline-radio',
+            options: ['none', 'small', 'medium', 'large', 'full'],
+            description: '圆角："none" | "small" | "medium" | "large" | "full"',
+        },
+        highContrast: {
+            control: 'boolean',
+            description: '使用高对比度颜色',
+            type: 'boolean'
+        },
+        disabled: {
+            control: 'boolean',
+            description: '按钮禁用',
+            type: 'boolean'
+        },
+        loading: {
+            control: 'boolean',
+            description: '按钮loading态',
+            type: 'boolean'
+        }
+    },
     args: {
-        children: 'click',
-        size: '3',
+        asChild: undefined,
+        size: '2',
+        variant: 'solid',
         color: 'ruby',
         radius: 'large',
-        disabled: false,
+        highContrast: undefined,
+        disabled: undefined,
+        loading: undefined,
         onClick: () => alert('click')
     },
     render: (props) => {
@@ -28,22 +102,115 @@ export const ButtonWithProps: Story = {
             <div>
                 <Theme>
                     <div>
-                        <div className="story-book-label">通过controls面板，调整props查看效果</div>
                         <Flex>
-                            <Button {...props} />
+                            <Button {...props}>Button</Button>
                         </Flex>
                     </div>
                 </Theme>
-                <div>
-                    <div className="story-book-label">不加主题</div>
-                    <Flex>
-                        <Button>click</Button>
-                    </Flex>
-                </div>
             </div>
         );
     }
 }
+
+
+export const ButtonWithEditor: Story = {
+    name: 'Button panel',
+    argTypes: {
+        color: {
+            control: 'inline-radio',
+            options: [
+                "gray",
+                "gold",
+                "bronze",
+                "brown",
+                "yellow",
+                "amber",
+                "orange",
+                "tomato",
+                "red",
+                "ruby",
+                "crimson",
+                "pink",
+                "plum",
+                "purple",
+                "violet",
+                "iris",
+                "indigo",
+                "blue",
+                "cyan",
+                "teal",
+                "jade",
+                "green",
+                "grass",
+                "lime",
+                "mint",
+                "sky"
+            ],
+            description: '颜色："gray" | "gold" | "brown"...',
+        },
+        radius: {
+            control: 'inline-radio',
+            options: ['none', 'small', 'medium', 'large', 'full'],
+            description: '圆角："none" | "small" | "medium" | "large" | "full"',
+        },
+        highContrast: {
+            control: 'boolean',
+            description: '使用高对比度颜色',
+            type: 'boolean'
+        },
+    },
+    args: {
+        size: '2',
+        color: 'ruby',
+        radius: 'large'
+    },
+    render: (props) => {
+        return (
+            <div>
+                <Theme>
+                    <div className="story-book-container">
+                        <div className="story-book-margin-top-20">
+                            <div className="story-book-label">面性按钮</div>
+                            <Flex gap="20px">
+                                <Button {...props} variant="solid">solid button</Button>
+                                <Button {...props} variant="solid" disabled>solid button</Button>
+                                <Button {...props} variant="solid" loading>solid button</Button>
+                            </Flex>
+                        </div>
+                        <div className="story-book-margin-top-20">
+                            <div className="story-book-label">线性按钮</div>
+                            <Flex gap="20px">
+                                <Button {...props} variant="outline">outline button</Button>
+                                <Button {...props} variant="outline" disabled>outline button</Button>
+                                <Button {...props} variant="outline" loading>outline button</Button>
+                            </Flex>
+                        </div>
+                        <div className="story-book-margin-top-20">
+                            <div className="story-book-label">link按钮</div>
+                            <Flex gap="20px">
+                                <Button {...props} variant="ghost">link button</Button>
+                                <Button {...props} variant="ghost" disabled>link button</Button>
+                                <Button {...props} variant="ghost" loading>link button</Button>
+                            </Flex>
+                        </div>
+                    </div>
+                </Theme>
+            </div>
+        );
+    }
+}
+
+export const ButtonWithoutTheme = () => {
+    return (
+        <div>
+            <Flex>
+                <Button>不带主题button</Button>
+            </Flex>
+        </div>
+    );
+}
+
+ButtonWithoutTheme.storyName = '不使用Theme组件'
 
 export const ButtonStyle = () => {
     return (
