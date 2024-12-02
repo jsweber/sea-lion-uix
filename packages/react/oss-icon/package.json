@@ -1,5 +1,5 @@
 {
-  "name": "@sea-lion/react-icon",
+  "name": "@sea-lion/react-oss-icon",
   "version": "0.1.0",
   "keywords": [],
   "author": "jsweber",
@@ -21,10 +21,7 @@
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
-  "dependencies": {
-    "@radix-ui/react-icons": "^1.3.2",
-    "@sea-lion/react-helpers": "workspace:*"
-  },
+  "dependencies": {},
   "peerDependencies": {
     "@types/react": "*",
     "@types/react-dom": "*",

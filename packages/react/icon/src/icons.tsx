@@ -1,6 +1,8 @@
 import React from 'react';
+import * as RadixIcon from "@radix-ui/react-icons";
 
 import type { ComponentPropsWithout, RemovedProps } from '@sea-lion/react-helpers';
+import type * as RadixIconProps from '@radix-ui/react-icons';
 
 type IconElement = React.ElementRef<'svg'>;
 interface IconProps extends ComponentPropsWithout<'svg', RemovedProps | 'children'> { }
@@ -87,5 +89,5 @@ const ThickChevronRightIcon = React.forwardRef<IconElement, IconProps>((props, f
 });
 ThickChevronRightIcon.displayName = 'ThickChevronRightIcon';
 
-export { ChevronDownIcon, ThickCheckIcon, ThickChevronRightIcon, ThickDividerHorizontalIcon };
-export type { IconProps };
+export { ChevronDownIcon, ThickCheckIcon, ThickChevronRightIcon, ThickDividerHorizontalIcon, RadixIcon };
+export type { IconProps, RadixIconProps };

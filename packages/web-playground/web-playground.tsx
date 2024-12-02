@@ -15,6 +15,7 @@ import * as Table from '@sea-lion/react-table';
 import { ComponentsDemo } from './components-demo';
 import { App } from './v0-dev/preview';
 import { TextArea } from '@sea-lion/react-text-area';
+import { IconFont } from '@sea-lion/react-oss-icon';
 
 import AntdImage from './images/antd.jpg';
 import ArcoImage from './images/arco.jpg';
@@ -92,6 +93,9 @@ const WebPlayground: FC<WebPlaygroundProps> = ({ mode }) => {
 
                         </div>
                     </div>
+                    <IconFont icon="icon-CompassionOutlined" />
+                    <IconFont className="spin" style={{ fontSize: 32, color: 'grey' }} icon="icon-RefreshOutlined" />
+                    <IconFont icon="icon-cuowu1" style={{ fontSize: '16px', lineHeight: 1, color: '#464A53' }} />
                     <div>
                         <Blockquote size="5">
                             同行对比

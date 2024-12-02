@@ -60,6 +60,9 @@
             "@sea-lion/react-avatar": [
                 "./packages/react/avatar/src"
             ],
+            "@sea-lion/react-aspect-ratio": [
+                "./packages/react/aspect-ratio/src"
+            ],
             "@sea-lion/react-badge": [
                 "./packages/react/badge/src"
             ],
@@ -176,6 +179,9 @@
             ],
             "@sea-lion/react-icon": [
                 "./packages/react/icon/src"
+            ],
+            "@sea-lion/react-oss-icon": [
+                "./packages/react/oss-icon/src"
             ],
             "@sea-lion/react-slider": [
                 "./packages/react/slider/src"

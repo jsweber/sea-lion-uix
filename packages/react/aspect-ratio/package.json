@@ -1,5 +1,5 @@
 {
-  "name": "@sea-lion/react-icon",
+  "name": "@sea-lion/react-aspect-ratio",
   "version": "0.1.0",
   "keywords": [],
   "author": "jsweber",
@@ -22,13 +22,11 @@
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "dependencies": {
-    "@radix-ui/react-icons": "^1.3.2",
-    "@sea-lion/react-helpers": "workspace:*"
+    "@radix-ui/react-aspect-ratio": "^1.1.0"
   },
   "peerDependencies": {
     "@types/react": "*",
     "@types/react-dom": "*",
-    "classnames": "*",
     "react": "^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc",
     "react-dom": "^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc"
   },
@@ -40,14 +38,14 @@
       "optional": true
     }
   },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/",
-    "access": "public"
-  },
   "files": [
     "dist",
     "README.md"
   ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
   "sideEffects": true,
   "scripts": {
     "clean": "rm -rf dist"
