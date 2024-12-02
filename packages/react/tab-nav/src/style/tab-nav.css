@@ -1,0 +1,5 @@
+@import '../../../base-tab-list/src/style/index.less';
+
+.rt-TabNavItem {
+  display: flex;
+}

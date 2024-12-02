@@ -93,6 +93,9 @@
             "@sea-lion/react-card": [
                 "./packages/react/card/src"
             ],
+            "@sea-lion/react-callout": [
+                "./packages/react/callout/src"
+            ],
             "@sea-lion/react-checkbox": [
                 "./packages/react/checkbox/src"
             ],
@@ -110,6 +113,9 @@
             ],
             "@sea-lion/react-container": [
                 "./packages/react/container/src"
+            ],
+            "@sea-lion/react-data-list": [
+                "./packages/react/data-list/src"
             ],
             "@sea-lion/react-dialog": [
                 "./packages/react/dialog/src"
@@ -135,6 +141,9 @@
             "@sea-lion/react-heading": [
                 "./packages/react/heading/src"
             ],
+            "@sea-lion/react-hover-card": [
+                "./packages/react/hover-card/src"
+            ],
             "@sea-lion/react-icon-button": [
                 "./packages/react/icon-button/src"
             ],
@@ -144,8 +153,14 @@
             "@sea-lion/react-inset": [
                 "./packages/react/inset/src"
             ],
+            "@sea-lion/react-link": [
+                "./packages/react/link/src"
+            ],
             "@sea-lion/react-popover": [
                 "./packages/react/popover/src"
+            ],
+            "@sea-lion/react-progress": [
+                "./packages/react/progress/src"
             ],
             "@sea-lion/react-radio": [
                 "./packages/react/radio/src"
@@ -156,6 +171,9 @@
             "@sea-lion/react-radio-group": [
                 "./packages/react/radio-group/src"
             ],
+            "@sea-lion/react-reset": [
+                "./packages/react/reset/src"
+            ],
             "@sea-lion/react-icon": [
                 "./packages/react/icon/src"
             ],
@@ -164,6 +182,9 @@
             ],
             "@sea-lion/react-tab": [
                 "./packages/react/tab/src"
+            ],
+            "@sea-lion/react-tab-nav": [
+                "./packages/react/tab-nav/src"
             ],
             "@sea-lion/react-table": [
                 "./packages/react/table/src"
@@ -191,6 +212,18 @@
             ],
             "@sea-lion/react-switch": [
                 "./packages/react/switch/src"
+            ],
+            "@sea-lion/react-segmented-control": [
+                "./packages/react/segmented-control/src"
+            ],
+            "@sea-lion/react-separator": [
+                "./packages/react/separator/src"
+            ],
+            "@sea-lion/react-skeleton": [
+                "./packages/react/skeleton/src"
+            ],
+            "@sea-lion/react-section": [
+                "./packages/react/section/src"
             ],
             "@sea-lion/react-props": [
                 "./packages/react/props/src"

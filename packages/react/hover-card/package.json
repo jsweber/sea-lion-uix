@@ -1,5 +1,5 @@
 {
-  "name": "@sea-lion/react-tab",
+  "name": "@sea-lion/react-hover-card",
   "version": "0.1.0",
   "keywords": [],
   "author": "jsweber",
@@ -22,11 +22,10 @@
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "dependencies": {
-    "@radix-ui/react-tabs": "^1.1.1",
-    "@sea-lion/react-base-tab-list": "workspace:*",
-    "@sea-lion/react-heading": "workspace:*",
+    "@radix-ui/react-hover-card": "^1.1.2",
     "@sea-lion/react-helpers": "workspace:*",
-    "@sea-lion/react-props": "workspace:*"
+    "@sea-lion/react-props": "workspace:*",
+    "@sea-lion/react-theme": "workspace:*"
   },
   "peerDependencies": {
     "@types/react": "*",

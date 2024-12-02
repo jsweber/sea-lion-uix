@@ -8,5 +8,5 @@ const tabsContentPropDefs = {
   ...asChildPropDef,
 };
 
-export { baseTabListPropDefs as tabsListPropDefs } from './base-tab-list.props';
+export { baseTabListPropDefs as tabsListPropDefs } from '@sea-lion/react-base-tab-list';
 export { tabsRootPropDefs, tabsContentPropDefs };
