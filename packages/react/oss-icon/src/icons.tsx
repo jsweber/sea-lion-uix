@@ -1,5 +1,5 @@
 'use client';
-import { FC, CSSProperties, useLayoutEffect } from 'react';
+import { FC, CSSProperties, useEffect } from 'react';
 import classNames from 'classnames';
 
 interface IconFontProps {
@@ -20,7 +20,7 @@ const IconFont: FC<IconFontProps> = ({
     ossUrl = defaultOssIconUrl
 }) => {
     const classes = classNames(className, icon, 'iconfont');
-    useLayoutEffect(() => {
+    useEffect(() => {
         try {
             const id = 'append_oss_iconfont_id';
             const iconStyleElement = document.getElementById(id);
