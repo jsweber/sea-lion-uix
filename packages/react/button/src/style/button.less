@@ -47,15 +47,23 @@
 
 @breakpoints {
     .rt-Button {
+        --button-theme-padding: var(--space-3);
+        --button-theme-height: var(--space-6);
+
         &:where(.rt-r-size-1) {
             gap: var(--space-1);
             font-size: var(--font-size-1);
             line-height: var(--line-height-1);
             letter-spacing: var(--letter-spacing-1);
+            height: calc(var(--button-theme-height) * 0.75);
 
             &:where(:not(.rt-variant-ghost)) {
-                padding-left: var(--space-2);
-                padding-right: var(--space-2);
+                padding-left: calc(var(--button-theme-padding) * 0.8);
+                padding-right: calc(var(--button-theme-padding) * 0.8);
+                /*
+                    padding-left: var(--space-2);
+                    padding-right: var(--space-2);
+                */
             }
 
             &:where(.rt-variant-ghost) {
@@ -70,10 +78,15 @@
             font-size: var(--font-size-2);
             line-height: var(--line-height-2);
             letter-spacing: var(--letter-spacing-2);
+            height: var(--button-theme-height);
 
             &:where(:not(.rt-variant-ghost)) {
-                padding-left: var(--space-3);
-                padding-right: var(--space-3);
+                padding-left: var(--button-theme-padding);
+                padding-right: var(--button-theme-padding);
+                /*
+                    padding-left: var(--space-3);
+                    padding-right: var(--space-3);
+                */
             }
 
             &:where(.rt-variant-ghost) {
@@ -88,10 +101,15 @@
             font-size: var(--font-size-3);
             line-height: var(--line-height-3);
             letter-spacing: var(--letter-spacing-3);
+            height: calc(var(--button-theme-height) * 1.25);
 
             &:where(:not(.rt-variant-ghost)) {
-                padding-left: var(--space-4);
-                padding-right: var(--space-4);
+                padding-left: calc(var(--button-theme-padding) * 1.2);
+                padding-right: calc(var(--button-theme-padding) * 1.2);
+                /*
+                    padding-left: var(--space-4);
+                    padding-right: var(--space-4);
+                */
             }
 
             &:where(.rt-variant-ghost) {
@@ -106,10 +124,15 @@
             font-size: var(--font-size-4);
             line-height: var(--line-height-4);
             letter-spacing: var(--letter-spacing-4);
+            height: calc(var(--button-theme-height) * 1.5);
 
             &:where(:not(.rt-variant-ghost)) {
-                padding-left: var(--space-5);
-                padding-right: var(--space-5);
+                padding-left: calc(var(--button-theme-padding) * 1.5);
+                padding-right: calc(var(--button-theme-padding) * 1.5);
+                /*
+                    padding-left: var(--space-5);
+                    padding-right: var(--space-5);
+                */
             }
 
             &:where(.rt-variant-ghost) {
