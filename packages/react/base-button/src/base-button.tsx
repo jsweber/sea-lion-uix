@@ -17,7 +17,9 @@ type BaseButtonOwnProps = GetPropDefTypes<typeof baseButtonPropDefs>;
 interface BaseButtonProps
   extends ComponentPropsWithout<'button', RemovedProps>,
   MarginProps,
-  BaseButtonOwnProps { }
+  BaseButtonOwnProps {
+  block?: boolean;
+}
 const BaseButton = React.forwardRef<BaseButtonElement, BaseButtonProps>((props, forwardedRef) => {
   const { size = baseButtonPropDefs.size.default } = props;
   const {
@@ -25,6 +27,7 @@ const BaseButton = React.forwardRef<BaseButtonElement, BaseButtonProps>((props, 
     children,
     asChild,
     color,
+    block,
     radius,
     disabled = props.loading,
     ...baseButtonProps
@@ -35,6 +38,7 @@ const BaseButton = React.forwardRef<BaseButtonElement, BaseButtonProps>((props, 
       // The `data-disabled` attribute enables correct styles when doing `<Button asChild disabled>`
       data-disabled={disabled || undefined}
       data-accent-color={color}
+      data-block={block}
       data-radius={radius}
       {...baseButtonProps}
       ref={forwardedRef}

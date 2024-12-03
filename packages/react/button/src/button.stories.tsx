@@ -3,6 +3,13 @@ import { Theme } from '../../theme/src';
 
 import { Flex } from '@sea-lion/react-flex';
 import { Button } from '@sea-lion/react-button';
+import { Box } from '@sea-lion/react-box';
+import { Card } from '@sea-lion/react-card';
+import { Inset } from '@sea-lion/react-inset';
+import { Text } from '@sea-lion/react-text';
+import NazaImage from '../../../web-playground/images/naza.jpg';
+
+import './style/button-story.less';
 
 const meta: Meta<typeof Button> = {
     component: Button,
@@ -90,7 +97,7 @@ export const ButtonWithProps: Story = {
         asChild: undefined,
         size: '2',
         variant: 'solid',
-        color: 'ruby',
+        color: 'blue',
         radius: 'large',
         highContrast: undefined,
         disabled: undefined,
@@ -101,10 +108,58 @@ export const ButtonWithProps: Story = {
         return (
             <div>
                 <Theme>
-                    <div>
-                        <Flex>
-                            <Button {...props}>Button</Button>
-                        </Flex>
+                    <div className="story-book-container button-example-container">
+                        <div className="button-example-box">
+                            <div className="story-book-label">面性按钮</div>
+                            <Flex gap="20px">
+                                <Button {...props} variant="solid">solid button</Button>
+                                <Button {...props} variant="solid" disabled>solid button</Button>
+                                <Button {...props} variant="solid" loading>solid button</Button>
+                            </Flex>
+                        </div>
+                        <div className="button-example-box">
+                            <div className="story-book-label">线性按钮</div>
+                            <Flex gap="20px">
+                                <Button {...props} variant="outline">outline button</Button>
+                                <Button {...props} variant="outline" disabled>outline button</Button>
+                                <Button {...props} variant="outline" loading>outline button</Button>
+                            </Flex>
+                        </div>
+                        <div className="button-example-box">
+                            <div className="story-book-label">link按钮</div>
+                            <Flex gap="20px">
+                                <Button {...props} variant="ghost">link button</Button>
+                                <Button {...props} variant="ghost" disabled>link button</Button>
+                                <Button {...props} variant="ghost" loading>link button</Button>
+                            </Flex>
+                        </div>
+                    </div>
+                    <div className="button-example-container">
+                        <Box maxWidth="240px">
+                            <Card size="2">
+                                <Inset clip="padding-box" side="top" pb="current">
+                                    <img
+                                        src={NazaImage}
+                                        alt="Bold typography"
+                                        style={{
+                                            display: "block",
+                                            objectFit: "cover",
+                                            width: "100%",
+                                            height: 140,
+                                            backgroundColor: "var(--gray-5)",
+                                        }}
+                                    />
+                                </Inset>
+                                <Text as="p" size="3">
+                                    <strong>哪吒</strong> 生性善良，行侠仗义，见义勇为。
+                                </Text>
+                                <div className="button-example-section">
+                                    <Button {...props} variant="solid" block>block button</Button>
+                                </div>
+
+                            </Card>
+                        </Box>
+
                     </div>
                 </Theme>
             </div>
