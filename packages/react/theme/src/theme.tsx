@@ -41,10 +41,10 @@ interface ThemeContextValue extends ThemeChangeHandlers {
 }
 const ThemeContext = React.createContext<ThemeContextValue | undefined>(undefined);
 
-function useThemeContext() {
+function useThemeContext(): any {
     const context = React.useContext(ThemeContext);
     if (context === undefined) {
-        throw new Error('`useThemeContext` must be used within a `Theme`');
+        console.warn('`useThemeContext` must be used within a `Theme`');
     }
     return context;
 }
