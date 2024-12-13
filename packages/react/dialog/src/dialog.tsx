@@ -36,16 +36,17 @@ interface DialogContentProps
   extends ComponentPropsWithout<typeof DialogPrimitive.Content, RemovedProps>,
   DialogContentOwnProps {
   container?: React.ComponentPropsWithoutRef<typeof DialogPrimitive.Portal>['container'];
+  overLayerClassname?: string;
 }
 const DialogContent = React.forwardRef<DialogContentElement, DialogContentProps>(
-  ({ align, ...props }, forwardedRef) => {
+  ({ align, overLayerClassname, ...props }, forwardedRef) => {
     const { align: alignPropDef, ...propDefs } = dialogContentPropDefs;
     const { className: alignClassName } = extractProps({ align }, { align: alignPropDef });
     const { className, forceMount, container, ...contentProps } = extractProps(props, propDefs);
     return (
       <DialogPrimitive.Portal container={container} forceMount={forceMount}>
         <Theme asChild>
-          <DialogPrimitive.Overlay className="rt-BaseDialogOverlay rt-DialogOverlay">
+          <DialogPrimitive.Overlay className={`rt-BaseDialogOverlay rt-DialogOverlay ${overLayerClassname}`}>
             <div className="rt-BaseDialogScroll rt-DialogScroll">
               <div
                 className={`rt-BaseDialogScrollPadding rt-DialogScrollPadding ${alignClassName}`}
