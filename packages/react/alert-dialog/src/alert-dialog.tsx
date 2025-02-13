@@ -2,7 +2,7 @@ import * as React from 'react';
 import classNames from 'classnames';
 import * as AlertDialogPrimitive from '@radix-ui/react-alert-dialog';
 
-import { alertDialogContentPropDefs } from './alert-dialog.props.js';
+import { alertDialogContentPropDefs } from './alert-dialog.props';
 import { Heading } from '@sea-lion/react-heading';
 import { Text } from '@sea-lion/react-text';
 import { Theme } from '@sea-lion/react-theme';

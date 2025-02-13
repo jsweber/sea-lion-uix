@@ -1,0 +1,142 @@
+@import '../../../base-tab-list/src/style/index.less';
+
+.rt-Tabs2 {
+  width: 100%;
+}
+
+.rt-Tabs2Nav {
+  position: relative;
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.rt-Tabs2Tab {
+  position: relative;
+  padding: 8px 0;
+  margin: 0 32px 0 0;
+  cursor: pointer;
+  color: var(--gray-11);
+  transition: color var(--tabs2-animation-duration) cubic-bezier(0.645, 0.045, 0.355, 1);
+  user-select: none;
+
+  &:hover:not(.rt-Tabs2TabDisabled) {
+    color: var(--accent-9);
+  }
+}
+
+.rt-Tabs2TabInner {
+  display: block;
+  white-space: nowrap;
+}
+
+.rt-Tabs2TabInnerHidden {
+  display: block;
+  visibility: hidden;
+  height: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.rt-Tabs2TabActive {
+  color: var(--accent-9);
+}
+
+.rt-Tabs2TabDisabled {
+  color: var(--gray-8);
+  cursor: not-allowed;
+}
+
+.rt-Tabs2Ink {
+  position: absolute;
+  height: 2px;
+  background-color: var(--accent-9);
+  pointer-events: none;
+  transition: transform var(--tabs2-animation-duration) cubic-bezier(0.645, 0.045, 0.355, 1),
+              width var(--tabs2-animation-duration) cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.rt-Tabs2Content {
+  display: flex;
+  width: 100%;
+}
+
+.rt-Tabs2Pane {
+  flex: none;
+  width: 100%;
+  outline: none;
+}
+
+// 水平布局（默认）
+.rt-orientation-horizontal {
+  .rt-Tabs2Nav {
+    flex-direction: row;
+    border-bottom: 1px solid var(--gray-6);
+  }
+
+  .rt-Tabs2Ink {
+    bottom: 0;
+    left: 0;
+  }
+}
+
+// 垂直布局
+.rt-orientation-vertical {
+  display: flex;
+
+  .rt-Tabs2Nav {
+    flex-direction: column;
+    border-right: 1px solid var(--gray-6);
+    margin-bottom: 0;
+    margin-right: 0;
+    padding: 0;
+    min-width: 120px;
+  }
+
+  .rt-Tabs2Tab {
+    margin: 0;
+    padding: 8px 0;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .rt-Tabs2Ink {
+    right: 0;
+    width: 2px;
+  }
+
+  .rt-Tabs2Content {
+    padding-left: 32px;
+  }
+}
+
+// Size variants
+.rt-r-size-1 {
+  .rt-Tabs2Tab {
+    font-size: 13px;
+  }
+}
+
+.rt-r-size-2 {
+  .rt-Tabs2Tab {
+    font-size: 14px;
+  }
+}
+
+.rt-r-size-3 {
+  .rt-Tabs2Tab {
+    font-size: 16px;
+  }
+}
+
+// High contrast
+.rt-high-contrast {
+  .rt-Tabs2Tab {
+    color: var(--gray-12);
+  }
+
+  .rt-Tabs2TabDisabled {
+    color: var(--gray-8);
+  }
+} 
