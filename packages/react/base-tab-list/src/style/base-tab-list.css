@@ -32,7 +32,8 @@
 .rt-BaseTabListTriggerInner {
   position: absolute;
 
-  :where(.rt-BaseTabListTrigger[data-state='inactive'], .rt-TabNavLink:not([data-active])) & {
+  :where(.rt-BaseTabListTrigger[data-state='inactive']),
+  :where(.rt-TabNavLink:not([data-active])) & {
     letter-spacing: var(--tab-inactive-letter-spacing);
     word-spacing: var(--tab-inactive-word-spacing);
   }

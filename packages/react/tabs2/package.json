@@ -1,0 +1,22 @@
+{
+  "name": "@sea-lion/react-tabs2",
+  "version": "0.0.1",
+  "description": "A tabs component with sliding indicator.",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "sideEffects": false,
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@radix-ui/react-tabs": "^1.0.4",
+    "@sea-lion/react-base-tab-list": "workspace:*",
+    "@sea-lion/react-helpers": "workspace:*",
+    "@sea-lion/react-props": "workspace:*",
+    "classnames": "^2.3.2"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+} 
