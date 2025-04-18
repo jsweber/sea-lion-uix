@@ -13,6 +13,7 @@ interface ChatMessage {
 
 interface ChatProps {
     messages: ChatMessage[];
+    onSend?: (message: string) => void;
 }
 
 export type {

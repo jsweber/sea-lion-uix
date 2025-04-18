@@ -14,9 +14,11 @@ type CodeOwnProps = GetPropDefTypes<typeof codePropDefs>;
 interface CodeProps
   extends ComponentPropsWithout<'code', RemovedProps>,
   MarginProps,
-  CodeOwnProps { }
+  CodeOwnProps {
+    textWrap?: 'wrap' | 'nowrap' | 'balance' | 'pretty';
+  }
 const Code = React.forwardRef<CodeElement, CodeProps>((props, forwardedRef) => {
-  const { asChild, className, color, ...codeProps } = extractProps(
+  const { asChild, className, color, textWrap, ...codeProps } = extractProps(
     props,
     codePropDefs,
     marginPropDefs
@@ -27,6 +29,7 @@ const Code = React.forwardRef<CodeElement, CodeProps>((props, forwardedRef) => {
   return (
     <Comp
       data-accent-color={resolvedColor}
+      data-text-wrap={textWrap}
       {...codeProps}
       ref={forwardedRef}
       className={classNames('rt-reset', 'rt-Code', className)}
