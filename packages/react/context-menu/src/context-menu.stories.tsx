@@ -421,31 +421,10 @@ export const ContextMenuWithSizes = () => {
                       userSelect: 'none'
                     }}
                   >
-                    <Text weight="bold">尺寸 2 (中，默认)</Text>
+                    <Text weight="bold">尺寸 2 (中，高对比度)</Text>
                   </Box>
                 </ContextMenu.Trigger>
-                <ContextMenu.Content size="2">
-                  <ContextMenu.Item>选项 1</ContextMenu.Item>
-                  <ContextMenu.Item>选项 2</ContextMenu.Item>
-                  <ContextMenu.Item>选项 3</ContextMenu.Item>
-                </ContextMenu.Content>
-              </ContextMenu.Root>
-            </Box>
-            <Box style={{ height: '200px' }}>
-              <ContextMenu.Root>
-                <ContextMenu.Trigger>
-                  <Box 
-                    style={{ 
-                      backgroundColor: 'var(--gray-a3)', 
-                      padding: '40px',
-                      cursor: 'context-menu',
-                      userSelect: 'none'
-                    }}
-                  >
-                    <Text weight="bold">尺寸 3 (大)</Text>
-                  </Box>
-                </ContextMenu.Trigger>
-                <ContextMenu.Content size="3">
+                <ContextMenu.Content size="2" highContrast>
                   <ContextMenu.Item>选项 1</ContextMenu.Item>
                   <ContextMenu.Item>选项 2</ContextMenu.Item>
                   <ContextMenu.Item>选项 3</ContextMenu.Item>
