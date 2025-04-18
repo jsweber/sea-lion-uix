@@ -4,6 +4,11 @@
   gap: var(--space-1);
 }
 
+.rt-CheckboxGroupRoot[data-orientation="horizontal"] {
+  flex-direction: row;
+  align-items: center;
+}
+
 .rt-CheckboxGroupItem {
   display: flex;
   gap: 0.5em;

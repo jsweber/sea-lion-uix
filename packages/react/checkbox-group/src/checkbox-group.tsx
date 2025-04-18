@@ -49,7 +49,7 @@ const CheckboxGroupRoot = React.forwardRef<CheckboxGroupRootElement, CheckboxGro
     }: ScopedProps<CheckboxGroupRootProps>,
     forwardedRef
   ) => {
-    const { __scopeCheckboxGroup, className, ...rootProps } = extractProps(props, marginPropDefs);
+    const { __scopeCheckboxGroup, className, orientation, ...rootProps } = extractProps(props, marginPropDefs);
     const checkboxGroupScope = useCheckboxGroupScope(__scopeCheckboxGroup);
     return (
       <CheckboxGroupProvider
@@ -62,6 +62,8 @@ const CheckboxGroupRoot = React.forwardRef<CheckboxGroupRootElement, CheckboxGro
         <CheckboxGroupPrimitive.Root
           {...checkboxGroupScope}
           {...rootProps}
+          orientation={orientation}
+          data-orientation={orientation}
           ref={forwardedRef}
           className={classNames('rt-CheckboxGroupRoot', className)}
         />

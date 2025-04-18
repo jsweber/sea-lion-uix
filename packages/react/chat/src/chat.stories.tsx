@@ -27,4 +27,4 @@ export const Basic: Story = {
       <Chat messages={sampleMessages} />
     </Theme>
   )
-}; 
+};
