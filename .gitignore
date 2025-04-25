@@ -29,3 +29,5 @@ TODO.md
 
 *storybook.log
 pnpm-lock.yaml
+.prompt/*
+.cursor/*

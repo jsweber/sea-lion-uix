@@ -1,0 +1,135 @@
+# `react-dialog`
+
+Dialog is a modal dialog component that displays content requiring user attention or action while preventing interaction with the rest of the page until the dialog is closed.
+
+## Installation
+
+```sh
+$ yarn add @sea-lion/react-dialog
+# or
+$ npm install @sea-lion/react-dialog
+```
+
+## Basic Usage
+
+```jsx
+import * as Dialog from "@sea-lion/react-dialog";
+import { Button } from "@sea-lion/react-button";
+
+export default () => (
+  <Dialog.Root>
+    <Dialog.Trigger>
+      <Button>Open Dialog</Button>
+    </Dialog.Trigger>
+    <Dialog.Content>
+      <Dialog.Title>Dialog Title</Dialog.Title>
+      <Dialog.Description>
+        This is a simple dialog example. Dialogs are used to display content
+        that requires user attention or action.
+      </Dialog.Description>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "flex-end",
+          gap: "8px",
+          marginTop: "16px",
+        }}
+      >
+        <Dialog.Close>
+          <Button variant="soft" color="gray">
+            Cancel
+          </Button>
+        </Dialog.Close>
+        <Dialog.Close>
+          <Button>Confirm</Button>
+        </Dialog.Close>
+      </div>
+    </Dialog.Content>
+  </Dialog.Root>
+);
+```
+
+## When to Use
+
+- When user confirmation is needed for important actions
+- To display information that requires immediate attention
+- To collect user input without leaving the current page
+- To show warnings or error messages that require user decisions
+- To present detailed content without navigating to a new page
+
+## Features
+
+- Supports different dialog sizes (1-4)
+- Configurable alignment (center or top aligned)
+- Customizable width, max-width, and min-width
+- Provides both controlled and uncontrolled usage
+- Built-in title, description, and close button components
+- Support for custom content and forms
+
+## API
+
+### Dialog.Root
+
+| Property     | Description                             | Type                    | Default | Version |
+| ------------ | --------------------------------------- | ----------------------- | ------- | ------- |
+| defaultOpen  | Whether the dialog is open by default   | boolean                 | false   | 0.2.1   |
+| open         | Whether the dialog is open (controlled) | boolean                 | -       | 0.2.1   |
+| onOpenChange | Callback when open state changes        | (open: boolean) => void | -       | 0.2.1   |
+| modal        | Whether it's a modal dialog             | boolean                 | true    | 0.2.1   |
+| children     | Child elements                          | ReactNode               | -       | 0.2.1   |
+
+### Dialog.Content
+
+| Property             | Description                                       | Type                                     | Default       | Version |
+| -------------------- | ------------------------------------------------- | ---------------------------------------- | ------------- | ------- |
+| align                | Dialog alignment                                  | 'start' \| 'center'                      | 'center'      | 0.2.1   |
+| size                 | Dialog size                                       | '1' \| '2' \| '3' \| '4'                 | '3'           | 0.2.1   |
+| width                | Width                                             | string                                   | -             | 0.2.1   |
+| minWidth             | Minimum width                                     | string                                   | -             | 0.2.1   |
+| maxWidth             | Maximum width                                     | string                                   | '600px'       | 0.2.1   |
+| height               | Height                                            | string                                   | -             | 0.2.1   |
+| minHeight            | Minimum height                                    | string                                   | -             | 0.2.1   |
+| maxHeight            | Maximum height                                    | string                                   | -             | 0.2.1   |
+| container            | Specify the container element to mount the dialog | HTMLElement                              | document.body | 0.2.1   |
+| forceMount           | Whether to force render the dialog                | boolean                                  | -             | 0.2.1   |
+| onOpenAutoFocus      | Callback when dialog is opened and auto-focused   | (event: Event) => void                   | -             | 0.2.1   |
+| onCloseAutoFocus     | Callback when dialog is closed and focus returns  | (event: Event) => void                   | -             | 0.2.1   |
+| onEscapeKeyDown      | Callback when ESC key is pressed                  | (event: KeyboardEvent) => void           | -             | 0.2.1   |
+| onPointerDownOutside | Callback when clicking outside the dialog         | (event: PointerDownOutsideEvent) => void | -             | 0.2.1   |
+| onInteractOutside    | Callback when interacting outside the dialog      | (event: InteractOutsideEvent) => void    | -             | 0.2.1   |
+| overLayerClassname   | Custom class name for the overlay                 | string                                   | -             | 0.2.1   |
+
+### Dialog.Trigger
+
+| Property | Description                                   | Type         | Default | Version |
+| -------- | --------------------------------------------- | ------------ | ------- | ------- |
+| children | Child element (must be a valid React element) | ReactElement | -       | 0.2.1   |
+
+### Dialog.Close
+
+| Property | Description                                   | Type         | Default | Version |
+| -------- | --------------------------------------------- | ------------ | ------- | ------- |
+| children | Child element (must be a valid React element) | ReactElement | -       | 0.2.1   |
+
+### Dialog.Title
+
+| Property | Description    | Type                                                        | Default | Version |
+| -------- | -------------- | ----------------------------------------------------------- | ------- | ------- |
+| children | Title content  | ReactNode                                                   | -       | 0.2.1   |
+| size     | Title size     | '1' \| '2' \| '3' \| '4' \| '5' \| '6' \| '7' \| '8' \| '9' | '5'     | 0.2.1   |
+| weight   | Text weight    | 'light' \| 'regular' \| 'medium' \| 'bold'                  | -       | 0.2.1   |
+| color    | Text color     | string                                                      | -       | 0.2.1   |
+| align    | Text alignment | 'left' \| 'center' \| 'right'                               | -       | 0.2.1   |
+
+### Dialog.Description
+
+| Property | Description         | Type                                                        | Default | Version |
+| -------- | ------------------- | ----------------------------------------------------------- | ------- | ------- |
+| children | Description content | ReactNode                                                   | -       | 0.2.1   |
+| size     | Text size           | '1' \| '2' \| '3' \| '4' \| '5' \| '6' \| '7' \| '8' \| '9' | '3'     | 0.2.1   |
+| weight   | Text weight         | 'light' \| 'regular' \| 'medium' \| 'bold'                  | -       | 0.2.1   |
+| color    | Text color          | string                                                      | -       | 0.2.1   |
+
+## Learn More
+
+View the [documentation](https://gitee.com/summer_sleep/ui-lib-monorepo-template) for more information.

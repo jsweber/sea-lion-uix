@@ -59,5 +59,8 @@ const Tooltip = React.forwardRef<TooltipElement, TooltipProps>((props, forwarded
 });
 Tooltip.displayName = 'Tooltip';
 
-export { Tooltip };
+export {
+  Tooltip,
+  TooltipPrimitive
+};
 export type { TooltipProps };

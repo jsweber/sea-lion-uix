@@ -11,7 +11,7 @@ import {
   contextMenuItemPropDefs,
   contextMenuCheckboxItemPropDefs,
   contextMenuRadioItemPropDefs,
-} from './context-menu.props.js';
+} from './context-menu.props';
 import { Theme, useThemeContext } from '@sea-lion/react-theme';
 import { ThickCheckIcon, ThickChevronRightIcon } from '@sea-lion/react-icon';
 import { extractProps, requireReactElement } from '@sea-lion/react-helpers';

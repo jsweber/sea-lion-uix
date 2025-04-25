@@ -14,6 +14,7 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "publish-stable": "pnpm run build && pnpm changeset && pnpm changeset publish",
+    "publish-fix": "pnpm changeset && pnpm changeset publish",
     "preinstall": "npx only-allow pnpm"
   },
   "keywords": [],
