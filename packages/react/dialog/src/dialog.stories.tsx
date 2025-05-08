@@ -7,6 +7,7 @@ import { Box } from '@sea-lion/react-box';
 import { Text } from '@sea-lion/react-text';
 import { Button } from '@sea-lion/react-button';
 import { useState, useEffect } from 'react';
+import { DialogPropsComponent } from './dialog-props-table';
 
 /**
  * ## 介绍
@@ -499,44 +500,15 @@ export const DialogWithCustomContent = () => {
 
 DialogWithCustomContent.storyName = '自定义内容对话框';
 
-// 使用React Markdown库的替代实现（如果已安装）
-export const DialogDocumentation = () => {
-  const [markdown, setMarkdown] = useState('');
-  
-  useEffect(() => {
-    // 获取readme.md的内容
-    fetch('/packages/react/dialog/readme.md')
-      .then(response => response.text())
-      .then(text => {
-        setMarkdown(text);
-      })
-      .catch(error => {
-        console.error('加载Markdown文档失败:', error);
-        setMarkdown('加载文档失败');
-      });
-  }, []);
-
+export const DialogAPI = () => {
   return (
     <Theme>
-      <div className="story-book-container">
-        <div className="story-book-margin-top-20">
-          <div className="story-book-label">对话框组件文档</div>
-          <Box p="4" style={{ maxWidth: '800px' }}>
-            {/* 如果使用ReactMarkdown库 */}
-            {/* <ReactMarkdown>{markdown}</ReactMarkdown> */}
-            
-            {/* 使用简单的dangerouslySetInnerHTML */}
-            <div 
-              className="markdown-content"
-              dangerouslySetInnerHTML={{ 
-                __html: markdown.replace(/\n/g, '<br/>') 
-              }} 
-            />
-          </Box>
-        </div>
+      <div>
+        <div className="api-table-title">Dialog props</div>
+        <DialogPropsComponent />
       </div>
     </Theme>
   );
 };
 
-DialogDocumentation.storyName = '组件文档';
+DialogAPI.storyName = '组件 API';
