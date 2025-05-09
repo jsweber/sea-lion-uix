@@ -38,6 +38,9 @@ const ScrollArea = React.forwardRef<ScrollAreaElement, ScrollAreaProps>((props, 
     ...viewportProps
   } = marginRest;
 
+  // 创建一个CSS类名，用于设置滚动条圆角
+  const radiusClassName = radius ? `rt-radius-${radius}` : '';
+
   return (
     <ScrollAreaPrimitive.Root
       type={type}
@@ -51,6 +54,7 @@ const ScrollArea = React.forwardRef<ScrollAreaElement, ScrollAreaProps>((props, 
           <ScrollAreaPrimitive.Viewport
             {...viewportProps}
             ref={forwardedRef}
+            dir={dir}
             className="rt-ScrollAreaViewport"
           >
             {children}
@@ -64,6 +68,7 @@ const ScrollArea = React.forwardRef<ScrollAreaElement, ScrollAreaProps>((props, 
               orientation="horizontal"
               className={classNames(
                 'rt-ScrollAreaScrollbar',
+                radiusClassName,
                 getResponsiveClassNames({
                   className: 'rt-r-size',
                   value: size,
@@ -81,6 +86,7 @@ const ScrollArea = React.forwardRef<ScrollAreaElement, ScrollAreaProps>((props, 
               orientation="vertical"
               className={classNames(
                 'rt-ScrollAreaScrollbar',
+                radiusClassName,
                 getResponsiveClassNames({
                   className: 'rt-r-size',
                   value: size,
