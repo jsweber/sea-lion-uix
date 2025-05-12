@@ -134,4 +134,4 @@ Input.Root 组件还支持所有标准的 margin 属性（如 `m`、`mt`、`mb` 
 
 ## 查看更多
 
-查看[文档](https://gitee.com/summer_sleep/ui-lib-monorepo-template)获取更多信息。
+查看[文档](https://www.radix-ui.com/themes/docs/theme/overview)获取更多信息。

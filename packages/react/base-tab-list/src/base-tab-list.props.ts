@@ -2,12 +2,14 @@ import { colorPropDef, highContrastPropDef } from '@sea-lion/react-props';
 
 import type { PropDef } from '@sea-lion/react-props';
 
-const sizes = ['1', '2'] as const;
+const sizes = ['1', '2', '3'] as const;
 const wrapValues = ['nowrap', 'wrap', 'wrap-reverse'] as const;
 const justifyValues = ['start', 'center', 'end'] as const;
+const variants = ['surface', 'underline'] as const;
 
 const baseTabListPropDefs = {
   size: { type: 'enum', className: 'rt-r-size', values: sizes, default: '2', responsive: true },
+  variant: { type: 'enum', className: 'rt-variant', values: variants, default: 'surface' },
   wrap: {
     type: 'enum',
     className: 'rt-r-fw',
@@ -24,6 +26,7 @@ const baseTabListPropDefs = {
   ...highContrastPropDef,
 } satisfies {
   size: PropDef<(typeof sizes)[number]>;
+  variant: PropDef<(typeof variants)[number]>;
   wrap: PropDef<(typeof wrapValues)[number]>;
   justify: PropDef<(typeof justifyValues)[number]>;
 };
