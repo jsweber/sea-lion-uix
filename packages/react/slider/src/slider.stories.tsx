@@ -20,7 +20,7 @@ import { SliderPropsComponent } from './slider-props-table';
  * - 当操作需要立即反馈时
  */
 const meta: Meta<typeof Slider> = {
-  title: 'Slider',
+  title: '数据录入/Slider',
   component: Slider,
   tags: ['autodocs'],
   parameters: {

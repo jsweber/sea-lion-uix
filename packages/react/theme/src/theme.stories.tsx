@@ -4,7 +4,7 @@ import { Theme } from '@sea-lion/react-theme';
 
 const meta: Meta<typeof Theme> = {
     component: Theme,
-    title: 'Theme'
+    title: '主题/Theme'
 };
 
 export default meta;

@@ -59,6 +59,33 @@ const config: StorybookConfig = {
         }
       }
     };
-  }
+  },
+  refs: {
+    '@chakra-ui/react': {
+      disable: true,
+    },
+  },
+  managerHead: (head) => `
+    ${head}
+    <script>
+      window.STORYBOOK_CATEGORIES = {
+        '总览': ['web-playground'],
+        '主题': ['theme'],
+        '布局': ['flex', 'container', 'grid', 'aspect-ratio'],
+        '排版': ['text', 'heading', 'blockquote', 'code'],
+        '导航': ['tabs', 'menu', 'breadcrumbs'],
+        '数据录入': ['text-area', 'input', 'checkbox', 'checkbox-cards', 'select', 'radio-group', 'switch'],
+        '数据展示': ['avatar', 'badge', 'table', 'slider'],
+        '反馈': ['alert-dialog', 'dialog', 'popover', 'toast', 'tooltip'],
+        '其他': ['*']
+      };
+    </script>
+  `,
+  previewAnnotations: (entry = []) => {
+    return [
+      ...entry,
+      require.resolve('./categoryAddon.js'),
+    ];
+  },
 };
 export default config;

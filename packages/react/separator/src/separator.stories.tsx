@@ -18,7 +18,7 @@ import { Heading } from '@sea-lion/react-heading';
  * - 需要划分不同的内容区域
  */
 const meta: Meta<typeof Separator> = {
-  title: 'Separator',
+  title: '布局/Separator',
   component: Separator,
   tags: ['autodocs'],
   parameters: {

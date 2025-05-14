@@ -16,7 +16,7 @@ import { Text } from '@sea-lion/react-text';
  */
 
 const meta = {
-  title: 'Card',
+  title: '数据展示/Card',
   component: Card,
   tags: ['autodocs'],
 } satisfies Meta<typeof Card>;

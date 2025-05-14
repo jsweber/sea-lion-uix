@@ -21,7 +21,7 @@ import { InsetPropsComponent } from './inset-props-table';
  */
 const meta: Meta<typeof Inset> = {
   component: Inset,
-  title: 'Inset',
+  title: '布局/Inset',
   tags: ['autodocs'],
   parameters: {
     docs: {

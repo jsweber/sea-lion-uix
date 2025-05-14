@@ -21,7 +21,7 @@ import { TextAreaPropsComponent } from './text-area-props-table';
  * - 需要可调整大小的文本输入区域时
  */
 const meta: Meta<typeof TextArea> = {
-  title: 'TextArea',
+  title: '数据录入/TextArea',
   component: TextArea,
   tags: ['autodocs'],
   argTypes: {

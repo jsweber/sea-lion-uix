@@ -20,7 +20,7 @@ import { TextPropsComponent } from './text-props-table';
  * - 需要处理文本溢出或截断时
  */
 const meta: Meta<typeof Text> = {
-  title: 'Text',
+  title: '数据录入/Text',
   component: Text,
   tags: ['autodocs'],
   argTypes: {

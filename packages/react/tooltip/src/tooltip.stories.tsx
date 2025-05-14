@@ -24,7 +24,7 @@ import { TooltipPropsComponent } from './tooltip-props-table';
  * - 用于展示非关键信息，不影响用户主要任务的完成
  */
 const meta: Meta<typeof Tooltip> = {
-  title: 'Tooltip',
+  title: '反馈/Tooltip',
   component: Tooltip,
   tags: ['autodocs'],
   argTypes: {

@@ -21,7 +21,7 @@ import { SelectPropsComponent } from './select-props-table';
  * - 选项需要分类展示
  */
 const meta: Meta<typeof Select.Root> = {
-  title: 'Select',
+  title: '数据录入/Select',
   component: Select.Root,
   tags: ['autodocs'],
   parameters: {

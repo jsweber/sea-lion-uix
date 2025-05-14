@@ -27,7 +27,7 @@ interface ExtendedLinkProps extends React.ComponentProps<typeof Link> {
 
 const meta: Meta<typeof Link> = {
   component: Link,
-  title: 'Link',
+  title: '排版/Link',
   tags: ['autodocs'],
   parameters: {
     docs: {

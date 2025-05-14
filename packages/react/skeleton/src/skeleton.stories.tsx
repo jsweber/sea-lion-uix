@@ -21,7 +21,7 @@ import { SkeletonPropsComponent } from './skeleton-props-table';
  * - 希望提供更好的加载反馈，而不是仅显示加载图标
  */
 const meta: Meta<typeof Skeleton> = {
-  title: 'Skeleton',
+  title: '通用/Skeleton',
   component: Skeleton,
   tags: ['autodocs'],
   parameters: {

@@ -21,7 +21,7 @@ import { SpinnerPropsComponent } from './spinner-props-table';
  * - 需要告知用户等待过程
  */
 const meta: Meta<typeof Spinner> = {
-  title: 'Spinner',
+  title: '通用/Spinner',
   component: Spinner,
   tags: ['autodocs'],
   parameters: {

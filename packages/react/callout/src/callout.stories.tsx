@@ -17,7 +17,7 @@ import { InfoCircledIcon, ExclamationTriangleIcon, CheckCircledIcon } from '@rad
  */
 
 const meta = {
-  title: 'Callout',
+  title: '反馈/Callout',
   component: Callout.Root,
   tags: ['autodocs'],
 } satisfies Meta<typeof Callout.Root>;

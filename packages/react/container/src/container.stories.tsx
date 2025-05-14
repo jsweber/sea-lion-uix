@@ -20,7 +20,7 @@ import { Heading } from '@sea-lion/react-heading';
  */
 const meta: Meta<typeof Container> = {
   component: Container,
-  title: 'Container',
+  title: '排版/Container',
   tags: ['autodocs']
 };
 

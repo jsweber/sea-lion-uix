@@ -18,7 +18,7 @@ import { InfoCircledIcon, RocketIcon, GearIcon } from '@radix-ui/react-icons';
  */
 
 const meta = {
-  title: 'CheckboxCards',
+  title: '数据录入/CheckboxCards',
   component: CheckboxCards.Root,
   tags: ['autodocs'],
 } satisfies Meta<typeof CheckboxCards.Root>;

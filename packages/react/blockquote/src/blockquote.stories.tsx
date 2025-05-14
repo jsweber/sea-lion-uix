@@ -5,7 +5,7 @@ import { Flex } from '@sea-lion/react-flex';
 import { Text } from '@sea-lion/react-text';
 
 const meta = {
-  title: 'Blockquote',
+  title: '排版/Blockquote',
   component: Blockquote,
   tags: ['autodocs'],
 } satisfies Meta<typeof Blockquote>;

@@ -24,7 +24,7 @@ import { TablePropsComponent } from './table-props-table';
  * - 需要创建不同风格的数据表格时
  */
 const meta: Meta<typeof Table.Root> = {
-  title: 'Table',
+  title: '数据展示/Table',
   component: Table.Root,
   tags: ['autodocs'],
   argTypes: {

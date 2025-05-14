@@ -25,7 +25,7 @@ import {
  * - 需要节省页面空间
  */
 const meta: Meta<typeof Tabs.Root> = {
-  title: 'Tabs',
+  title: '导航/Tabs',
   component: Tabs.Root,
   tags: ['autodocs'],
   parameters: {

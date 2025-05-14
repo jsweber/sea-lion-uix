@@ -23,7 +23,7 @@ import {
  * - 当页面需要分成多个部分时
  */
 const meta: Meta<typeof TabNav.Root> = {
-  title: 'TabNav',
+  title: '导航/TabNav',
   component: TabNav.Root,
   tags: ['autodocs'],
   parameters: {

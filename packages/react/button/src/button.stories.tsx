@@ -13,7 +13,7 @@ import './style/button-story.less';
 
 const meta: Meta<typeof Button> = {
     component: Button,
-    title: 'Button', // 不加title就会出现文件夹，如src
+    title: '通用/Button', // 不加title就会出现文件夹，如src
     tags: ['autodocs']
 };
 

@@ -20,7 +20,7 @@ import { useState } from 'react';
  * - 适用于筛选、视图切换、时间单位选择等场景
  */
 const meta: Meta<typeof SegmentedControl.Root> = {
-  title: 'SegmentedControl',
+  title: '导航/SegmentedControl',
   component: SegmentedControl.Root,
   tags: ['autodocs'],
   parameters: {

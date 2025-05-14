@@ -3,7 +3,7 @@ import { WebPlayground } from './web-playground';
 
 const meta: Meta<typeof WebPlayground> = {
     component: WebPlayground,
-    title: 'Web playground', // 不加title就会出现文件夹，如src
+    title: '总览/Web playground',
 };
 
 export default meta;

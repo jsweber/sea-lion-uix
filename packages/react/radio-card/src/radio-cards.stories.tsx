@@ -37,7 +37,7 @@ import { RadioCardsPropsComponent } from './radio-cards-props-table';
  */
 const meta: Meta<typeof RadioCards.Root> = {
   component: RadioCards.Root,
-  title: 'RadioCards',
+  title: '数据录入/RadioCards',
   tags: ['autodocs'],
   parameters: {
     docs: {

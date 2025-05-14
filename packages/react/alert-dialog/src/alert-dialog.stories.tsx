@@ -13,7 +13,7 @@ type AlertDialogProps = React.ComponentProps<typeof AlertDialog.Root> &
   >;
 
 const meta = {
-  title: 'AlertDialog',
+  title: '反馈/AlertDialog',
   component: AlertDialog.Root,
   tags: ['autodocs'],
 } satisfies Meta<typeof AlertDialog.Root>;

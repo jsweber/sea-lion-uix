@@ -5,7 +5,7 @@ import { Flex } from '@sea-lion/react-flex';
 import { Text } from '@sea-lion/react-text';
 
 const meta = {
-  title: 'Avatar',
+  title: '数据展示/Avatar',
   component: Avatar,
   tags: ['autodocs'],
 } satisfies Meta<typeof Avatar>;

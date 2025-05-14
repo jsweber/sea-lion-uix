@@ -22,7 +22,7 @@ import { RadioPropsComponent } from './radio-props-table';
  */
 const meta: Meta<typeof Radio> = {
   component: Radio,
-  title: 'Radio',
+  title: '数据录入/Radio',
   tags: ['autodocs'],
   parameters: {
     docs: {

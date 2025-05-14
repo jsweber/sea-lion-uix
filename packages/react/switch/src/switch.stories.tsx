@@ -20,7 +20,7 @@ import { SwitchPropsComponent } from './switch-props-table';
  * - 立即生效的操作
  */
 const meta: Meta<typeof Switch> = {
-  title: 'Switch',
+  title: '数据录入/Switch',
   component: Switch,
   tags: ['autodocs'],
   parameters: {

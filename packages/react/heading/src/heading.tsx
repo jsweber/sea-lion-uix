@@ -14,7 +14,9 @@ type HeadingOwnProps = GetPropDefTypes<typeof headingPropDefs>;
 interface HeadingProps
   extends ComponentPropsWithout<'h1', RemovedProps>,
   MarginProps,
-  HeadingOwnProps { }
+  HeadingOwnProps {
+  textWrap?: 'wrap' | 'nowrap' | 'balance' | 'pretty';
+}
 
 const Heading = React.forwardRef<HeadingElement, HeadingProps>((props, forwardedRef) => {
   const {
