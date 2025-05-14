@@ -21,7 +21,7 @@ import { KbdPropsComponent } from './kbd-props-table';
  */
 const meta: Meta<typeof Kbd> = {
   component: Kbd,
-  title: 'Kbd',
+  title: '排版/Kbd',
   tags: ['autodocs'],
   parameters: {
     docs: {

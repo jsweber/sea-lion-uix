@@ -5,7 +5,7 @@ import { Flex } from '@sea-lion/react-flex';
 import { Text } from '@sea-lion/react-text';
 
 const meta = {
-  title: 'Box',
+  title: '布局/Box',
   component: Box,
   tags: ['autodocs'],
 } satisfies Meta<typeof Box>;

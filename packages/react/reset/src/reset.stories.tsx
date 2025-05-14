@@ -21,7 +21,7 @@ import { ResetPropsComponent } from './reset-props-table';
  */
 const meta: Meta<typeof Reset> = {
   component: Reset,
-  title: 'Reset',
+  title: '布局/Reset',
   tags: ['autodocs'],
   parameters: {
     docs: {

@@ -4,7 +4,7 @@ import { Theme } from '@sea-lion/react-theme';
 import { Text } from '@sea-lion/react-text';
 
 const meta = {
-  title: 'AspectRatio',
+  title: '布局/AspectRatio',
   component: AspectRatio.Root,
   tags: ['autodocs'],
 } satisfies Meta<typeof AspectRatio.Root>;

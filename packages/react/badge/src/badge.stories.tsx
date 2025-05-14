@@ -5,7 +5,7 @@ import { Flex } from '@sea-lion/react-flex';
 import { Text } from '@sea-lion/react-text';
 
 const meta = {
-  title: 'Badge',
+  title: '数据展示/Badge',
   component: Badge,
   tags: ['autodocs'],
 } satisfies Meta<typeof Badge>;

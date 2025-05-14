@@ -30,9 +30,15 @@ const textPropDefs = {
   ...textWrapPropDef,
   ...colorPropDef,
   ...highContrastPropDef,
+  textAlign: { 
+    type: 'enum', 
+    className: 'rt-text-align', 
+    values: ['left', 'center', 'right'] 
+  },
 } satisfies {
   as: PropDef<(typeof as)[number]>;
   size: PropDef<(typeof sizes)[number]>;
+  textAlign: PropDef<'left' | 'center' | 'right'>;
 };
 
 export { textPropDefs };

@@ -8,7 +8,7 @@ import './style/tabs2.less';
 
 const meta: Meta<typeof Tabs2> = {
     component: Tabs2,
-    title: 'Tabs2',
+    title: '实验/Tabs2',
     tags: ['autodocs']
 };
 

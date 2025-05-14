@@ -21,7 +21,7 @@ import { ScrollAreaPropsComponent } from './scroll-area-props-table';
  */
 const meta: Meta<typeof ScrollArea> = {
   component: ScrollArea,
-  title: 'ScrollArea',
+  title: '布局/ScrollArea',
   tags: ['autodocs'],
   parameters: {
     docs: {

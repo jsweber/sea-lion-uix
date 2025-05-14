@@ -47,7 +47,7 @@ const {
  */
 const meta: Meta<typeof IconButton> = {
   component: IconButton,
-  title: 'IconButton',
+  title: '通用/IconButton',
   tags: ['autodocs'],
   parameters: {
     docs: {

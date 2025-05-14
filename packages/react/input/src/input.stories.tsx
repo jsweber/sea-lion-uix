@@ -22,7 +22,7 @@ import { InputPropsComponent } from './input-props-table';
  */
 const meta: Meta<typeof Input> = {
   component: Input.Root as any,
-  title: 'Input',
+  title: '数据录入/Input',
   tags: ['autodocs'],
   parameters: {
     docs: {
