@@ -23,7 +23,7 @@ import { GridPropsComponent } from './grid-props-table';
  */
 const meta: Meta<typeof Grid> = {
   component: Grid,
-  title: 'Grid',
+  title: '布局/Grid',
   tags: ['autodocs'],
   parameters: {
     docs: {

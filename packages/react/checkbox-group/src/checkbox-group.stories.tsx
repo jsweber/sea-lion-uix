@@ -23,7 +23,7 @@ import { useState } from 'react';
  */
 const meta: Meta<typeof CheckboxGroup.Root> = {
   component: CheckboxGroup.Root,
-  title: 'CheckboxGroup',
+  title: '数据录入/CheckboxGroup',
   tags: ['autodocs']
 };
 

@@ -24,7 +24,7 @@ import { DialogPropsComponent } from './dialog-props-table';
  */
 const meta: Meta<typeof Dialog.Root> = {
   component: Dialog.Root,
-  title: 'Dialog',
+  title: '反馈/Dialog',
   tags: ['autodocs'],
   parameters: {
     docs: {

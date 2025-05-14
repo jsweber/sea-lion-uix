@@ -23,7 +23,7 @@ import { PopoverPropsComponent } from './popover-props-table';
  * - 需要在有限空间内显示更多内容
  */
 const meta: Meta<typeof Popover.Root> = {
-  title: 'Popover',
+  title: '反馈/Popover',
   tags: ['autodocs'],
   parameters: {
     docs: {

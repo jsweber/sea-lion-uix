@@ -21,7 +21,7 @@ import { Text } from '@sea-lion/react-text';
  */
 const meta: Meta<typeof Code> = {
   component: Code,
-  title: 'Code',
+  title: '排版/Code',
   tags: ['autodocs'],
   argTypes: {
     textWrap: {

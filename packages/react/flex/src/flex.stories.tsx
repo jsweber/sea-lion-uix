@@ -22,7 +22,7 @@ import { FlexPropsComponent } from './flex-props-table';
  */
 const meta: Meta<typeof Flex> = {
   component: Flex,
-  title: 'Flex',
+  title: '布局/Flex',
   tags: ['autodocs'],
   parameters: {
     docs: {

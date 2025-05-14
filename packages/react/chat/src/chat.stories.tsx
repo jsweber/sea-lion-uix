@@ -3,7 +3,7 @@ import { Chat } from './chat';
 import { Theme } from '@sea-lion/react-theme';
 
 const meta = {
-  title: 'Chat',
+  title: '实验/Chat',
   component: Chat,
   tags: ['autodocs'],
 } satisfies Meta<typeof Chat>;

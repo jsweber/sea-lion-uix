@@ -24,7 +24,7 @@ import { ProgressPropsComponent } from './progress-props-table';
  */
 const meta: Meta<typeof Progress> = {
   component: Progress,
-  title: 'Progress',
+  title: '数据展示/Progress',
   tags: ['autodocs'],
   parameters: {
     docs: {

@@ -17,7 +17,7 @@ import { Text } from '@sea-lion/react-text';
  */
 
 const meta = {
-  title: 'Checkbox',
+  title: '数据录入/Checkbox',
   component: Checkbox,
   tags: ['autodocs'],
 } satisfies Meta<typeof Checkbox>;

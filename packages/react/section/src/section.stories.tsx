@@ -21,7 +21,7 @@ import { SectionPropsComponent } from './section-props-table';
  */
 const meta: Meta<typeof Section> = {
   component: Section,
-  title: 'Section',
+  title: '布局/Section',
   tags: ['autodocs'],
   parameters: {
     docs: {

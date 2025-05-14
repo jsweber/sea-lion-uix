@@ -21,7 +21,7 @@ import { Text } from '@sea-lion/react-text';
  */
 const meta: Meta<typeof ContextMenu.Root> = {
   component: ContextMenu.Root,
-  title: 'ContextMenu',
+  title: '数据展示/ContextMenu',
   tags: ['autodocs']
 };
 

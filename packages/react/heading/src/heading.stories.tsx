@@ -22,7 +22,7 @@ import { HeadingPropsComponent } from './heading-props-table';
  */
 const meta: Meta<typeof Heading> = {
   component: Heading,
-  title: 'Heading',
+  title: '排版/Heading',
   tags: ['autodocs'],
   parameters: {
     docs: {
@@ -80,11 +80,6 @@ export const HeadingWithProps: Story = {
     truncate: {
       control: 'boolean',
       description: '是否截断文本并显示省略号',
-    },
-    textWrap: {
-      control: 'inline-radio',
-      options: ['wrap', 'nowrap', 'balance', 'pretty'],
-      description: '文本换行行为',
     },
   },
   args: {

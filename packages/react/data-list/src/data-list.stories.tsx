@@ -20,7 +20,7 @@ import { Text } from '@sea-lion/react-text';
  */
 const meta: Meta<typeof DataList.Root> = {
   component: DataList.Root,
-  title: 'DataList',
+  title: '数据展示/DataList',
   tags: ['autodocs']
 };
 

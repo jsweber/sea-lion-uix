@@ -23,7 +23,7 @@ import { HoverCardPropsComponent } from './hover-card-props-table';
  */
 const meta: Meta<typeof HoverCard> = {
   component: HoverCard.Root as any,
-  title: 'HoverCard',
+  title: '数据录入/HoverCard',
   tags: ['autodocs'],
   parameters: {
     docs: {
