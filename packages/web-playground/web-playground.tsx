@@ -1,5 +1,5 @@
 import { FC, useState } from 'react';
-import { FaceIcon, SunIcon, StarIcon, HeartIcon, MoonIcon, MagicWandIcon, RocketIcon } from "@radix-ui/react-icons";
+import { FaceIcon, SunIcon, StarIcon, HeartIcon, MoonIcon, MagicWandIcon, RocketIcon, PaperPlaneIcon } from "@radix-ui/react-icons";
 import { ThemePanel } from '@sea-lion/react-theme-panel';
 import { Theme } from '@sea-lion/react-theme';
 import { Flex } from '@sea-lion/react-flex';
@@ -12,6 +12,7 @@ import { Checkbox } from '@sea-lion/react-checkbox';
 import { Heading } from '@sea-lion/react-heading';
 import { Text } from '@sea-lion/react-text';
 import * as Table from '@sea-lion/react-table';
+import { Kbd } from '@sea-lion/react-kbd';
 import { ComponentsDemo } from './components-demo';
 import { App } from './v0-dev/preview';
 import { TextArea } from '@sea-lion/react-text-area';
@@ -93,9 +94,19 @@ const WebPlayground: FC<WebPlaygroundProps> = ({ mode }) => {
 
                         </div>
                     </div>
-                    <IconFont icon="icon-CompassionOutlined" />
+                    {/* <IconFont icon="icon-CompassionOutlined" />
                     <IconFont className="spin" style={{ fontSize: 32, color: 'grey' }} icon="icon-RefreshOutlined" />
-                    <IconFont icon="icon-cuowu1" style={{ fontSize: '16px', lineHeight: 1, color: '#464A53' }} />
+                    <IconFont icon="icon-cuowu1" style={{ fontSize: '16px', lineHeight: 1, color: '#464A53' }} /> */}
+                    <div>
+                        <Blockquote size="5">
+                            交流
+                        </Blockquote>
+                        <div className="block-section">
+                            <Text as="p" className="wp-descr-item">
+                                <Badge color="blue"><PaperPlaneIcon /></Badge>如果对组件有任何疑问和建议，欢迎联系，<Kbd>飞书@杜晓卿。</Kbd>
+                            </Text>
+                        </div>
+                    </div>
                     <div>
                         <Blockquote size="5">
                             同行对比
