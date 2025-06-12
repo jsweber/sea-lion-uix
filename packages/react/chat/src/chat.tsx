@@ -1,7 +1,6 @@
 'use client';
 
-import { forwardRef, useState } from 'react';
-import classNames from 'classnames';
+import { useState } from 'react';
 import type { ChatProps } from './chat.props';
 import './style/index.less';
 

@@ -1,5 +1,3 @@
-import type { PropDef } from '@sea-lion/react-props';
-
 const chatPropDefs = {} satisfies {};
 
 type Role = 'user' | 'assistant' | 'system' | 'Tool';
