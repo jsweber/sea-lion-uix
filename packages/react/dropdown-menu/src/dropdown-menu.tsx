@@ -12,7 +12,7 @@ import {
   dropdownMenuCheckboxItemPropDefs,
   dropdownMenuRadioItemPropDefs,
 } from './dropdown-menu.props';
-import { Theme, useThemeContext } from '@sea-lion/react-theme';
+import { Theme, themePropDefs, useThemeContext } from '@sea-lion/react-theme';
 import { ChevronDownIcon, ThickCheckIcon, ThickChevronRightIcon } from '@sea-lion/react-icon';
 import { extractProps, requireReactElement } from '@sea-lion/react-helpers';
 
@@ -60,7 +60,7 @@ const DropdownMenuContent = React.forwardRef<DropdownMenuContentElement, Dropdow
       props,
       dropdownMenuContentPropDefs
     );
-    const resolvedColor = color || themeContext.accentColor;
+    const resolvedColor = color || themeContext?.accentColor || themePropDefs.accentColor.default;
     return (
       <DropdownMenuPrimitive.Portal container={container} forceMount={forceMount}>
         <Theme asChild>
