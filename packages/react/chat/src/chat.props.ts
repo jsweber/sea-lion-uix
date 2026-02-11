@@ -14,9 +14,5 @@ interface ChatProps {
     onSend?: (message: string) => void;
 }
 
-export type {
-    ChatMessage,
-    ChatProps,
-    chatPropDefs,
-    Role
-}
+export { chatPropDefs };
+export type { ChatMessage, ChatProps, Role };

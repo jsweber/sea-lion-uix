@@ -3,7 +3,7 @@ import {
     ElementRef,
     ComponentPropsWithoutRef,
     CSSProperties,
-    useMemo
+    useMemo,
 } from 'react';
 import classNames from 'classnames';
 
@@ -52,7 +52,7 @@ const Button = forwardRef<ButtonElement, ButtonProps>(
                 style={buttonTheme}
             />
         );
-    }
+    },
 );
 Button.displayName = 'Button';
 

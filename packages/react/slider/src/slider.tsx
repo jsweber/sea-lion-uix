@@ -19,35 +19,35 @@ interface SliderProps
   MarginProps,
   SliderOwnProps { }
 const Slider = React.forwardRef<SliderElement, SliderProps>((props, forwardedRef) => {
-  const { className, color, radius, tabIndex, ...sliderProps } = extractProps(
-    props,
-    sliderPropDefs,
-    marginPropDefs
-  );
-  return (
-    <SliderPrimitive.Root
-      data-accent-color={color}
-      data-radius={radius}
-      ref={forwardedRef}
-      {...sliderProps}
-      asChild={false}
-      className={classNames('rt-SliderRoot', className)}
-    >
-      <SliderPrimitive.Track className="rt-SliderTrack">
-        <SliderPrimitive.Range
-          className={classNames('rt-SliderRange', { 'rt-high-contrast': props.highContrast })}
-          data-inverted={sliderProps.inverted ? '' : undefined}
-        />
-      </SliderPrimitive.Track>
-      {(sliderProps.value ?? sliderProps.defaultValue ?? []).map((value, index) => (
-        <SliderPrimitive.Thumb
-          key={index}
-          className="rt-SliderThumb"
-          {...(tabIndex !== undefined ? { tabIndex } : undefined)}
-        />
-      ))}
-    </SliderPrimitive.Root>
-  );
+    const { className, color, radius, tabIndex, ...sliderProps } = extractProps(
+        props,
+        sliderPropDefs,
+        marginPropDefs,
+    );
+    return (
+        <SliderPrimitive.Root
+            data-accent-color={color}
+            data-radius={radius}
+            ref={forwardedRef}
+            {...sliderProps}
+            asChild={false}
+            className={classNames('rt-SliderRoot', className)}
+        >
+            <SliderPrimitive.Track className="rt-SliderTrack">
+                <SliderPrimitive.Range
+                    className={classNames('rt-SliderRange', { 'rt-high-contrast': props.highContrast })}
+                    data-inverted={sliderProps.inverted ? '' : undefined}
+                />
+            </SliderPrimitive.Track>
+            {(sliderProps.value ?? sliderProps.defaultValue ?? []).map((value, index) => (
+                <SliderPrimitive.Thumb
+                    key={index}
+                    className="rt-SliderThumb"
+                    {...(tabIndex !== undefined ? { tabIndex } : undefined)}
+                />
+            ))}
+        </SliderPrimitive.Root>
+    );
 });
 Slider.displayName = 'Slider';
 

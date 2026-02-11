@@ -17,16 +17,16 @@ interface SectionProps
   LayoutProps,
   SectionOwnProps { }
 const Section = React.forwardRef<SectionElement, SectionProps>((props, forwardedRef) => {
-  const { asChild, className, ...sectionProps } = extractProps(
-    props,
-    sectionPropDefs,
-    layoutPropDefs,
-    marginPropDefs
-  );
-  const Comp = asChild ? Slot : 'section';
-  return (
-    <Comp {...sectionProps} ref={forwardedRef} className={classNames('rt-Section', className)} />
-  );
+    const { asChild, className, ...sectionProps } = extractProps(
+        props,
+        sectionPropDefs,
+        layoutPropDefs,
+        marginPropDefs,
+    );
+    const Comp = asChild ? Slot : 'section';
+    return (
+        <Comp {...sectionProps} ref={forwardedRef} className={classNames('rt-Section', className)} />
+    );
 });
 Section.displayName = 'Section';
 

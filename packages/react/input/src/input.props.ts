@@ -7,10 +7,10 @@ const sizes = ['1', '2', '3'] as const;
 const variants = ['classic', 'surface', 'soft'] as const;
 
 const inputRootPropDefs = {
-  size: { type: 'enum', className: 'rt-r-size', values: sizes, default: '2', responsive: true },
-  variant: { type: 'enum', className: 'rt-variant', values: variants, default: 'surface' },
-  ...colorPropDef,
-  ...radiusPropDef,
+    size: { type: 'enum', className: 'rt-r-size', values: sizes, default: '2', responsive: true },
+    variant: { type: 'enum', className: 'rt-variant', values: variants, default: 'surface' },
+    ...colorPropDef,
+    ...radiusPropDef,
 } satisfies {
   size: PropDef<(typeof sizes)[number]>;
   variant: PropDef<(typeof variants)[number]>;
@@ -19,12 +19,12 @@ const inputRootPropDefs = {
 const sides = ['left', 'right'] as const;
 
 const inputFieldSlotPropDefs = {
-  side: { type: 'enum', values: sides },
-  ...colorPropDef,
-  gap: flexPropDefs.gap,
-  px: paddingPropDefs.px,
-  pl: paddingPropDefs.pl,
-  pr: paddingPropDefs.pr,
+    side: { type: 'enum', values: sides },
+    ...colorPropDef,
+    gap: flexPropDefs.gap,
+    px: paddingPropDefs.px,
+    pl: paddingPropDefs.pl,
+    pr: paddingPropDefs.pr,
 } satisfies {
   side: PropDef<(typeof sides)[number]>;
   gap: typeof flexPropDefs.gap;
@@ -34,5 +34,5 @@ const inputFieldSlotPropDefs = {
 };
 
 export {
-  inputRootPropDefs, inputFieldSlotPropDefs
+    inputRootPropDefs, inputFieldSlotPropDefs,
 };

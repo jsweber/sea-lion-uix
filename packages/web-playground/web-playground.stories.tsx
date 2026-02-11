@@ -13,12 +13,12 @@ type Story = StoryObj<typeof WebPlayground>;
 export const App: Story = {
     name: 'Web playground',
     args: {
-        mode: 'development'
+        mode: 'development',
     },
     render: (props) => {
         return (
             <WebPlayground {...props} />
         );
-    }
+    },
 }
 

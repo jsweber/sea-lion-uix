@@ -77,7 +77,7 @@ const WebPlayground: FC<WebPlaygroundProps> = ({ mode }) => {
                                 所以新版本在原名后增加“x”，以下简称 <strong>x</strong>。
                             </Text>
                             <Text as="p" className="wp-descr-item">
-                                <Badge color="yellow"><StarIcon /></Badge><strong>在组件数量上</strong>，力求在有限的开发时间内提供更多的组件，组件数量从一代的19个增加到 <strong>40</strong>（<i>截止2024.11月末为33</i>）。
+                                <Badge color="yellow"><StarIcon /></Badge><strong>在组件数量上</strong>，力求在有限的开发时间内提供更多的组件，组件数量从一代的19个增加到 <strong>49</strong>。
                             </Text>
                             <Text as="p" className="wp-descr-item">
                                 <Badge color="red"><HeartIcon /></Badge><strong>在全局功能上</strong>，x在使用上会更灵活，组件支持 主题样式 和 headless 两种使用模式，并且每个组件开放更多参数，尽量避免产生难以更改的情况。
@@ -253,12 +253,15 @@ const WebPlayground: FC<WebPlaygroundProps> = ({ mode }) => {
                     </div>
                     <div style={{
                         height: 300,
-                        paddingBottom: 100
-                    }}>
+                        paddingBottom: 100,
+                    }}
+                    >
                         <Heading align="center">V0.dev</Heading>
                         <Container>
                             <App />
-                            <TextArea rows={30} value={
+                            <TextArea
+                                rows={30}
+                                value={
                                 `
                                     <div className="cascader-container">
                                         <h2 className="cascader-title">Cascader Component</h2>
@@ -289,7 +292,8 @@ const WebPlayground: FC<WebPlaygroundProps> = ({ mode }) => {
                                         </Popover.Root>
                                     </div>
                                 `
-                            } />
+                                }
+                            />
                             <img src={v0Image} width="100%" />
                         </Container>
                     </div>
@@ -300,9 +304,9 @@ const WebPlayground: FC<WebPlaygroundProps> = ({ mode }) => {
 }
 
 export {
-    WebPlayground
+    WebPlayground,
 }
 
 export type {
-    WebPlaygroundProps
+    WebPlaygroundProps,
 }

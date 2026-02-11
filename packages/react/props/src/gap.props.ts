@@ -3,7 +3,7 @@ import type { PropDef } from './prop-def';
 const gapValues = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'] as const;
 
 const gapPropDefs = {
-  /**
+    /**
    * Sets the CSS **gap** property.
    * Supports space scale values, CSS strings, and responsive objects.
    *
@@ -15,14 +15,14 @@ const gapPropDefs = {
    * @link
    * https://developer.mozilla.org/en-US/docs/Web/CSS/gap
    */
-  gap: {
-    type: 'enum | string',
-    className: 'rt-r-gap',
-    customProperties: ['--gap'],
-    values: gapValues,
-    responsive: true,
-  },
-  /**
+    gap: {
+        type: 'enum | string',
+        className: 'rt-r-gap',
+        customProperties: ['--gap'],
+        values: gapValues,
+        responsive: true,
+    },
+    /**
    * Sets the CSS **row-gap** property.
    * Supports space scale values, CSS strings, and responsive objects.
    *
@@ -34,14 +34,14 @@ const gapPropDefs = {
    * @link
    * https://developer.mozilla.org/en-US/docs/Web/CSS/row-gap
    */
-  gapX: {
-    type: 'enum | string',
-    className: 'rt-r-cg',
-    customProperties: ['--column-gap'],
-    values: gapValues,
-    responsive: true,
-  },
-  /**
+    gapX: {
+        type: 'enum | string',
+        className: 'rt-r-cg',
+        customProperties: ['--column-gap'],
+        values: gapValues,
+        responsive: true,
+    },
+    /**
    * Sets the CSS **column-gap** property.
    * Supports space scale values, CSS strings, and responsive objects.
    *
@@ -53,13 +53,13 @@ const gapPropDefs = {
    * @link
    * https://developer.mozilla.org/en-US/docs/Web/CSS/column-gap
    */
-  gapY: {
-    type: 'enum | string',
-    className: 'rt-r-rg',
-    customProperties: ['--row-gap'],
-    values: gapValues,
-    responsive: true,
-  },
+    gapY: {
+        type: 'enum | string',
+        className: 'rt-r-rg',
+        customProperties: ['--row-gap'],
+        values: gapValues,
+        responsive: true,
+    },
 } satisfies {
   gap: PropDef<(typeof gapValues)[number]>;
   gapX: PropDef<(typeof gapValues)[number]>;

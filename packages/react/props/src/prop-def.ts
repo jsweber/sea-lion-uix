@@ -8,51 +8,51 @@ const breakpoints = ['initial', 'xs', 'sm', 'md', 'lg', 'xl'] as const;
 type Breakpoint = (typeof breakpoints)[number];
 type Responsive<T> = T | Partial<Record<Breakpoint, T>>;
 
-type BooleanPropDef = {
+interface BooleanPropDef {
   type: 'boolean';
   default?: boolean;
   required?: boolean;
   className?: string;
-};
-type StringPropDef = {
+}
+interface StringPropDef {
   type: 'string';
   default?: string;
   required?: boolean;
-};
-type ReactNodePropDef = {
+}
+interface ReactNodePropDef {
   type: 'ReactNode';
   default?: React.ReactNode;
   required?: boolean;
-};
-type EnumPropDef<T> = {
+}
+interface EnumPropDef<T> {
   type: 'enum';
   values: readonly T[];
   default?: T;
   required?: boolean;
-};
-type EnumOrStringPropDef<T> = {
+}
+interface EnumOrStringPropDef<T> {
   type: 'enum | string';
   values: readonly T[];
   default?: T | string;
   required?: boolean;
-};
+}
 
-type NonStylingPropDef = {
+interface NonStylingPropDef {
   className?: never;
   customProperties?: never;
   parseValue?: never;
-};
+}
 
-type StylingPropDef = {
+interface StylingPropDef {
   className: string;
   parseValue?: (value: string) => string | undefined;
-};
+}
 
-type ArbitraryStylingPropDef = {
+interface ArbitraryStylingPropDef {
   className: string;
-  customProperties: `--${string}`[];
+  customProperties: Array<`--${string}`>;
   parseValue?: (value: string) => string | undefined;
-};
+}
 
 type RegularPropDef<T> =
   | ReactNodePropDef
@@ -82,11 +82,11 @@ type GetPropDefTypes<P> = {
 
 export { breakpoints };
 export type {
-  PropDef,
-  GetPropDefTypes,
-  ResponsivePropDef,
-  //
-  Breakpoint,
-  Responsive,
-  Union,
+    PropDef,
+    GetPropDefTypes,
+    ResponsivePropDef,
+    //
+    Breakpoint,
+    Responsive,
+    Union,
 };

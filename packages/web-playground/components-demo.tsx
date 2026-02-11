@@ -28,8 +28,6 @@ interface ComponentsDemoProps {
 }
 
 const ComponentsDemo: FC<ComponentsDemoProps> = ({ mode }) => {
-
-
     return (
         <>
             <div className="wp-comp-section">
@@ -1022,9 +1020,9 @@ const ComponentsDemo: FC<ComponentsDemoProps> = ({ mode }) => {
 }
 
 export {
-    ComponentsDemo
+    ComponentsDemo,
 }
 
 export type {
-    ComponentsDemoProps
+    ComponentsDemoProps,
 }

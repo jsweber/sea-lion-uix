@@ -13,11 +13,11 @@ interface IconFontProps {
 // oss://openmmlab-open/x-lab/sea-lion-ui/iconfont/
 // https://www.iconfont.cn/manage/index?spm=a313x.7781069.1998910419.20&manage_type=myprojects&projectId=3858115&keyword=&project_type=&page=
 
-const defaultOssIconUrl = 'https://oss.openmmlab.com/x-lab/sea-lion-ui/iconfont/iconfont.css';
+const defaultOssIconUrl = 'https://cdn-static.openxlab.org.cn/x-lab/sea-lion-ui/iconfont/iconfont.css';
 
 const IconFont: FC<IconFontProps> = ({
     icon, color, fontSize, style, className,
-    ossUrl = defaultOssIconUrl
+    ossUrl = defaultOssIconUrl,
 }) => {
     const classes = classNames(className, icon, 'iconfont');
     useEffect(() => {
@@ -42,16 +42,16 @@ const IconFont: FC<IconFontProps> = ({
                 display: 'inline-block',
                 color: `${color && color}`,
                 fontSize: `${fontSize && fontSize}`,
-                ...style
+                ...style,
             }}
         />
     );
 };
 export {
     IconFont,
-    defaultOssIconUrl
+    defaultOssIconUrl,
 }
 
 export type {
-    IconFontProps
+    IconFontProps,
 }

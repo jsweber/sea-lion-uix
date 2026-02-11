@@ -1,7 +1,7 @@
 import type { PropDef, GetPropDefTypes } from './prop-def';
 
 const heightPropDefs = {
-  /**
+    /**
    * Sets the CSS **height** property.
    * Supports CSS strings and responsive objects.
    *
@@ -12,13 +12,13 @@ const heightPropDefs = {
    * @link
    * https://developer.mozilla.org/en-US/docs/Web/CSS/height
    */
-  height: {
-    type: 'string',
-    className: 'rt-r-h',
-    customProperties: ['--height'],
-    responsive: true,
-  },
-  /**
+    height: {
+        type: 'string',
+        className: 'rt-r-h',
+        customProperties: ['--height'],
+        responsive: true,
+    },
+    /**
    * Sets the CSS **min-height** property.
    * Supports CSS strings and responsive objects.
    *
@@ -29,13 +29,13 @@ const heightPropDefs = {
    * @link
    * https://developer.mozilla.org/en-US/docs/Web/CSS/min-height
    */
-  minHeight: {
-    type: 'string',
-    className: 'rt-r-min-h',
-    customProperties: ['--min-height'],
-    responsive: true,
-  },
-  /**
+    minHeight: {
+        type: 'string',
+        className: 'rt-r-min-h',
+        customProperties: ['--min-height'],
+        responsive: true,
+    },
+    /**
    * Sets the CSS **max-height** property.
    * Supports CSS strings and responsive objects.
    *
@@ -46,12 +46,12 @@ const heightPropDefs = {
    * @link
    * https://developer.mozilla.org/en-US/docs/Web/CSS/max-height
    */
-  maxHeight: {
-    type: 'string',
-    className: 'rt-r-max-h',
-    customProperties: ['--max-height'],
-    responsive: true,
-  },
+    maxHeight: {
+        type: 'string',
+        className: 'rt-r-max-h',
+        customProperties: ['--max-height'],
+        responsive: true,
+    },
 } satisfies {
   height: PropDef<string>;
   minHeight: PropDef<string>;

@@ -44,5 +44,15 @@ module.exports = {
         "@typescript-eslint/consistent-type-assertions": 'off',
         'no-shadow': 'off',
         '@typescript-eslint/no-shadow': 'warn',
-    }
+    },
+    overrides: [
+        {
+            files: ['**/*.props.ts', '**/*.props.tsx'],
+            rules: {
+                '@typescript-eslint/consistent-type-exports': ['warn', {
+                    fixMixedExportsWithInlineTypeSpecifier: true
+                }]
+            }
+        }
+    ]
 };

@@ -14,7 +14,7 @@ import './style/button-story.less';
 const meta: Meta<typeof Button> = {
     component: Button,
     title: '通用/Button', // 不加title就会出现文件夹，如src
-    tags: ['autodocs']
+    tags: ['autodocs'],
 };
 
 export default meta;
@@ -27,7 +27,7 @@ export const ButtonWithProps: Story = {
         asChild: {
             control: 'boolean',
             description: '使用chidren根元素作为组件元素，并且自身props和children props合并',
-            type: 'boolean'
+            type: 'boolean',
         },
         size: {
             control: 'inline-radio',
@@ -39,7 +39,7 @@ export const ButtonWithProps: Story = {
             options: ['classic', 'solid', 'soft', 'surface', 'outline', 'ghost'],
             description: '视觉变量："classic" | "solid" | "soft" | "surface" | "outline" | "ghost"',
         },
-        // 
+        //
         color: {
             control: 'inline-radio',
             options: [
@@ -68,7 +68,7 @@ export const ButtonWithProps: Story = {
                 "grass",
                 "lime",
                 "mint",
-                "sky"
+                "sky",
             ],
             description: '颜色："gray" | "gold" | "brown"...',
         },
@@ -80,18 +80,18 @@ export const ButtonWithProps: Story = {
         highContrast: {
             control: 'boolean',
             description: '使用高对比度颜色',
-            type: 'boolean'
+            type: 'boolean',
         },
         disabled: {
             control: 'boolean',
             description: '按钮禁用',
-            type: 'boolean'
+            type: 'boolean',
         },
         loading: {
             control: 'boolean',
             description: '按钮loading态',
-            type: 'boolean'
-        }
+            type: 'boolean',
+        },
     },
     args: {
         asChild: undefined,
@@ -102,7 +102,7 @@ export const ButtonWithProps: Story = {
         highContrast: undefined,
         disabled: undefined,
         loading: undefined,
-        onClick: () => alert('click')
+        onClick: () => alert('click'),
     },
     render: (props) => {
         return (
@@ -164,7 +164,7 @@ export const ButtonWithProps: Story = {
                 </Theme>
             </div>
         );
-    }
+    },
 }
 
 
@@ -199,7 +199,7 @@ export const ButtonWithEditor: Story = {
                 "grass",
                 "lime",
                 "mint",
-                "sky"
+                "sky",
             ],
             description: '颜色："gray" | "gold" | "brown"...',
         },
@@ -211,13 +211,13 @@ export const ButtonWithEditor: Story = {
         highContrast: {
             control: 'boolean',
             description: '使用高对比度颜色',
-            type: 'boolean'
+            type: 'boolean',
         },
     },
     args: {
         size: '2',
         color: 'ruby',
-        radius: 'large'
+        radius: 'large',
     },
     render: (props) => {
         return (
@@ -252,7 +252,7 @@ export const ButtonWithEditor: Story = {
                 </Theme>
             </div>
         );
-    }
+    },
 }
 
 export const ButtonWithoutTheme = () => {

@@ -20,23 +20,23 @@ interface RadioCardsRootProps
   MarginProps,
   RadioCardsRootOwnProps { }
 const RadioCardsRoot = React.forwardRef<RadioCardsRootElement, RadioCardsRootProps>(
-  (props, forwardedRef) => {
-    const { className, color, ...rootProps } = extractProps(
-      props,
-      radioCardsRootPropDefs,
-      marginPropDefs
-    );
-    return (
-      <Grid asChild>
-        <RadioGroupPrimitive.Root
-          data-accent-color={color}
-          {...rootProps}
-          ref={forwardedRef}
-          className={classNames('rt-RadioCardsRoot', className)}
-        />
-      </Grid>
-    );
-  }
+    (props, forwardedRef) => {
+        const { className, color, ...rootProps } = extractProps(
+            props,
+            radioCardsRootPropDefs,
+            marginPropDefs,
+        );
+        return (
+            <Grid asChild>
+                <RadioGroupPrimitive.Root
+                    data-accent-color={color}
+                    {...rootProps}
+                    ref={forwardedRef}
+                    className={classNames('rt-RadioCardsRoot', className)}
+                />
+            </Grid>
+        );
+    },
 );
 RadioCardsRoot.displayName = 'RadioCards.Root';
 
@@ -45,14 +45,14 @@ interface RadioCardsItemProps
   extends ComponentPropsWithout<typeof RadioGroupPrimitive.Item, RemovedProps>,
   MarginProps { }
 const RadioCardsItem = React.forwardRef<RadioCardsItemElement, RadioCardsItemProps>(
-  ({ className, ...props }, forwardedRef) => (
-    <RadioGroupPrimitive.Item
-      {...props}
-      asChild={false}
-      ref={forwardedRef}
-      className={classNames('rt-reset', 'rt-BaseCard', 'rt-RadioCardsItem', className)}
-    />
-  )
+    ({ className, ...props }, forwardedRef) => (
+        <RadioGroupPrimitive.Item
+            {...props}
+            asChild={false}
+            ref={forwardedRef}
+            className={classNames('rt-reset', 'rt-BaseCard', 'rt-RadioCardsItem', className)}
+        />
+    ),
 );
 RadioCardsItem.displayName = 'RadioCards.Item';
 

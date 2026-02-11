@@ -4,11 +4,11 @@ import classNames from 'classnames';
 import { BaseButton } from '@sea-lion/react-base-button';
 
 type IconButtonElement = React.ElementRef<typeof BaseButton>;
-interface IconButtonProps extends React.ComponentPropsWithoutRef<typeof BaseButton> { }
+type IconButtonProps = React.ComponentPropsWithoutRef<typeof BaseButton>
 const IconButton = React.forwardRef<IconButtonElement, IconButtonProps>(
-  ({ className, ...props }, forwardedRef) => (
-    <BaseButton {...props} ref={forwardedRef} className={classNames('rt-IconButton', className)} />
-  )
+    ({ className, ...props }, forwardedRef) => (
+        <BaseButton {...props} ref={forwardedRef} className={classNames('rt-IconButton', className)} />
+    ),
 );
 IconButton.displayName = 'IconButton';
 

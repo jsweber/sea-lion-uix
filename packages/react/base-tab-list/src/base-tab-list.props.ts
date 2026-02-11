@@ -8,22 +8,22 @@ const justifyValues = ['start', 'center', 'end'] as const;
 const variants = ['surface', 'underline'] as const;
 
 const baseTabListPropDefs = {
-  size: { type: 'enum', className: 'rt-r-size', values: sizes, default: '2', responsive: true },
-  variant: { type: 'enum', className: 'rt-variant', values: variants, default: 'surface' },
-  wrap: {
-    type: 'enum',
-    className: 'rt-r-fw',
-    values: wrapValues,
-    responsive: true,
-  },
-  justify: {
-    type: 'enum',
-    className: 'rt-r-jc',
-    values: justifyValues,
-    responsive: true,
-  },
-  ...colorPropDef,
-  ...highContrastPropDef,
+    size: { type: 'enum', className: 'rt-r-size', values: sizes, default: '2', responsive: true },
+    variant: { type: 'enum', className: 'rt-variant', values: variants, default: 'surface' },
+    wrap: {
+        type: 'enum',
+        className: 'rt-r-fw',
+        values: wrapValues,
+        responsive: true,
+    },
+    justify: {
+        type: 'enum',
+        className: 'rt-r-jc',
+        values: justifyValues,
+        responsive: true,
+    },
+    ...colorPropDef,
+    ...highContrastPropDef,
 } satisfies {
   size: PropDef<(typeof sizes)[number]>;
   variant: PropDef<(typeof variants)[number]>;
