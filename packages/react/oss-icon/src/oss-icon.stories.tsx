@@ -1,5 +1,6 @@
 import type { Meta } from '@storybook/react';
 import { Theme } from '../../theme/src';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 
 import { IconFont } from '@sea-lion/react-oss-icon';
 import { Box } from '@sea-lion/react-box';
@@ -11,6 +12,15 @@ const ICONFONT_PLATFORM_URLS = {
     css: '//at.alicdn.com/t/c/font_3858115_arqhh46u7i7.css',
     js: '//at.alicdn.com/t/c/font_3858115_arqhh46u7i7.js',
 } as const;
+
+/** 图标库 Story 使用的 CSS 地址 */
+const ICONFONT_ICONS_CSS_URL = 'https://at.alicdn.com/t/c/font_3858115_arqhh46u7i7.css';
+
+/** 从 iconfont 生成的 CSS 文本中解析出所有图标类名（用捕获组动态提取，避免写死截取长度） */
+function parseIconNamesFromCss(cssText: string): string[] {
+    const matches = [...cssText.matchAll(/\.(icon-[^:]+):before/g)];
+    return [...new Set(matches.map((m) => m[1]))];
+}
 
 /**
  * ## 介绍
@@ -195,3 +205,124 @@ CustomOssUrl.args = {
     icon: 'icon-CompassionOutlined',
     ossUrl: ICONFONT_PLATFORM_URLS.css,
 };
+
+/** 图标库：从 iconfont CSS 解析并网格展示，点击复制图标名 */
+function IconGalleryInner() {
+    const [iconList, setIconList] = useState<string[]>([]);
+    const [loading, setLoading] = useState(true);
+    const [search, setSearch] = useState('');
+    const [copiedId, setCopiedId] = useState<string | null>(null);
+
+    useEffect(() => {
+        const url = ICONFONT_ICONS_CSS_URL;
+        setLoading(true);
+        fetch(url)
+            .then((res) => res.text())
+            .then((cssText) => {
+                console.log(parseIconNamesFromCss(cssText));
+                setIconList(parseIconNamesFromCss(cssText));
+            })
+            .catch(() => setIconList([]))
+            .finally(() => setLoading(false));
+    }, []);
+
+    const filteredIcons = useMemo(() => {
+        const q = search.trim().toLowerCase();
+        if (!q) return iconList;
+        return iconList.filter((name) => name.toLowerCase().includes(q));
+    }, [iconList, search]);
+
+    const copyIconName = useCallback(async (name: string) => {
+        try {
+            await navigator.clipboard.writeText(name);
+            setCopiedId(name);
+            setTimeout(() => setCopiedId(null), 2000);
+        } catch {
+            // ignore
+        }
+    }, []);
+
+    return (
+        <Box p="5" style={{ minHeight: 400 }}>
+            <Text size="2" weight="bold" mb="3">
+                图标库（点击复制类名）
+            </Text>
+            <Text size="1" color="gray" mb="3">
+                资源：{ICONFONT_ICONS_CSS_URL}
+            </Text>
+            <Box mb="4">
+                <input
+                    type="text"
+                    placeholder="搜索图标名称…"
+                    value={search}
+                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSearch(e.target.value)}
+                    style={{
+                        width: '100%',
+                        maxWidth: 320,
+                        padding: '8px 12px',
+                        border: '1px solid var(--gray-6)',
+                        borderRadius: 6,
+                        fontSize: 14,
+                    }}
+                />
+            </Box>
+            {loading ? (
+                <Text color="gray">加载中…</Text>
+            ) : (
+                <Box
+                    style={{
+                        display: 'grid',
+                        gridTemplateColumns: 'repeat(auto-fill, minmax(100px, 1fr))',
+                        gap: 8,
+                    }}
+                >
+                    {filteredIcons.map((name) => (
+                        <Flex
+                            key={name}
+                            direction="column"
+                            align="center"
+                            justify="center"
+                            onClick={() => copyIconName(name)}
+                            style={{
+                                padding: '16px 8px',
+                                borderRadius: 8,
+                                border: '1px solid var(--gray-4)',
+                                cursor: 'pointer',
+                                background: copiedId === name ? 'var(--blue-3)' : 'var(--gray-2)',
+                                transition: 'background 0.15s, border-color 0.15s',
+                            }}
+                            onMouseEnter={(e) => {
+                                if (copiedId !== name) {
+                                    e.currentTarget.style.background = 'var(--gray-3)';
+                                    e.currentTarget.style.borderColor = 'var(--gray-6)';
+                                }
+                            }}
+                            onMouseLeave={(e) => {
+                                if (copiedId !== name) {
+                                    e.currentTarget.style.background = 'var(--gray-2)';
+                                    e.currentTarget.style.borderColor = 'var(--gray-4)';
+                                }
+                            }}
+                        >
+                            <IconFont ossUrl={ICONFONT_ICONS_CSS_URL} icon={name} style={{ fontSize: 28, marginBottom: 8 }} />
+                            <Text size="1" style={{ textAlign: 'center', wordBreak: 'break-all', lineHeight: 1.3 }}>
+                                {copiedId === name ? '已复制' : name}
+                            </Text>
+                        </Flex>
+                    ))}
+                </Box>
+            )}
+            {!loading && filteredIcons.length === 0 && (
+                <Text color="gray">未找到匹配的图标</Text>
+            )}
+        </Box>
+    );
+}
+
+export const IconGallery = () => (
+    <Theme>
+        <IconGalleryInner />
+    </Theme>
+);
+
+IconGallery.storyName = '图标库（可视化·点击复制）';
