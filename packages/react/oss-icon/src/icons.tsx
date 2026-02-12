@@ -21,14 +21,24 @@ const IconFont: FC<IconFontProps> = ({
 }) => {
     const classes = classNames(className, icon, 'iconfont');
     useEffect(() => {
+        if (!ossUrl?.trim()) return;
         try {
-            const id = 'append_oss_iconfont_id';
-            const iconStyleElement = document.getElementById(id);
-            if (!iconStyleElement) {
-                const newStyleElement = document.createElement('style');
-                newStyleElement.textContent = `@import url(${ossUrl});`;
-                newStyleElement.id = id;
-                document.head.appendChild(newStyleElement);
+            const normalizedUrl = ossUrl.startsWith('//') ? `https:${ossUrl}` : ossUrl;
+            const isJs = /\.js$/i.test(ossUrl);
+            const safeId = `oss-iconfont-${isJs ? 'js' : 'css'}-${ossUrl.replace(/[^a-zA-Z0-9._-]/g, '_').slice(0, 80)}`;
+            if (document.getElementById(safeId)) return;
+
+            if (isJs) {
+                const script = document.createElement('script');
+                script.id = safeId;
+                script.src = normalizedUrl;
+                script.async = true;
+                document.head.appendChild(script);
+            } else {
+                const styleEl = document.createElement('style');
+                styleEl.id = safeId;
+                styleEl.textContent = `@import url("${normalizedUrl}");`;
+                document.head.appendChild(styleEl);
             }
         } catch (error) {
             console.error(error);
