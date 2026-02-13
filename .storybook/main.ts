@@ -14,7 +14,7 @@ function convertTsConfigPathsToWebpackAliases() {
 }
 
 const config: StorybookConfig = {
-  stories: ['../packages/react/**/*.stories.tsx', '../packages/web-playground/*.stories.tsx'],
+  stories: ['../packages/react/**/*.stories.tsx', '../packages/web-playground/*.stories.tsx', '../packages/oss-icon-picker/*.stories.tsx'],
   docs: {
     //👇 See the table below for the list of supported options
     defaultName: 'Documentation',
@@ -69,7 +69,7 @@ const config: StorybookConfig = {
     ${head}
     <script>
       window.STORYBOOK_CATEGORIES = {
-        '总览': ['web-playground'],
+        '总览': ['web-playground', 'oss-icon-picker'],
         '主题': ['theme'],
         '布局': ['flex', 'container', 'grid', 'aspect-ratio'],
         '排版': ['text', 'heading', 'blockquote', 'code'],

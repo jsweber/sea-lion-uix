@@ -218,10 +218,7 @@ function IconGalleryInner() {
         setLoading(true);
         fetch(url)
             .then((res) => res.text())
-            .then((cssText) => {
-                console.log(parseIconNamesFromCss(cssText));
-                setIconList(parseIconNamesFromCss(cssText));
-            })
+            .then((cssText) => setIconList(parseIconNamesFromCss(cssText)))
             .catch(() => setIconList([]))
             .finally(() => setLoading(false));
     }, []);
