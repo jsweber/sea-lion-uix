@@ -6,6 +6,8 @@ import { Flex } from '@sea-lion/react-flex';
 import { Text } from '@sea-lion/react-text';
 
 /**
+ * ## 介绍
+ *
  * Checkbox 是一个复选框组件，用于在表单中进行多选操作。
  * 它提供了丰富的视觉样式和状态。
  *
@@ -14,6 +16,19 @@ import { Text } from '@sea-lion/react-text';
  * - 提供多种颜色主题
  * - 支持禁用状态
  * - 支持高对比度模式
+ *
+ * ## 安装
+ *
+ * ```bash
+ * pnpm add @sea-lion/react-checkbox
+ * ```
+ *
+ * 或使用 npm / yarn：
+ *
+ * ```bash
+ * npm install @sea-lion/react-checkbox
+ * yarn add @sea-lion/react-checkbox
+ * ```
  */
 
 const meta = {

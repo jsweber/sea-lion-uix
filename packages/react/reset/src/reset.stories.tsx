@@ -13,6 +13,19 @@ import { ResetPropsComponent } from './reset-props-table';
  *
  * Reset 是一个样式重置组件，用于清除 HTML 元素的默认样式，确保在不同浏览器中的一致外观。
  *
+ * ## 安装
+ *
+ * ```bash
+ * pnpm add @sea-lion/react-reset
+ * ```
+ *
+ * 或使用 npm / yarn：
+ *
+ * ```bash
+ * npm install @sea-lion/react-reset
+ * yarn add @sea-lion/react-reset
+ * ```
+ *
  * ## 何时使用
  *
  * - 需要移除元素默认样式时

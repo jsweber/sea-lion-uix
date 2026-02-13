@@ -13,6 +13,19 @@ import { SectionPropsComponent } from './section-props-table';
  *
  * Section 是一个布局组件，用于创建具有预设垂直内边距的区域，帮助组织页面内容的层次结构。
  *
+ * ## 安装
+ *
+ * ```bash
+ * pnpm add @sea-lion/react-section
+ * ```
+ *
+ * 或使用 npm / yarn：
+ *
+ * ```bash
+ * npm install @sea-lion/react-section
+ * yarn add @sea-lion/react-section
+ * ```
+ *
  * ## 何时使用
  *
  * - 需要在页面上划分不同的内容区域

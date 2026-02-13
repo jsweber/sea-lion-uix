@@ -13,6 +13,19 @@ import { TextAreaPropsComponent } from './text-area-props-table';
  *
  * TextArea 是一个多行文本输入组件，用于用户输入较长的文本内容。组件支持多种尺寸、变体样式以及自定义调整大小方式。
  *
+ * ## 安装
+ *
+ * ```bash
+ * pnpm add @sea-lion/react-text-area
+ * ```
+ *
+ * 或使用 npm / yarn：
+ *
+ * ```bash
+ * npm install @sea-lion/react-text-area
+ * yarn add @sea-lion/react-text-area
+ * ```
+ *
  * ## 何时使用
  *
  * - 需要用户输入多行文本时

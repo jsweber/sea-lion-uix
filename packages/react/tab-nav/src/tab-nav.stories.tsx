@@ -15,6 +15,19 @@ import {
  *
  * TabNav 是一个导航菜单组件，用于创建导航栏和标签式导航。
  *
+ * ## 安装
+ *
+ * ```bash
+ * pnpm add @sea-lion/react-tab-nav
+ * ```
+ *
+ * 或使用 npm / yarn：
+ *
+ * ```bash
+ * npm install @sea-lion/react-tab-nav
+ * yarn add @sea-lion/react-tab-nav
+ * ```
+ *
  * ## 何时使用
  *
  * - 需要在页面之间导航时

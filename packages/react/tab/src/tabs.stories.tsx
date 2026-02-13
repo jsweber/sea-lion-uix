@@ -18,6 +18,19 @@ import {
  *
  * Tabs 是一个选项卡组件，用于在同一个区域内切换不同内容。
  *
+ * ## 安装
+ *
+ * ```bash
+ * pnpm add @sea-lion/react-tab
+ * ```
+ *
+ * 或使用 npm / yarn：
+ *
+ * ```bash
+ * npm install @sea-lion/react-tab
+ * yarn add @sea-lion/react-tab
+ * ```
+ *
  * ## 何时使用
  *
  * - 需要在同一区域内展示不同类别的内容

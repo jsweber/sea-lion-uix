@@ -12,6 +12,19 @@ import { useState } from 'react';
  *
  * CheckboxGroup 是一组复选框组件，用于从一组数据中选择多个值。
  *
+ * ## 安装
+ *
+ * ```bash
+ * pnpm add @sea-lion/react-checkbox-group
+ * ```
+ *
+ * 或使用 npm / yarn：
+ *
+ * ```bash
+ * npm install @sea-lion/react-checkbox-group
+ * yarn add @sea-lion/react-checkbox-group
+ * ```
+ *
  * ## 何时使用
  *
  * - 当用户需要从一组数据中选择多个选项时

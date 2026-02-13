@@ -3,6 +3,24 @@ import * as AspectRatio from './aspect-ratio';
 import { Theme } from '@sea-lion/react-theme';
 import { Text } from '@sea-lion/react-text';
 
+/**
+ * ## 介绍
+ *
+ * AspectRatio 是宽高比容器组件，用于保持内容的宽高比显示。
+ *
+ * ## 安装
+ *
+ * ```bash
+ * pnpm add @sea-lion/react-aspect-ratio
+ * ```
+ *
+ * 或使用 npm / yarn：
+ *
+ * ```bash
+ * npm install @sea-lion/react-aspect-ratio
+ * yarn add @sea-lion/react-aspect-ratio
+ * ```
+ */
 const meta = {
     title: '布局/AspectRatio',
     component: AspectRatio.Root,

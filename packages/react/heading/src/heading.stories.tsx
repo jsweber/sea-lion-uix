@@ -12,6 +12,19 @@ import { HeadingPropsComponent } from './heading-props-table';
  *
  * Heading 是一个用于显示标题的组件，提供多种级别、尺寸和样式选项，以满足不同层级的标题需求。
  *
+ * ## 安装
+ *
+ * ```bash
+ * pnpm add @sea-lion/react-heading
+ * ```
+ *
+ * 或使用 npm / yarn：
+ *
+ * ```bash
+ * npm install @sea-lion/react-heading
+ * yarn add @sea-lion/react-heading
+ * ```
+ *
  * ## 何时使用
  *
  * - 网页、应用的各级标题展示

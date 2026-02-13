@@ -5,6 +5,8 @@ import { Flex } from '@sea-lion/react-flex';
 import { Text } from '@sea-lion/react-text';
 
 /**
+ * ## 介绍
+ *
  * Card 是一个多功能的容器组件，用于组织和展示内容。
  * 它提供了不同的视觉样式和尺寸选项，可以用作按钮或链接。
  *
@@ -13,6 +15,19 @@ import { Text } from '@sea-lion/react-text';
  * - 提供三种视觉变体：surface、classic、ghost
  * - 可以作为容器、按钮或链接使用
  * - 支持响应式布局
+ *
+ * ## 安装
+ *
+ * ```bash
+ * pnpm add @sea-lion/react-card
+ * ```
+ *
+ * 或使用 npm / yarn：
+ *
+ * ```bash
+ * npm install @sea-lion/react-card
+ * yarn add @sea-lion/react-card
+ * ```
  */
 
 const meta = {

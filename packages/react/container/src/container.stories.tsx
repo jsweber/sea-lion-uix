@@ -12,6 +12,19 @@ import { Heading } from '@sea-lion/react-heading';
  *
  * Container 是一个用于限制内容最大宽度并在页面中居中内容的组件。
  *
+ * ## 安装
+ *
+ * ```bash
+ * pnpm add @sea-lion/react-container
+ * ```
+ *
+ * 或使用 npm / yarn：
+ *
+ * ```bash
+ * npm install @sea-lion/react-container
+ * yarn add @sea-lion/react-container
+ * ```
+ *
  * ## 何时使用
  *
  * - 创建具有标准宽度的页面布局

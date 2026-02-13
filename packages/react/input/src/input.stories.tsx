@@ -12,6 +12,19 @@ import { InputPropsComponent } from './input-props-table';
  *
  * Input 是一个用于收集用户输入的文本字段组件，提供多种样式和变体选项。
  *
+ * ## 安装
+ *
+ * ```bash
+ * pnpm add @sea-lion/react-input
+ * ```
+ *
+ * 或使用 npm / yarn：
+ *
+ * ```bash
+ * npm install @sea-lion/react-input
+ * yarn add @sea-lion/react-input
+ * ```
+ *
  * ## 何时使用
  *
  * - 收集用户文本信息

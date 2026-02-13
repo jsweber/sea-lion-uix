@@ -27,6 +27,19 @@ import { RadioGroupPropsComponent } from './radio-group-props-table';
  *
  * RadioGroup 是一个单选按钮组组件，用于在一组选项中选择一个选项。
  *
+ * ## 安装
+ *
+ * ```bash
+ * pnpm add @sea-lion/react-radio-group
+ * ```
+ *
+ * 或使用 npm / yarn：
+ *
+ * ```bash
+ * npm install @sea-lion/react-radio-group
+ * yarn add @sea-lion/react-radio-group
+ * ```
+ *
  * ## 何时使用
  *
  * - 需要在一组互斥选项中选择一个选项时

@@ -13,6 +13,19 @@ import { SelectPropsComponent } from './select-props-table';
  *
  * Select 是一个下拉选择组件，允许用户从预定义的选项列表中选择一个值。组件支持选项分组、禁用选项和自定义占位符。
  *
+ * ## 安装
+ *
+ * ```bash
+ * pnpm add @sea-lion/react-select
+ * ```
+ *
+ * 或使用 npm / yarn：
+ *
+ * ```bash
+ * npm install @sea-lion/react-select
+ * yarn add @sea-lion/react-select
+ * ```
+ *
  * ## 何时使用
  *
  * - 需要从一组选项中选择单个值

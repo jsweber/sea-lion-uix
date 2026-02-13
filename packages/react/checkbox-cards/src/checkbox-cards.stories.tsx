@@ -7,6 +7,8 @@ import { Flex } from '@sea-lion/react-flex';
 import { InfoCircledIcon, RocketIcon, GearIcon } from '@radix-ui/react-icons';
 
 /**
+ * ## 介绍
+ *
  * CheckboxCards 是一个卡片式复选框组件，用于在网格布局中进行多选操作。
  * 它结合了卡片的视觉效果和复选框的功能。
  *
@@ -15,6 +17,19 @@ import { InfoCircledIcon, RocketIcon, GearIcon } from '@radix-ui/react-icons';
  * - 提供两种视觉变体：surface、classic
  * - 支持网格布局
  * - 支持高对比度模式
+ *
+ * ## 安装
+ *
+ * ```bash
+ * pnpm add @sea-lion/react-checkbox-cards
+ * ```
+ *
+ * 或使用 npm / yarn：
+ *
+ * ```bash
+ * npm install @sea-lion/react-checkbox-cards
+ * yarn add @sea-lion/react-checkbox-cards
+ * ```
  */
 
 const meta = {

@@ -14,6 +14,19 @@ import { SkeletonPropsComponent } from './skeleton-props-table';
  *
  * Skeleton 是一个加载占位符组件，用于在数据加载时显示内容的轮廓，提升用户体验。
  *
+ * ## 安装
+ *
+ * ```bash
+ * pnpm add @sea-lion/react-skeleton
+ * ```
+ *
+ * 或使用 npm / yarn：
+ *
+ * ```bash
+ * npm install @sea-lion/react-skeleton
+ * yarn add @sea-lion/react-skeleton
+ * ```
+ *
  * ## 何时使用
  *
  * - 内容正在加载中，需要向用户展示页面结构

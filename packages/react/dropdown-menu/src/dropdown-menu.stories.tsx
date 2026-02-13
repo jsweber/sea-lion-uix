@@ -14,6 +14,19 @@ import { DropdownMenuPropsComponent } from './dropdown-menu-props-table';
  *
  * DropdownMenu 是一个下拉菜单组件，它可以在用户点击触发器后显示一系列选项，支持多级子菜单、复选框、单选框等功能。
  *
+ * ## 安装
+ *
+ * ```bash
+ * pnpm add @sea-lion/react-dropdown-menu
+ * ```
+ *
+ * 或使用 npm / yarn：
+ *
+ * ```bash
+ * npm install @sea-lion/react-dropdown-menu
+ * yarn add @sea-lion/react-dropdown-menu
+ * ```
+ *
  * ## 何时使用
  *
  * - 提供一组相关操作的入口

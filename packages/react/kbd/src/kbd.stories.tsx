@@ -13,6 +13,19 @@ import { KbdPropsComponent } from './kbd-props-table';
  *
  * Kbd 是一个用于显示键盘按键或快捷键的组件，适用于教程、帮助文档等场景。
  *
+ * ## 安装
+ *
+ * ```bash
+ * pnpm add @sea-lion/react-kbd
+ * ```
+ *
+ * 或使用 npm / yarn：
+ *
+ * ```bash
+ * npm install @sea-lion/react-kbd
+ * yarn add @sea-lion/react-kbd
+ * ```
+ *
  * ## 何时使用
  *
  * - 在文档或教程中展示键盘快捷键

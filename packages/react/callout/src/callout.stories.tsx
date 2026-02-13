@@ -5,6 +5,8 @@ import { Flex } from '@sea-lion/react-flex';
 import { InfoCircledIcon, ExclamationTriangleIcon, CheckCircledIcon } from '@radix-ui/react-icons';
 
 /**
+ * ## 介绍
+ *
  * Callout 是一个用于展示重要信息、提示、警告等内容的组件。
  * 它包含图标和文本两个部分，支持不同的视觉样式、尺寸和颜色主题。
  *
@@ -14,6 +16,19 @@ import { InfoCircledIcon, ExclamationTriangleIcon, CheckCircledIcon } from '@rad
  * - 可自定义颜色主题
  * - 支持高对比度模式
  * - 包含 Icon 和 Text 两个子组件
+ *
+ * ## 安装
+ *
+ * ```bash
+ * pnpm add @sea-lion/react-callout
+ * ```
+ *
+ * 或使用 npm / yarn：
+ *
+ * ```bash
+ * npm install @sea-lion/react-callout
+ * yarn add @sea-lion/react-callout
+ * ```
  */
 
 const meta = {

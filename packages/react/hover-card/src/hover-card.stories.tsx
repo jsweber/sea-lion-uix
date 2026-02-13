@@ -13,6 +13,19 @@ import { HoverCardPropsComponent } from './hover-card-props-table';
  *
  * HoverCard 是一个在用户悬停在触发元素上时显示的卡片组件，用于展示补充内容，不打断用户的操作流程。
  *
+ * ## 安装
+ *
+ * ```bash
+ * pnpm add @sea-lion/react-hover-card
+ * ```
+ *
+ * 或使用 npm / yarn：
+ *
+ * ```bash
+ * npm install @sea-lion/react-hover-card
+ * yarn add @sea-lion/react-hover-card
+ * ```
+ *
  * ## 何时使用
  *
  * - 显示用户简介或头像信息

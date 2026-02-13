@@ -12,6 +12,19 @@ import { Text } from '@sea-lion/react-text';
  *
  * ContextMenu 是在用户右击或长按元素时显示的菜单，提供与该上下文相关的操作选项。
  *
+ * ## 安装
+ *
+ * ```bash
+ * pnpm add @sea-lion/react-context-menu
+ * ```
+ *
+ * 或使用 npm / yarn：
+ *
+ * ```bash
+ * npm install @sea-lion/react-context-menu
+ * yarn add @sea-lion/react-context-menu
+ * ```
+ *
  * ## 何时使用
  *
  * - 需要为用户提供特定元素或区域的附加操作

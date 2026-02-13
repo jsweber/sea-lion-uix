@@ -11,6 +11,19 @@ import { Heading } from '@sea-lion/react-heading';
  *
  * Theme 组件是一个提供统一设计系统的主题提供者，用于向应用程序提供颜色、字体、尺寸等设计变量。
  *
+ * ## 安装
+ *
+ * ```bash
+ * pnpm add @sea-lion/react-theme
+ * ```
+ *
+ * 或使用 npm / yarn：
+ *
+ * ```bash
+ * npm install @sea-lion/react-theme
+ * yarn add @sea-lion/react-theme
+ * ```
+ *
  * ## 何时使用
  *
  * - 需要在应用程序中应用一致的设计系统时

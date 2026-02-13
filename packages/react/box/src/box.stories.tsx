@@ -4,6 +4,24 @@ import { Theme } from '@sea-lion/react-theme';
 import { Flex } from '@sea-lion/react-flex';
 import { Text } from '@sea-lion/react-text';
 
+/**
+ * ## 介绍
+ *
+ * Box 是基础的布局容器组件，支持 div/span 渲染及 asChild 等能力。
+ *
+ * ## 安装
+ *
+ * ```bash
+ * pnpm add @sea-lion/react-box
+ * ```
+ *
+ * 或使用 npm / yarn：
+ *
+ * ```bash
+ * npm install @sea-lion/react-box
+ * yarn add @sea-lion/react-box
+ * ```
+ */
 const meta = {
     title: '布局/Box',
     component: Box,

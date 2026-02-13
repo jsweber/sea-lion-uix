@@ -14,6 +14,19 @@ import { SpinnerPropsComponent } from './spinner-props-table';
  *
  * Spinner 是一个加载指示器组件，用于表示内容正在加载中。
  *
+ * ## 安装
+ *
+ * ```bash
+ * pnpm add @sea-lion/react-spinner
+ * ```
+ *
+ * 或使用 npm / yarn：
+ *
+ * ```bash
+ * npm install @sea-lion/react-spinner
+ * yarn add @sea-lion/react-spinner
+ * ```
+ *
  * ## 何时使用
  *
  * - 页面或组件正在加载数据时

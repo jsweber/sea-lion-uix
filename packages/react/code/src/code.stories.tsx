@@ -10,6 +10,19 @@ import { Text } from '@sea-lion/react-text';
  *
  * Code 是一个用于展示代码片段的组件，提供了多种风格和尺寸选项。
  *
+ * ## 安装
+ *
+ * ```bash
+ * pnpm add @sea-lion/react-code
+ * ```
+ *
+ * 或使用 npm / yarn：
+ *
+ * ```bash
+ * npm install @sea-lion/react-code
+ * yarn add @sea-lion/react-code
+ * ```
+ *
  * ## 何时使用
  *
  * - 在文本中展示代码片段或命令

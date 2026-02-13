@@ -13,6 +13,19 @@ import { SliderPropsComponent } from './slider-props-table';
  *
  * Slider 是一个滑动输入控件，允许用户在一个范围内选择值。
  *
+ * ## 安装
+ *
+ * ```bash
+ * pnpm add @sea-lion/react-slider
+ * ```
+ *
+ * 或使用 npm / yarn：
+ *
+ * ```bash
+ * npm install @sea-lion/react-slider
+ * yarn add @sea-lion/react-slider
+ * ```
+ *
  * ## 何时使用
  *
  * - 需要在连续或离散的区间内选择值

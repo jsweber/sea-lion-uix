@@ -11,6 +11,24 @@ import NazaImage from '../../../web-playground/images/naza.jpg';
 
 import './style/button-story.less';
 
+/**
+ * ## 介绍
+ *
+ * Button 是按钮组件，提供多种尺寸、变体和颜色选项。
+ *
+ * ## 安装
+ *
+ * ```bash
+ * pnpm add @sea-lion/react-button
+ * ```
+ *
+ * 或使用 npm / yarn：
+ *
+ * ```bash
+ * npm install @sea-lion/react-button
+ * yarn add @sea-lion/react-button
+ * ```
+ */
 const meta: Meta<typeof Button> = {
     component: Button,
     title: '通用/Button', // 不加title就会出现文件夹，如src

@@ -12,6 +12,19 @@ import { FlexPropsComponent } from './flex-props-table';
  *
  * Flex 是一个基于 CSS flexbox 布局的容器组件，用于创建灵活的一维布局，无论是行还是列。
  *
+ * ## 安装
+ *
+ * ```bash
+ * pnpm add @sea-lion/react-flex
+ * ```
+ *
+ * 或使用 npm / yarn：
+ *
+ * ```bash
+ * npm install @sea-lion/react-flex
+ * yarn add @sea-lion/react-flex
+ * ```
+ *
  * ## 何时使用
  *
  * - 创建水平或垂直方向的布局结构

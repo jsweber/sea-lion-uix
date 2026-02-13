@@ -13,6 +13,19 @@ import { GridPropsComponent } from './grid-props-table';
  *
  * Grid 是一个基于 CSS Grid 布局的容器组件，用于创建灵活的二维布局，能够同时控制行和列。
  *
+ * ## 安装
+ *
+ * ```bash
+ * pnpm add @sea-lion/react-grid
+ * ```
+ *
+ * 或使用 npm / yarn：
+ *
+ * ```bash
+ * npm install @sea-lion/react-grid
+ * yarn add @sea-lion/react-grid
+ * ```
+ *
  * ## 何时使用
  *
  * - 创建复杂的二维布局结构

@@ -12,6 +12,19 @@ import { TextPropsComponent } from './text-props-table';
  *
  * Text 是一个文本组件，用于显示不同样式和尺寸的文本内容。组件支持多种尺寸、字重、对齐方式和颜色选项。
  *
+ * ## 安装
+ *
+ * ```bash
+ * pnpm add @sea-lion/react-text
+ * ```
+ *
+ * 或使用 npm / yarn：
+ *
+ * ```bash
+ * npm install @sea-lion/react-text
+ * yarn add @sea-lion/react-text
+ * ```
+ *
  * ## 何时使用
  *
  * - 需要显示段落、标签或一般文本内容时

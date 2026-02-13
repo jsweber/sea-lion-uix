@@ -4,6 +4,24 @@ import { Theme } from '@sea-lion/react-theme';
 import { Flex } from '@sea-lion/react-flex';
 import { Text } from '@sea-lion/react-text';
 
+/**
+ * ## 介绍
+ *
+ * Badge 是徽章组件，用于展示标签、计数或状态等短文本。
+ *
+ * ## 安装
+ *
+ * ```bash
+ * pnpm add @sea-lion/react-badge
+ * ```
+ *
+ * 或使用 npm / yarn：
+ *
+ * ```bash
+ * npm install @sea-lion/react-badge
+ * yarn add @sea-lion/react-badge
+ * ```
+ */
 const meta = {
     title: '数据展示/Badge',
     component: Badge,

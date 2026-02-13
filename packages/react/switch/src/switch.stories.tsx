@@ -13,6 +13,19 @@ import { SwitchPropsComponent } from './switch-props-table';
  *
  * Switch 是一个开关组件，用于在两种状态间切换。
  *
+ * ## 安装
+ *
+ * ```bash
+ * pnpm add @sea-lion/react-switch
+ * ```
+ *
+ * 或使用 npm / yarn：
+ *
+ * ```bash
+ * npm install @sea-lion/react-switch
+ * yarn add @sea-lion/react-switch
+ * ```
+ *
  * ## 何时使用
  *
  * - 需要表示开关状态/处理用户的选择时

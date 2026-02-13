@@ -12,6 +12,19 @@ import { useState } from 'react';
  *
  * SegmentedControl 是一个分段控制器组件，用于在一组相关选项中进行单选。它提供了一个可视化的指示器，显示当前选中的选项。
  *
+ * ## 安装
+ *
+ * ```bash
+ * pnpm add @sea-lion/react-segmented-control
+ * ```
+ *
+ * 或使用 npm / yarn：
+ *
+ * ```bash
+ * npm install @sea-lion/react-segmented-control
+ * yarn add @sea-lion/react-segmented-control
+ * ```
+ *
  * ## 何时使用
  *
  * - 需要在有限的选项中进行单项选择

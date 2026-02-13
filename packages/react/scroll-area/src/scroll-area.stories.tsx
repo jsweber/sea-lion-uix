@@ -13,6 +13,19 @@ import { ScrollAreaPropsComponent } from './scroll-area-props-table';
  *
  * ScrollArea 是一个自定义滚动区域组件，提供优雅的跨浏览器滚动体验，具有可自定义的滚动条。
  *
+ * ## 安装
+ *
+ * ```bash
+ * pnpm add @sea-lion/react-scroll-area
+ * ```
+ *
+ * 或使用 npm / yarn：
+ *
+ * ```bash
+ * npm install @sea-lion/react-scroll-area
+ * yarn add @sea-lion/react-scroll-area
+ * ```
+ *
  * ## 何时使用
  *
  * - 需要自定义滚动条样式时

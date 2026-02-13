@@ -14,6 +14,19 @@ import { RadioPropsComponent } from './radio-props-table';
  *
  * Radio 是一个单选按钮组件，用于在一组选项中选择一个选项。
  *
+ * ## 安装
+ *
+ * ```bash
+ * pnpm add @sea-lion/react-radio
+ * ```
+ *
+ * 或使用 npm / yarn：
+ *
+ * ```bash
+ * npm install @sea-lion/react-radio
+ * yarn add @sea-lion/react-radio
+ * ```
+ *
  * ## 何时使用
  *
  * - 用户需要在一组互斥选项中做单选时

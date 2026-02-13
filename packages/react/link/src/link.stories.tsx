@@ -8,19 +8,6 @@ import { Text } from '@sea-lion/react-text';
 import { Heading } from '@sea-lion/react-heading';
 import { LinkPropsComponent } from './link-props-table';
 
-/**
- * ## 介绍
- *
- * Link 是一个链接组件，用于在页面间跳转或打开外部资源，支持自定义样式和各种交互状态。
- *
- * ## 何时使用
- *
- * - 需要页面导航或跳转到其他路由
- * - 需要在应用内部或外部建立超链接
- * - 需要创建自定义样式的链接
- * - 需要实现各种交互状态的链接（如悬停、点击等）
- */
-
 interface ExtendedLinkProps extends React.ComponentProps<typeof Link> {
   textWrap?: string;
 }
@@ -31,7 +18,33 @@ const meta: Meta<typeof Link> = {
     tags: ['autodocs'],
     parameters: {
         docs: {
-            page: null,
+            description: {
+                component: [
+                    '## 介绍',
+                    '',
+                    'Link 是一个链接组件，用于在页面间跳转或打开外部资源，支持自定义样式和各种交互状态。',
+                    '',
+                    '## 安装',
+                    '',
+                    '```bash',
+                    'pnpm add @sea-lion/react-link',
+                    '```',
+                    '',
+                    '或使用 npm / yarn：',
+                    '',
+                    '```bash',
+                    'npm install @sea-lion/react-link',
+                    'yarn add @sea-lion/react-link',
+                    '```',
+                    '',
+                    '## 何时使用',
+                    '',
+                    '- 需要页面导航或跳转到其他路由',
+                    '- 需要在应用内部或外部建立超链接',
+                    '- 需要创建自定义样式的链接',
+                    '- 需要实现各种交互状态的链接（如悬停、点击等）',
+                ].join('\n'),
+            },
         },
     },
     decorators: [

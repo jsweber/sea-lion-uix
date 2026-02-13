@@ -16,6 +16,19 @@ import { TablePropsComponent } from './table-props-table';
  *
  * Table 是一个表格组件，用于以行和列的形式展示数据。组件支持不同尺寸、变体样式、自定义布局以及单元格对齐方式。
  *
+ * ## 安装
+ *
+ * ```bash
+ * pnpm add @sea-lion/react-table
+ * ```
+ *
+ * 或使用 npm / yarn：
+ *
+ * ```bash
+ * npm install @sea-lion/react-table
+ * yarn add @sea-lion/react-table
+ * ```
+ *
  * ## 何时使用
  *
  * - 需要展示大量结构化数据时

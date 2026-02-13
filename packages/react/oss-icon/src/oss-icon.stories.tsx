@@ -27,6 +27,19 @@ function parseIconNamesFromCss(cssText: string): string[] {
  *
  * OssIcon (IconFont) 是基于 [iconfont 平台](https://www.iconfont.cn/) 的图标组件，支持通过 **Font-class**（.css）或 **Symbol**（.js）资源地址加载图标。
  *
+ * ## 安装
+ *
+ * ```bash
+ * pnpm add @sea-lion/react-oss-icon
+ * ```
+ *
+ * 或使用 npm / yarn：
+ *
+ * ```bash
+ * npm install @sea-lion/react-oss-icon
+ * yarn add @sea-lion/react-oss-icon
+ * ```
+ *
  * ## 何时使用
  *
  * - 需要使用团队 iconfont 项目中的图标时

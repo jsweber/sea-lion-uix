@@ -11,6 +11,19 @@ import { Heading } from '@sea-lion/react-heading';
  *
  * Separator 是一个分隔线组件，用于在视觉上分隔不同的内容区域。
  *
+ * ## 安装
+ *
+ * ```bash
+ * pnpm add @sea-lion/react-separator
+ * ```
+ *
+ * 或使用 npm / yarn：
+ *
+ * ```bash
+ * npm install @sea-lion/react-separator
+ * yarn add @sea-lion/react-separator
+ * ```
+ *
  * ## 何时使用
  *
  * - 需要在不同内容块之间创建视觉分隔

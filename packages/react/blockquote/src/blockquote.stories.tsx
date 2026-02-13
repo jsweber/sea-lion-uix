@@ -4,6 +4,24 @@ import { Theme } from '@sea-lion/react-theme';
 import { Flex } from '@sea-lion/react-flex';
 import { Text } from '@sea-lion/react-text';
 
+/**
+ * ## 介绍
+ *
+ * Blockquote 是引用块组件，用于展示引用内容，支持多种尺寸与样式。
+ *
+ * ## 安装
+ *
+ * ```bash
+ * pnpm add @sea-lion/react-blockquote
+ * ```
+ *
+ * 或使用 npm / yarn：
+ *
+ * ```bash
+ * npm install @sea-lion/react-blockquote
+ * yarn add @sea-lion/react-blockquote
+ * ```
+ */
 const meta = {
     title: '排版/Blockquote',
     component: Blockquote,

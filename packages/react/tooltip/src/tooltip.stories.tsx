@@ -16,6 +16,19 @@ import { TooltipPropsComponent } from './tooltip-props-table';
  * Tooltip 是一个提示组件，当用户将鼠标悬停在元素上时显示简短的说明文本。
  * 组件支持自定义内容、宽度和位置等属性。
  *
+ * ## 安装
+ *
+ * ```bash
+ * pnpm add @sea-lion/react-tooltip
+ * ```
+ *
+ * 或使用 npm / yarn：
+ *
+ * ```bash
+ * npm install @sea-lion/react-tooltip
+ * yarn add @sea-lion/react-tooltip
+ * ```
+ *
  * ## 何时使用
  *
  * - 当需要为用户提供额外的上下文或解释时

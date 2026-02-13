@@ -15,6 +15,19 @@ import { PopoverPropsComponent } from './popover-props-table';
  *
  * Popover 是一个弹出式组件，用于显示与触发元素相关的临时内容，如附加信息、操作菜单等。
  *
+ * ## 安装
+ *
+ * ```bash
+ * pnpm add @sea-lion/react-popover
+ * ```
+ *
+ * 或使用 npm / yarn：
+ *
+ * ```bash
+ * npm install @sea-lion/react-popover
+ * yarn add @sea-lion/react-popover
+ * ```
+ *
  * ## 何时使用
  *
  * - 需要显示额外内容但不希望跳转页面或打开模态框

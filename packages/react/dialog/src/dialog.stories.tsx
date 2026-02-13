@@ -14,6 +14,19 @@ import { DialogPropsComponent } from './dialog-props-table';
  *
  * Dialog 是一个模态对话框组件，用于显示需要用户注意或操作的内容，同时阻止与页面其余部分的交互，直到对话框关闭。
  *
+ * ## 安装
+ *
+ * ```bash
+ * pnpm add @sea-lion/react-dialog
+ * ```
+ *
+ * 或使用 npm / yarn：
+ *
+ * ```bash
+ * npm install @sea-lion/react-dialog
+ * yarn add @sea-lion/react-dialog
+ * ```
+ *
  * ## 何时使用
  *
  * - 需要用户确认重要操作

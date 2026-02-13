@@ -29,6 +29,19 @@ import { RadioCardsPropsComponent } from './radio-cards-props-table';
  *
  * RadioCards 是一个卡片式单选按钮组件，用于在一组选项中选择一个选项，适合需要更大点击区域或需要展示更丰富内容的场景。
  *
+ * ## 安装
+ *
+ * ```bash
+ * pnpm add @sea-lion/react-radio-card
+ * ```
+ *
+ * 或使用 npm / yarn：
+ *
+ * ```bash
+ * npm install @sea-lion/react-radio-card
+ * yarn add @sea-lion/react-radio-card
+ * ```
+ *
  * ## 何时使用
  *
  * - 需要在一组选项中进行单选，且选项有图标或需要更多文本描述

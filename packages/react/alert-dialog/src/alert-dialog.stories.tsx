@@ -12,6 +12,24 @@ type AlertDialogProps = React.ComponentProps<typeof AlertDialog.Root> &
     'height' | 'minHeight' | 'maxHeight' | 'asChild'
   >;
 
+/**
+ * ## 介绍
+ *
+ * AlertDialog 是确认对话框组件，用于需要用户确认或取消的操作场景。
+ *
+ * ## 安装
+ *
+ * ```bash
+ * pnpm add @sea-lion/react-alert-dialog
+ * ```
+ *
+ * 或使用 npm / yarn：
+ *
+ * ```bash
+ * npm install @sea-lion/react-alert-dialog
+ * yarn add @sea-lion/react-alert-dialog
+ * ```
+ */
 const meta = {
     title: '反馈/AlertDialog',
     component: AlertDialog.Root,

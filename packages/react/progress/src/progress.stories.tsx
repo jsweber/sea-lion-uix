@@ -15,6 +15,19 @@ import { ProgressPropsComponent } from './progress-props-table';
  *
  * Progress 是一个进度指示器组件，用于显示操作完成的进度或加载状态。
  *
+ * ## 安装
+ *
+ * ```bash
+ * pnpm add @sea-lion/react-progress
+ * ```
+ *
+ * 或使用 npm / yarn：
+ *
+ * ```bash
+ * npm install @sea-lion/react-progress
+ * yarn add @sea-lion/react-progress
+ * ```
+ *
  * ## 何时使用
  *
  * - 需要显示任务或操作的完成进度

@@ -13,6 +13,19 @@ import { InsetPropsComponent } from './inset-props-table';
  *
  * Inset 是一个容器组件，用于创建负边距效果，可以将内容向外延伸超出父元素的边界。
  *
+ * ## 安装
+ *
+ * ```bash
+ * pnpm add @sea-lion/react-inset
+ * ```
+ *
+ * 或使用 npm / yarn：
+ *
+ * ```bash
+ * npm install @sea-lion/react-inset
+ * yarn add @sea-lion/react-inset
+ * ```
+ *
  * ## 何时使用
  *
  * - 需要让图片或其他内容扩展到容器边缘时

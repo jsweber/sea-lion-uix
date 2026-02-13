@@ -38,6 +38,19 @@ const {
  *
  * IconButton 是一个用于展示图标的按钮组件，提供多种尺寸和样式选项。
  *
+ * ## 安装
+ *
+ * ```bash
+ * pnpm add @sea-lion/react-icon-button
+ * ```
+ *
+ * 或使用 npm / yarn：
+ *
+ * ```bash
+ * npm install @sea-lion/react-icon-button
+ * yarn add @sea-lion/react-icon-button
+ * ```
+ *
  * ## 何时使用
  *
  * - 需要节省空间但仍需提供交互功能时

@@ -11,6 +11,19 @@ import { Text } from '@sea-lion/react-text';
  *
  * DataList 是一个用于展示键值对列表的组件，通常用于展示属性、配置和详细信息。
  *
+ * ## 安装
+ *
+ * ```bash
+ * pnpm add @sea-lion/react-data-list
+ * ```
+ *
+ * 或使用 npm / yarn：
+ *
+ * ```bash
+ * npm install @sea-lion/react-data-list
+ * yarn add @sea-lion/react-data-list
+ * ```
+ *
  * ## 何时使用
  *
  * - 需要以结构化方式展示对象属性或数据字段

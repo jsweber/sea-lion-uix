@@ -4,6 +4,24 @@ import { Theme } from '@sea-lion/react-theme';
 import { Flex } from '@sea-lion/react-flex';
 import { Text } from '@sea-lion/react-text';
 
+/**
+ * ## 介绍
+ *
+ * Avatar 是头像组件，用于展示用户或实体头像，支持多种尺寸与样式。
+ *
+ * ## 安装
+ *
+ * ```bash
+ * pnpm add @sea-lion/react-avatar
+ * ```
+ *
+ * 或使用 npm / yarn：
+ *
+ * ```bash
+ * npm install @sea-lion/react-avatar
+ * yarn add @sea-lion/react-avatar
+ * ```
+ */
 const meta = {
     title: '数据展示/Avatar',
     component: Avatar,
