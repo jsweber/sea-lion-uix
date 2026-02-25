@@ -50,8 +50,9 @@ const IconFont: FC<IconFontProps> = ({
             className={classes}
             style={{
                 display: 'inline-block',
-                color: `${color && color}`,
-                fontSize: `${fontSize && fontSize}`,
+                // 未传时使用 currentColor/1em，便于在 IconButton 等父组件内继承颜色与尺寸
+                color: color ?? 'currentColor',
+                fontSize: fontSize ?? '1em',
                 ...style,
             }}
         />

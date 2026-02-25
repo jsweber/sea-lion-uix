@@ -3,6 +3,7 @@ import { Theme } from '../../theme/src';
 import * as RadixIcons from '@radix-ui/react-icons';
 
 import { IconButton } from '@sea-lion/react-icon-button';
+import { IconFont } from '@sea-lion/react-oss-icon';
 import { Box } from '@sea-lion/react-box';
 import { Flex } from '@sea-lion/react-flex';
 import { Text } from '@sea-lion/react-text';
@@ -107,6 +108,38 @@ export const Basic = () => {
 };
 
 Basic.storyName = '基础用法';
+
+export const WithOssIcon = () => {
+    return (
+        <Theme>
+            <Box p="5">
+                <Text mb="4">配合 OssIcon (IconFont) 使用 iconfont 图标：</Text>
+                <Flex gap="4" align="center" wrap="wrap">
+                    <IconButton aria-label="刷新">
+                        <IconFont icon="icon-RefreshOutlined" />
+                    </IconButton>
+                    <IconButton variant="solid" color="blue" aria-label="喜欢">
+                        <IconFont icon="icon-CompassionFilled" />
+                    </IconButton>
+                    <IconButton variant="outline" aria-label="设置">
+                        <IconFont icon="icon-SettingsOutlined" />
+                    </IconButton>
+                    <IconButton variant="soft" color="green" aria-label="正确">
+                        <IconFont icon="icon-CorrectOutlined" />
+                    </IconButton>
+                    <IconButton variant="ghost" aria-label="搜索">
+                        <IconFont icon="icon-SearchOutlined" />
+                    </IconButton>
+                </Flex>
+                <Text mt="4" size="1" color="gray">
+                    需安装 @sea-lion/react-oss-icon；IconFont 未传 color/fontSize 时会继承按钮颜色与尺寸。
+                </Text>
+            </Box>
+        </Theme>
+    );
+};
+
+WithOssIcon.storyName = '配合 OssIcon';
 
 export const Variants = () => {
     return (
