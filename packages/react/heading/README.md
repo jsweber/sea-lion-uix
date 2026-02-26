@@ -5,9 +5,18 @@ Heading 是一个用于显示标题的组件，提供多种级别、尺寸和样
 ## 安装
 
 ```sh
-$ yarn add @sea-lion/react-heading
+pnpm add @sea-lion/react-heading
 # 或者
-$ npm install @sea-lion/react-heading
+npm install @sea-lion/react-heading
+yarn add @sea-lion/react-heading
+```
+
+## 使用
+
+在代码中引入组件：
+
+```tsx
+import { Heading } from '@sea-lion/react-heading';
 ```
 
 ## 基本使用

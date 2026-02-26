@@ -5,9 +5,18 @@ Tooltip 是一个提示组件，当用户将鼠标悬停在元素上时显示简
 ## 安装
 
 ```sh
-$ yarn add @sea-lion/react-tooltip
+pnpm add @sea-lion/react-tooltip
 # 或者
-$ npm install @sea-lion/react-tooltip
+npm install @sea-lion/react-tooltip
+yarn add @sea-lion/react-tooltip
+```
+
+## 使用
+
+在代码中引入组件：
+
+```tsx
+import * as Tooltip from '@sea-lion/react-tooltip';
 ```
 
 ## 基本使用

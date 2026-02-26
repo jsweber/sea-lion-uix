@@ -5,10 +5,25 @@ RadioGroup is a component that allows users to select a single option from a lis
 ## Installation
 
 ```sh
-$ yarn add @sea-lion/react-radio-group
+pnpm add @sea-lion/react-radio-group
 # or
-$ npm install @sea-lion/react-radio-group
+npm install @sea-lion/react-radio-group
+yarn add @sea-lion/react-radio-group
 ```
+
+## Usage
+
+Import the component in your code:
+
+```tsx
+import * as RadioGroup from '@sea-lion/react-radio-group';
+```
+
+## When to Use
+
+- When the user must select one option from a set of mutually exclusive options
+- When there are few options and they can all be shown at once
+- When the user needs to make an explicit choice
 
 ## Basic Usage
 

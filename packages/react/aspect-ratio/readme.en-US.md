@@ -1,40 +1,40 @@
 # `react-aspect-ratio`
 
-AspectRatio 是宽高比容器组件，用于保持内容的宽高比显示。
+AspectRatio is a container component that maintains a fixed aspect ratio for its content.
 
-## 安装
+## Installation
 
 ```sh
 pnpm add @sea-lion/react-aspect-ratio
-# 或者
+# or
 npm install @sea-lion/react-aspect-ratio
 yarn add @sea-lion/react-aspect-ratio
 ```
 
-## 使用
+## Usage
 
-在代码中引入组件：
+Import the component in your code:
 
 ```tsx
 import * as AspectRatio from '@sea-lion/react-aspect-ratio';
 ```
 
-### 基本用法
+### Basic Usage
 
 ```jsx
 <AspectRatio.Root ratio={16 / 9}>
   <img
     src="https://example.com/image.jpg"
-    alt="示例"
+    alt="Example"
     style={{ objectFit: 'cover', width: '100%', height: '100%' }}
   />
 </AspectRatio.Root>
 ```
 
-### 不同宽高比
+### Different Ratios
 
-通过 `ratio` 属性设置宽高比，如 `16/9`、`4/3`、`1` 等。
+Set the aspect ratio via the `ratio` prop, e.g. `16/9`, `4/3`, `1`.
 
-## 查看更多
+## Learn More
 
-查看[文档](https://gitee.com/summer_sleep/ui-lib-monorepo-template)获取更多信息。
+View the [documentation](https://gitee.com/summer_sleep/ui-lib-monorepo-template) for more information.

@@ -5,9 +5,18 @@ Link 是一个链接组件，用于在页面间跳转或打开外部资源，支
 ## 安装
 
 ```sh
-$ yarn add @sea-lion/react-link
+pnpm add @sea-lion/react-link
 # 或者
-$ npm install @sea-lion/react-link
+npm install @sea-lion/react-link
+yarn add @sea-lion/react-link
+```
+
+## 使用
+
+在代码中引入组件：
+
+```tsx
+import { Link } from '@sea-lion/react-link';
 ```
 
 ## 基本使用

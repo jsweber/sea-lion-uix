@@ -5,9 +5,18 @@ Flex is a container component based on CSS flexbox layout, used to create flexib
 ## Installation
 
 ```sh
-$ yarn add @sea-lion/react-flex
+pnpm add @sea-lion/react-flex
 # or
-$ npm install @sea-lion/react-flex
+npm install @sea-lion/react-flex
+yarn add @sea-lion/react-flex
+```
+
+## Usage
+
+Import the component in your code:
+
+```tsx
+import { Flex } from '@sea-lion/react-flex';
 ```
 
 ## Basic Usage
@@ -73,6 +82,14 @@ The Flex component supports all major flexbox layout options:
 | gap       | Space between child elements       | '1' - '9'                                               | -        | 0.2.0   |
 
 The Flex component also supports all standard margin and layout props, such as `m`, `mt`, `width`, `height`, etc.
+
+## When to Use
+
+- Create horizontal or vertical layout structures
+- Build UIs that need flexible space distribution
+- Align and distribute child elements
+- Build responsive layouts
+- Implement nav bars, toolbars, and other basic UI
 
 ## Learn More
 

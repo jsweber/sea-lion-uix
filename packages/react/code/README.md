@@ -1,26 +1,29 @@
 # `react-code`
 
-Code 组件用于展示代码片段，提供多种风格和尺寸选项。
+Code 是一个用于展示代码片段的组件，提供了多种风格和尺寸选项，使代码内容与上下文区分、更加醒目。
 
 ## 安装
 
 ```sh
-$ yarn add @sea-lion/react-code
+pnpm add @sea-lion/react-code
 # 或者
-$ npm install @sea-lion/react-code
+npm install @sea-lion/react-code
+yarn add @sea-lion/react-code
 ```
 
-## 基本使用
+## 使用
+
+在代码中引入组件：
+
+```tsx
+import { Code } from '@sea-lion/react-code';
+```
+
+### 基本用法
 
 ```jsx
-import { Code } from "@sea-lion/react-code";
-import { Text } from "@sea-lion/react-text";
-
-export default () => (
-  <Text>
-    这是使用示例：<Code>console.log('Hello World')</Code>
-  </Text>
-);
+<Code>const x = 1;</Code>
+<Code size="2" variant="soft">代码片段</Code>
 ```
 
 ## 何时使用

@@ -5,9 +5,18 @@ Input is a text field component for collecting user input, providing multiple st
 ## Installation
 
 ```sh
-$ yarn add @sea-lion/react-input
+pnpm add @sea-lion/react-input
 # or
-$ npm install @sea-lion/react-input
+npm install @sea-lion/react-input
+yarn add @sea-lion/react-input
+```
+
+## Usage
+
+Import the component in your code:
+
+```tsx
+import { Input } from '@sea-lion/react-input';
 ```
 
 ## Basic Usage

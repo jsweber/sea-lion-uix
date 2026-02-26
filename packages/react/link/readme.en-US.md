@@ -5,9 +5,18 @@ Link is a component for navigation between pages or opening external resources, 
 ## Installation
 
 ```sh
-$ yarn add @sea-lion/react-link
+pnpm add @sea-lion/react-link
 # or
-$ npm install @sea-lion/react-link
+npm install @sea-lion/react-link
+yarn add @sea-lion/react-link
+```
+
+## Usage
+
+Import the component in your code:
+
+```tsx
+import { Link } from '@sea-lion/react-link';
 ```
 
 ## Basic Usage
