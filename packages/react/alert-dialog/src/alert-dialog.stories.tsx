@@ -29,6 +29,14 @@ type AlertDialogProps = React.ComponentProps<typeof AlertDialog.Root> &
  * npm install @sea-lion/react-alert-dialog
  * yarn add @sea-lion/react-alert-dialog
  * ```
+ *
+ * ## 使用
+ *
+ * 在代码中引入组件：
+ *
+ * ```tsx
+ * import * as AlertDialog from '@sea-lion/react-alert-dialog';
+ * ```
  */
 const meta = {
     title: '反馈/AlertDialog',

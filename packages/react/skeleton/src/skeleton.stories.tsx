@@ -27,6 +27,14 @@ import { SkeletonPropsComponent } from './skeleton-props-table';
  * yarn add @sea-lion/react-skeleton
  * ```
  *
+ * ## 使用
+ *
+ * 在代码中引入组件：
+ *
+ * ```tsx
+ * import { Skeleton } from '@sea-lion/react-skeleton';
+ * ```
+ *
  * ## 何时使用
  *
  * - 内容正在加载中，需要向用户展示页面结构

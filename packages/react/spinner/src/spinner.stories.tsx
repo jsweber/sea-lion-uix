@@ -27,6 +27,14 @@ import { SpinnerPropsComponent } from './spinner-props-table';
  * yarn add @sea-lion/react-spinner
  * ```
  *
+ * ## 使用
+ *
+ * 在代码中引入组件：
+ *
+ * ```tsx
+ * import { Spinner } from '@sea-lion/react-spinner';
+ * ```
+ *
  * ## 何时使用
  *
  * - 页面或组件正在加载数据时

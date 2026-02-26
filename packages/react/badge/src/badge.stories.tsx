@@ -21,6 +21,14 @@ import { Text } from '@sea-lion/react-text';
  * npm install @sea-lion/react-badge
  * yarn add @sea-lion/react-badge
  * ```
+ *
+ * ## 使用
+ *
+ * 在代码中引入组件：
+ *
+ * ```tsx
+ * import { Badge } from '@sea-lion/react-badge';
+ * ```
  */
 const meta = {
     title: '数据展示/Badge',

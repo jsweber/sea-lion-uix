@@ -27,6 +27,14 @@ import { DialogPropsComponent } from './dialog-props-table';
  * yarn add @sea-lion/react-dialog
  * ```
  *
+ * ## 使用
+ *
+ * 在代码中引入组件：
+ *
+ * ```tsx
+ * import * as Dialog from '@sea-lion/react-dialog';
+ * ```
+ *
  * ## 何时使用
  *
  * - 需要用户确认重要操作

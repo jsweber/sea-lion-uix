@@ -26,6 +26,14 @@ import { SelectPropsComponent } from './select-props-table';
  * yarn add @sea-lion/react-select
  * ```
  *
+ * ## 使用
+ *
+ * 在代码中引入组件：
+ *
+ * ```tsx
+ * import * as Select from '@sea-lion/react-select';
+ * ```
+ *
  * ## 何时使用
  *
  * - 需要从一组选项中选择单个值

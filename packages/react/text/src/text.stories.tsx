@@ -25,6 +25,14 @@ import { TextPropsComponent } from './text-props-table';
  * yarn add @sea-lion/react-text
  * ```
  *
+ * ## 使用
+ *
+ * 在代码中引入组件：
+ *
+ * ```tsx
+ * import { Text } from '@sea-lion/react-text';
+ * ```
+ *
  * ## 何时使用
  *
  * - 需要显示段落、标签或一般文本内容时

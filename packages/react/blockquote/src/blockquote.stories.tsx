@@ -21,6 +21,14 @@ import { Text } from '@sea-lion/react-text';
  * npm install @sea-lion/react-blockquote
  * yarn add @sea-lion/react-blockquote
  * ```
+ *
+ * ## 使用
+ *
+ * 在代码中引入组件：
+ *
+ * ```tsx
+ * import { Blockquote } from '@sea-lion/react-blockquote';
+ * ```
  */
 const meta = {
     title: '排版/Blockquote',

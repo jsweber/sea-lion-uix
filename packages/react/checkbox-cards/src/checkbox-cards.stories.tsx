@@ -30,6 +30,14 @@ import { InfoCircledIcon, RocketIcon, GearIcon } from '@radix-ui/react-icons';
  * npm install @sea-lion/react-checkbox-cards
  * yarn add @sea-lion/react-checkbox-cards
  * ```
+ *
+ * ## 使用
+ *
+ * 在代码中引入组件：
+ *
+ * ```tsx
+ * import * as CheckboxCards from '@sea-lion/react-checkbox-cards';
+ * ```
  */
 
 const meta = {

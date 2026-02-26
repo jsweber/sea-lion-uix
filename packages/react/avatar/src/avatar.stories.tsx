@@ -21,6 +21,14 @@ import { Text } from '@sea-lion/react-text';
  * npm install @sea-lion/react-avatar
  * yarn add @sea-lion/react-avatar
  * ```
+ *
+ * ## 使用
+ *
+ * 在代码中引入组件：
+ *
+ * ```tsx
+ * import { Avatar } from '@sea-lion/react-avatar';
+ * ```
  */
 const meta = {
     title: '数据展示/Avatar',

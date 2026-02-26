@@ -26,6 +26,14 @@ import { InsetPropsComponent } from './inset-props-table';
  * yarn add @sea-lion/react-inset
  * ```
  *
+ * ## 使用
+ *
+ * 在代码中引入组件：
+ *
+ * ```tsx
+ * import { Inset } from '@sea-lion/react-inset';
+ * ```
+ *
  * ## 何时使用
  *
  * - 需要让图片或其他内容扩展到容器边缘时

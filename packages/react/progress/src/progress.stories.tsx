@@ -28,6 +28,14 @@ import { ProgressPropsComponent } from './progress-props-table';
  * yarn add @sea-lion/react-progress
  * ```
  *
+ * ## 使用
+ *
+ * 在代码中引入组件：
+ *
+ * ```tsx
+ * import { Progress } from '@sea-lion/react-progress';
+ * ```
+ *
  * ## 何时使用
  *
  * - 需要显示任务或操作的完成进度

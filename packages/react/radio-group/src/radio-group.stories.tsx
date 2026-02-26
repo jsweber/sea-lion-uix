@@ -40,6 +40,14 @@ import { RadioGroupPropsComponent } from './radio-group-props-table';
  * yarn add @sea-lion/react-radio-group
  * ```
  *
+ * ## 使用
+ *
+ * 在代码中引入组件：
+ *
+ * ```tsx
+ * import * as RadioGroup from '@sea-lion/react-radio-group';
+ * ```
+ *
  * ## 何时使用
  *
  * - 需要在一组互斥选项中选择一个选项时

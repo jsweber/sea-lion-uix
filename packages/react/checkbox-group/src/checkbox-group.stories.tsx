@@ -25,6 +25,14 @@ import { useState } from 'react';
  * yarn add @sea-lion/react-checkbox-group
  * ```
  *
+ * ## 使用
+ *
+ * 在代码中引入组件：
+ *
+ * ```tsx
+ * import * as CheckboxGroup from '@sea-lion/react-checkbox-group';
+ * ```
+ *
  * ## 何时使用
  *
  * - 当用户需要从一组数据中选择多个选项时

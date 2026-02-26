@@ -28,6 +28,14 @@ import { Text } from '@sea-lion/react-text';
  * npm install @sea-lion/react-card
  * yarn add @sea-lion/react-card
  * ```
+ *
+ * ## 使用
+ *
+ * 在代码中引入组件：
+ *
+ * ```tsx
+ * import { Card } from '@sea-lion/react-card';
+ * ```
  */
 
 const meta = {

@@ -26,6 +26,14 @@ import { KbdPropsComponent } from './kbd-props-table';
  * yarn add @sea-lion/react-kbd
  * ```
  *
+ * ## 使用
+ *
+ * 在代码中引入组件：
+ *
+ * ```tsx
+ * import { Kbd } from '@sea-lion/react-kbd';
+ * ```
+ *
  * ## 何时使用
  *
  * - 在文档或教程中展示键盘快捷键

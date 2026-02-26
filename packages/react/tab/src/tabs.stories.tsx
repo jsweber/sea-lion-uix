@@ -31,6 +31,14 @@ import {
  * yarn add @sea-lion/react-tab
  * ```
  *
+ * ## 使用
+ *
+ * 在代码中引入组件：
+ *
+ * ```tsx
+ * import * as Tabs from '@sea-lion/react-tab';
+ * ```
+ *
  * ## 何时使用
  *
  * - 需要在同一区域内展示不同类别的内容

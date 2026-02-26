@@ -26,6 +26,14 @@ import { SliderPropsComponent } from './slider-props-table';
  * yarn add @sea-lion/react-slider
  * ```
  *
+ * ## 使用
+ *
+ * 在代码中引入组件：
+ *
+ * ```tsx
+ * import { Slider } from '@sea-lion/react-slider';
+ * ```
+ *
  * ## 何时使用
  *
  * - 需要在连续或离散的区间内选择值

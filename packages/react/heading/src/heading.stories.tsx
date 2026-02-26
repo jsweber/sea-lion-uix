@@ -25,6 +25,14 @@ import { HeadingPropsComponent } from './heading-props-table';
  * yarn add @sea-lion/react-heading
  * ```
  *
+ * ## 使用
+ *
+ * 在代码中引入组件：
+ *
+ * ```tsx
+ * import { Heading } from '@sea-lion/react-heading';
+ * ```
+ *
  * ## 何时使用
  *
  * - 网页、应用的各级标题展示

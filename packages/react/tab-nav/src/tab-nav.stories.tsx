@@ -28,6 +28,14 @@ import {
  * yarn add @sea-lion/react-tab-nav
  * ```
  *
+ * ## 使用
+ *
+ * 在代码中引入组件：
+ *
+ * ```tsx
+ * import * as TabNav from '@sea-lion/react-tab-nav';
+ * ```
+ *
  * ## 何时使用
  *
  * - 需要在页面之间导航时

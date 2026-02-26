@@ -27,6 +27,14 @@ import { RadioPropsComponent } from './radio-props-table';
  * yarn add @sea-lion/react-radio
  * ```
  *
+ * ## 使用
+ *
+ * 在代码中引入组件：
+ *
+ * ```tsx
+ * import { Radio } from '@sea-lion/react-radio';
+ * ```
+ *
  * ## 何时使用
  *
  * - 用户需要在一组互斥选项中做单选时

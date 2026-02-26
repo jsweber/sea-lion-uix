@@ -28,6 +28,14 @@ import { PopoverPropsComponent } from './popover-props-table';
  * yarn add @sea-lion/react-popover
  * ```
  *
+ * ## 使用
+ *
+ * 在代码中引入组件：
+ *
+ * ```tsx
+ * import * as Popover from '@sea-lion/react-popover';
+ * ```
+ *
  * ## 何时使用
  *
  * - 需要显示额外内容但不希望跳转页面或打开模态框

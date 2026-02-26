@@ -29,6 +29,14 @@ import { TablePropsComponent } from './table-props-table';
  * yarn add @sea-lion/react-table
  * ```
  *
+ * ## 使用
+ *
+ * 在代码中引入组件：
+ *
+ * ```tsx
+ * import * as Table from '@sea-lion/react-table';
+ * ```
+ *
  * ## 何时使用
  *
  * - 需要展示大量结构化数据时

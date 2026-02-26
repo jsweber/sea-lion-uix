@@ -24,6 +24,14 @@ import { Heading } from '@sea-lion/react-heading';
  * yarn add @sea-lion/react-theme
  * ```
  *
+ * ## 使用
+ *
+ * 在代码中引入组件：
+ *
+ * ```tsx
+ * import { Theme } from '@sea-lion/react-theme';
+ * ```
+ *
  * ## 何时使用
  *
  * - 需要在应用程序中应用一致的设计系统时

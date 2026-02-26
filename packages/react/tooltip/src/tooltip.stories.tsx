@@ -29,6 +29,14 @@ import { TooltipPropsComponent } from './tooltip-props-table';
  * yarn add @sea-lion/react-tooltip
  * ```
  *
+ * ## 使用
+ *
+ * 在代码中引入组件：
+ *
+ * ```tsx
+ * import * as Tooltip from '@sea-lion/react-tooltip';
+ * ```
+ *
  * ## 何时使用
  *
  * - 当需要为用户提供额外的上下文或解释时

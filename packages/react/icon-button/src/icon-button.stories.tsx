@@ -52,6 +52,14 @@ const {
  * yarn add @sea-lion/react-icon-button
  * ```
  *
+ * ## 使用
+ *
+ * 在代码中引入组件：
+ *
+ * ```tsx
+ * import { IconButton } from '@sea-lion/react-icon-button';
+ * ```
+ *
  * ## 何时使用
  *
  * - 需要节省空间但仍需提供交互功能时

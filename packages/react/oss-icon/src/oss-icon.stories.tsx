@@ -40,6 +40,14 @@ function parseIconNamesFromCss(cssText: string): string[] {
  * yarn add @sea-lion/react-oss-icon
  * ```
  *
+ * ## 使用
+ *
+ * 在代码中引入组件：
+ *
+ * ```tsx
+ * import { IconFont } from '@sea-lion/react-oss-icon';
+ * ```
+ *
  * ## 何时使用
  *
  * - 需要使用团队 iconfont 项目中的图标时

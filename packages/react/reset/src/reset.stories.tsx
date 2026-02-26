@@ -26,6 +26,14 @@ import { ResetPropsComponent } from './reset-props-table';
  * yarn add @sea-lion/react-reset
  * ```
  *
+ * ## 使用
+ *
+ * 在代码中引入组件：
+ *
+ * ```tsx
+ * import { Reset } from '@sea-lion/react-reset';
+ * ```
+ *
  * ## 何时使用
  *
  * - 需要移除元素默认样式时

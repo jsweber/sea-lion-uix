@@ -26,6 +26,14 @@ import { SectionPropsComponent } from './section-props-table';
  * yarn add @sea-lion/react-section
  * ```
  *
+ * ## 使用
+ *
+ * 在代码中引入组件：
+ *
+ * ```tsx
+ * import * as Section from '@sea-lion/react-section';
+ * ```
+ *
  * ## 何时使用
  *
  * - 需要在页面上划分不同的内容区域

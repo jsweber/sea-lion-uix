@@ -25,6 +25,14 @@ import { Text } from '@sea-lion/react-text';
  * yarn add @sea-lion/react-context-menu
  * ```
  *
+ * ## 使用
+ *
+ * 在代码中引入组件：
+ *
+ * ```tsx
+ * import * as ContextMenu from '@sea-lion/react-context-menu';
+ * ```
+ *
  * ## 何时使用
  *
  * - 需要为用户提供特定元素或区域的附加操作

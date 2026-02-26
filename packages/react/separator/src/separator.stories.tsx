@@ -24,6 +24,14 @@ import { Heading } from '@sea-lion/react-heading';
  * yarn add @sea-lion/react-separator
  * ```
  *
+ * ## 使用
+ *
+ * 在代码中引入组件：
+ *
+ * ```tsx
+ * import { Separator } from '@sea-lion/react-separator';
+ * ```
+ *
  * ## 何时使用
  *
  * - 需要在不同内容块之间创建视觉分隔

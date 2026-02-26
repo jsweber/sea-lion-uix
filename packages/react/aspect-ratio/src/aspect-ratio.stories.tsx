@@ -20,6 +20,14 @@ import { Text } from '@sea-lion/react-text';
  * npm install @sea-lion/react-aspect-ratio
  * yarn add @sea-lion/react-aspect-ratio
  * ```
+ *
+ * ## 使用
+ *
+ * 在代码中引入组件：
+ *
+ * ```tsx
+ * import * as AspectRatio from '@sea-lion/react-aspect-ratio';
+ * ```
  */
 const meta = {
     title: '布局/AspectRatio',

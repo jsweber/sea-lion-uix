@@ -26,6 +26,14 @@ import { SwitchPropsComponent } from './switch-props-table';
  * yarn add @sea-lion/react-switch
  * ```
  *
+ * ## 使用
+ *
+ * 在代码中引入组件：
+ *
+ * ```tsx
+ * import { Switch } from '@sea-lion/react-switch';
+ * ```
+ *
  * ## 何时使用
  *
  * - 需要表示开关状态/处理用户的选择时

@@ -27,6 +27,14 @@ import { DropdownMenuPropsComponent } from './dropdown-menu-props-table';
  * yarn add @sea-lion/react-dropdown-menu
  * ```
  *
+ * ## 使用
+ *
+ * 在代码中引入组件：
+ *
+ * ```tsx
+ * import * as DropdownMenu from '@sea-lion/react-dropdown-menu';
+ * ```
+ *
  * ## 何时使用
  *
  * - 提供一组相关操作的入口

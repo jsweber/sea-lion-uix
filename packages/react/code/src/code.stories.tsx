@@ -23,6 +23,14 @@ import { Text } from '@sea-lion/react-text';
  * yarn add @sea-lion/react-code
  * ```
  *
+ * ## 使用
+ *
+ * 在代码中引入组件：
+ *
+ * ```tsx
+ * import { Code } from '@sea-lion/react-code';
+ * ```
+ *
  * ## 何时使用
  *
  * - 在文本中展示代码片段或命令

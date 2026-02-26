@@ -21,6 +21,14 @@ import { Text } from '@sea-lion/react-text';
  * npm install @sea-lion/react-box
  * yarn add @sea-lion/react-box
  * ```
+ *
+ * ## 使用
+ *
+ * 在代码中引入组件：
+ *
+ * ```tsx
+ * import { Box } from '@sea-lion/react-box';
+ * ```
  */
 const meta = {
     title: '布局/Box',

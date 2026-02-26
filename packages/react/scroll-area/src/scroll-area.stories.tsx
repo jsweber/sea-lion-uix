@@ -26,6 +26,14 @@ import { ScrollAreaPropsComponent } from './scroll-area-props-table';
  * yarn add @sea-lion/react-scroll-area
  * ```
  *
+ * ## 使用
+ *
+ * 在代码中引入组件：
+ *
+ * ```tsx
+ * import * as ScrollArea from '@sea-lion/react-scroll-area';
+ * ```
+ *
  * ## 何时使用
  *
  * - 需要自定义滚动条样式时

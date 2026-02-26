@@ -25,6 +25,14 @@ import { InputPropsComponent } from './input-props-table';
  * yarn add @sea-lion/react-input
  * ```
  *
+ * ## 使用
+ *
+ * 在代码中引入组件：
+ *
+ * ```tsx
+ * import { Input } from '@sea-lion/react-input';
+ * ```
+ *
  * ## 何时使用
  *
  * - 收集用户文本信息

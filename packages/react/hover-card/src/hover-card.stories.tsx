@@ -26,6 +26,14 @@ import { HoverCardPropsComponent } from './hover-card-props-table';
  * yarn add @sea-lion/react-hover-card
  * ```
  *
+ * ## 使用
+ *
+ * 在代码中引入组件：
+ *
+ * ```tsx
+ * import * as HoverCard from '@sea-lion/react-hover-card';
+ * ```
+ *
  * ## 何时使用
  *
  * - 显示用户简介或头像信息

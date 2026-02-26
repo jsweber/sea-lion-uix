@@ -25,6 +25,14 @@ import { FlexPropsComponent } from './flex-props-table';
  * yarn add @sea-lion/react-flex
  * ```
  *
+ * ## 使用
+ *
+ * 在代码中引入组件：
+ *
+ * ```tsx
+ * import { Flex } from '@sea-lion/react-flex';
+ * ```
+ *
  * ## 何时使用
  *
  * - 创建水平或垂直方向的布局结构

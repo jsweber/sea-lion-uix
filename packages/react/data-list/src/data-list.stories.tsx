@@ -24,6 +24,14 @@ import { Text } from '@sea-lion/react-text';
  * yarn add @sea-lion/react-data-list
  * ```
  *
+ * ## 使用
+ *
+ * 在代码中引入组件：
+ *
+ * ```tsx
+ * import * as DataList from '@sea-lion/react-data-list';
+ * ```
+ *
  * ## 何时使用
  *
  * - 需要以结构化方式展示对象属性或数据字段

@@ -29,6 +29,14 @@ import { Text } from '@sea-lion/react-text';
  * npm install @sea-lion/react-checkbox
  * yarn add @sea-lion/react-checkbox
  * ```
+ *
+ * ## 使用
+ *
+ * 在代码中引入组件：
+ *
+ * ```tsx
+ * import { Checkbox } from '@sea-lion/react-checkbox';
+ * ```
  */
 
 const meta = {

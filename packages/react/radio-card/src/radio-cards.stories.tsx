@@ -42,6 +42,14 @@ import { RadioCardsPropsComponent } from './radio-cards-props-table';
  * yarn add @sea-lion/react-radio-card
  * ```
  *
+ * ## 使用
+ *
+ * 在代码中引入组件：
+ *
+ * ```tsx
+ * import * as RadioCards from '@sea-lion/react-radio-card';
+ * ```
+ *
  * ## 何时使用
  *
  * - 需要在一组选项中进行单选，且选项有图标或需要更多文本描述

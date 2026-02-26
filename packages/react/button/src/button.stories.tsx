@@ -28,6 +28,14 @@ import './style/button-story.less';
  * npm install @sea-lion/react-button
  * yarn add @sea-lion/react-button
  * ```
+ *
+ * ## 使用
+ *
+ * 在代码中引入组件：
+ *
+ * ```tsx
+ * import { Button } from '@sea-lion/react-button';
+ * ```
  */
 const meta: Meta<typeof Button> = {
     component: Button,

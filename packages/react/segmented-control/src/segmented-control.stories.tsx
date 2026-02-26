@@ -25,6 +25,14 @@ import { useState } from 'react';
  * yarn add @sea-lion/react-segmented-control
  * ```
  *
+ * ## 使用
+ *
+ * 在代码中引入组件：
+ *
+ * ```tsx
+ * import * as SegmentedControl from '@sea-lion/react-segmented-control';
+ * ```
+ *
  * ## 何时使用
  *
  * - 需要在有限的选项中进行单项选择

@@ -26,6 +26,14 @@ import { GridPropsComponent } from './grid-props-table';
  * yarn add @sea-lion/react-grid
  * ```
  *
+ * ## 使用
+ *
+ * 在代码中引入组件：
+ *
+ * ```tsx
+ * import { Grid } from '@sea-lion/react-grid';
+ * ```
+ *
  * ## 何时使用
  *
  * - 创建复杂的二维布局结构

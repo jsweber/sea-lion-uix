@@ -25,6 +25,14 @@ import { Heading } from '@sea-lion/react-heading';
  * yarn add @sea-lion/react-container
  * ```
  *
+ * ## 使用
+ *
+ * 在代码中引入组件：
+ *
+ * ```tsx
+ * import { Container } from '@sea-lion/react-container';
+ * ```
+ *
  * ## 何时使用
  *
  * - 创建具有标准宽度的页面布局

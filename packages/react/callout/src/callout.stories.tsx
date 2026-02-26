@@ -29,6 +29,14 @@ import { InfoCircledIcon, ExclamationTriangleIcon, CheckCircledIcon } from '@rad
  * npm install @sea-lion/react-callout
  * yarn add @sea-lion/react-callout
  * ```
+ *
+ * ## 使用
+ *
+ * 在代码中引入组件：
+ *
+ * ```tsx
+ * import * as Callout from '@sea-lion/react-callout';
+ * ```
  */
 
 const meta = {
