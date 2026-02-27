@@ -14,7 +14,7 @@ function convertTsConfigPathsToWebpackAliases() {
 }
 
 const config: StorybookConfig = {
-  stories: ['../packages/react/**/*.stories.tsx', '../packages/web-playground/*.stories.tsx', '../packages/oss-icon-picker/*.stories.tsx'],
+  stories: ['../packages/react/**/*.stories.tsx', '../packages/web-playground/*.stories.tsx', '../packages/oss-icon-picker/*.stories.tsx', '../packages/skill/**/*.stories.tsx'],
   docs: {
     //👇 See the table below for the list of supported options
     defaultName: 'Documentation',
