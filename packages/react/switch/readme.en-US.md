@@ -1,4 +1,4 @@
-# `react-switch`
+﻿# `react-switch`
 
 Switch is a toggle component used to switch between two states.
 
@@ -116,4 +116,4 @@ Also supports all standard margin properties.
 
 ## Learn More
 
-View the [documentation](https://www.radix-ui.com/themes/docs/theme/overview) for more information.
+See the [Radix UI documentation](https://www.radix-ui.com/themes/docs/components/switch) for the full API reference and design guidelines.

@@ -15,101 +15,177 @@ $ npm install @sea-lion/react-grid
 ```jsx
 import { Grid } from "@sea-lion/react-grid";
 import { Box } from "@sea-lion/react-box";
-import { Text } from "@sea-lion/react-text";
 
 export default () => (
   <Grid columns="3" gap="4">
-    <Box
-      p="3"
-      style={{ backgroundColor: "var(--blue-5)", borderRadius: "6px" }}
-    >
-      <Text style={{ color: "white" }}>Item 1</Text>
-    </Box>
-    <Box
-      p="3"
-      style={{ backgroundColor: "var(--blue-5)", borderRadius: "6px" }}
-    >
-      <Text style={{ color: "white" }}>Item 2</Text>
-    </Box>
-    <Box
-      p="3"
-      style={{ backgroundColor: "var(--blue-5)", borderRadius: "6px" }}
-    >
-      <Text style={{ color: "white" }}>Item 3</Text>
-    </Box>
-    <Box
-      p="3"
-      style={{ backgroundColor: "var(--blue-5)", borderRadius: "6px" }}
-    >
-      <Text style={{ color: "white" }}>Item 4</Text>
-    </Box>
+    <Box p="3" style={{ backgroundColor: "var(--blue-5)", borderRadius: "6px" }}>Item 1</Box>
+    <Box p="3" style={{ backgroundColor: "var(--blue-5)", borderRadius: "6px" }}>Item 2</Box>
+    <Box p="3" style={{ backgroundColor: "var(--blue-5)", borderRadius: "6px" }}>Item 3</Box>
+    <Box p="3" style={{ backgroundColor: "var(--blue-5)", borderRadius: "6px" }}>Item 4</Box>
   </Grid>
 );
 ```
 
-## Grid Layouts
+## Columns and Gap
 
-The Grid component supports all major CSS Grid layout options:
+Grid supports equal-width column counts from 1 to 9, with multiple gap levels:
 
 ```jsx
-// Basic grid with 3 equal-width columns
+{/* Two-column grid with small gap */}
+<Grid columns="2" gap="2">
+  <Box>Item 1</Box>
+  <Box>Item 2</Box>
+</Grid>
+
+{/* Three-column grid with medium gap */}
 <Grid columns="3" gap="3">
   <Box>Item 1</Box>
   <Box>Item 2</Box>
   <Box>Item 3</Box>
 </Grid>
 
-// Custom column widths
-<Grid columns="100px 1fr 2fr" gap="3">
-  <Box>Fixed width</Box>
-  <Box>1 part space</Box>
-  <Box>2 parts space</Box>
-</Grid>
-
-// Using grid areas
-<Grid
-  areas={`"header header"
-          "sidebar content"
-          "footer footer"`}
-  columns="200px 1fr"
-  rows="auto 1fr auto"
-  gap="3"
->
-  <Box style={{ gridArea: 'header' }}>Header</Box>
-  <Box style={{ gridArea: 'sidebar' }}>Sidebar</Box>
-  <Box style={{ gridArea: 'content' }}>Content area</Box>
-  <Box style={{ gridArea: 'footer' }}>Footer</Box>
-</Grid>
-
-// Responsive grid
-<Grid
-  columns={{ base: '1', md: '2', lg: '3' }}
-  gap={{ base: '2', md: '4' }}
->
-  <Box>Single column on small screens, two columns on medium screens, three columns on large screens</Box>
-  <Box>With different spacing</Box>
+{/* Four-column grid with larger gap */}
+<Grid columns="4" gap="4">
+  {items.map((item, i) => <Box key={i}>{item}</Box>)}
 </Grid>
 ```
+
+## Custom Column Widths
+
+Use CSS grid-template-columns syntax to set custom column widths:
+
+```jsx
+{/* Mix of fixed and flexible widths */}
+<Grid columns="200px 1fr 1fr" gap="3">
+  <Box>Fixed width (200px)</Box>
+  <Box>Flexible width (1fr)</Box>
+  <Box>Flexible width (1fr)</Box>
+</Grid>
+
+{/* Different proportional flexible widths */}
+<Grid columns="1fr 2fr 1fr" gap="3">
+  <Box>1 part</Box>
+  <Box>2 parts</Box>
+  <Box>1 part</Box>
+</Grid>
+
+{/* Min/max width constraints */}
+<Grid columns="minmax(100px, 1fr) minmax(200px, 2fr) minmax(100px, 1fr)" gap="3">
+  <Box>Min 100px, max 1fr</Box>
+  <Box>Min 200px, max 2fr</Box>
+  <Box>Min 100px, max 1fr</Box>
+</Grid>
+```
+
+## Grid Area Layout
+
+Use the `areas` prop to create named grid areas for complex page layouts:
+
+```jsx
+<Grid
+  areas={`"header header header"
+          "sidebar content content"
+          "sidebar footer footer"`}
+  columns="200px 1fr 1fr"
+  rows="auto 1fr auto"
+  gap="3"
+  style={{ height: '400px' }}
+>
+  <Box style={{ gridArea: 'header', backgroundColor: 'var(--blue-5)', padding: '16px', borderRadius: '6px' }}>Header</Box>
+  <Box style={{ gridArea: 'sidebar', backgroundColor: 'var(--purple-5)', padding: '16px', borderRadius: '6px' }}>Sidebar</Box>
+  <Box style={{ gridArea: 'content', backgroundColor: 'var(--green-5)', padding: '16px', borderRadius: '6px' }}>Content</Box>
+  <Box style={{ gridArea: 'footer', backgroundColor: 'var(--amber-5)', padding: '16px', borderRadius: '6px' }}>Footer</Box>
+</Grid>
+```
+
+## Alignment
+
+```jsx
+{/* Top-aligned (default) */}
+<Grid columns="3" gap="3" align="start" style={{ height: '150px', backgroundColor: 'var(--gray-3)' }}>
+  {[1, 2, 3].map(n => <Box key={n} style={{ height: `${n * 30}px`, backgroundColor: 'var(--blue-5)' }}>Item {n}</Box>)}
+</Grid>
+
+{/* Vertically centered */}
+<Grid columns="3" gap="3" align="center" style={{ height: '150px', backgroundColor: 'var(--gray-3)' }}>
+  {[1, 2, 3].map(n => <Box key={n} style={{ height: `${n * 30}px`, backgroundColor: 'var(--blue-5)' }}>Item {n}</Box>)}
+</Grid>
+
+{/* Bottom-aligned */}
+<Grid columns="3" gap="3" align="end" style={{ height: '150px', backgroundColor: 'var(--gray-3)' }}>
+  {[1, 2, 3].map(n => <Box key={n} style={{ height: `${n * 30}px`, backgroundColor: 'var(--blue-5)' }}>Item {n}</Box>)}
+</Grid>
+```
+
+## Responsive Grid
+
+```jsx
+{/* Responsive columns: 1 on mobile, 2 on tablet, 3 on desktop, 4 on large screens */}
+<Grid
+  columns={{ initial: '1', sm: '2', md: '3', lg: '4' }}
+  gap={{ initial: '2', md: '4' }}
+>
+  {items.map((item, i) => <Box key={i}>{item}</Box>)}
+</Grid>
+```
+
+## Practical Use Cases
+
+### Product Card Grid
+
+```jsx
+<Grid columns={{ initial: '1', sm: '2', md: '3', lg: '4' }} gap="4">
+  {products.map((product, i) => (
+    <div key={i} style={{ backgroundColor: 'white', borderRadius: '6px', boxShadow: '0 2px 10px rgba(0,0,0,0.1)', overflow: 'hidden' }}>
+      <div style={{ height: '200px', backgroundColor: 'var(--blue-3)' }} />
+      <div style={{ padding: '16px' }}>
+        <h3>{product.name}</h3>
+        <p>{product.description}</p>
+        <span>${product.price}</span>
+      </div>
+    </div>
+  ))}
+</Grid>
+```
+
+### Photo Gallery
+
+```jsx
+<Grid columns={{ initial: '2', sm: '3', md: '4' }} gap="2">
+  {photos.map((photo, i) => (
+    <div key={i} style={{ paddingTop: '100%', position: 'relative', backgroundColor: 'var(--gray-5)', borderRadius: '6px' }}>
+      <img src={photo.url} alt={photo.alt} style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', borderRadius: '6px' }} />
+    </div>
+  ))}
+</Grid>
+```
+
+## When to Use
+
+- Creating complex two-dimensional layout structures (controlling both rows and columns)
+- When you need to precisely arrange elements in rows and columns
+- Building responsive grid systems (card lists, photo galleries, etc.)
+- Implementing dashboards, admin panels, and other interfaces needing flexible layouts
 
 ## Props
 
 ### Grid
 
-| Prop    | Description                        | Type                                                          | Default   | Version |
-| ------- | ---------------------------------- | ------------------------------------------------------------- | --------- | ------- |
-| as      | HTML element to render             | 'div' \| 'span'                                               | 'div'     | 0.2.0   |
-| asChild | Whether to pass component as child | boolean                                                       | false     | 0.2.0   |
-| display | CSS display property               | 'none' \| 'inline-grid' \| 'grid'                             | 'grid'    | 0.2.0   |
-| areas   | CSS grid-template-areas property   | string                                                        | -         | 0.2.0   |
-| columns | CSS grid-template-columns property | '1' - '9' \| string                                           | -         | 0.2.0   |
-| rows    | CSS grid-template-rows property    | '1' - '9' \| string                                           | -         | 0.2.0   |
-| flow    | CSS grid-auto-flow property        | 'row' \| 'column' \| 'dense' \| 'row-dense' \| 'column-dense' | -         | 0.2.0   |
-| align   | CSS align-items property           | 'start' \| 'center' \| 'end' \| 'baseline' \| 'stretch'       | 'stretch' | 0.2.0   |
-| justify | CSS justify-content property       | 'start' \| 'center' \| 'end' \| 'between'                     | 'start'   | 0.2.0   |
-| gap     | Space between grid items           | '1' - '9'                                                     | -         | 0.2.0   |
+| Prop    | Description                        | Type                                                          | Default   |
+| ------- | ---------------------------------- | ------------------------------------------------------------- | --------- |
+| as      | HTML element to render             | 'div' \| 'span'                                               | 'div'     |
+| asChild | Whether to pass component as child | boolean                                                       | false     |
+| display | CSS display property               | 'none' \| 'inline-grid' \| 'grid'                             | 'grid'    |
+| areas   | CSS grid-template-areas property   | string                                                        | -         |
+| columns | CSS grid-template-columns property | '1' - '9' \| string                                           | -         |
+| rows    | CSS grid-template-rows property    | '1' - '9' \| string                                           | -         |
+| flow    | CSS grid-auto-flow property        | 'row' \| 'column' \| 'dense' \| 'row-dense' \| 'column-dense' | -         |
+| align   | CSS align-items property           | 'start' \| 'center' \| 'end' \| 'baseline' \| 'stretch'       | 'stretch' |
+| justify | CSS justify-content property       | 'start' \| 'center' \| 'end' \| 'between'                     | 'start'   |
+| gap     | Space between grid items           | '1' - '9'                                                     | -         |
 
 The Grid component also supports all standard margin and layout props, such as `m`, `mt`, `width`, `height`, etc.
 
 ## Learn More
 
-View the [documentation](https://gitee.com/summer_sleep/ui-lib-monorepo-template) for more information.
+See the [Radix UI documentation](https://www.radix-ui.com/themes/docs/components/grid) for the full API reference and design guidelines.

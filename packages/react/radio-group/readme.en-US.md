@@ -1,4 +1,4 @@
-# `react-radio-group`
+﻿# `react-radio-group`
 
 RadioGroup is a component that allows users to select a single option from a list of options.
 
@@ -148,4 +148,4 @@ RadioGroup component is vertically arranged by default, but you can use styles t
 
 ## Learn More
 
-View the [documentation](https://gitee.com/summer_sleep/ui-lib-monorepo-template) for more information.
+See the [Radix UI documentation](https://www.radix-ui.com/themes/docs/components/radio-group) for the full API reference and design guidelines.

@@ -1,4 +1,4 @@
-# `react-radio-card`
+﻿# `react-radio-card`
 
 RadioCard is a card-style radio button component for selecting one option from a set of options in card format.
 
@@ -157,4 +157,4 @@ import { Flex, Text } from "@sea-lion/react-flex";
 
 ## Learn More
 
-View the [documentation](https://gitee.com/summer_sleep/ui-lib-monorepo-template) for more information.
+See the [Radix UI documentation](https://www.radix-ui.com/themes/docs/components/radio-cards) for the full API reference and design guidelines.

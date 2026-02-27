@@ -1,4 +1,4 @@
-# `react-tab`
+﻿# `react-tab`
 
 Tab 是一个选项卡组件，用于在同一个区域内切换不同内容。
 
@@ -153,7 +153,8 @@ Tab.List 组件支持多种变体样式：
 | asChild | 是否将子元素作为根节点 | boolean | false  | 0.2.1 |
 
 所有组件同时支持标准的外边距（margin）属性。
+
 
 ## 查看更多
 
-查看[文档](https://www.radix-ui.com/themes/docs/theme/overview)获取更多信息。
+参考 [Radix UI 官方文档](https://www.radix-ui.com/themes/docs/components/tabs) 获取完整 API 与设计规范。

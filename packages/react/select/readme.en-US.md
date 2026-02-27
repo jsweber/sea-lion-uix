@@ -1,4 +1,4 @@
-# `react-select`
+﻿# `react-select`
 
 Select is a dropdown component that allows users to choose a value from a predefined list of options. The component supports grouping options, disabling options, and custom placeholders.
 
@@ -190,4 +190,4 @@ export default () => {
 
 ## Learn More
 
-View the [documentation](https://gitee.com/summer_sleep/ui-lib-monorepo-template) for more information.
+See the [Radix UI documentation](https://www.radix-ui.com/themes/docs/components/select) for the full API reference and design guidelines.

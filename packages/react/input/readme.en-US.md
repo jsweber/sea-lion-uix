@@ -1,4 +1,4 @@
-# `react-input`
+﻿# `react-input`
 
 Input is a text field component for collecting user input, providing multiple style and variant options.
 
@@ -143,4 +143,4 @@ Input.Root component also supports all standard margin properties (like `m`, `mt
 
 ## Learn More
 
-View the [documentation](https://gitee.com/summer_sleep/ui-lib-monorepo-template) for more information.
+See the [Radix UI documentation](https://www.radix-ui.com/themes/docs/components/text-field) for the full API reference and design guidelines.

@@ -1,4 +1,4 @@
-# `react-tab-nav`
+﻿# `react-tab-nav`
 
 TabNav 是一个导航菜单组件，用于创建导航栏和标签式导航。
 
@@ -155,7 +155,8 @@ import { Link } from "react-router-dom";
 | asChild | 是否将子元素作为根节点 | boolean | false  | 0.2.0 |
 
 所有组件同时支持标准的外边距（margin）属性。
+
 
 ## 查看更多
 
-查看[文档](https://www.radix-ui.com/themes/docs/theme/overview)获取更多信息。
+参考 [Radix UI 官方文档](https://www.radix-ui.com/themes/docs/components/tab-nav) 获取完整 API 与设计规范。

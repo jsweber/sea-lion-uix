@@ -1,4 +1,4 @@
-# `react-text-area`
+﻿# `react-text-area`
 
 TextArea is a multi-line text input component for users to enter longer text content. The component supports multiple sizes, visual variants, and custom resize options.
 
@@ -116,4 +116,4 @@ const [value, setValue] = React.useState("");
 
 ## Learn More
 
-View the [documentation](https://gitee.com/summer_sleep/ui-lib-monorepo-template) for more information.
+See the [Radix UI documentation](https://www.radix-ui.com/themes/docs/components/text-area) for the full API reference and design guidelines.

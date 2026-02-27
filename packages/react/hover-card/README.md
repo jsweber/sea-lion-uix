@@ -1,4 +1,4 @@
-# `react-hover-card`
+﻿# `react-hover-card`
 
 HoverCard 是一个在用户悬停在触发元素上时显示的卡片组件，用于展示补充内容，不打断用户的操作流程。
 
@@ -114,7 +114,8 @@ HoverCard 提供了不同的尺寸选项，以适应不同的内容需求：
 | maxWidth  | 最大宽度                 | string                       | '480px' | 0.2.1 |
 | align     | 对齐方式                 | 'start' \| 'center' \| 'end' | 'start' | 0.2.1 |
 | container | 门户容器                 | HTMLElement                  | -       | 0.2.1 |
+
 
 ## 查看更多
 
-查看[文档](https://gitee.com/summer_sleep/ui-lib-monorepo-template)获取更多信息。
+参考 [Radix UI 官方文档](https://www.radix-ui.com/themes/docs/components/hover-card) 获取完整 API 与设计规范。

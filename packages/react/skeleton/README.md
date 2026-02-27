@@ -1,4 +1,4 @@
-# `react-skeleton`
+﻿# `react-skeleton`
 
 Skeleton 是一个加载占位符组件，用于在数据加载时显示内容的轮廓，提升用户体验。
 
@@ -130,7 +130,8 @@ export default () => {
 | children  | 加载完成后显示的内容   | React.ReactNode            | -      | 0.2.0 |
 
 同时支持所有标准的外边距（margin）属性。
+
 
 ## 查看更多
 
-查看[文档](https://www.radix-ui.com/themes/docs/theme/overview)获取更多信息。
+参考 [Radix UI 官方文档](https://www.radix-ui.com/themes/docs/components/skeleton) 获取完整 API 与设计规范。

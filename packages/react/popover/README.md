@@ -1,4 +1,4 @@
-# `react-popover`
+﻿# `react-popover`
 
 Popover 是一个弹出式组件，用于显示与触发元素相关的临时内容，如附加信息、操作菜单等。
 
@@ -125,7 +125,8 @@ Popover.Content 组件提供了四种尺寸：
 | 参数    | 说明                           | 类型    | 默认值 | 版本  |
 | ------- | ------------------------------ | ------- | ------ | ----- |
 | asChild | 将组件的样式和行为应用于子元素 | boolean | true   | 0.2.1 |
+
 
 ## 查看更多
 
-查看[文档](https://gitee.com/summer_sleep/ui-lib-monorepo-template)获取更多信息。
+参考 [Radix UI 官方文档](https://www.radix-ui.com/themes/docs/components/popover) 获取完整 API 与设计规范。

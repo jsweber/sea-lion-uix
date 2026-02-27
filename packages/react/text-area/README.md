@@ -1,4 +1,4 @@
-# `react-text-area`
+﻿# `react-text-area`
 
 TextArea 是一个多行文本输入组件，用于用户输入较长的文本内容。组件支持多种尺寸、变体样式以及自定义调整大小方式。
 
@@ -113,7 +113,8 @@ const [value, setValue] = React.useState("");
 | value        | 当前值（受控） | string                                             | -         | 0.2.0 |
 | disabled     | 是否禁用       | boolean                                            | false     | 0.2.0 |
 | readOnly     | 是否只读       | boolean                                            | false     | 0.2.0 |
+
 
 ## 查看更多
 
-查看[文档](https://gitee.com/summer_sleep/ui-lib-monorepo-template)获取更多信息。
+参考 [Radix UI 官方文档](https://www.radix-ui.com/themes/docs/components/text-area) 获取完整 API 与设计规范。

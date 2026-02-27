@@ -37,7 +37,4 @@ import { IconFont } from '@sea-lion/react-oss-icon';
 - 需要使用团队 iconfont 项目中的图标时
 - 需要与现有 iconfont 图标体系保持一致时
 - 需要轻量、可配置颜色与尺寸的图标展示时
-
-## 查看更多
-
-查看[文档](https://gitee.com/summer_sleep/ui-lib-monorepo-template)获取更多信息。
+

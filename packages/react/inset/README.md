@@ -1,4 +1,4 @@
-# `react-inset`
+﻿# `react-inset`
 
 Inset 是一个容器组件，用于创建负边距效果，可以将内容向外延伸超出父元素的边界。
 
@@ -119,7 +119,8 @@ Inset 支持不同的裁剪方式：
 | pl   | 左侧内边距      | 'current' \| '0'                                              | -            | 0.2.0 |
 
 Inset 组件还支持所有标准的外边距属性（如 `m`、`mt`、`mb` 等）。
+
 
 ## 查看更多
 
-查看[文档](https://gitee.com/summer_sleep/ui-lib-monorepo-template)获取更多信息。
+参考 [Radix UI 官方文档](https://www.radix-ui.com/themes/docs/components/inset) 获取完整 API 与设计规范。

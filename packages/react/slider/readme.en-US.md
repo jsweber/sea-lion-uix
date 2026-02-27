@@ -1,4 +1,4 @@
-# `react-slider`
+﻿# `react-slider`
 
 Slider is a sliding input control that allows users to select a value from a range.
 
@@ -144,4 +144,4 @@ Also supports all standard margin properties.
 
 ## Learn More
 
-View the [documentation](https://www.radix-ui.com/themes/docs/theme/overview) for more information.
+See the [Radix UI documentation](https://www.radix-ui.com/themes/docs/components/slider) for the full API reference and design guidelines.

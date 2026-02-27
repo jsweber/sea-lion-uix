@@ -24,15 +24,17 @@ export default () => {
 };
 ```
 
-## 用途
+## HTML 元素重置
 
-Reset 组件可以应用于任何 HTML 元素，用于清除其默认样式：
+Reset 组件可以应用于各种 HTML 元素，清除其默认样式：
 
 ```jsx
+{/* 重置输入框 */}
 <Reset>
   <input type="text" placeholder="无默认样式的输入框" />
 </Reset>
 
+{/* 重置列表 */}
 <Reset>
   <ul>
     <li>无默认样式的列表项 1</li>
@@ -40,8 +42,19 @@ Reset 组件可以应用于任何 HTML 元素，用于清除其默认样式：
   </ul>
 </Reset>
 
+{/* 重置链接 */}
 <Reset>
   <a href="#">无默认样式的链接</a>
+</Reset>
+
+{/* 重置单选按钮 */}
+<Reset>
+  <input type="radio" />
+</Reset>
+
+{/* 重置复选框 */}
+<Reset>
+  <input type="checkbox" />
 </Reset>
 ```
 
@@ -64,13 +77,87 @@ export default () => {
 };
 ```
 
+## 构建自定义表单
+
+利用 Reset 组件可以构建完全自定义样式的表单，避免浏览器默认样式的干扰：
+
+```jsx
+<Reset>
+  <form style={{ display: 'flex', flexDirection: 'column', gap: '12px', maxWidth: '300px' }}>
+    <input
+      type="text"
+      placeholder="用户名"
+      style={{ padding: '10px', border: '1px solid var(--gray-7)', borderRadius: '4px' }}
+    />
+    <input
+      type="password"
+      placeholder="密码"
+      style={{ padding: '10px', border: '1px solid var(--gray-7)', borderRadius: '4px' }}
+    />
+    <button
+      style={{
+        padding: '10px',
+        background: 'var(--blue-9)',
+        color: 'white',
+        borderRadius: '4px',
+        cursor: 'pointer',
+      }}
+    >
+      登录
+    </button>
+  </form>
+</Reset>
+```
+
+## 自定义按钮示例
+
+```jsx
+<Reset>
+  <button
+    style={{
+      padding: '8px 16px',
+      background: 'var(--blue-9)',
+      color: 'white',
+      borderRadius: '4px',
+      cursor: 'pointer',
+    }}
+  >
+    确认
+  </button>
+</Reset>
+
+<Reset>
+  <button
+    style={{
+      padding: '8px 16px',
+      background: 'transparent',
+      color: 'var(--gray-11)',
+      border: '1px solid var(--gray-7)',
+      borderRadius: '4px',
+      cursor: 'pointer',
+    }}
+  >
+    取消
+  </button>
+</Reset>
+```
+
+## 何时使用
+
+- 需要从零开始构建自定义样式的 HTML 元素时
+- 作为自定义 UI 组件的基础，确保跨浏览器样式一致性
+- 需要覆盖浏览器的 User-Agent Stylesheet 时
+- 构建高度定制化的表单元素（输入框、按钮、下拉选择等）
+- 需要移除链接、列表等元素的默认装饰样式时
+
 ## 属性
 
-| 参数     | 说明               | 类型            | 默认值 | 版本  |
-| -------- | ------------------ | --------------- | ------ | ----- |
-| children | 需要重置样式的内容 | React.ReactNode | -      | 0.2.0 |
-| asChild  | 是否作为子元素渲染 | boolean         | false  | 0.2.0 |
+| 参数     | 说明               | 类型            | 默认值 |
+| -------- | ------------------ | --------------- | ------ |
+| children | 需要重置样式的内容 | React.ReactNode | -      |
+| asChild  | 是否作为子元素渲染 | boolean         | false  |
+
 
 ## 查看更多
 
-查看[文档](https://gitee.com/summer_sleep/ui-lib-monorepo-template)获取更多信息。
+参考 [Radix UI 官方文档](https://www.radix-ui.com/themes/docs/components/reset) 获取完整 API 与设计规范。

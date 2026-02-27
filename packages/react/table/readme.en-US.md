@@ -1,4 +1,4 @@
-# `react-table`
+﻿# `react-table`
 
 Table is a component for displaying data in rows and columns. The component supports different sizes, variant styles, custom layouts, and cell alignment options.
 
@@ -159,4 +159,4 @@ Table component supports two visual variants:
 
 ## Learn More
 
-View the [documentation](https://gitee.com/summer_sleep/ui-lib-monorepo-template) for more information.
+See the [Radix UI documentation](https://www.radix-ui.com/themes/docs/components/table) for the full API reference and design guidelines.

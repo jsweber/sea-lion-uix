@@ -1,4 +1,4 @@
-# `react-radio-card`
+﻿# `react-radio-card`
 
 RadioCard 是一个卡片式单选按钮组件，用于在一组选项中以卡片的形式选择一个选项。
 
@@ -154,7 +154,8 @@ import { Flex, Text } from "@sea-lion/react-flex";
 | -------- | -------- | ------- | ------ | ----- |
 | value    | 选项的值 | string  | -      | 0.2.0 |
 | disabled | 是否禁用 | boolean | false  | 0.2.0 |
+
 
 ## 查看更多
 
-查看[文档](https://gitee.com/summer_sleep/ui-lib-monorepo-template)获取更多信息。
+参考 [Radix UI 官方文档](https://www.radix-ui.com/themes/docs/components/radio-cards) 获取完整 API 与设计规范。

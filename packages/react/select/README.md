@@ -1,4 +1,4 @@
-# `react-select`
+﻿# `react-select`
 
 Select 是一个下拉选择组件，允许用户从预定义的选项列表中选择一个值。组件支持选项分组、禁用选项和自定义占位符。
 
@@ -187,7 +187,8 @@ export default () => {
 | -------- | -------- | ------- | ------ | ----- |
 | value    | 选项值   | string  | -      | 0.2.4 |
 | disabled | 是否禁用 | boolean | false  | 0.2.4 |
+
 
 ## 查看更多
 
-查看[文档](https://gitee.com/summer_sleep/ui-lib-monorepo-template)获取更多信息。
+参考 [Radix UI 官方文档](https://www.radix-ui.com/themes/docs/components/select) 获取完整 API 与设计规范。

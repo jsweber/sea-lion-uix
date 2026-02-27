@@ -1,4 +1,4 @@
-# `react-popover`
+﻿# `react-popover`
 
 Popover is a floating component used to display temporary content related to a trigger element, such as additional information, action menus, etc.
 
@@ -128,4 +128,4 @@ Popover.Content component offers four sizes:
 
 ## Learn More
 
-View the [documentation](https://gitee.com/summer_sleep/ui-lib-monorepo-template) for more information.
+See the [Radix UI documentation](https://www.radix-ui.com/themes/docs/components/popover) for the full API reference and design guidelines.

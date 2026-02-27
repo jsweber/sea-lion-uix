@@ -1,4 +1,4 @@
-# `react-segmented-control`
+﻿# `react-segmented-control`
 
 SegmentedControl 是一个分段控制器组件，用于在一组相关选项中进行单选。它提供了一个可视化的指示器，显示当前选中的选项。
 
@@ -128,7 +128,8 @@ export default () => {
 | 参数  | 说明     | 类型   | 默认值 | 版本  |
 | ----- | -------- | ------ | ------ | ----- |
 | value | 选项的值 | string | -      | 0.2.0 |
+
 
 ## 查看更多
 
-查看[文档](https://gitee.com/summer_sleep/ui-lib-monorepo-template)获取更多信息。
+参考 [Radix UI 官方文档](https://www.radix-ui.com/themes/docs/components/segmented-control) 获取完整 API 与设计规范。

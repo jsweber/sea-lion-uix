@@ -38,6 +38,3 @@ import { IconFont } from '@sea-lion/react-oss-icon';
 - When staying consistent with an existing iconfont setup
 - When you need lightweight, color- and size-configurable icons
 
-## Learn More
-
-View the [documentation](https://gitee.com/summer_sleep/ui-lib-monorepo-template) for more information.
