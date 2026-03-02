@@ -67,6 +67,17 @@ import { Theme } from '@sea-lion/react-theme';
 - **常用配套**：布局用 `Flex`、`Grid`、`Box`；文案用 `Text`；按钮用 `Button`；主题用 `Theme`。
 - **技术栈**：React + TypeScript，底层基于 Radix UI (Radix Theme)。
 
+## 知识库文档下载
+
+本 Skill 提供聚合好的组件知识库 Markdown，便于作为 RAG/向量库或本地查阅：
+
+- **中文知识库**：[KNOWLEDGE_BASE_zh.md](../KNOWLEDGE_BASE_zh.md)（所有组件 readme 合并，组件之间用 `----- split line -----` 分隔）
+- **英文知识库**：[KNOWLEDGE_BASE_en.md](../KNOWLEDGE_BASE_en.md)（同上，英文版）
+
+**获取方式**：在仓库中**点击上方链接**即可打开文件；在 GitHub 等托管页进入对应文件后，可使用 **Raw** 或 **Download** 保存到本地。若已 clone 本仓库，也可在本地 `packages/skill/` 目录下直接打开或复制上述文件。
+
+知识库内容包含各组件安装、用法、Props 及示例，可按分隔符拆分为单组件文档后导入知识库系统。
+
 ## 更多信息
 
 - 包名列表、引入方式及业务项目中查文档的路径见 [reference.md](reference.md)。

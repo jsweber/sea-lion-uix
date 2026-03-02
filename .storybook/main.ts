@@ -15,7 +15,10 @@ function convertTsConfigPathsToWebpackAliases() {
 
 const config: StorybookConfig = {
   stories: ['../packages/react/**/*.stories.tsx', '../packages/web-playground/*.stories.tsx', '../packages/oss-icon-picker/*.stories.tsx', '../packages/skill/**/*.stories.tsx'],
-  staticDirs: [{ from: '../packages/web-playground/images', to: '/images' }],
+  staticDirs: [
+    { from: '../packages/web-playground/images', to: '/images' },
+    { from: '../packages/skill', to: '/skill' },
+  ],
   docs: {
     //👇 See the table below for the list of supported options
     defaultName: 'Documentation',
@@ -50,6 +53,13 @@ const config: StorybookConfig = {
       'React': 'react',
     }));
 
+    config.module = config.module || {};
+    config.module.rules = config.module.rules || [];
+    config.module.rules.push({
+      test: /\.md$/,
+      type: 'asset/source',
+    });
+
     return {
       ...config,
       resolve: {
@@ -68,7 +78,7 @@ const config: StorybookConfig = {
   },
   managerHead: (head) => `
     ${head}
-    <link rel="icon" type="image/svg+xml" href="/images/logo-static.svg" />
+    <link rel="icon" type="image/svg+xml" href="/images/favicon.jpg" />
     <script>
       window.STORYBOOK_CATEGORIES = {
         '总览': ['web-playground', 'oss-icon-picker'],

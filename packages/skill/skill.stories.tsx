@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
+import KNOWLEDGE_BASE_zh from './KNOWLEDGE_BASE_zh.md';
+import KNOWLEDGE_BASE_en from './KNOWLEDGE_BASE_en.md';
 
 const SKILL_MD = `---
 name: use-sea-lion-components
@@ -189,6 +191,13 @@ const FILES: FileInfo[] = [
     },
 ];
 
+const SKILL_DIR_TREE = `业务项目根目录/
+└── .cursor/
+    └── skills/
+        └── use-sea-lion-components/
+            ├── SKILL.md
+            └── reference.md`;
+
 function CopyButton({ text }: { text: string }) {
     const [copied, setCopied] = useState(false);
 
@@ -214,6 +223,38 @@ function CopyButton({ text }: { text: string }) {
     return (
         <button onClick={handleCopy} style={style}>
             {copied ? '已复制' : '复制'}
+        </button>
+    );
+}
+
+function KnowledgeBaseCopyButton({ content, label }: { content: string; label: string }) {
+    const [copied, setCopied] = useState(false);
+
+    const handleCopy = () => {
+        navigator.clipboard.writeText(content).then(
+            () => {
+                setCopied(true);
+                setTimeout(() => setCopied(false), 2500);
+            },
+            () => {},
+        );
+    };
+
+    const btnStyle: React.CSSProperties = {
+        padding: '8px 16px',
+        fontSize: '13px',
+        borderRadius: '6px',
+        border: '1px solid #e5e7eb',
+        background: copied ? '#22c55e' : '#fff',
+        color: copied ? '#fff' : '#374151',
+        cursor: 'pointer',
+        transition: 'all 0.15s',
+        fontWeight: 500,
+    };
+
+    return (
+        <button onClick={handleCopy} style={btnStyle}>
+            {copied ? '已复制' : label}
         </button>
     );
 }
@@ -280,8 +321,6 @@ function FileCard({ file }: { file: FileInfo }) {
     );
 }
 
-const INSTALL_CMD = 'cp -r /path/to/sea-lion-uix/packages/skill/use-sea-lion-components .cursor/skills/';
-
 function SkillDocs() {
     const wrapStyle: React.CSSProperties = {
         maxWidth: '900px',
@@ -326,22 +365,6 @@ function SkillDocs() {
         marginBottom: '8px',
     };
 
-    const installRowStyle: React.CSSProperties = {
-        display: 'flex',
-        alignItems: 'center',
-        gap: '12px',
-    };
-
-    const cmdStyle: React.CSSProperties = {
-        flex: 1,
-        background: '#1e293b',
-        color: '#86efac',
-        padding: '8px 12px',
-        borderRadius: '6px',
-        fontSize: '13px',
-        fontFamily: 'monospace',
-    };
-
     const h2Style: React.CSSProperties = {
         fontSize: '16px',
         fontWeight: 600,
@@ -377,10 +400,40 @@ function SkillDocs() {
             </p>
 
             <div style={installBoxStyle}>
-                <div style={installLabelStyle}>快速引入（在业务项目根目录执行）</div>
-                <div style={installRowStyle}>
-                    <code style={cmdStyle}>{INSTALL_CMD}</code>
-                    <CopyButton text={INSTALL_CMD} />
+                <div style={installLabelStyle}>快速引入</div>
+                <div style={{ fontSize: '13px', color: '#166534', lineHeight: '1.7' }}>
+                    <p style={{ margin: '0 0 8px 0' }}>在业务项目根目录下按以下步骤操作：</p>
+                    <ol style={{ margin: 0, paddingLeft: '20px' }}>
+                        <li>若不存在，先创建 <code style={inlineCodeStyle}>.cursor</code> 目录；</li>
+                        <li>在 <code style={inlineCodeStyle}>.cursor</code> 下创建 <code style={inlineCodeStyle}>skills</code> 目录；</li>
+                        <li>在 <code style={inlineCodeStyle}>skills</code> 下创建 <code style={inlineCodeStyle}>use-sea-lion-components</code> 目录；</li>
+                        <li>
+                            将下方「Skill 文件内容」中的 <code style={inlineCodeStyle}>SKILL.md</code>、
+                            <code style={inlineCodeStyle}>reference.md</code> 分别复制到{' '}
+                            <code style={inlineCodeStyle}>.cursor/skills/use-sea-lion-components/</code> 下同名文件中。
+                        </li>
+                    </ol>
+                    <p style={{ margin: '12px 0 0 0' }}>目标目录结构：</p>
+                    <pre style={{
+                        margin: '8px 0 0 0',
+                        padding: '12px 16px',
+                        background: '#ecfdf5',
+                        border: '1px solid #bbf7d0',
+                        borderRadius: '6px',
+                        fontSize: '12px',
+                        lineHeight: '1.5',
+                        fontFamily: 'monospace',
+                        color: '#166534',
+                        overflowX: 'auto',
+                    }}
+                    >
+                        {SKILL_DIR_TREE}
+                    </pre>
+                    <p style={{ margin: '12px 0 0 0' }}>
+                        若已克隆 sea-lion-uix 仓库，也可直接将仓库中的{' '}
+                        <code style={inlineCodeStyle}>packages/skill/use-sea-lion-components</code> 整个目录
+                        复制到业务项目的 <code style={inlineCodeStyle}>.cursor/skills/</code> 下。
+                    </p>
                 </div>
             </div>
 
@@ -396,6 +449,15 @@ function SkillDocs() {
                 <code style={tipCodeStyle}>.cursor/skills/use-sea-lion-components/</code>{' '}
                 目录下，保持目录结构。复制后在 Cursor 中与 Agent 对话时提到「用 sea-lion 的 Button」「加一个确认对话框」等，
                 Agent 会自动按照 Skill 中的约定使用正确的包名和引入方式。
+            </div>
+
+            <h2 style={h2Style}>知识库文档（点击复制）</h2>
+            <div style={{ ...installBoxStyle, background: '#fefce8', border: '1px solid #fef08a' }}>
+                <div style={{ ...installLabelStyle, color: '#854d0e' }}>聚合好的组件 readme，可用于 RAG / 向量库或本地查阅。点击按钮复制全文到剪贴板。</div>
+                <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', marginTop: '8px' }}>
+                    <KnowledgeBaseCopyButton content={KNOWLEDGE_BASE_zh} label="复制中文知识库 (KNOWLEDGE_BASE_zh.md)" />
+                    <KnowledgeBaseCopyButton content={KNOWLEDGE_BASE_en} label="复制英文知识库 (KNOWLEDGE_BASE_en.md)" />
+                </div>
             </div>
         </div>
     );
