@@ -1,7 +1,5 @@
 import { useState } from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import KNOWLEDGE_BASE_zh from './KNOWLEDGE_BASE_zh.md';
-import KNOWLEDGE_BASE_en from './KNOWLEDGE_BASE_en.md';
 
 const SKILL_MD = `---
 name: use-sea-lion-components
@@ -158,15 +156,8 @@ const REFERENCE_MD = `# Sea-Lion 组件速查（业务项目用）
 
 ## 业务项目如何引入本 Skill
 
-本 Skill 随组件库存放在 \`packages/skill/use-sea-lion-components/\`，便于通过 git 提交与版本管理。
-业务项目使用时，将该目录复制到业务项目的 \`.cursor/skills/\` 下即可：
-
-\`\`\`bash
-cp -r /path/to/sea-lion-uix/packages/skill/use-sea-lion-components .cursor/skills/
-\`\`\`
-
-复制后，在业务项目中与 Cursor 协作时，提到「用 sea-lion 的 Button」「加一个确认对话框」等，
-Agent 会按本 Skill 与 reference 使用正确的包名和引入方式。
+本 Skill 随组件库存放在 \`packages/skill/use-sea-lion-components/\`。业务项目使用时，按本页「快速引入」步骤，
+将 SKILL.md 与 reference.md 复制到 \`.cursor/skills/use-sea-lion-components/\` 下即可；复制后提到「用 sea-lion 的 Button」「加一个确认对话框」等，Agent 会按本 Skill 与 reference 使用正确的包名和引入方式。
 `;
 
 interface FileInfo {
@@ -223,38 +214,6 @@ function CopyButton({ text }: { text: string }) {
     return (
         <button onClick={handleCopy} style={style}>
             {copied ? '已复制' : '复制'}
-        </button>
-    );
-}
-
-function KnowledgeBaseCopyButton({ content, label }: { content: string; label: string }) {
-    const [copied, setCopied] = useState(false);
-
-    const handleCopy = () => {
-        navigator.clipboard.writeText(content).then(
-            () => {
-                setCopied(true);
-                setTimeout(() => setCopied(false), 2500);
-            },
-            () => {},
-        );
-    };
-
-    const btnStyle: React.CSSProperties = {
-        padding: '8px 16px',
-        fontSize: '13px',
-        borderRadius: '6px',
-        border: '1px solid #e5e7eb',
-        background: copied ? '#22c55e' : '#fff',
-        color: copied ? '#fff' : '#374151',
-        cursor: 'pointer',
-        transition: 'all 0.15s',
-        fontWeight: 500,
-    };
-
-    return (
-        <button onClick={handleCopy} style={btnStyle}>
-            {copied ? '已复制' : label}
         </button>
     );
 }
@@ -339,7 +298,7 @@ function SkillDocs() {
     const leadStyle: React.CSSProperties = {
         color: '#475569',
         fontSize: '14px',
-        marginBottom: '32px',
+        marginBottom: '24px',
         lineHeight: '1.7',
     };
 
@@ -355,21 +314,15 @@ function SkillDocs() {
         border: '1px solid #bbf7d0',
         borderRadius: '8px',
         padding: '16px 20px',
-        marginBottom: '32px',
-    };
-
-    const installLabelStyle: React.CSSProperties = {
-        fontWeight: 600,
-        fontSize: '13px',
-        color: '#15803d',
-        marginBottom: '8px',
+        marginBottom: '24px',
     };
 
     const h2Style: React.CSSProperties = {
-        fontSize: '16px',
+        fontSize: '15px',
         fontWeight: 600,
         color: '#0f172a',
-        marginBottom: '16px',
+        marginTop: '24px',
+        marginBottom: '12px',
     };
 
     const tipStyle: React.CSSProperties = {
@@ -382,25 +335,19 @@ function SkillDocs() {
         lineHeight: '1.7',
     };
 
-    const tipCodeStyle: React.CSSProperties = {
-        background: '#dbeafe',
-        padding: '1px 5px',
-        borderRadius: '3px',
-    };
-
     return (
         <div style={wrapStyle}>
-            <h1 style={h1Style}>Cursor Skill — use-sea-lion-components</h1>
+            <h1 style={h1Style}>Skill 使用说明</h1>
             <p style={leadStyle}>
-                本 Skill 供业务项目使用，帮助 Cursor Agent 正确安装、引入和使用{' '}
+                供业务项目使用的 Cursor Skill（use-sea-lion-components），帮助 Agent 正确安装、引入和使用{' '}
                 <code style={inlineCodeStyle}>@sea-lion/react-*</code>{' '}
-                系列组件。将下方文件复制到业务项目的{' '}
+                组件。将下方两个文件复制到业务项目的{' '}
                 <code style={inlineCodeStyle}>.cursor/skills/use-sea-lion-components/</code>{' '}
-                目录下即可激活。
+                目录即可激活。
             </p>
 
+            <h2 style={{ ...h2Style, marginTop: 0 }}>快速引入</h2>
             <div style={installBoxStyle}>
-                <div style={installLabelStyle}>快速引入</div>
                 <div style={{ fontSize: '13px', color: '#166534', lineHeight: '1.7' }}>
                     <p style={{ margin: '0 0 8px 0' }}>在业务项目根目录下按以下步骤操作：</p>
                     <ol style={{ margin: 0, paddingLeft: '20px' }}>
@@ -429,15 +376,13 @@ function SkillDocs() {
                     >
                         {SKILL_DIR_TREE}
                     </pre>
-                    <p style={{ margin: '12px 0 0 0' }}>
-                        若已克隆 sea-lion-uix 仓库，也可直接将仓库中的{' '}
-                        <code style={inlineCodeStyle}>packages/skill/use-sea-lion-components</code> 整个目录
-                        复制到业务项目的 <code style={inlineCodeStyle}>.cursor/skills/</code> 下。
-                    </p>
                 </div>
             </div>
 
-            <h2 style={h2Style}>Skill 文件内容（点击「复制」后粘贴到对应文件）</h2>
+            <h2 style={h2Style}>Skill 文件内容</h2>
+            <p style={{ margin: '0 0 12px 0', fontSize: '13px', color: '#475569', lineHeight: '1.6' }}>
+                点击卡片内「复制」后，粘贴到业务项目对应路径下的同名文件中。
+            </p>
 
             {FILES.map((file) => (
                 <FileCard key={file.filename} file={file} />
@@ -445,39 +390,20 @@ function SkillDocs() {
 
             <div style={tipStyle}>
                 <strong>使用说明：</strong>
-                将 SKILL.md 和 reference.md 均复制到业务项目的{' '}
-                <code style={tipCodeStyle}>.cursor/skills/use-sea-lion-components/</code>{' '}
-                目录下，保持目录结构。复制后在 Cursor 中与 Agent 对话时提到「用 sea-lion 的 Button」「加一个确认对话框」等，
+                复制到对应路径后，在 Cursor 中与 Agent 对话时提到「用 sea-lion 的 Button」「加一个确认对话框」等，
                 Agent 会自动按照 Skill 中的约定使用正确的包名和引入方式。
-            </div>
-
-            <h2 style={h2Style}>知识库文档（点击复制）</h2>
-            <div style={{ ...installBoxStyle, background: '#fefce8', border: '1px solid #fef08a' }}>
-                <div style={{ ...installLabelStyle, color: '#854d0e' }}>聚合好的组件 readme，可用于 RAG / 向量库或本地查阅。点击按钮复制全文到剪贴板。</div>
-                <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', marginTop: '8px' }}>
-                    <KnowledgeBaseCopyButton content={KNOWLEDGE_BASE_zh} label="复制中文知识库 (KNOWLEDGE_BASE_zh.md)" />
-                    <KnowledgeBaseCopyButton content={KNOWLEDGE_BASE_en} label="复制英文知识库 (KNOWLEDGE_BASE_en.md)" />
-                </div>
             </div>
         </div>
     );
 }
 
 /**
- * ## Cursor Skill: use-sea-lion-components
- *
- * 本页展示供业务项目使用的 Cursor Skill 文件内容。
- *
- * 业务项目引入方式：
- *
- * ```bash
- * cp -r /path/to/sea-lion-uix/packages/skill/use-sea-lion-components .cursor/skills/
- * ```
- *
- * 复制后 Cursor Agent 在业务项目中即可自动识别并使用正确的 `@sea-lion/react-*` 包名与引入方式。
+ * 本页说明如何在业务项目中引入 use-sea-lion-components Skill：按「快速引入」创建
+ * `.cursor/skills/use-sea-lion-components/` 并将 SKILL.md、reference.md 复制到该目录后，
+ * Cursor Agent 即可按正确的 `@sea-lion/react-*` 包名与引入方式使用组件。
  */
 const meta = {
-    title: '总览/Cursor Skill',
+    title: 'Agent/use-sea-lion-components',
     component: SkillDocs,
     tags: ['autodocs'],
     parameters: {
@@ -489,6 +415,6 @@ export default meta;
 type Story = StoryObj<typeof SkillDocs>;
 
 export const Overview: Story = {
-    name: 'Skill 文件内容与使用说明',
+    name: '使用说明',
     render: () => <SkillDocs />,
 };

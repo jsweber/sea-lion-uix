@@ -3,7 +3,7 @@ import { OssIconPicker } from './oss-icon-picker';
 
 const meta: Meta<typeof OssIconPicker> = {
     component: OssIconPicker,
-    title: '总览/Icon Picker',
+    title: 'Icon/Icon Picker',
     parameters: {
         layout: 'fullscreen',
     },

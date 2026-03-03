@@ -81,7 +81,9 @@ const config: StorybookConfig = {
     <link rel="icon" type="image/svg+xml" href="/images/favicon.jpg" />
     <script>
       window.STORYBOOK_CATEGORIES = {
-        '总览': ['web-playground', 'oss-icon-picker'],
+        '总览': ['web-playground'],
+        'Agent': ['agent', 'skill', 'use-sea-lion'],
+        'Icon': ['icon', 'oss-icon-picker'],
         '主题': ['theme'],
         '布局': ['flex', 'container', 'grid', 'aspect-ratio'],
         '排版': ['text', 'heading', 'blockquote', 'code'],
