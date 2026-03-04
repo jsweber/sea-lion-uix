@@ -22,6 +22,58 @@ import { AccessibleIcon } from '@radix-ui/react-accessible-icon';
 
 import type { ComponentPropsWithout, RemovedProps } from '@sea-lion/react-helpers';
 import type { GetPropDefTypes } from '@sea-lion/react-props';
+import classNames from 'classnames';
+
+const CUSTOM_VARS_STYLE_ID = 'sea-lion-theme-panel-custom-vars';
+
+const fontFamilyPresets = [
+    {
+        value: 'default',
+        label: '系统',
+        fontStack: '',
+    },
+    {
+        value: 'pingfang',
+        label: '苹方',
+        fontStack: "'PingFang SC', 'Hiragino Sans GB', 'Noto Sans SC', sans-serif",
+    },
+    {
+        value: 'msyh',
+        label: '雅黑',
+        fontStack: "'Microsoft YaHei', 'WenQuanYi Micro Hei', 'Noto Sans SC', sans-serif",
+    },
+    {
+        value: 'sourcehans',
+        label: '思源',
+        fontStack: "'Source Han Sans SC', 'Noto Sans CJK SC', 'Noto Sans SC', sans-serif",
+    },
+    {
+        value: 'alibaba',
+        label: '普惠',
+        fontStack: "'Alibaba PuHuiTi', 'PingFang SC', 'Noto Sans SC', sans-serif",
+    },
+] as const;
+
+type FontFamilyValue = (typeof fontFamilyPresets)[number]['value'];
+
+const fontSizePresets = [
+    { value: '12', label: '12px' },
+    { value: '13', label: '13px' },
+    { value: '14', label: '14px' },
+    { value: '16', label: '16px' },
+    { value: '18', label: '18px' },
+] as const;
+
+type FontSizeValue = (typeof fontSizePresets)[number]['value'];
+
+const shadowModeOptions = [
+    { value: 'none', label: '无' },
+    { value: 'soft', label: '柔和' },
+    { value: 'default', label: '默认' },
+    { value: 'strong', label: '强' },
+] as const;
+
+type ShadowMode = (typeof shadowModeOptions)[number]['value'];
 
 interface ThemePanelProps extends Omit<ThemePanelImplProps, keyof ThemePanelImplPrivateProps> {
   open: boolean;
@@ -104,6 +156,61 @@ const ThemePanelImpl = React.forwardRef<ThemePanelImplElement, ThemePanelImplPro
             };
         }
 
+        const [fontFamily, setFontFamily] = React.useState<FontFamilyValue>('default');
+        const [fontSize, setFontSize] = React.useState<FontSizeValue>('16');
+        const [shadowMode, setShadowMode] = React.useState<ShadowMode>('default');
+
+        React.useEffect(() => {
+            let styleEl = document.getElementById(CUSTOM_VARS_STYLE_ID) as HTMLStyleElement | null;
+            if (!styleEl) {
+                styleEl = document.createElement('style');
+                styleEl.id = CUSTOM_VARS_STYLE_ID;
+                document.head.appendChild(styleEl);
+            }
+
+            const vars: string[] = [];
+
+            const selectedFont = fontFamilyPresets.find((f) => f.value === fontFamily);
+            if (selectedFont && fontFamily !== 'default') {
+                vars.push(`--default-font-family: ${selectedFont.fontStack};`);
+                vars.push(`--heading-font-family: ${selectedFont.fontStack};`);
+            }
+
+            if (fontSize !== '16') {
+                vars.push(`--default-font-size: ${fontSize}px;`);
+            }
+
+            if (shadowMode === 'none') {
+                for (let i = 1; i <= 6; i++) {
+                    vars.push(`--shadow-${i}: none;`);
+                }
+            } else if (shadowMode === 'soft') {
+                vars.push('--shadow-1: inset 0 0 0 1px var(--gray-a3);');
+                vars.push('--shadow-2: 0 0 0 1px var(--gray-a2), 0 1px 3px var(--gray-a2);');
+                vars.push('--shadow-3: 0 0 0 1px var(--gray-a2), 0 2px 6px var(--gray-a2);');
+                vars.push('--shadow-4: 0 0 0 1px var(--gray-a2), 0 4px 12px var(--gray-a2);');
+                vars.push('--shadow-5: 0 0 0 1px var(--gray-a2), 0 8px 20px var(--gray-a3);');
+                vars.push('--shadow-6: 0 0 0 1px var(--gray-a3), 0 12px 32px var(--gray-a3);');
+            } else if (shadowMode === 'strong') {
+                vars.push('--shadow-1: inset 0 0 0 1px var(--gray-a7), inset 0 2px 3px var(--gray-a4);');
+                vars.push('--shadow-2: 0 0 0 1px var(--gray-a5), 0 2px 6px var(--gray-a4), 0 4px 12px var(--black-a2);');
+                vars.push('--shadow-3: 0 0 0 1px var(--gray-a5), 0 4px 12px var(--gray-a4), 0 8px 24px var(--black-a3);');
+                vars.push('--shadow-4: 0 0 0 1px var(--gray-a5), 0 8px 24px var(--black-a2), 0 16px 40px var(--gray-a4);');
+                vars.push('--shadow-5: 0 0 0 1px var(--gray-a5), 0 16px 48px var(--black-a4), 0 20px 48px var(--gray-a5);');
+                vars.push('--shadow-6: 0 0 0 1px var(--gray-a5), 0 20px 60px var(--black-a5), 0 24px 64px var(--gray-a6);');
+            }
+
+            styleEl.textContent =
+                vars.length > 0 ? `.radix-themes {\n  ${vars.join('\n  ')}\n}` : '';
+        }, [fontFamily, fontSize, shadowMode]);
+
+        React.useEffect(() => {
+            return () => {
+                const el = document.getElementById(CUSTOM_VARS_STYLE_ID);
+                if (el) el.remove();
+            };
+        }, []);
+
         const [copyState, setCopyState] = React.useState<'idle' | 'copying' | 'copied'>('idle');
         async function handleCopyThemeConfig() {
             const theme = {
@@ -121,7 +228,30 @@ const ThemePanelImpl = React.forwardRef<ThemePanelImplElement, ThemePanelImplPro
                 .map((key) => `${key}="${theme[key as keyof typeof theme]}"`)
                 .join(' ');
 
-            const textToCopy = themePropsStr ? `<Theme ${themePropsStr}>` : '<Theme>';
+            const themeTag = themePropsStr ? `<Theme ${themePropsStr}>` : '<Theme>';
+
+            const cssVars: string[] = [];
+            const selectedFont = fontFamilyPresets.find((f) => f.value === fontFamily);
+            if (selectedFont && fontFamily !== 'default') {
+                cssVars.push(`  --default-font-family: ${selectedFont.fontStack};`);
+                cssVars.push(`  --heading-font-family: ${selectedFont.fontStack};`);
+            }
+            if (fontSize !== '16') {
+                cssVars.push(`  --default-font-size: ${fontSize}px;`);
+            }
+            if (shadowMode === 'none') {
+                cssVars.push('  --shadow-1: none; --shadow-2: none; --shadow-3: none;');
+                cssVars.push('  --shadow-4: none; --shadow-5: none; --shadow-6: none;');
+            } else if (shadowMode !== 'default') {
+                cssVars.push(`  /* shadow: ${shadowMode} */`);
+            }
+
+            const cssBlock =
+                cssVars.length > 0
+                    ? `\n\n/* Global CSS */\n.radix-themes {\n${cssVars.join('\n')}\n}`
+                    : '';
+
+            const textToCopy = themeTag + cssBlock;
 
             setCopyState('copying');
             await navigator.clipboard.writeText(textToCopy);
@@ -288,7 +418,7 @@ const ThemePanelImpl = React.forwardRef<ThemePanelImplElement, ThemePanelImplPro
 
                             <Flex asChild align="center" justify="between">
                                 <Text as="p" id="gray-color-title" size="2" weight="medium" mt="5">
-                                    ???
+                                    中性色
                                 </Text>
                             </Flex>
 
@@ -593,6 +723,95 @@ const ThemePanelImpl = React.forwardRef<ThemePanelImplElement, ThemePanelImplPro
                                 ))}
                             </Grid>
                             {/* eslint-enable max-len */}
+
+                            <Text id="font-family-title" as="p" size="2" weight="medium" mt="5">
+                                字体
+                            </Text>
+
+                            <Grid columns="5" gap="2" mt="3" role="group" aria-labelledby="font-family-title">
+                                {fontFamilyPresets.map((preset) => (
+                                    <Flex key={preset.value} direction="column" align="center">
+                                        <label className={classNames('rt-ThemePanelRadioCard', 'rt-ThemePanelRadioCardFontFamily')}>
+                                            <input
+                                                className="rt-ThemePanelRadioCardInput"
+                                                type="radio"
+                                                name="fontFamily"
+                                                id={`theme-panel-font-${preset.value}`}
+                                                value={preset.value}
+                                                checked={fontFamily === preset.value}
+                                                onChange={(event) =>
+                                                    setFontFamily(event.target.value as FontFamilyValue)
+                                                }
+                                            />
+                                            <Flex align="center" justify="center" height="32px">
+                                                <Text
+                                                    size="1"
+                                                    weight="medium"
+                                                    style={
+                                                        preset.fontStack
+                                                            ? { fontFamily: preset.fontStack }
+                                                            : undefined
+                                                    }
+                                                >
+                                                    {preset.label}
+                                                </Text>
+                                            </Flex>
+                                        </label>
+                                    </Flex>
+                                ))}
+                            </Grid>
+
+                            <Text id="font-size-title" as="p" size="2" weight="medium" mt="5">
+                                字号基准
+                            </Text>
+
+                            <Grid columns="5" gap="2" mt="3" role="group" aria-labelledby="font-size-title">
+                                {fontSizePresets.map((preset) => (
+                                    <label key={preset.value} className="rt-ThemePanelRadioCard">
+                                        <input
+                                            className="rt-ThemePanelRadioCardInput"
+                                            type="radio"
+                                            name="fontSize"
+                                            value={preset.value}
+                                            checked={fontSize === preset.value}
+                                            onChange={(event) =>
+                                                setFontSize(event.target.value as FontSizeValue)
+                                            }
+                                        />
+                                        <Flex align="center" justify="center" height="32px">
+                                            <Text size="1" weight="medium">
+                                                {preset.label}
+                                            </Text>
+                                        </Flex>
+                                    </label>
+                                ))}
+                            </Grid>
+
+                            <Text id="shadow-mode-title" as="p" size="2" weight="medium" mt="5">
+                                阴影强度
+                            </Text>
+
+                            <Grid columns="4" gap="2" mt="3" role="group" aria-labelledby="shadow-mode-title">
+                                {shadowModeOptions.map((option) => (
+                                    <label key={option.value} className="rt-ThemePanelRadioCard">
+                                        <input
+                                            className="rt-ThemePanelRadioCardInput"
+                                            type="radio"
+                                            name="shadowMode"
+                                            value={option.value}
+                                            checked={shadowMode === option.value}
+                                            onChange={(event) =>
+                                                setShadowMode(event.target.value as ShadowMode)
+                                            }
+                                        />
+                                        <Flex align="center" justify="center" height="32px">
+                                            <Text size="1" weight="medium">
+                                                {option.label}
+                                            </Text>
+                                        </Flex>
+                                    </label>
+                                ))}
+                            </Grid>
 
                             {/* eslint-disable react/jsx-no-bind -- theme copy handler is stable */}
                             <Button
