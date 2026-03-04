@@ -29,6 +29,7 @@
     "@sea-lion/react-flex": "workspace:*",
     "@sea-lion/react-grid": "workspace:*",
     "@sea-lion/react-helpers": "workspace:*",
+    "@sea-lion/react-popover": "workspace:*",
     "@sea-lion/react-props": "workspace:*",
     "@sea-lion/react-theme": "workspace:*",
     "@sea-lion/react-tooltip": "workspace:*"
