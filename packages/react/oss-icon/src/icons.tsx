@@ -13,7 +13,7 @@ interface IconFontProps {
 // oss://openmmlab-open/x-lab/sea-lion-ui/iconfont/
 // https://www.iconfont.cn/manage/index?spm=a313x.7781069.1998910419.20&manage_type=myprojects&projectId=3858115&keyword=&project_type=&page=
 
-const defaultOssIconUrl = 'https://cdn-static.openxlab.org.cn/x-lab/sea-lion-ui/iconfont/iconfont.css';
+const defaultOssIconUrl = '//at.alicdn.com/t/c/font_3858115_hwwfmyoy6t7.css';
 
 const IconFont: FC<IconFontProps> = ({
     icon, color, fontSize, style, className,

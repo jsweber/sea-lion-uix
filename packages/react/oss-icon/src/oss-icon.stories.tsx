@@ -9,12 +9,12 @@ import { Text } from '@sea-lion/react-text';
 
 /** Iconfont 平台常用资源类型：Font-class 用 .css，Symbol 用 .js */
 const ICONFONT_PLATFORM_URLS = {
-    css: '//at.alicdn.com/t/c/font_3858115_arqhh46u7i7.css',
-    js: '//at.alicdn.com/t/c/font_3858115_arqhh46u7i7.js',
+    css: '//at.alicdn.com/t/c/font_3858115_hwwfmyoy6t7.css',
+    js: '//at.alicdn.com/t/c/font_3858115_hwwfmyoy6t7.js',
 } as const;
 
 /** 图标库 Story 使用的 CSS 地址 */
-const ICONFONT_ICONS_CSS_URL = 'https://at.alicdn.com/t/c/font_3858115_arqhh46u7i7.css';
+const ICONFONT_ICONS_CSS_URL = '//at.alicdn.com/t/c/font_3858115_hwwfmyoy6t7.css';
 
 /** 从 iconfont 生成的 CSS 文本中解析出所有图标类名（用捕获组动态提取，避免写死截取长度） */
 function parseIconNamesFromCss(cssText: string): string[] {

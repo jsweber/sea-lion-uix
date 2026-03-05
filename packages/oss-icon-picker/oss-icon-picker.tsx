@@ -9,7 +9,7 @@ import { IconFont } from '@sea-lion/react-oss-icon';
 
 import './oss-icon-picker.less';
 
-const ICONFONT_ICONS_CSS_URL = 'https://at.alicdn.com/t/c/font_3858115_arqhh46u7i7.css';
+const ICONFONT_ICONS_CSS_URL = '//at.alicdn.com/t/c/font_3858115_hwwfmyoy6t7.css';
 const PAGE_SIZE = 7 * 7; // 49
 
 function parseIconNamesFromCss(cssText: string): string[] {
