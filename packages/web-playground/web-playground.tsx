@@ -131,7 +131,7 @@ const WebPlayground: FC<WebPlaygroundProps> = ({ mode }) => {
                         </Blockquote>
                         <div className="block-section">
                             <Text as="p" className="wp-descr-item">
-                                <Badge color="blue"><PaperPlaneIcon /></Badge>如果对组件有任何疑问和建议，欢迎联系，<Kbd>飞书@杜晓卿。</Kbd>
+                                <Badge color="blue"><PaperPlaneIcon /></Badge>如果对组件有任何疑问和建议，欢迎联系，<Kbd>dxqweber@gmail.com</Kbd>
                             </Text>
                         </div>
                     </div>
