@@ -19,25 +19,25 @@ interface SwitchProps
   MarginProps,
   SwitchOwnProps { }
 const Switch = React.forwardRef<SwitchElement, SwitchProps>((props, forwardedRef) => {
-  const { className, color, radius, ...switchProps } = extractProps(
-    props,
-    switchPropDefs,
-    marginPropDefs
-  );
-  return (
-    <SwitchPrimitive.Root
-      data-accent-color={color}
-      data-radius={radius}
-      {...switchProps}
-      asChild={false}
-      ref={forwardedRef}
-      className={classNames('rt-reset', 'rt-SwitchRoot', className)}
-    >
-      <SwitchPrimitive.Thumb
-        className={classNames('rt-SwitchThumb', { 'rt-high-contrast': props.highContrast })}
-      />
-    </SwitchPrimitive.Root>
-  );
+    const { className, color, radius, ...switchProps } = extractProps(
+        props,
+        switchPropDefs,
+        marginPropDefs,
+    );
+    return (
+        <SwitchPrimitive.Root
+            data-accent-color={color}
+            data-radius={radius}
+            {...switchProps}
+            asChild={false}
+            ref={forwardedRef}
+            className={classNames('rt-reset', 'rt-SwitchRoot', className)}
+        >
+            <SwitchPrimitive.Thumb
+                className={classNames('rt-SwitchThumb', { 'rt-high-contrast': props.highContrast })}
+            />
+        </SwitchPrimitive.Root>
+    );
 });
 Switch.displayName = 'Switch';
 

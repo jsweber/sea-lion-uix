@@ -17,36 +17,36 @@ interface ContainerProps
   LayoutProps,
   ContainerOwnProps { }
 const Container = React.forwardRef<ContainerElement, ContainerProps>(
-  ({ width, minWidth, maxWidth, height, minHeight, maxHeight, ...props }, forwardedRef) => {
-    const { asChild, children, className, ...containerProps } = extractProps(
-      props,
-      containerPropDefs,
-      layoutPropDefs,
-      marginPropDefs
-    );
+    ({ width, minWidth, maxWidth, height, minHeight, maxHeight, ...props }, forwardedRef) => {
+        const { asChild, children, className, ...containerProps } = extractProps(
+            props,
+            containerPropDefs,
+            layoutPropDefs,
+            marginPropDefs,
+        );
 
-    const { className: innerClassName, style: innerStyle } = extractProps(
-      { width, minWidth, maxWidth, height, minHeight, maxHeight },
-      widthPropDefs,
-      heightPropDefs
-    );
+        const { className: innerClassName, style: innerStyle } = extractProps(
+            { width, minWidth, maxWidth, height, minHeight, maxHeight },
+            widthPropDefs,
+            heightPropDefs,
+        );
 
-    const Comp = asChild ? Slot : 'div';
+        const Comp = asChild ? Slot : 'div';
 
-    return (
-      <Comp
-        {...containerProps}
-        ref={forwardedRef}
-        className={classNames('rt-Container', className)}
-      >
-        {getSubtree({ asChild, children }, (children) => (
-          <div className={classNames('rt-ContainerInner', innerClassName)} style={innerStyle}>
-            {children}
-          </div>
-        ))}
-      </Comp>
-    );
-  }
+        return (
+            <Comp
+                {...containerProps}
+                ref={forwardedRef}
+                className={classNames('rt-Container', className)}
+            >
+                {getSubtree({ asChild, children }, (children) => (
+                    <div className={classNames('rt-ContainerInner', innerClassName)} style={innerStyle}>
+                        {children}
+                    </div>
+                ))}
+            </Comp>
+        );
+    },
 );
 Container.displayName = 'Container';
 

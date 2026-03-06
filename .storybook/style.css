@@ -23,3 +23,13 @@
 .story-book-border {
     border: 1px solid #777;
 }
+
+.api-table-title {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.api-table-sub-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+}

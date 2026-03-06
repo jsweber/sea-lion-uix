@@ -14,27 +14,29 @@ type HeadingOwnProps = GetPropDefTypes<typeof headingPropDefs>;
 interface HeadingProps
   extends ComponentPropsWithout<'h1', RemovedProps>,
   MarginProps,
-  HeadingOwnProps { }
+  HeadingOwnProps {
+  textWrap?: 'wrap' | 'nowrap' | 'balance' | 'pretty';
+}
 
 const Heading = React.forwardRef<HeadingElement, HeadingProps>((props, forwardedRef) => {
-  const {
-    children,
-    className,
-    asChild,
-    as: Tag = 'h1',
-    color,
-    ...headingProps
-  } = extractProps(props, headingPropDefs, marginPropDefs);
-  return (
-    <Slot
-      data-accent-color={color}
-      {...headingProps}
-      ref={forwardedRef}
-      className={classNames('rt-Heading', className)}
-    >
-      {asChild ? children : <Tag>{children}</Tag>}
-    </Slot>
-  );
+    const {
+        children,
+        className,
+        asChild,
+        as: Tag = 'h1',
+        color,
+        ...headingProps
+    } = extractProps(props, headingPropDefs, marginPropDefs);
+    return (
+        <Slot
+            data-accent-color={color}
+            {...headingProps}
+            ref={forwardedRef}
+            className={classNames('rt-Heading', className)}
+        >
+            {asChild ? children : <Tag>{children}</Tag>}
+        </Slot>
+    );
 });
 Heading.displayName = 'Heading';
 

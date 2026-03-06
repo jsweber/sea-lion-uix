@@ -23,40 +23,40 @@ interface CheckboxProps
   MarginProps,
   CheckboxOwnProps { }
 const Checkbox = React.forwardRef<CheckboxElement, CheckboxProps>((props, forwardedRef) => {
-  const {
-    className,
-    color,
-    checked: checkedProp,
-    defaultChecked: defaultCheckedProp,
-    onCheckedChange,
-    ...checkboxProps
-  } = extractProps(props, checkboxPropDefs, marginPropDefs);
+    const {
+        className,
+        color,
+        checked: checkedProp,
+        defaultChecked: defaultCheckedProp,
+        onCheckedChange,
+        ...checkboxProps
+    } = extractProps(props, checkboxPropDefs, marginPropDefs);
 
-  const [checked, setChecked] = useControllableState({
-    prop: checkedProp,
-    defaultProp: defaultCheckedProp,
-    onChange: onCheckedChange,
-  });
+    const [checked, setChecked] = useControllableState({
+        prop: checkedProp,
+        defaultProp: defaultCheckedProp,
+        onChange: onCheckedChange,
+    });
 
-  return (
-    <CheckboxPrimitive.Root
-      data-accent-color={color}
-      {...checkboxProps}
-      defaultChecked={defaultCheckedProp}
-      checked={checked}
-      onCheckedChange={setChecked}
-      asChild={false}
-      ref={forwardedRef}
-      className={classNames('rt-reset', 'rt-BaseCheckboxRoot', 'rt-CheckboxRoot', className)}
-    >
-      <CheckboxPrimitive.Indicator
-        asChild
-        className="rt-BaseCheckboxIndicator rt-CheckboxIndicator"
-      >
-        {checked === 'indeterminate' ? <ThickDividerHorizontalIcon /> : <ThickCheckIcon />}
-      </CheckboxPrimitive.Indicator>
-    </CheckboxPrimitive.Root>
-  );
+    return (
+        <CheckboxPrimitive.Root
+            data-accent-color={color}
+            {...checkboxProps}
+            defaultChecked={defaultCheckedProp}
+            checked={checked}
+            onCheckedChange={setChecked}
+            asChild={false}
+            ref={forwardedRef}
+            className={classNames('rt-reset', 'rt-BaseCheckboxRoot', 'rt-CheckboxRoot', className)}
+        >
+            <CheckboxPrimitive.Indicator
+                asChild
+                className="rt-BaseCheckboxIndicator rt-CheckboxIndicator"
+            >
+                {checked === 'indeterminate' ? <ThickDividerHorizontalIcon /> : <ThickCheckIcon />}
+            </CheckboxPrimitive.Indicator>
+        </CheckboxPrimitive.Root>
+    );
 });
 Checkbox.displayName = 'Checkbox';
 

@@ -18,14 +18,14 @@ type FlexSpanProps = { as: 'span' } & ComponentPropsWithout<'span', RemovedProps
 type FlexProps = CommonFlexProps & (FlexSpanProps | FlexDivProps);
 
 const Flex = React.forwardRef<FlexElement, FlexProps>((props, forwardedRef) => {
-  const {
-    className,
-    asChild,
-    as: Tag = 'div',
-    ...flexProps
-  } = extractProps(props, flexPropDefs, layoutPropDefs, marginPropDefs);
-  const Comp = asChild ? Slot : Tag;
-  return <Comp {...flexProps} ref={forwardedRef} className={classNames('rt-Flex', className)} />;
+    const {
+        className,
+        asChild,
+        as: Tag = 'div',
+        ...flexProps
+    } = extractProps(props, flexPropDefs, layoutPropDefs, marginPropDefs);
+    const Comp = asChild ? Slot : Tag;
+    return <Comp {...flexProps} ref={forwardedRef} className={classNames('rt-Flex', className)} />;
 });
 Flex.displayName = 'Flex';
 

@@ -13,22 +13,32 @@ interface IconFontProps {
 // oss://openmmlab-open/x-lab/sea-lion-ui/iconfont/
 // https://www.iconfont.cn/manage/index?spm=a313x.7781069.1998910419.20&manage_type=myprojects&projectId=3858115&keyword=&project_type=&page=
 
-const defaultOssIconUrl = 'https://oss.openmmlab.com/x-lab/sea-lion-ui/iconfont/iconfont.css';
+const defaultOssIconUrl = '//at.alicdn.com/t/c/font_3858115_hwwfmyoy6t7.css';
 
 const IconFont: FC<IconFontProps> = ({
     icon, color, fontSize, style, className,
-    ossUrl = defaultOssIconUrl
+    ossUrl = defaultOssIconUrl,
 }) => {
     const classes = classNames(className, icon, 'iconfont');
     useEffect(() => {
+        if (!ossUrl?.trim()) return;
         try {
-            const id = 'append_oss_iconfont_id';
-            const iconStyleElement = document.getElementById(id);
-            if (!iconStyleElement) {
-                const newStyleElement = document.createElement('style');
-                newStyleElement.textContent = `@import url(${ossUrl});`;
-                newStyleElement.id = id;
-                document.head.appendChild(newStyleElement);
+            const normalizedUrl = ossUrl.startsWith('//') ? `https:${ossUrl}` : ossUrl;
+            const isJs = /\.js$/i.test(ossUrl);
+            const safeId = `oss-iconfont-${isJs ? 'js' : 'css'}-${ossUrl.replace(/[^a-zA-Z0-9._-]/g, '_').slice(0, 80)}`;
+            if (document.getElementById(safeId)) return;
+
+            if (isJs) {
+                const script = document.createElement('script');
+                script.id = safeId;
+                script.src = normalizedUrl;
+                script.async = true;
+                document.head.appendChild(script);
+            } else {
+                const styleEl = document.createElement('style');
+                styleEl.id = safeId;
+                styleEl.textContent = `@import url("${normalizedUrl}");`;
+                document.head.appendChild(styleEl);
             }
         } catch (error) {
             console.error(error);
@@ -40,18 +50,19 @@ const IconFont: FC<IconFontProps> = ({
             className={classes}
             style={{
                 display: 'inline-block',
-                color: `${color && color}`,
-                fontSize: `${fontSize && fontSize}`,
-                ...style
+                // 未传时使用 currentColor/1em，便于在 IconButton 等父组件内继承颜色与尺寸
+                color: color ?? 'currentColor',
+                fontSize: fontSize ?? '1em',
+                ...style,
             }}
         />
     );
 };
 export {
     IconFont,
-    defaultOssIconUrl
+    defaultOssIconUrl,
 }
 
 export type {
-    IconFontProps
+    IconFontProps,
 }

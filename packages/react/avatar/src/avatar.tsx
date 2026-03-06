@@ -13,24 +13,24 @@ import type { ComponentPropsWithout, RemovedProps } from '@sea-lion/react-helper
 
 interface AvatarProps extends MarginProps, AvatarImplProps { }
 const Avatar = React.forwardRef<AvatarImplElement, AvatarProps>((props, forwardedRef) => {
-  const { asChild, children, className, style, color, radius, ...imageProps } = extractProps(
-    props,
-    avatarPropDefs,
-    marginPropDefs
-  );
+    const { asChild, children, className, style, color, radius, ...imageProps } = extractProps(
+        props,
+        avatarPropDefs,
+        marginPropDefs,
+    );
 
-  return (
+    return (
     // TODO as a rule, should we rather spread the props on root?
-    <AvatarPrimitive.Root
-      data-accent-color={color}
-      data-radius={radius}
-      className={classNames('rt-reset', 'rt-AvatarRoot', className)}
-      style={style}
-      asChild={asChild}
-    >
-      {getSubtree({ asChild, children }, <AvatarImpl ref={forwardedRef} {...imageProps} />)}
-    </AvatarPrimitive.Root>
-  );
+        <AvatarPrimitive.Root
+            data-accent-color={color}
+            data-radius={radius}
+            className={classNames('rt-reset', 'rt-AvatarRoot', className)}
+            style={style}
+            asChild={asChild}
+        >
+            {getSubtree({ asChild, children }, <AvatarImpl ref={forwardedRef} {...imageProps} />)}
+        </AvatarPrimitive.Root>
+    );
 });
 Avatar.displayName = 'Avatar';
 
@@ -45,36 +45,36 @@ interface AvatarImplProps
 }
 
 const AvatarImpl = React.forwardRef<AvatarImplElement, AvatarImplProps>(
-  ({ fallback, ...imageProps }, forwardedRef) => {
-    const [status, setStatus] = React.useState<'idle' | 'loading' | 'loaded' | 'error'>('idle');
-    return (
-      <>
-        {status === 'idle' || status === 'loading' ? <span className="rt-AvatarFallback" /> : null}
+    ({ fallback, ...imageProps }, forwardedRef) => {
+        const [status, setStatus] = React.useState<'idle' | 'loading' | 'loaded' | 'error'>('idle');
+        return (
+            <>
+                {status === 'idle' || status === 'loading' ? <span className="rt-AvatarFallback" /> : null}
 
-        {status === 'error' ? (
-          <AvatarPrimitive.Fallback
-            className={classNames('rt-AvatarFallback', {
-              'rt-one-letter': typeof fallback === 'string' && fallback.length === 1,
-              'rt-two-letters': typeof fallback === 'string' && fallback.length === 2,
-            })}
-            delayMs={0}
-          >
-            {fallback}
-          </AvatarPrimitive.Fallback>
-        ) : null}
+                {status === 'error' ? (
+                    <AvatarPrimitive.Fallback
+                        className={classNames('rt-AvatarFallback', {
+                            'rt-one-letter': typeof fallback === 'string' && fallback.length === 1,
+                            'rt-two-letters': typeof fallback === 'string' && fallback.length === 2,
+                        })}
+                        delayMs={0}
+                    >
+                        {fallback}
+                    </AvatarPrimitive.Fallback>
+                ) : null}
 
-        <AvatarPrimitive.Image
-          ref={forwardedRef}
-          className="rt-AvatarImage"
-          {...imageProps}
-          onLoadingStatusChange={(status) => {
-            imageProps.onLoadingStatusChange?.(status);
-            setStatus(status);
-          }}
-        />
-      </>
-    );
-  }
+                <AvatarPrimitive.Image
+                    ref={forwardedRef}
+                    className="rt-AvatarImage"
+                    {...imageProps}
+                    onLoadingStatusChange={(status) => {
+                        imageProps.onLoadingStatusChange?.(status);
+                        setStatus(status);
+                    }}
+                />
+            </>
+        );
+    },
 );
 
 AvatarImpl.displayName = 'AvatarImpl';

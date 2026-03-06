@@ -74,9 +74,9 @@ type NotInputRadioAttributes = Exclude<InputAttributes, InputRadioAttributes>;
 type NotInputTextualAttributes = Exclude<InputAttributes, InputTextualAttributes>;
 
 export type {
-  InputAttributes,
-  InputRadioAttributes,
-  InputTextualAttributes,
-  NotInputRadioAttributes,
-  NotInputTextualAttributes,
+    InputAttributes,
+    InputRadioAttributes,
+    InputTextualAttributes,
+    NotInputRadioAttributes,
+    NotInputTextualAttributes,
 };

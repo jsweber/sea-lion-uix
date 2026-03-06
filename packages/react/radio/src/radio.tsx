@@ -9,9 +9,9 @@ import { radioPropDefs } from './radio.props';
 import { marginPropDefs } from '@sea-lion/react-props';
 import { extractProps } from '@sea-lion/react-helpers';
 
-import type { MarginProps } from '@sea-lion/react-props';
+import type { MarginProps , GetPropDefTypes } from '@sea-lion/react-props';
 import type { ComponentPropsWithout, NotInputRadioAttributes } from '@sea-lion/react-helpers';
-import type { GetPropDefTypes } from '@sea-lion/react-props';
+
 
 type RadioElement = React.ElementRef<'input'>;
 type RadioOwnProps = GetPropDefTypes<typeof radioPropDefs> & {
@@ -25,24 +25,23 @@ type RadioInputProps = ComponentPropsWithout<
 interface RadioProps extends RadioInputProps, MarginProps, RadioOwnProps { }
 
 const Radio = React.forwardRef<RadioElement, RadioProps>((props, forwardedRef) => {
-  const ref = React.useRef<RadioElement>(null);
-  const { className, color, onChange, onValueChange, ...radioProps } = extractProps(
-    props,
-    radioPropDefs,
-    marginPropDefs
-  );
-  return (
-    <input
-      type="radio"
-      data-accent-color={color}
-      {...radioProps}
-      onChange={composeEventHandlers(onChange, (event) =>
-        onValueChange?.(event.currentTarget.value)
-      )}
-      ref={composeRefs(ref, forwardedRef)}
-      className={classNames('rt-reset', 'rt-BaseRadioRoot', 'rt-RadioRoot', className)}
-    />
-  );
+    const ref = React.useRef<RadioElement>(null);
+    const { className, color, onChange, onValueChange, ...radioProps } = extractProps(
+        props,
+        radioPropDefs,
+        marginPropDefs,
+    );
+    return (
+        <input
+            type="radio"
+            data-accent-color={color}
+            {...radioProps}
+            onChange={composeEventHandlers(onChange, (event) =>
+                onValueChange?.(event.currentTarget.value))}
+            ref={composeRefs(ref, forwardedRef)}
+            className={classNames('rt-reset', 'rt-BaseRadioRoot', 'rt-RadioRoot', className)}
+        />
+    );
 });
 Radio.displayName = 'Radio';
 

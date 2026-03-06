@@ -24,6 +24,7 @@ const build = async (path) => {
         format: 'cjs',
         target: 'es2022',
         outdir: dist,
+        loader: { '.svg': 'dataurl' },
         plugins: [lessLoader()]
     };
 
@@ -79,6 +80,7 @@ const start = async () => {
             format: 'cjs',
             target: 'es2022',
             outdir: dist,
+            loader: { '.svg': 'dataurl' },
             plugins: [lessLoader()]
         };
 

@@ -11,16 +11,16 @@ const alignValues = ['start', 'center', 'end', 'baseline', 'stretch'] as const;
 const justifyValues = ['start', 'center', 'end', 'between'] as const;
 
 const gridPropDefs = {
-  /**
+    /**
    * Controls whether to render **div** or **span**
    *
    * @example
    * as="div"
    * as="span"
    */
-  as: { type: 'enum', values: as, default: 'div' },
-  ...asChildPropDef,
-  /**
+    as: { type: 'enum', values: as, default: 'div' },
+    ...asChildPropDef,
+    /**
    * Sets the CSS **display** property.
    * Supports a subset of the corresponding CSS values and responsive objects.
    *
@@ -31,13 +31,13 @@ const gridPropDefs = {
    * @link
    * https://developer.mozilla.org/en-US/docs/Web/CSS/display
    */
-  display: {
-    type: 'enum',
-    className: 'rt-r-display',
-    values: displayValues,
-    responsive: true,
-  },
-  /**
+    display: {
+        type: 'enum',
+        className: 'rt-r-display',
+        values: displayValues,
+        responsive: true,
+    },
+    /**
    * Sets the CSS **grid-template** property.
    * Supports a subset of the corresponding CSS values and responsive objects.
    *
@@ -47,13 +47,13 @@ const gridPropDefs = {
    * @link
    * https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-areas
    */
-  areas: {
-    type: 'string',
-    className: 'rt-r-gta',
-    customProperties: ['--grid-template-areas'],
-    responsive: true,
-  },
-  /**
+    areas: {
+        type: 'string',
+        className: 'rt-r-gta',
+        customProperties: ['--grid-template-areas'],
+        responsive: true,
+    },
+    /**
    * Sets the CSS **grid-template-columns** property.
    * Supports numeric string values, CSS strings and responsive objects.
    *
@@ -67,15 +67,15 @@ const gridPropDefs = {
    * @link
    * https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns
    */
-  columns: {
-    type: 'enum | string',
-    className: 'rt-r-gtc',
-    customProperties: ['--grid-template-columns'],
-    values: columnsValues,
-    parseValue: parseGridValue,
-    responsive: true,
-  },
-  /**
+    columns: {
+        type: 'enum | string',
+        className: 'rt-r-gtc',
+        customProperties: ['--grid-template-columns'],
+        values: columnsValues,
+        parseValue: parseGridValue,
+        responsive: true,
+    },
+    /**
    * Sets the CSS **grid-template-rows** property.
    * Supports numeric string values, CSS strings and responsive objects.
    *
@@ -89,15 +89,15 @@ const gridPropDefs = {
    * @link
    * https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-rows
    */
-  rows: {
-    type: 'enum | string',
-    className: 'rt-r-gtr',
-    customProperties: ['--grid-template-rows'],
-    values: rowsValues,
-    parseValue: parseGridValue,
-    responsive: true,
-  },
-  /**
+    rows: {
+        type: 'enum | string',
+        className: 'rt-r-gtr',
+        customProperties: ['--grid-template-rows'],
+        values: rowsValues,
+        parseValue: parseGridValue,
+        responsive: true,
+    },
+    /**
    * Sets the CSS **grid-auto-flow** property.
    * Supports the corresponding CSS values and responsive objects.
    *
@@ -108,13 +108,13 @@ const gridPropDefs = {
    * @link
    * https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-flow
    */
-  flow: {
-    type: 'enum',
-    className: 'rt-r-gaf',
-    values: flowValues,
-    responsive: true,
-  },
-  /**
+    flow: {
+        type: 'enum',
+        className: 'rt-r-gaf',
+        values: flowValues,
+        responsive: true,
+    },
+    /**
    * Sets the CSS **align-items** property.
    * Supports the corresponding CSS values and responsive objects.
    *
@@ -125,13 +125,13 @@ const gridPropDefs = {
    * @link
    * https://developer.mozilla.org/en-US/docs/Web/CSS/align-items
    */
-  align: {
-    type: 'enum',
-    className: 'rt-r-ai',
-    values: alignValues,
-    responsive: true,
-  },
-  /**
+    align: {
+        type: 'enum',
+        className: 'rt-r-ai',
+        values: alignValues,
+        responsive: true,
+    },
+    /**
    * Sets the CSS **justify-content** property.
    * Supports a subset of the corresponding CSS values and responsive objects.
    *
@@ -142,14 +142,14 @@ const gridPropDefs = {
    * @link
    * https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content
    */
-  justify: {
-    type: 'enum',
-    className: 'rt-r-jc',
-    values: justifyValues,
-    parseValue: parseJustifyValue,
-    responsive: true,
-  },
-  ...gapPropDefs,
+    justify: {
+        type: 'enum',
+        className: 'rt-r-jc',
+        values: justifyValues,
+        parseValue: parseJustifyValue,
+        responsive: true,
+    },
+    ...gapPropDefs,
 } satisfies {
   as: PropDef<(typeof as)[number]>;
   display: PropDef<(typeof displayValues)[number]>;
@@ -162,15 +162,15 @@ const gridPropDefs = {
 };
 
 function parseGridValue(value: string): string {
-  if ((gridPropDefs.columns.values as readonly string[]).includes(value)) {
-    return value;
-  }
+    if ((gridPropDefs.columns.values as readonly string[]).includes(value)) {
+        return value;
+    }
 
-  return value?.match(/^\d+$/) ? `repeat(${value}, minmax(0, 1fr))` : value;
+    return value?.match(/^\d+$/) ? `repeat(${value}, minmax(0, 1fr))` : value;
 }
 
 function parseJustifyValue(value: string) {
-  return value === 'between' ? 'space-between' : value;
+    return value === 'between' ? 'space-between' : value;
 }
 
 // Use all of the imported prop defs to ensure that JSDoc works

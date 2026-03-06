@@ -5,14 +5,14 @@ import type { Responsive } from '@sea-lion/react-props';
 
 function mapResponsiveProp<Input extends string, Output>(
     propValue: Responsive<Input> | undefined,
-    mapValue: (value: Input) => Output
+    mapValue: (value: Input) => Output,
 ): Responsive<Output> | undefined {
     if (propValue === undefined) return undefined;
     if (typeof propValue === 'string') {
         return mapValue(propValue);
     }
     return Object.fromEntries(
-        Object.entries(propValue).map(([key, value]) => [key, mapValue(value)])
+        Object.entries(propValue).map(([key, value]) => [key, mapValue(value)]),
     );
 }
 
@@ -21,7 +21,6 @@ function mapResponsiveProp<Input extends string, Output>(
 // ): (typeof textPropDefs.size.values)[number] {
 //     return size === '3' ? '3' : '2';
 // }
-
 
 
 export { mapResponsiveProp };

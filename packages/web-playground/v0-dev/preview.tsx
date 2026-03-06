@@ -10,5 +10,5 @@ const App: FC<any> = () => {
 }
 
 export {
-    App
+    App,
 };

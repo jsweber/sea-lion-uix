@@ -16,30 +16,30 @@ interface SkeletonProps
   MarginProps,
   SkeletonOwnProps { }
 const Skeleton = React.forwardRef<SkeletonElement, SkeletonProps>((props, forwardedRef) => {
-  const { children, className, loading, ...skeletonProps } = extractProps(
-    props,
-    skeletonPropDefs,
-    marginPropDefs
-  );
+    const { children, className, loading, ...skeletonProps } = extractProps(
+        props,
+        skeletonPropDefs,
+        marginPropDefs,
+    );
 
-  if (!loading) return children;
+    if (!loading) return children;
 
-  const Tag = React.isValidElement(children) ? Slot : 'span';
+    const Tag = React.isValidElement(children) ? Slot : 'span';
 
-  return (
-    <Tag
-      ref={forwardedRef}
-      aria-hidden
-      className={classNames('rt-Skeleton', className)}
-      data-inline-skeleton={React.isValidElement(children) ? undefined : true}
-      tabIndex={-1}
-      // @ts-ignore
-      inert={inert}
-      {...skeletonProps}
-    >
-      {children}
-    </Tag>
-  );
+    return (
+        <Tag
+            ref={forwardedRef}
+            aria-hidden
+            className={classNames('rt-Skeleton', className)}
+            data-inline-skeleton={React.isValidElement(children) ? undefined : true}
+            tabIndex={-1}
+            // @ts-ignore
+            inert={inert}
+            {...skeletonProps}
+        >
+            {children}
+        </Tag>
+    );
 });
 Skeleton.displayName = 'Skeleton';
 

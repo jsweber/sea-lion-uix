@@ -6,16 +6,16 @@ const as = ['div', 'span'] as const;
 const displayValues = ['none', 'inline', 'inline-block', 'block'] as const;
 
 const boxPropDefs = {
-  /**
+    /**
    * Controls whether to render **div** or **span**
    *
    * @example
    * as="div"
    * as="span"
    */
-  as: { type: 'enum', values: as, default: 'div' },
-  ...asChildPropDef,
-  /**
+    as: { type: 'enum', values: as, default: 'div' },
+    ...asChildPropDef,
+    /**
    * Sets the CSS **display** property.
    * Supports a subset of the corresponding CSS values and responsive objects.
    *
@@ -26,12 +26,12 @@ const boxPropDefs = {
    * @link
    * https://developer.mozilla.org/en-US/docs/Web/CSS/display
    */
-  display: {
-    type: 'enum',
-    className: 'rt-r-display',
-    values: displayValues,
-    responsive: true,
-  },
+    display: {
+        type: 'enum',
+        className: 'rt-r-display',
+        values: displayValues,
+        responsive: true,
+    },
 } satisfies {
   as: PropDef<(typeof as)[number]>;
   display: PropDef<(typeof displayValues)[number]>;

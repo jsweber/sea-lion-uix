@@ -1,0 +1,47 @@
+/* 新增加的 CSS 文件，用于专门处理滚动条圆角 */
+.radix-themes {
+  /* 默认滚动条圆角值 */
+  --scrollarea-scrollbar-border-radius: 0;
+}
+
+/* 圆角类名样式 */
+.rt-radius-none .rt-ScrollAreaScrollbar {
+  border-radius: 0;
+}
+
+.rt-radius-small .rt-ScrollAreaScrollbar {
+  border-radius: var(--radius-1);
+}
+
+.rt-radius-medium .rt-ScrollAreaScrollbar {
+  border-radius: var(--radius-2);
+}
+
+.rt-radius-large .rt-ScrollAreaScrollbar {
+  border-radius: var(--radius-3);
+}
+
+.rt-radius-full .rt-ScrollAreaScrollbar {
+  border-radius: 9999px;
+}
+
+/* 滚动条圆角样式也应该应用到滚动条的 thumb 元素 */
+.rt-radius-none .rt-ScrollAreaThumb {
+  border-radius: 0;
+}
+
+.rt-radius-small .rt-ScrollAreaThumb {
+  border-radius: var(--radius-1);
+}
+
+.rt-radius-medium .rt-ScrollAreaThumb {
+  border-radius: var(--radius-2);
+}
+
+.rt-radius-large .rt-ScrollAreaThumb {
+  border-radius: var(--radius-3);
+}
+
+.rt-radius-full .rt-ScrollAreaThumb {
+  border-radius: 9999px;
+} 

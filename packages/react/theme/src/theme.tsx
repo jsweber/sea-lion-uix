@@ -49,7 +49,7 @@ function useThemeContext(): any {
     return context;
 }
 
-interface ThemeProps extends ThemeImplPublicProps { }
+type ThemeProps = ThemeImplPublicProps
 const Theme = React.forwardRef<ThemeImplElement, ThemeProps>((props, forwardedRef) => {
     const context = React.useContext(ThemeContext);
     const isRoot = context === undefined;
@@ -118,7 +118,7 @@ const ThemeRoot = React.forwardRef<ThemeImplElement, ThemeImplPublicProps>(
                 onScalingChange={setScaling}
             />
         );
-    }
+    },
 );
 ThemeRoot.displayName = 'ThemeRoot';
 
@@ -192,7 +192,7 @@ const ThemeImpl = React.forwardRef<ThemeImplElement, ThemeImplProps>((props, for
                     onPanelBackgroundChange,
                     onRadiusChange,
                     onScalingChange,
-                ]
+                ],
             )}
         >
             <Comp
@@ -212,7 +212,7 @@ const ThemeImpl = React.forwardRef<ThemeImplElement, ThemeImplProps>((props, for
                         light: appearance === 'light',
                         dark: appearance === 'dark',
                     },
-                    themeProps.className
+                    themeProps.className,
                 )}
             />
         </ThemeContext.Provider>

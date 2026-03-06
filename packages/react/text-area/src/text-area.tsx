@@ -18,21 +18,21 @@ interface TextAreaProps
   MarginProps,
   TextAreaOwnProps { }
 const TextArea = React.forwardRef<TextAreaElement, TextAreaProps>((props, forwardedRef) => {
-  const { className, color, radius, style, ...textAreaProps } = extractProps(
-    props,
-    textAreaPropDefs,
-    marginPropDefs
-  );
-  return (
-    <div
-      data-accent-color={color}
-      data-radius={radius}
-      className={classNames('rt-TextAreaRoot', className)}
-      style={style}
-    >
-      <textarea className="rt-reset rt-TextAreaInput" ref={forwardedRef} {...textAreaProps} />
-    </div>
-  );
+    const { className, color, radius, style, ...textAreaProps } = extractProps(
+        props,
+        textAreaPropDefs,
+        marginPropDefs,
+    );
+    return (
+        <div
+            data-accent-color={color}
+            data-radius={radius}
+            className={classNames('rt-TextAreaRoot', className)}
+            style={style}
+        >
+            <textarea className="rt-reset rt-TextAreaInput" ref={forwardedRef} {...textAreaProps} />
+        </div>
+    );
 });
 TextArea.displayName = 'TextArea';
 

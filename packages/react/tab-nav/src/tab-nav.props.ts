@@ -3,8 +3,8 @@ import { asChildPropDef } from '@sea-lion/react-props';
 import type { PropDef } from '@sea-lion/react-props';
 
 const tabNavLinkPropDefs = {
-  ...asChildPropDef,
-  active: { type: 'boolean', default: false },
+    ...asChildPropDef,
+    active: { type: 'boolean', default: false },
 } satisfies {
   active: PropDef<boolean>;
 };
