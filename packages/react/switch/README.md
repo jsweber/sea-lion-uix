@@ -1,4 +1,4 @@
-# `react-switch`
+﻿# `react-switch`
 
 Switch 是一个开关组件，用于在两种状态间切换。
 
@@ -113,7 +113,8 @@ Switch 组件支持多种变体样式：
 | disabled        | 是否禁用         | boolean                          | false     | 0.2.0 |
 
 同时支持所有标准的外边距（margin）属性。
+
 
 ## 查看更多
 
-查看[文档](https://www.radix-ui.com/themes/docs/theme/overview)获取更多信息。
+参考 [Radix UI 官方文档](https://www.radix-ui.com/themes/docs/components/switch) 获取完整 API 与设计规范。

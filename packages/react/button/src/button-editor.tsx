@@ -16,7 +16,6 @@ interface ButtonEditorProps {
 }
 
 const ButtonEditor: FC<ButtonEditorProps> = () => {
-
     return (
         <Container className="button-editor-container">
             <Heading className="button-editor-header">修改button样式</Heading>
@@ -49,9 +48,9 @@ const ButtonEditor: FC<ButtonEditorProps> = () => {
 }
 
 export {
-    ButtonEditor
+    ButtonEditor,
 }
 
 export type {
-    ButtonEditorProps
+    ButtonEditorProps,
 }

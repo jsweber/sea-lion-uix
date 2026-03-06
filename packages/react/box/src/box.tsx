@@ -17,14 +17,14 @@ type BoxSpanProps = { as: 'span' } & ComponentPropsWithout<'span', RemovedProps>
 type BoxProps = CommonBoxProps & (BoxSpanProps | BoxDivProps);
 
 const Box = React.forwardRef<BoxElement, BoxProps>((props, forwardedRef) => {
-  const {
-    className,
-    asChild,
-    as: Tag = 'div',
-    ...boxProps
-  } = extractProps(props, boxPropDefs, layoutPropDefs, marginPropDefs);
-  const Comp = asChild ? Slot : Tag;
-  return <Comp {...boxProps} ref={forwardedRef} className={classNames('rt-Box', className)} />;
+    const {
+        className,
+        asChild,
+        as: Tag = 'div',
+        ...boxProps
+    } = extractProps(props, boxPropDefs, layoutPropDefs, marginPropDefs);
+    const Comp = asChild ? Slot : Tag;
+    return <Comp {...boxProps} ref={forwardedRef} className={classNames('rt-Box', className)} />;
 });
 Box.displayName = 'Box';
 

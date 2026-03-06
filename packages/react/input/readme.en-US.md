@@ -1,13 +1,22 @@
-# `react-input`
+﻿# `react-input`
 
 Input is a text field component for collecting user input, providing multiple style and variant options.
 
 ## Installation
 
 ```sh
-$ yarn add @sea-lion/react-input
+pnpm add @sea-lion/react-input
 # or
-$ npm install @sea-lion/react-input
+npm install @sea-lion/react-input
+yarn add @sea-lion/react-input
+```
+
+## Usage
+
+Import the component in your code:
+
+```tsx
+import { Input } from '@sea-lion/react-input';
 ```
 
 ## Basic Usage
@@ -134,4 +143,4 @@ Input.Root component also supports all standard margin properties (like `m`, `mt
 
 ## Learn More
 
-View the [documentation](https://gitee.com/summer_sleep/ui-lib-monorepo-template) for more information.
+See the [Radix UI documentation](https://www.radix-ui.com/themes/docs/components/text-field) for the full API reference and design guidelines.

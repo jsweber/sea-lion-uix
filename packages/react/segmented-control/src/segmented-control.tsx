@@ -20,48 +20,48 @@ interface SegmentedControlRootProps
   MarginProps {
   value?: string;
   defaultValue?: string;
-  onValueChange?(value: string): void;
+  onValueChange?: (value: string) => void;
 }
 
 const SegmentedControlRoot = React.forwardRef<HTMLDivElement, SegmentedControlRootProps>(
-  (props, forwardedRef) => {
-    const {
-      className,
-      children,
-      radius,
-      value: valueProp,
-      defaultValue: defaultValueProp,
-      onValueChange: onValueChangeProp,
-      ...rootProps
-    } = extractProps(props, segmentedControlRootPropDefs, marginPropDefs);
+    (props, forwardedRef) => {
+        const {
+            className,
+            children,
+            radius,
+            value: valueProp,
+            defaultValue: defaultValueProp,
+            onValueChange: onValueChangeProp,
+            ...rootProps
+        } = extractProps(props, segmentedControlRootPropDefs, marginPropDefs);
 
-    const [value, setValue] = useControllableState({
-      prop: valueProp,
-      onChange: onValueChangeProp,
-      defaultProp: defaultValueProp,
-    });
+        const [value, setValue] = useControllableState({
+            prop: valueProp,
+            onChange: onValueChangeProp,
+            defaultProp: defaultValueProp,
+        });
 
-    return (
-      <ToggleGroupPrimitive.Root
-        data-radius={radius}
-        ref={forwardedRef}
-        className={classNames('rt-SegmentedControlRoot', className)}
-        onValueChange={(value) => {
-          if (value) {
-            setValue(value);
-          }
-        }}
-        {...rootProps}
-        type="single"
-        value={value}
-        asChild={false}
-        disabled={false}
-      >
-        {children}
-        <div className="rt-SegmentedControlIndicator" />
-      </ToggleGroupPrimitive.Root>
-    );
-  }
+        return (
+            <ToggleGroupPrimitive.Root
+                data-radius={radius}
+                ref={forwardedRef}
+                className={classNames('rt-SegmentedControlRoot', className)}
+                onValueChange={(value) => {
+                    if (value) {
+                        setValue(value);
+                    }
+                }}
+                {...rootProps}
+                type="single"
+                value={value}
+                asChild={false}
+                disabled={false}
+            >
+                {children}
+                <div className="rt-SegmentedControlIndicator" />
+            </ToggleGroupPrimitive.Root>
+        );
+    },
 );
 
 SegmentedControlRoot.displayName = 'SegmentedControl.Root';
@@ -78,21 +78,21 @@ interface SegmentedControlItemProps
   SegmentedControlItemOwnProps { }
 
 const SegmentedControlItem = React.forwardRef<HTMLButtonElement, SegmentedControlItemProps>(
-  ({ children, className, ...props }, forwardedRef) => (
-    <ToggleGroupPrimitive.Item
-      ref={forwardedRef}
-      className={classNames('rt-reset', 'rt-SegmentedControlItem', className)}
-      {...props}
-      disabled={false}
-      asChild={false}
-    >
-      <span className="rt-SegmentedControlItemSeparator" />
-      <span className="rt-SegmentedControlItemLabel">
-        <span className="rt-SegmentedControlItemLabelActive">{children}</span>
-        <span className="rt-SegmentedControlItemLabelInactive">{children}</span>
-      </span>
-    </ToggleGroupPrimitive.Item>
-  )
+    ({ children, className, ...props }, forwardedRef) => (
+        <ToggleGroupPrimitive.Item
+            ref={forwardedRef}
+            className={classNames('rt-reset', 'rt-SegmentedControlItem', className)}
+            {...props}
+            disabled={false}
+            asChild={false}
+        >
+            <span className="rt-SegmentedControlItemSeparator" />
+            <span className="rt-SegmentedControlItemLabel">
+                <span className="rt-SegmentedControlItemLabelActive">{children}</span>
+                <span className="rt-SegmentedControlItemLabelInactive">{children}</span>
+            </span>
+        </ToggleGroupPrimitive.Item>
+    ),
 );
 
 SegmentedControlItem.displayName = 'SegmentedControl.Item';

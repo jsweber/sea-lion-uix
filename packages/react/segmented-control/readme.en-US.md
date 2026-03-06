@@ -1,4 +1,4 @@
-# `react-segmented-control`
+﻿# `react-segmented-control`
 
 SegmentedControl is a component that allows users to select a single option from a group of related options. It provides a visual indicator showing the currently selected option.
 
@@ -131,4 +131,4 @@ export default () => {
 
 ## Learn More
 
-View the [documentation](https://gitee.com/summer_sleep/ui-lib-monorepo-template) for more information.
+See the [Radix UI documentation](https://www.radix-ui.com/themes/docs/components/segmented-control) for the full API reference and design guidelines.

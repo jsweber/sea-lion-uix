@@ -1,13 +1,22 @@
-# `react-input`
+﻿# `react-input`
 
 Input 是一个用于收集用户输入的文本字段组件，提供多种样式和变体选项。
 
 ## 安装
 
 ```sh
-$ yarn add @sea-lion/react-input
+pnpm add @sea-lion/react-input
 # 或者
-$ npm install @sea-lion/react-input
+npm install @sea-lion/react-input
+yarn add @sea-lion/react-input
+```
+
+## 使用
+
+在代码中引入组件：
+
+```tsx
+import { Input } from '@sea-lion/react-input';
 ```
 
 ## 基本使用
@@ -131,7 +140,8 @@ Input.Root 组件还支持所有标准的 margin 属性（如 `m`、`mt`、`mb` 
 | px    | 水平内边距   | '1' - '9'         | -      | 0.2.0 |
 | pl    | 左内边距     | '1' - '9'         | -      | 0.2.0 |
 | pr    | 右内边距     | '1' - '9'         | -      | 0.2.0 |
+
 
 ## 查看更多
 
-查看[文档](https://www.radix-ui.com/themes/docs/theme/overview)获取更多信息。
+参考 [Radix UI 官方文档](https://www.radix-ui.com/themes/docs/components/text-field) 获取完整 API 与设计规范。

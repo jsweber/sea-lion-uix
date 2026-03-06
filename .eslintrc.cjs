@@ -33,9 +33,6 @@ module.exports = {
             ignoredNodes: ['TemplateLiteral'],
             SwitchCase: 1
         }],
-        '@typescript-eslint/indent': [
-            'error', 4
-        ],
         'max-len': ['warn', {
             code: 200
         }],
@@ -44,5 +41,27 @@ module.exports = {
         "@typescript-eslint/consistent-type-assertions": 'off',
         'no-shadow': 'off',
         '@typescript-eslint/no-shadow': 'warn',
-    }
+        // Disable @typescript-eslint rules removed in v6+ (eslint-config-ali still references them)
+        '@typescript-eslint/indent': 'off',
+        '@typescript-eslint/brace-style': 'off',
+        '@typescript-eslint/comma-spacing': 'off',
+        '@typescript-eslint/func-call-spacing': 'off',
+        '@typescript-eslint/keyword-spacing': 'off',
+        '@typescript-eslint/member-delimiter-style': 'off',
+        '@typescript-eslint/no-extra-semi': 'off',
+        '@typescript-eslint/quotes': 'off',
+        '@typescript-eslint/semi': 'off',
+        '@typescript-eslint/space-before-function-paren': 'off',
+        '@typescript-eslint/type-annotation-spacing': 'off',
+    },
+    overrides: [
+        {
+            files: ['**/*.props.ts', '**/*.props.tsx'],
+            rules: {
+                '@typescript-eslint/consistent-type-exports': ['warn', {
+                    fixMixedExportsWithInlineTypeSpecifier: true
+                }]
+            }
+        }
+    ]
 };

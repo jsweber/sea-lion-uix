@@ -1,13 +1,22 @@
-# `react-tooltip`
+﻿# `react-tooltip`
 
 Tooltip 是一个提示组件，当用户将鼠标悬停在元素上时显示简短的说明文本。组件支持自定义内容、宽度和位置等属性。
 
 ## 安装
 
 ```sh
-$ yarn add @sea-lion/react-tooltip
+pnpm add @sea-lion/react-tooltip
 # 或者
-$ npm install @sea-lion/react-tooltip
+npm install @sea-lion/react-tooltip
+yarn add @sea-lion/react-tooltip
+```
+
+## 使用
+
+在代码中引入组件：
+
+```tsx
+import * as Tooltip from '@sea-lion/react-tooltip';
 ```
 
 ## 基本使用
@@ -125,7 +134,8 @@ const [open, setOpen] = React.useState(false);
 | side                    | 提示显示位置             | 'top' \| 'right' \| 'bottom' \| 'left' | 'top'    | 0.2.3 |
 | sideOffset              | 提示与目标元素的偏移量   | number                                 | 4        | 0.2.3 |
 | align                   | 提示与目标元素的对齐方式 | 'start' \| 'center' \| 'end'           | 'center' | 0.2.3 |
+
 
 ## 查看更多
 
-查看[文档](https://gitee.com/summer_sleep/ui-lib-monorepo-template)获取更多信息。
+参考 [Radix UI 官方文档](https://www.radix-ui.com/themes/docs/components/tooltip) 获取完整 API 与设计规范。

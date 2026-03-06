@@ -15,20 +15,20 @@ interface SeparatorProps
   MarginProps,
   SeparatorOwnProps { }
 const Separator = React.forwardRef<SeparatorElement, SeparatorProps>((props, forwardedRef) => {
-  const { className, color, decorative, ...separatorProps } = extractProps(
-    props,
-    separatorPropDefs,
-    marginPropDefs
-  );
-  return (
-    <span
-      data-accent-color={color}
-      role={decorative ? undefined : 'separator'}
-      {...separatorProps}
-      ref={forwardedRef}
-      className={classNames('rt-Separator', className)}
-    />
-  );
+    const { className, color, decorative, ...separatorProps } = extractProps(
+        props,
+        separatorPropDefs,
+        marginPropDefs,
+    );
+    return (
+        <span
+            data-accent-color={color}
+            role={decorative ? undefined : 'separator'}
+            {...separatorProps}
+            ref={forwardedRef}
+            className={classNames('rt-Separator', className)}
+        />
+    );
 });
 Separator.displayName = 'Separator';
 

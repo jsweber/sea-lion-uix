@@ -18,18 +18,20 @@ const preview: Preview = {
       storySort: {
         order: [
           '总览',
+          'Agent',
+          'Icon',
           '主题',
           '通用',
           '布局',
           '排版',
           '导航',
           '数据录入',
-          '数据展示', 
+          '数据展示',
           '反馈',
           '其他',
-          '实验'
+          '实验',
         ],
-      }
+      },
     },
     tags: ['autodocs'],
   },

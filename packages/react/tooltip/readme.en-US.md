@@ -1,4 +1,4 @@
-# `react-tooltip`
+﻿# `react-tooltip`
 
 Tooltip is a component that displays informative text when a user hovers over an element. The component supports custom content, width, and positioning options.
 
@@ -128,4 +128,4 @@ const [open, setOpen] = React.useState(false);
 
 ## Learn More
 
-View the [documentation](https://gitee.com/summer_sleep/ui-lib-monorepo-template) for more information.
+See the [Radix UI documentation](https://www.radix-ui.com/themes/docs/components/tooltip) for the full API reference and design guidelines.

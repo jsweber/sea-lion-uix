@@ -1,6 +1,4 @@
-import { asChildPropDef } from '@sea-lion/react-props';
-import { accentColors, grayColors } from '@sea-lion/react-props';
-import { radii } from '@sea-lion/react-props';
+import { asChildPropDef , accentColors, grayColors , radii } from '@sea-lion/react-props';
 
 import type { GetPropDefTypes, PropDef } from '@sea-lion/react-props';
 

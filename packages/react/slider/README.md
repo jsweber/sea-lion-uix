@@ -1,4 +1,4 @@
-# `react-slider`
+﻿# `react-slider`
 
 Slider 是一个滑动输入控件，允许用户在一个范围内选择值。
 
@@ -141,7 +141,8 @@ export default () => {
 | onValueCommit | 值提交时的回调     | (value: number[]) => void        | -            | 0.2.0 |
 
 同时支持所有标准的外边距（margin）属性。
+
 
 ## 查看更多
 
-查看[文档](https://www.radix-ui.com/themes/docs/theme/overview)获取更多信息。
+参考 [Radix UI 官方文档](https://www.radix-ui.com/themes/docs/components/slider) 获取完整 API 与设计规范。

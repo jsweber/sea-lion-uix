@@ -1,4 +1,4 @@
-# `react-inset`
+﻿# `react-inset`
 
 Inset is a container component used to create negative margin effects, allowing content to extend beyond the boundaries of its parent element.
 
@@ -125,4 +125,4 @@ The Inset component also supports all standard margin properties (such as `m`, `
 
 ## Learn More
 
-View the [documentation](https://gitee.com/summer_sleep/ui-lib-monorepo-template) for more information.
+See the [Radix UI documentation](https://www.radix-ui.com/themes/docs/components/inset) for the full API reference and design guidelines.

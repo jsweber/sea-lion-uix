@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint packages --ext .js,.jsx,.ts,.tsx --report-unused-disable-directives --max-warnings 999",
-    "lint-fix": "eslint src --fix --ext .js,.jsx,.ts,.tsx",
+    "lint-fix": "eslint packages --fix --ext .js,.jsx,.ts,.tsx",
     "build": "pnpm run build:mjs && pnpm run build:theme",
     "build:mjs": "node scripts/build.mjs",
     "build:theme": "cd packages/react/theme && pnpm run build:css",

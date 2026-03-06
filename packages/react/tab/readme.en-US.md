@@ -1,4 +1,4 @@
-# `react-tab`
+﻿# `react-tab`
 
 Tab is a component that allows users to switch between different content views within the same area.
 
@@ -156,4 +156,4 @@ All components also support standard margin properties.
 
 ## Learn More
 
-View the [documentation](https://www.radix-ui.com/themes/docs/theme/overview) for more information.
+See the [Radix UI documentation](https://www.radix-ui.com/themes/docs/components/tabs) for the full API reference and design guidelines.

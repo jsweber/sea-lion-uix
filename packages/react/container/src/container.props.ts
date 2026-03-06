@@ -7,8 +7,8 @@ const displayValues = ['none', 'initial'] as const;
 const alignValues = ['left', 'center', 'right'] as const;
 
 const containerPropDefs = {
-  ...asChildPropDef,
-  /**
+    ...asChildPropDef,
+    /**
    * Controls the **max-width** of the content within the container.
    * Supports the predefined values and responsive objects.
    *
@@ -27,14 +27,14 @@ const containerPropDefs = {
    * @link
    * https://github.com/radix-ui/themes/blob/main/packages/radix-ui-themes/src/components/container.css
    */
-  size: {
-    type: 'enum',
-    className: 'rt-r-size',
-    values: sizes,
-    default: '4',
-    responsive: true,
-  },
-  /**
+    size: {
+        type: 'enum',
+        className: 'rt-r-size',
+        values: sizes,
+        default: '4',
+        responsive: true,
+    },
+    /**
    * Controls whether the container is visible or hidden.
    * Supports "none", "initial", and responsive object values.
    *
@@ -42,27 +42,27 @@ const containerPropDefs = {
    * display="none"
    * display={{ sm: 'none', lg: 'initial' }}
    */
-  display: {
-    type: 'enum',
-    className: 'rt-r-display',
-    values: displayValues,
-    parseValue: parseDisplayValue,
-    responsive: true,
-  },
-  /**
+    display: {
+        type: 'enum',
+        className: 'rt-r-display',
+        values: displayValues,
+        parseValue: parseDisplayValue,
+        responsive: true,
+    },
+    /**
    * Controls the alignment of the content within the container.
    *
    * @example
    * align="center"
    * align={{ initial: 'left', lg: 'center' }}
    */
-  align: {
-    type: 'enum',
-    className: 'rt-r-ai',
-    values: alignValues,
-    parseValue: parseAlignValue,
-    responsive: true,
-  },
+    align: {
+        type: 'enum',
+        className: 'rt-r-ai',
+        values: alignValues,
+        parseValue: parseAlignValue,
+        responsive: true,
+    },
 } satisfies {
   size: PropDef<(typeof sizes)[number]>;
   display: PropDef<(typeof displayValues)[number]>;
@@ -70,11 +70,11 @@ const containerPropDefs = {
 };
 
 function parseDisplayValue(value: string) {
-  return value === 'initial' ? 'flex' : value;
+    return value === 'initial' ? 'flex' : value;
 }
 
 function parseAlignValue(value: string) {
-  return value === 'left' ? 'start' : value === 'right' ? 'end' : value;
+    return value === 'left' ? 'start' : value === 'right' ? 'end' : value;
 }
 
 // Use all of the imported prop defs to ensure that JSDoc works

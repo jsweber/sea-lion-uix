@@ -1,4 +1,4 @@
-# `react-icon-button`
+﻿# `react-icon-button`
 
 IconButton is a button component for displaying icons, offering various size and style options.
 
@@ -137,4 +137,4 @@ When using IconButton, always provide an `aria-label` attribute to ensure screen
 
 ## Learn More
 
-View the [documentation](https://gitee.com/summer_sleep/ui-lib-monorepo-template) for more information.
+See the [Radix UI documentation](https://www.radix-ui.com/themes/docs/components/icon-button) for the full API reference and design guidelines.

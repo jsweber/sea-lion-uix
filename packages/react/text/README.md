@@ -1,4 +1,4 @@
-# `react-text`
+﻿# `react-text`
 
 Text 是一个文本组件，用于显示不同样式和尺寸的文本内容。组件支持多种尺寸、字重、对齐方式和颜色选项。
 
@@ -126,7 +126,8 @@ Text 组件可以渲染为不同的 HTML 元素：
 | highContrast | 是否高对比度 | boolean                                                     | false  | 0.2.0 |
 | truncate     | 是否截断文本 | boolean                                                     | false  | 0.2.0 |
 | textWrap     | 文本换行方式 | 'wrap' \| 'nowrap' \| 'balance' \| 'pretty'                 | -      | 0.2.0 |
+
 
 ## 查看更多
 
-查看[文档](https://gitee.com/summer_sleep/ui-lib-monorepo-template)获取更多信息。
+参考 [Radix UI 官方文档](https://www.radix-ui.com/themes/docs/components/text) 获取完整 API 与设计规范。

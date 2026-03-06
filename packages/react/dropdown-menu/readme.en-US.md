@@ -1,116 +1,287 @@
 # `react-dropdown-menu`
 
-DropdownMenu is a component that displays a menu when a trigger element is clicked, supporting multi-level submenus, checkboxes, radio buttons, and more.
+DropdownMenu is a dropdown that shows a list of options when the user clicks a trigger. It supports nested submenus, checkboxes, and radio items.
 
 ## Installation
 
 ```sh
-$ yarn add @sea-lion/react-dropdown-menu
+pnpm add @sea-lion/react-dropdown-menu
 # or
-$ npm install @sea-lion/react-dropdown-menu
+npm install @sea-lion/react-dropdown-menu
+yarn add @sea-lion/react-dropdown-menu
 ```
 
-## Basic Usage
+## Usage
+
+Import the component in your code:
+
+```tsx
+import * as DropdownMenu from '@sea-lion/react-dropdown-menu';
+```
+
+### Basic Usage
 
 ```jsx
-import * as DropdownMenu from "@sea-lion/react-dropdown-menu";
-import { Button } from "@sea-lion/react-button";
+<DropdownMenu.Root>
+  <DropdownMenu.Trigger asChild>
+    <button>Open menu</button>
+  </DropdownMenu.Trigger>
+  <DropdownMenu.Content>
+    <DropdownMenu.Item onSelect={() => {}}>Option 1</DropdownMenu.Item>
+    <DropdownMenu.Item onSelect={() => {}}>Option 2</DropdownMenu.Item>
+    <DropdownMenu.Separator />
+    <DropdownMenu.Sub>
+      <DropdownMenu.SubTrigger>Submenu</DropdownMenu.SubTrigger>
+      <DropdownMenu.SubContent>
+        <DropdownMenu.Item>Sub item</DropdownMenu.Item>
+      </DropdownMenu.SubContent>
+    </DropdownMenu.Sub>
+  </DropdownMenu.Content>
+</DropdownMenu.Root>
+```
 
-export default () => (
-  <DropdownMenu.Root>
-    <DropdownMenu.Trigger>
-      <Button>
-        Options <DropdownMenu.TriggerIcon />
-      </Button>
-    </DropdownMenu.Trigger>
-    <DropdownMenu.Content>
-      <DropdownMenu.Item>New Document</DropdownMenu.Item>
-      <DropdownMenu.Item>Open File...</DropdownMenu.Item>
-      <DropdownMenu.Separator />
-      <DropdownMenu.Item shortcut="⌘S">Save</DropdownMenu.Item>
-      <DropdownMenu.Item shortcut="⇧⌘S">Save As...</DropdownMenu.Item>
-      <DropdownMenu.Separator />
-      <DropdownMenu.Item>Export</DropdownMenu.Item>
-    </DropdownMenu.Content>
-  </DropdownMenu.Root>
-);
+### With Button (and Shortcuts)
+
+Use `TriggerIcon` and the `shortcut` prop to enhance the user experience:
+
+```jsx
+import { Button } from '@sea-lion/react-button';
+
+<DropdownMenu.Root>
+  <DropdownMenu.Trigger>
+    <Button>
+      Menu Options <DropdownMenu.TriggerIcon />
+    </Button>
+  </DropdownMenu.Trigger>
+  <DropdownMenu.Content>
+    <DropdownMenu.Item>New Document</DropdownMenu.Item>
+    <DropdownMenu.Item>Open File...</DropdownMenu.Item>
+    <DropdownMenu.Separator />
+    <DropdownMenu.Item shortcut="⌘S">Save</DropdownMenu.Item>
+    <DropdownMenu.Item shortcut="⇧⌘S">Save As...</DropdownMenu.Item>
+    <DropdownMenu.Separator />
+    <DropdownMenu.Item>Export</DropdownMenu.Item>
+  </DropdownMenu.Content>
+</DropdownMenu.Root>
+```
+
+### Sizes
+
+Control menu density with the `size` prop on `DropdownMenu.Content`:
+
+```jsx
+{/* Small */}
+<DropdownMenu.Root>
+  <DropdownMenu.Trigger>
+    <Button>Small Menu</Button>
+  </DropdownMenu.Trigger>
+  <DropdownMenu.Content size="1">
+    <DropdownMenu.Item>Option 1</DropdownMenu.Item>
+    <DropdownMenu.Item>Option 2</DropdownMenu.Item>
+    <DropdownMenu.Item>Option 3</DropdownMenu.Item>
+  </DropdownMenu.Content>
+</DropdownMenu.Root>
+
+{/* Default */}
+<DropdownMenu.Root>
+  <DropdownMenu.Trigger>
+    <Button>Default Menu</Button>
+  </DropdownMenu.Trigger>
+  <DropdownMenu.Content size="2">
+    <DropdownMenu.Item>Option 1</DropdownMenu.Item>
+    <DropdownMenu.Item>Option 2</DropdownMenu.Item>
+    <DropdownMenu.Item>Option 3</DropdownMenu.Item>
+  </DropdownMenu.Content>
+</DropdownMenu.Root>
+```
+
+### Submenus
+
+Use `Sub`, `SubTrigger`, and `SubContent` to build nested menus:
+
+```jsx
+<DropdownMenu.Root>
+  <DropdownMenu.Trigger>
+    <Button>
+      Advanced Options <DropdownMenu.TriggerIcon />
+    </Button>
+  </DropdownMenu.Trigger>
+  <DropdownMenu.Content>
+    <DropdownMenu.Item>Simple Action</DropdownMenu.Item>
+    <DropdownMenu.Separator />
+    <DropdownMenu.Sub>
+      <DropdownMenu.SubTrigger>File Operations</DropdownMenu.SubTrigger>
+      <DropdownMenu.SubContent>
+        <DropdownMenu.Item>New File</DropdownMenu.Item>
+        <DropdownMenu.Item>Delete File</DropdownMenu.Item>
+        <DropdownMenu.Item>Rename</DropdownMenu.Item>
+      </DropdownMenu.SubContent>
+    </DropdownMenu.Sub>
+    <DropdownMenu.Sub>
+      <DropdownMenu.SubTrigger>Edit Operations</DropdownMenu.SubTrigger>
+      <DropdownMenu.SubContent>
+        <DropdownMenu.Item shortcut="⌘C">Copy</DropdownMenu.Item>
+        <DropdownMenu.Item shortcut="⌘V">Paste</DropdownMenu.Item>
+        <DropdownMenu.Item shortcut="⌘X">Cut</DropdownMenu.Item>
+      </DropdownMenu.SubContent>
+    </DropdownMenu.Sub>
+    <DropdownMenu.Separator />
+    <DropdownMenu.Item>Exit</DropdownMenu.Item>
+  </DropdownMenu.Content>
+</DropdownMenu.Root>
+```
+
+### Checkboxes and Radio Items
+
+Use `CheckboxItem` for toggles and `RadioGroup` + `RadioItem` for single-selection:
+
+```jsx
+const [checked, setChecked] = useState(true);
+const [fontSize, setFontSize] = useState('medium');
+
+<DropdownMenu.Root>
+  <DropdownMenu.Trigger>
+    <Button>
+      Format Options <DropdownMenu.TriggerIcon />
+    </Button>
+  </DropdownMenu.Trigger>
+  <DropdownMenu.Content>
+    <DropdownMenu.CheckboxItem
+      checked={checked}
+      onCheckedChange={setChecked}
+    >
+      Bold
+    </DropdownMenu.CheckboxItem>
+    <DropdownMenu.Separator />
+    <DropdownMenu.Label>Font Size</DropdownMenu.Label>
+    <DropdownMenu.RadioGroup value={fontSize} onValueChange={setFontSize}>
+      <DropdownMenu.RadioItem value="small">Small</DropdownMenu.RadioItem>
+      <DropdownMenu.RadioItem value="medium">Medium</DropdownMenu.RadioItem>
+      <DropdownMenu.RadioItem value="large">Large</DropdownMenu.RadioItem>
+    </DropdownMenu.RadioGroup>
+  </DropdownMenu.Content>
+</DropdownMenu.Root>
+```
+
+### Groups and Labels
+
+Use `Label` and `Separator` to visually group related menu items:
+
+```jsx
+<DropdownMenu.Root>
+  <DropdownMenu.Trigger>
+    <Button>Account <DropdownMenu.TriggerIcon /></Button>
+  </DropdownMenu.Trigger>
+  <DropdownMenu.Content>
+    <DropdownMenu.Label>Account</DropdownMenu.Label>
+    <DropdownMenu.Item>Profile</DropdownMenu.Item>
+    <DropdownMenu.Item>Settings</DropdownMenu.Item>
+    <DropdownMenu.Separator />
+    <DropdownMenu.Label>Workspace</DropdownMenu.Label>
+    <DropdownMenu.Item>Switch Team</DropdownMenu.Item>
+    <DropdownMenu.Item>Create New Team</DropdownMenu.Item>
+    <DropdownMenu.Separator />
+    <DropdownMenu.Item color="red">Sign Out</DropdownMenu.Item>
+  </DropdownMenu.Content>
+</DropdownMenu.Root>
+```
+
+### Disabled Items
+
+Use the `disabled` prop to disable specific menu items:
+
+```jsx
+<DropdownMenu.Content>
+  <DropdownMenu.Item>Edit</DropdownMenu.Item>
+  <DropdownMenu.Item disabled>Delete (no permission)</DropdownMenu.Item>
+  <DropdownMenu.Item>Copy</DropdownMenu.Item>
+</DropdownMenu.Content>
 ```
 
 ## When to Use
 
-- Provide entry points for a set of related actions
-- Save screen space by hiding secondary functionality
-- Display a list of options related to a control
-- Implement hierarchical commands or options
-- Enable selection, toggling, or grouping functionality
+- Expose a set of related actions
+- Save space by hiding secondary actions
+- Show options related to a control
+- Provide hierarchical commands or options
+- Implement selection, toggles, or grouped features
 
-## Features
-
-- Supports different menu sizes (1-4)
-- Provides high contrast mode and various color options
-- Supports keyboard navigation and shortcut display
-- Built-in submenu, grouping, and separator functionality
-- Supports checkbox and radio button options
-- Automatically handles overflow and scrolling
-
-## API
+## Props / API
 
 ### DropdownMenu.Root
 
-| Property     | Description                      | Type                    | Default | Version |
-| ------------ | -------------------------------- | ----------------------- | ------- | ------- |
-| defaultOpen  | Whether open by default          | boolean                 | false   | 0.2.1   |
-| open         | Controlled open state            | boolean                 | -       | 0.2.1   |
-| onOpenChange | Callback when open state changes | (open: boolean) => void | -       | 0.2.1   |
-| modal        | Whether it's a modal dropdown    | boolean                 | true    | 0.2.1   |
-| children     | Child elements                   | ReactNode               | -       | 0.2.1   |
+| Prop | Description | Type | Default |
+|------|-------------|------|---------|
+| `open` | Controlled open state | `boolean` | — |
+| `defaultOpen` | Uncontrolled default open state | `boolean` | `false` |
+| `onOpenChange` | Callback when open state changes | `(open: boolean) => void` | — |
+| `modal` | Render in modal mode | `boolean` | `true` |
+| `dir` | Text direction | `"ltr" \| "rtl"` | — |
+
+### DropdownMenu.Trigger
+
+| Prop | Description | Type | Default |
+|------|-------------|------|---------|
+| `asChild` | Render child as the trigger element | `boolean` | `false` |
 
 ### DropdownMenu.Content
 
-| Property     | Description               | Type                                   | Default  | Version |
-| ------------ | ------------------------- | -------------------------------------- | -------- | ------- |
-| size         | Menu size                 | '1' \| '2' \| '3' \| '4'               | '2'      | 0.2.1   |
-| variant      | Menu style variant        | 'solid' \| 'soft'                      | 'solid'  | 0.2.1   |
-| color        | Menu theme color          | string                                 | 'gray'   | 0.2.1   |
-| highContrast | Whether high contrast     | boolean                                | false    | 0.2.1   |
-| align        | Alignment                 | 'start' \| 'center' \| 'end'           | 'start'  | 0.2.1   |
-| side         | Menu position             | 'top' \| 'right' \| 'bottom' \| 'left' | 'bottom' | 0.2.1   |
-| sideOffset   | Side offset               | number                                 | 4        | 0.2.1   |
-| alignOffset  | Alignment offset          | number                                 | 0        | 0.2.1   |
-| container    | Specify container element | HTMLElement                            | -        | 0.2.1   |
+| Prop | Description | Type | Default |
+|------|-------------|------|---------|
+| `size` | Menu size | `"1" \| "2"` | `"2"` |
+| `variant` | Visual variant | `"soft" \| "solid"` | `"soft"` |
+| `color` | Theme color | `string` | — |
+| `highContrast` | Use high-contrast color | `boolean` | `false` |
 
 ### DropdownMenu.Item
 
-| Property | Description            | Type                   | Default | Version |
-| -------- | ---------------------- | ---------------------- | ------- | ------- |
-| color    | Item color             | string                 | 'gray'  | 0.2.1   |
-| shortcut | Keyboard shortcut hint | ReactNode              | -       | 0.2.1   |
-| disabled | Whether disabled       | boolean                | false   | 0.2.1   |
-| onSelect | Selection callback     | (event: Event) => void | -       | 0.2.1   |
-| children | Child elements         | ReactNode              | -       | 0.2.1   |
+| Prop | Description | Type | Default |
+|------|-------------|------|---------|
+| `disabled` | Disable this item | `boolean` | `false` |
+| `onSelect` | Callback when item is selected | `(event: Event) => void` | — |
+| `color` | Per-item color | `string` | — |
+| `shortcut` | Keyboard shortcut hint | `string` | — |
 
 ### DropdownMenu.CheckboxItem
 
-| Property        | Description                   | Type                       | Default | Version |
-| --------------- | ----------------------------- | -------------------------- | ------- | ------- |
-| checked         | Whether checked               | boolean                    | -       | 0.2.1   |
-| onCheckedChange | Callback when checked changes | (checked: boolean) => void | -       | 0.2.1   |
-| color           | Item color                    | string                     | 'gray'  | 0.2.1   |
-| shortcut        | Keyboard shortcut hint        | ReactNode                  | -       | 0.2.1   |
-| disabled        | Whether disabled              | boolean                    | false   | 0.2.1   |
-| children        | Child elements                | ReactNode                  | -       | 0.2.1   |
+| Prop | Description | Type | Default |
+|------|-------------|------|---------|
+| `checked` | Checked state | `boolean` | — |
+| `onCheckedChange` | Callback when checked state changes | `(checked: boolean) => void` | — |
+| `disabled` | Disable this item | `boolean` | `false` |
+| `shortcut` | Keyboard shortcut hint | `string` | — |
 
-### DropdownMenu.RadioGroup & DropdownMenu.RadioItem
+### DropdownMenu.RadioGroup
 
-| Property      | Description                 | Type                    | Default | Version |
-| ------------- | --------------------------- | ----------------------- | ------- | ------- |
-| value         | Selected value              | string                  | -       | 0.2.1   |
-| onValueChange | Callback when value changes | (value: string) => void | -       | 0.2.1   |
-| color         | Item color                  | string                  | 'gray'  | 0.2.1   |
-| shortcut      | Keyboard shortcut hint      | ReactNode               | -       | 0.2.1   |
-| disabled      | Whether disabled            | boolean                 | false   | 0.2.1   |
-| children      | Child elements              | ReactNode               | -       | 0.2.1   |
+| Prop | Description | Type | Default |
+|------|-------------|------|---------|
+| `value` | Current selected value | `string` | — |
+| `onValueChange` | Callback when value changes | `(value: string) => void` | — |
+
+### DropdownMenu.RadioItem
+
+| Prop | Description | Type | Default |
+|------|-------------|------|---------|
+| `value` | Item value (required) | `string` | — |
+| `disabled` | Disable this item | `boolean` | `false` |
+| `shortcut` | Keyboard shortcut hint | `string` | — |
+
+### DropdownMenu.Sub / SubTrigger / SubContent
+
+Used to build nested submenus. `Sub` wraps `SubTrigger` (the submenu trigger) and `SubContent` (the submenu content).
+
+### DropdownMenu.TriggerIcon
+
+A dropdown chevron icon to display inside the trigger, typically placed after the trigger text.
+
+### DropdownMenu.Label
+
+A non-interactive label for naming a group of menu items.
+
+### DropdownMenu.Separator
+
+A visual divider for separating groups of menu items.
 
 ## Learn More
 
-View the [documentation](https://gitee.com/summer_sleep/ui-lib-monorepo-template) for more information.
+See the [Radix UI documentation](https://www.radix-ui.com/themes/docs/components/dropdown-menu) for the full API reference and design guidelines.

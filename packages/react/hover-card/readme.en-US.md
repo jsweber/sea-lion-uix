@@ -1,4 +1,4 @@
-# `react-hover-card`
+﻿# `react-hover-card`
 
 HoverCard is a component displayed when users hover over a trigger element, showing supplementary content without interrupting the user's flow.
 
@@ -117,4 +117,4 @@ The card displays after hovering for 200ms by default and closes 150ms after lea
 
 ## Learn More
 
-View the [documentation](https://gitee.com/summer_sleep/ui-lib-monorepo-template) for more information.
+See the [Radix UI documentation](https://www.radix-ui.com/themes/docs/components/hover-card) for the full API reference and design guidelines.

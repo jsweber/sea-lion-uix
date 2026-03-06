@@ -8,14 +8,14 @@ import * as React from 'react';
  * correct order in the DOM, adopting the intended consumer `children`.
  */
 export function getSubtree(
-  options: { asChild: boolean | undefined; children: React.ReactNode },
-  content: React.ReactNode | ((children: React.ReactNode) => React.ReactNode)
+    options: { asChild: boolean | undefined; children: React.ReactNode },
+    content: React.ReactNode | ((children: React.ReactNode) => React.ReactNode),
 ) {
-  const { asChild, children } = options;
-  if (!asChild) return typeof content === 'function' ? content(children) : content;
+    const { asChild, children } = options;
+    if (!asChild) return typeof content === 'function' ? content(children) : content;
 
-  const firstChild = React.Children.only(children) as React.ReactElement;
-  return React.cloneElement(firstChild, {
-    children: typeof content === 'function' ? content(firstChild.props.children) : content,
-  });
+    const firstChild = React.Children.only(children) as React.ReactElement;
+    return React.cloneElement(firstChild, {
+        children: typeof content === 'function' ? content(firstChild.props.children) : content,
+    });
 }

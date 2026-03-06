@@ -52,7 +52,7 @@ export default function Cascader() {
     const renderLevels = () => {
         const levels = [options]
         for (let i = 0; i < selectedOptions.length; i++) {
-            const children = selectedOptions[i].children
+            const { children } = selectedOptions[i]
             if (children) {
                 levels.push(children)
             } else {
@@ -69,7 +69,7 @@ export default function Cascader() {
                 <Popover.Trigger className="cascader-trigger">
                     <Button>
                         {selectedOptions.length > 0
-                            ? selectedOptions.map(opt => opt.label).join(' > ')
+                            ? selectedOptions.map((opt) => opt.label).join(' > ')
                             : 'Select options'}
                         <ChevronDownIcon />
                     </Button>
@@ -165,7 +165,8 @@ export default function Cascader() {
           font-weight: bold;
           margin-bottom: 8px;
         }
-      `}</style>
+      `}
+            </style>
         </div>
     )
 }

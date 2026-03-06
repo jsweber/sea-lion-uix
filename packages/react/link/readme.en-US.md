@@ -1,13 +1,22 @@
-# `react-link`
+﻿# `react-link`
 
 Link is a component for navigation between pages or opening external resources, supporting custom styles and various interaction states.
 
 ## Installation
 
 ```sh
-$ yarn add @sea-lion/react-link
+pnpm add @sea-lion/react-link
 # or
-$ npm install @sea-lion/react-link
+npm install @sea-lion/react-link
+yarn add @sea-lion/react-link
+```
+
+## Usage
+
+Import the component in your code:
+
+```tsx
+import { Link } from '@sea-lion/react-link';
 ```
 
 ## Basic Usage
@@ -110,4 +119,4 @@ The Link component also supports all standard margin properties (such as `m`, `m
 
 ## Learn More
 
-View the [documentation](https://gitee.com/summer_sleep/ui-lib-monorepo-template) for more information.
+See the [Radix UI documentation](https://www.radix-ui.com/themes/docs/components/link) for the full API reference and design guidelines.

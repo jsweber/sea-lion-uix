@@ -9,7 +9,7 @@ import './style/tabs2.less';
 const meta: Meta<typeof Tabs2> = {
     component: Tabs2,
     title: '实验/Tabs2',
-    tags: ['autodocs']
+    tags: ['autodocs'],
 };
 
 export default meta;
@@ -46,7 +46,7 @@ export const Basic: Story = {
             control: 'radio',
             options: ['horizontal', 'vertical'],
             description: '标签页方向',
-        }
+        },
     },
     args: {
         size: '2',
@@ -54,7 +54,7 @@ export const Basic: Story = {
         color: 'blue',
         highContrast: false,
         animationDuration: 150,
-        orientation: 'horizontal'
+        orientation: 'horizontal',
     },
     render: (props) => (
         <Theme>
@@ -136,5 +136,5 @@ export const Basic: Story = {
                 </div>
             </div>
         </Theme>
-    )
-}; 
+    ),
+};

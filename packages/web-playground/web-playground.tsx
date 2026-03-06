@@ -1,5 +1,16 @@
 import { FC, useState } from 'react';
-import { FaceIcon, SunIcon, StarIcon, HeartIcon, MoonIcon, MagicWandIcon, RocketIcon, PaperPlaneIcon } from "@radix-ui/react-icons";
+import {
+    FaceIcon,
+    SunIcon,
+    StarIcon,
+    HeartIcon,
+    MoonIcon,
+    MagicWandIcon,
+    RocketIcon,
+    PaperPlaneIcon,
+    InfoCircledIcon,
+    MagnifyingGlassIcon,
+} from '@radix-ui/react-icons';
 import { ThemePanel } from '@sea-lion/react-theme-panel';
 import { Theme } from '@sea-lion/react-theme';
 import { Flex } from '@sea-lion/react-flex';
@@ -13,18 +24,35 @@ import { Heading } from '@sea-lion/react-heading';
 import { Text } from '@sea-lion/react-text';
 import * as Table from '@sea-lion/react-table';
 import { Kbd } from '@sea-lion/react-kbd';
-import { ComponentsDemo } from './components-demo';
-import { App } from './v0-dev/preview';
+import { Progress } from '@sea-lion/react-progress';
+import { Separator } from '@sea-lion/react-separator';
+import * as Callout from '@sea-lion/react-callout';
+import { Link } from '@sea-lion/react-link';
+import { Spinner } from '@sea-lion/react-spinner';
+import { Skeleton } from '@sea-lion/react-skeleton';
+import { Tooltip } from '@sea-lion/react-tooltip';
+import * as Popover from '@sea-lion/react-popover';
+import { ScrollArea } from '@sea-lion/react-scroll-area';
+import * as SegmentedControl from '@sea-lion/react-segmented-control';
+import { Box } from '@sea-lion/react-box';
+import { Grid } from '@sea-lion/react-grid';
+import { Switch } from '@sea-lion/react-switch';
+import * as Input from '@sea-lion/react-input';
 import { TextArea } from '@sea-lion/react-text-area';
-import { IconFont } from '@sea-lion/react-oss-icon';
-
+import * as Tabs from '@sea-lion/react-tab';
+import { Card } from '@sea-lion/react-card';
+import { Avatar } from '@sea-lion/react-avatar';
+import * as DropdownMenu from '@sea-lion/react-dropdown-menu';
+import { Radio } from '@sea-lion/react-radio';
+import { Slider } from '@sea-lion/react-slider';
+import { IconButton } from '@sea-lion/react-icon-button';
+import { ComponentsDemo } from './components-demo';
 import AntdImage from './images/antd.jpg';
 import ArcoImage from './images/arco.jpg';
 import radixImage from './images/radix.jpg';
 import varleftImage from './images/varleft.jpg';
 import logoImage from './images/logo.svg';
 import logoStaticImage from './images/logo-static.svg';
-import v0Image from './images/v0.jpg';
 
 import "./index.less";
 
@@ -77,7 +105,7 @@ const WebPlayground: FC<WebPlaygroundProps> = ({ mode }) => {
                                 所以新版本在原名后增加“x”，以下简称 <strong>x</strong>。
                             </Text>
                             <Text as="p" className="wp-descr-item">
-                                <Badge color="yellow"><StarIcon /></Badge><strong>在组件数量上</strong>，力求在有限的开发时间内提供更多的组件，组件数量从一代的19个增加到 <strong>40</strong>（<i>截止2024.11月末为33</i>）。
+                                <Badge color="yellow"><StarIcon /></Badge><strong>在组件数量上</strong>，力求在有限的开发时间内提供更多的组件，组件数量从一代的19个增加到 <strong>49</strong>。
                             </Text>
                             <Text as="p" className="wp-descr-item">
                                 <Badge color="red"><HeartIcon /></Badge><strong>在全局功能上</strong>，x在使用上会更灵活，组件支持 主题样式 和 headless 两种使用模式，并且每个组件开放更多参数，尽量避免产生难以更改的情况。
@@ -245,53 +273,256 @@ const WebPlayground: FC<WebPlaygroundProps> = ({ mode }) => {
 
                     <div>
                         <Blockquote size="5">
+                            主题调试示例
+                        </Blockquote>
+                        <div className="block-section wp-theme-debug-section">
+                            <Grid
+                                className="wp-theme-debug-grid"
+                                columns={{ initial: '1', sm: '2', lg: '3' }}
+                                gap="5"
+                            >
+                                <Box className="wp-theme-debug-cell">
+                                    <Text as="p" size="2" weight="medium" mb="2">Progress 进度条</Text>
+                                    <Flex direction="column" gap="3">
+                                        <Progress value={30} />
+                                        <Progress value={60} color="cyan" />
+                                        <Progress value={90} color="orange" size="3" />
+                                    </Flex>
+                                </Box>
+                                <Box className="wp-theme-debug-cell">
+                                    <Text as="p" size="2" weight="medium" mb="2">Separator 分割线</Text>
+                                    <Flex direction="column" gap="2">
+                                        <Text size="1">上方内容</Text>
+                                        <Separator size="4" />
+                                        <Text size="1">下方内容</Text>
+                                        <Flex align="center" gap="2">
+                                            <span>左</span>
+                                            <Separator orientation="vertical" size="4" style={{ height: 20 }} />
+                                            <span>右</span>
+                                        </Flex>
+                                    </Flex>
+                                </Box>
+                                <Box className="wp-theme-debug-cell">
+                                    <Text as="p" size="2" weight="medium" mb="2">Callout 提示框</Text>
+                                    <Flex direction="column" gap="3">
+                                        <Callout.Root size="2" color="blue" variant="soft">
+                                            <Callout.Icon><InfoCircledIcon width="20" height="20" /></Callout.Icon>
+                                            <Callout.Text>Callout 用于展示提示，随主题色变化。</Callout.Text>
+                                        </Callout.Root>
+                                        <Callout.Root size="2" color="green" variant="surface">
+                                            <Callout.Icon><InfoCircledIcon width="20" height="20" /></Callout.Icon>
+                                            <Callout.Text>Surface 变体。</Callout.Text>
+                                        </Callout.Root>
+                                    </Flex>
+                                </Box>
+                                <Box className="wp-theme-debug-cell">
+                                    <Text as="p" size="2" weight="medium" mb="2">Link 链接</Text>
+                                    <Flex gap="3" wrap="wrap">
+                                        <Link href="#">默认</Link>
+                                        <Link color="blue" href="#">蓝色</Link>
+                                        <Link color="crimson" href="#">红色</Link>
+                                        <Link highContrast href="#">高对比</Link>
+                                    </Flex>
+                                </Box>
+                                <Box className="wp-theme-debug-cell">
+                                    <Text as="p" size="2" weight="medium" mb="2">Spinner 加载</Text>
+                                    <Flex align="center" gap="4">
+                                        <Spinner size="1" />
+                                        <Spinner size="2" />
+                                        <Spinner size="3" />
+                                    </Flex>
+                                </Box>
+                                <Box className="wp-theme-debug-cell">
+                                    <Text as="p" size="2" weight="medium" mb="2">Skeleton 骨架屏</Text>
+                                    <Flex direction="column" gap="2">
+                                        <Skeleton loading>
+                                            <Text>loading 时骨架替代</Text>
+                                        </Skeleton>
+                                        <Skeleton loading width="100%" height="24px" />
+                                        <Skeleton loading width="80%" height="24px" />
+                                    </Flex>
+                                </Box>
+                                <Box className="wp-theme-debug-cell">
+                                    <Text as="p" size="2" weight="medium" mb="2">Tooltip 气泡</Text>
+                                    <Flex gap="3">
+                                        <Tooltip content="悬停查看 Tooltip 样式">
+                                            <Button variant="soft">悬停我</Button>
+                                        </Tooltip>
+                                        <Tooltip content="底部提示" side="bottom">
+                                            <Button variant="outline">底部</Button>
+                                        </Tooltip>
+                                    </Flex>
+                                </Box>
+                                <Box className="wp-theme-debug-cell">
+                                    <Text as="p" size="2" weight="medium" mb="2">Popover 弹出层</Text>
+                                    <Popover.Root>
+                                        <Popover.Trigger>
+                                            <Button variant="soft">打开 Popover</Button>
+                                        </Popover.Trigger>
+                                        <Popover.Content>
+                                            <Box p="3">
+                                                <Heading size="2" mb="2">主题调试</Heading>
+                                                <Text as="p" size="2" color="gray">继承主题圆角、阴影与背景。</Text>
+                                            </Box>
+                                        </Popover.Content>
+                                    </Popover.Root>
+                                </Box>
+                                <Box className="wp-theme-debug-cell">
+                                    <Text as="p" size="2" weight="medium" mb="2">ScrollArea 滚动区域</Text>
+                                    <ScrollArea type="scroll" style={{ height: 100 }}>
+                                        <Box p="3">
+                                            <Text as="p" size="2">第一行</Text>
+                                            <Text as="p" size="2">第二行</Text>
+                                            <Text as="p" size="2">第三行（可滚动）</Text>
+                                            <Text as="p" size="2">第四行</Text>
+                                            <Text as="p" size="2">第五行</Text>
+                                        </Box>
+                                    </ScrollArea>
+                                </Box>
+                                <Box className="wp-theme-debug-cell">
+                                    <Text as="p" size="2" weight="medium" mb="2">SegmentedControl</Text>
+                                    <SegmentedControl.Root defaultValue="a">
+                                        <SegmentedControl.Item value="a">A</SegmentedControl.Item>
+                                        <SegmentedControl.Item value="b">B</SegmentedControl.Item>
+                                        <SegmentedControl.Item value="c">C</SegmentedControl.Item>
+                                    </SegmentedControl.Root>
+                                </Box>
+                                <Box className="wp-theme-debug-cell">
+                                    <Text as="p" size="2" weight="medium" mb="2">Switch 开关</Text>
+                                    <Flex align="center" gap="3" wrap="wrap">
+                                        <Switch defaultChecked />
+                                        <Switch color="cyan" defaultChecked />
+                                        <Switch color="orange" defaultChecked />
+                                        <Text as="label" size="2">
+                                            <Flex gap="2" align="center">
+                                                <Switch size="2" defaultChecked /> 跟随主题
+                                            </Flex>
+                                        </Text>
+                                    </Flex>
+                                </Box>
+                                <Box className="wp-theme-debug-cell">
+                                    <Text as="p" size="2" weight="medium" mb="2">Input 输入框</Text>
+                                    <Flex direction="column" gap="2">
+                                        <Input.Root size="1" placeholder="小号输入" />
+                                        <Input.Root size="2" placeholder="默认输入" />
+                                        <Input.Root color="indigo" variant="soft" placeholder="soft 变体" />
+                                    </Flex>
+                                </Box>
+                                <Box className="wp-theme-debug-cell">
+                                    <Text as="p" size="2" weight="medium" mb="2">TextArea 多行</Text>
+                                    <Flex direction="column" gap="2">
+                                        <TextArea size="1" placeholder="小号多行" rows={2} />
+                                        <TextArea size="2" placeholder="默认多行" rows={2} />
+                                    </Flex>
+                                </Box>
+                                <Box className="wp-theme-debug-cell">
+                                    <Text as="p" size="2" weight="medium" mb="2">Tabs 标签页</Text>
+                                    <Tabs.Root defaultValue="1">
+                                        <Tabs.List>
+                                            <Tabs.Trigger value="1">Tab 1</Tabs.Trigger>
+                                            <Tabs.Trigger value="2">Tab 2</Tabs.Trigger>
+                                        </Tabs.List>
+                                        <Box pt="2">
+                                            <Tabs.Content value="1">
+                                                <Text size="2">第一个标签内容，随主题样式。</Text>
+                                            </Tabs.Content>
+                                            <Tabs.Content value="2">
+                                                <Text size="2">第二个标签内容。</Text>
+                                            </Tabs.Content>
+                                        </Box>
+                                    </Tabs.Root>
+                                </Box>
+                                <Box className="wp-theme-debug-cell">
+                                    <Text as="p" size="2" weight="medium" mb="2">Card 卡片</Text>
+                                    <Card size="2">
+                                        <Flex gap="2" align="center">
+                                            <Avatar size="2" fallback="U" radius="full" />
+                                            <Box>
+                                                <Text as="div" size="2" weight="bold">卡片标题</Text>
+                                                <Text as="div" size="1" color="gray">副标题随主题</Text>
+                                            </Box>
+                                        </Flex>
+                                    </Card>
+                                </Box>
+                                <Box className="wp-theme-debug-cell">
+                                    <Text as="p" size="2" weight="medium" mb="2">Avatar 头像</Text>
+                                    <Flex gap="3" align="center" wrap="wrap">
+                                        <Avatar size="1" fallback="A" />
+                                        <Avatar size="2" fallback="B" />
+                                        <Avatar size="3" fallback="C" />
+                                        <Avatar size="2" color="cyan" fallback="D" />
+                                        <Avatar size="2" color="orange" fallback="E" />
+                                    </Flex>
+                                </Box>
+                                <Box className="wp-theme-debug-cell">
+                                    <Text as="p" size="2" weight="medium" mb="2">DropdownMenu 下拉</Text>
+                                    <DropdownMenu.Root>
+                                        <DropdownMenu.Trigger>
+                                            <Button variant="soft">菜单 <DropdownMenu.TriggerIcon /></Button>
+                                        </DropdownMenu.Trigger>
+                                        <DropdownMenu.Content>
+                                            <DropdownMenu.Item shortcut="⌘ E">编辑</DropdownMenu.Item>
+                                            <DropdownMenu.Item shortcut="⌘ D">复制</DropdownMenu.Item>
+                                            <DropdownMenu.Separator />
+                                            <DropdownMenu.Item>更多</DropdownMenu.Item>
+                                        </DropdownMenu.Content>
+                                    </DropdownMenu.Root>
+                                </Box>
+                                <Box className="wp-theme-debug-cell">
+                                    <Text as="p" size="2" weight="medium" mb="2">Radio 单选</Text>
+                                    <Flex direction="column" gap="2">
+                                        <Text as="label" size="2">
+                                            <Flex gap="2" align="center">
+                                                <Radio name="demo" value="1" defaultChecked /> 选项一
+                                            </Flex>
+                                        </Text>
+                                        <Text as="label" size="2">
+                                            <Flex gap="2" align="center">
+                                                <Radio name="demo" value="2" /> 选项二
+                                            </Flex>
+                                        </Text>
+                                        <Flex gap="2">
+                                            <Radio color="cyan" name="c" value="1" />
+                                            <Radio color="orange" name="c" value="2" />
+                                        </Flex>
+                                    </Flex>
+                                </Box>
+                                <Box className="wp-theme-debug-cell">
+                                    <Text as="p" size="2" weight="medium" mb="2">Slider 滑块</Text>
+                                    <Flex direction="column" gap="3">
+                                        <Slider defaultValue={[30]} />
+                                        <Slider defaultValue={[60]} color="cyan" />
+                                        <Slider defaultValue={[25, 75]} />
+                                    </Flex>
+                                </Box>
+                                <Box className="wp-theme-debug-cell">
+                                    <Text as="p" size="2" weight="medium" mb="2">IconButton 图标按钮</Text>
+                                    <Flex gap="2" align="center" wrap="wrap">
+                                        <IconButton size="1" variant="soft">
+                                            <MagnifyingGlassIcon width="14" height="14" />
+                                        </IconButton>
+                                        <IconButton size="2" variant="soft">
+                                            <MagnifyingGlassIcon width="18" height="18" />
+                                        </IconButton>
+                                        <IconButton color="cyan" variant="soft">
+                                            <MagnifyingGlassIcon width="18" height="18" />
+                                        </IconButton>
+                                        <IconButton color="crimson" variant="solid">
+                                            <MagnifyingGlassIcon width="18" height="18" />
+                                        </IconButton>
+                                    </Flex>
+                                </Box>
+                            </Grid>
+                        </div>
+                    </div>
+
+                    <div>
+                        <Blockquote size="5">
                             组件示例
                         </Blockquote>
                         <div className="block-section">
                             <ComponentsDemo mode={mode} />
                         </div>
-                    </div>
-                    <div style={{
-                        height: 300,
-                        paddingBottom: 100
-                    }}>
-                        <Heading align="center">V0.dev</Heading>
-                        <Container>
-                            <App />
-                            <TextArea rows={30} value={
-                                `
-                                    <div className="cascader-container">
-                                        <h2 className="cascader-title">Cascader Component</h2>
-                                        <Popover.Root open={isOpen} onOpenChange={setIsOpen}>
-                                            <Popover.Trigger className="cascader-trigger">
-                                            {selectedOptions.length > 0
-                                                ? selectedOptions.map(opt => opt.label).join(' > ')
-                                                : 'Select options'}
-                                            <ChevronDownIcon />
-                                            </Popover.Trigger>
-                                            <Popover.Portal>
-                                            <Popover.Content className="cascader-content" sideOffset={5}>
-                                                {renderLevels().map((levelOptions, index) => (
-                                                <div key={index} className="cascader-level">
-                                                    {levelOptions.map((option) => (
-                                                    <div
-                                                        key={option.value}
-                                                        onClick={() => handleSelect(option, index)}
-                                                    >
-                                                        {option.label}
-                                                        {option.children && <ChevronRightIcon />}
-                                                    </div>
-                                                    ))}
-                                                </div>
-                                                ))}
-                                            </Popover.Content>
-                                            </Popover.Portal>
-                                        </Popover.Root>
-                                    </div>
-                                `
-                            } />
-                            <img src={v0Image} width="100%" />
-                        </Container>
                     </div>
                 </Container>
             </div>
@@ -300,9 +531,9 @@ const WebPlayground: FC<WebPlaygroundProps> = ({ mode }) => {
 }
 
 export {
-    WebPlayground
+    WebPlayground,
 }
 
 export type {
-    WebPlaygroundProps
+    WebPlaygroundProps,
 }

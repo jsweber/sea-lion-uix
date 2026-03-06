@@ -1,13 +1,22 @@
-# `react-link`
+﻿# `react-link`
 
 Link 是一个链接组件，用于在页面间跳转或打开外部资源，支持自定义样式和各种交互状态。
 
 ## 安装
 
 ```sh
-$ yarn add @sea-lion/react-link
+pnpm add @sea-lion/react-link
 # 或者
-$ npm install @sea-lion/react-link
+npm install @sea-lion/react-link
+yarn add @sea-lion/react-link
+```
+
+## 使用
+
+在代码中引入组件：
+
+```tsx
+import { Link } from '@sea-lion/react-link';
 ```
 
 ## 基本使用
@@ -107,7 +116,8 @@ import { Text } from "@sea-lion/react-text";
 | asChild      | 将组件的样式和行为应用于子元素 | boolean                                                     | false     | 0.2.0 |
 
 Link 组件还支持所有标准的外边距属性（如 `m`、`mt`、`mb` 等）和 `a` 元素的所有属性（如 `href`、`target` 等）。
+
 
 ## 查看更多
 
-查看[文档](https://gitee.com/summer_sleep/ui-lib-monorepo-template)获取更多信息。
+参考 [Radix UI 官方文档](https://www.radix-ui.com/themes/docs/components/link) 获取完整 API 与设计规范。

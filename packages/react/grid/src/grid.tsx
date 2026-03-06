@@ -17,14 +17,14 @@ type GridSpanProps = { as: 'span' } & ComponentPropsWithout<'span', RemovedProps
 type GridProps = CommonGridProps & (GridSpanProps | GridDivProps);
 
 const Grid = React.forwardRef<GridElement, GridProps>((props, forwardedRef) => {
-  const {
-    className,
-    asChild,
-    as: Tag = 'div',
-    ...gridProps
-  } = extractProps(props, gridPropDefs, layoutPropDefs, marginPropDefs);
-  const Comp = asChild ? Slot : Tag;
-  return <Comp {...gridProps} ref={forwardedRef} className={classNames('rt-Grid', className)} />;
+    const {
+        className,
+        asChild,
+        as: Tag = 'div',
+        ...gridProps
+    } = extractProps(props, gridPropDefs, layoutPropDefs, marginPropDefs);
+    const Comp = asChild ? Slot : Tag;
+    return <Comp {...gridProps} ref={forwardedRef} className={classNames('rt-Grid', className)} />;
 });
 Grid.displayName = 'Grid';
 

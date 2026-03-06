@@ -12,10 +12,10 @@ const flexShrinkValues = ['0', '1'] as const;
 const flexGrowValues = ['0', '1'] as const;
 
 const layoutPropDefs = {
-  ...paddingPropDefs,
-  ...widthPropDefs,
-  ...heightPropDefs,
-  /**
+    ...paddingPropDefs,
+    ...widthPropDefs,
+    ...heightPropDefs,
+    /**
    * Sets the CSS **position** property.
    * Supports the corresponding CSS values and responsive objects.
    *
@@ -26,13 +26,13 @@ const layoutPropDefs = {
    * @link
    * https://developer.mozilla.org/en-US/docs/Web/CSS/position
    */
-  position: {
-    type: 'enum',
-    className: 'rt-r-position',
-    values: positionValues,
-    responsive: true,
-  },
-  /**
+    position: {
+        type: 'enum',
+        className: 'rt-r-position',
+        values: positionValues,
+        responsive: true,
+    },
+    /**
    * Sets the CSS **inset** property.
    * Supports space scale values, CSS strings, and responsive objects.
    *
@@ -44,14 +44,14 @@ const layoutPropDefs = {
    * @link
    * https://developer.mozilla.org/en-US/docs/Web/CSS/inset
    */
-  inset: {
-    type: 'enum | string',
-    className: 'rt-r-inset',
-    customProperties: ['--inset'],
-    values: positionEdgeValues,
-    responsive: true,
-  },
-  /**
+    inset: {
+        type: 'enum | string',
+        className: 'rt-r-inset',
+        customProperties: ['--inset'],
+        values: positionEdgeValues,
+        responsive: true,
+    },
+    /**
    * Sets the CSS **top** property.
    * Supports space scale values, CSS strings, and responsive objects.
    *
@@ -63,14 +63,14 @@ const layoutPropDefs = {
    * @link
    * https://developer.mozilla.org/en-US/docs/Web/CSS/top
    */
-  top: {
-    type: 'enum | string',
-    className: 'rt-r-top',
-    customProperties: ['--top'],
-    values: positionEdgeValues,
-    responsive: true,
-  },
-  /**
+    top: {
+        type: 'enum | string',
+        className: 'rt-r-top',
+        customProperties: ['--top'],
+        values: positionEdgeValues,
+        responsive: true,
+    },
+    /**
    * Sets the CSS **right** property.
    * Supports space scale values, CSS strings, and responsive objects.
    *
@@ -82,14 +82,14 @@ const layoutPropDefs = {
    * @link
    * https://developer.mozilla.org/en-US/docs/Web/CSS/right
    */
-  right: {
-    type: 'enum | string',
-    className: 'rt-r-right',
-    customProperties: ['--right'],
-    values: positionEdgeValues,
-    responsive: true,
-  },
-  /**
+    right: {
+        type: 'enum | string',
+        className: 'rt-r-right',
+        customProperties: ['--right'],
+        values: positionEdgeValues,
+        responsive: true,
+    },
+    /**
    * Sets the CSS **bottom** property.
    * Supports space scale values, CSS strings, and responsive objects.
    *
@@ -101,14 +101,14 @@ const layoutPropDefs = {
    * @link
    * https://developer.mozilla.org/en-US/docs/Web/CSS/bottom
    */
-  bottom: {
-    type: 'enum | string',
-    className: 'rt-r-bottom',
-    customProperties: ['--bottom'],
-    values: positionEdgeValues,
-    responsive: true,
-  },
-  /**
+    bottom: {
+        type: 'enum | string',
+        className: 'rt-r-bottom',
+        customProperties: ['--bottom'],
+        values: positionEdgeValues,
+        responsive: true,
+    },
+    /**
    * Sets the CSS **left** property.
    * Supports space scale values, CSS strings, and responsive objects.
    *
@@ -120,14 +120,14 @@ const layoutPropDefs = {
    * @link
    * https://developer.mozilla.org/en-US/docs/Web/CSS/left
    */
-  left: {
-    type: 'enum | string',
-    className: 'rt-r-left',
-    customProperties: ['--left'],
-    values: positionEdgeValues,
-    responsive: true,
-  },
-  /**
+    left: {
+        type: 'enum | string',
+        className: 'rt-r-left',
+        customProperties: ['--left'],
+        values: positionEdgeValues,
+        responsive: true,
+    },
+    /**
    * Sets the CSS **overflow** property.
    * Supports the corresponding CSS values and responsive objects.
    *
@@ -138,13 +138,13 @@ const layoutPropDefs = {
    * @link
    * https://developer.mozilla.org/en-US/docs/Web/CSS/overflow
    */
-  overflow: {
-    type: 'enum',
-    className: 'rt-r-overflow',
-    values: overflowValues,
-    responsive: true,
-  },
-  /**
+    overflow: {
+        type: 'enum',
+        className: 'rt-r-overflow',
+        values: overflowValues,
+        responsive: true,
+    },
+    /**
    * Sets the CSS **overflow-x** property.
    * Supports the corresponding CSS values and responsive objects.
    *
@@ -155,13 +155,13 @@ const layoutPropDefs = {
    * @link
    * https://developer.mozilla.org/en-US/docs/Web/CSS/overflow
    */
-  overflowX: {
-    type: 'enum',
-    className: 'rt-r-ox',
-    values: overflowValues,
-    responsive: true,
-  },
-  /**
+    overflowX: {
+        type: 'enum',
+        className: 'rt-r-ox',
+        values: overflowValues,
+        responsive: true,
+    },
+    /**
    * Sets the CSS **overflow-y** property.
    * Supports the corresponding CSS values and responsive objects.
    *
@@ -172,13 +172,13 @@ const layoutPropDefs = {
    * @link
    * https://developer.mozilla.org/en-US/docs/Web/CSS/overflow
    */
-  overflowY: {
-    type: 'enum',
-    className: 'rt-r-oy',
-    values: overflowValues,
-    responsive: true,
-  },
-  /**
+    overflowY: {
+        type: 'enum',
+        className: 'rt-r-oy',
+        values: overflowValues,
+        responsive: true,
+    },
+    /**
    * Sets the CSS **flex-basis** property.
    * Supports CSS strings and responsive objects.
    *
@@ -190,13 +190,13 @@ const layoutPropDefs = {
    * @link
    * https://developer.mozilla.org/en-US/docs/Web/CSS/flex-basis
    */
-  flexBasis: {
-    type: 'string',
-    className: 'rt-r-fb',
-    customProperties: ['--flex-basis'],
-    responsive: true,
-  },
-  /**
+    flexBasis: {
+        type: 'string',
+        className: 'rt-r-fb',
+        customProperties: ['--flex-basis'],
+        responsive: true,
+    },
+    /**
    * Sets the CSS **flex-shrink** property.
    * Supports CSS strings and responsive objects.
    *
@@ -208,14 +208,14 @@ const layoutPropDefs = {
    * @link
    * https://developer.mozilla.org/en-US/docs/Web/CSS/flex-shrink
    */
-  flexShrink: {
-    type: 'enum | string',
-    className: 'rt-r-fs',
-    customProperties: ['--flex-shrink'],
-    values: flexShrinkValues,
-    responsive: true,
-  },
-  /**
+    flexShrink: {
+        type: 'enum | string',
+        className: 'rt-r-fs',
+        customProperties: ['--flex-shrink'],
+        values: flexShrinkValues,
+        responsive: true,
+    },
+    /**
    * Sets the CSS **flex-grow** property.
    * Supports CSS strings and responsive objects.
    *
@@ -227,14 +227,14 @@ const layoutPropDefs = {
    * @link
    * https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow
    */
-  flexGrow: {
-    type: 'enum | string',
-    className: 'rt-r-fg',
-    customProperties: ['--flex-grow'],
-    values: flexGrowValues,
-    responsive: true,
-  },
-  /**
+    flexGrow: {
+        type: 'enum | string',
+        className: 'rt-r-fg',
+        customProperties: ['--flex-grow'],
+        values: flexGrowValues,
+        responsive: true,
+    },
+    /**
    * Sets the CSS **grid-area** property.
    * Supports CSS strings and responsive objects.
    *
@@ -244,13 +244,13 @@ const layoutPropDefs = {
    * @link
    * https://developer.mozilla.org/en-US/docs/Web/CSS/grid-area
    */
-  gridArea: {
-    type: 'string',
-    className: 'rt-r-ga',
-    customProperties: ['--grid-area'],
-    responsive: true,
-  },
-  /**
+    gridArea: {
+        type: 'string',
+        className: 'rt-r-ga',
+        customProperties: ['--grid-area'],
+        responsive: true,
+    },
+    /**
    * Sets the CSS **grid-column** property.
    * Supports CSS strings and responsive objects.
    *
@@ -262,13 +262,13 @@ const layoutPropDefs = {
    * @link
    * https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column
    */
-  gridColumn: {
-    type: 'string',
-    className: 'rt-r-gc',
-    customProperties: ['--grid-column'],
-    responsive: true,
-  },
-  /**
+    gridColumn: {
+        type: 'string',
+        className: 'rt-r-gc',
+        customProperties: ['--grid-column'],
+        responsive: true,
+    },
+    /**
    * Sets the CSS **grid-column-start** property.
    * Supports CSS strings and responsive objects.
    *
@@ -280,13 +280,13 @@ const layoutPropDefs = {
    * @link
    * https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column-start
    */
-  gridColumnStart: {
-    type: 'string',
-    className: 'rt-r-gcs',
-    customProperties: ['--grid-column-start'],
-    responsive: true,
-  },
-  /**
+    gridColumnStart: {
+        type: 'string',
+        className: 'rt-r-gcs',
+        customProperties: ['--grid-column-start'],
+        responsive: true,
+    },
+    /**
    * Sets the CSS **grid-column-end** property.
    * Supports CSS strings and responsive objects.
    *
@@ -298,13 +298,13 @@ const layoutPropDefs = {
    * @link
    * https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column-end
    */
-  gridColumnEnd: {
-    type: 'string',
-    className: 'rt-r-gce',
-    customProperties: ['--grid-column-end'],
-    responsive: true,
-  },
-  /**
+    gridColumnEnd: {
+        type: 'string',
+        className: 'rt-r-gce',
+        customProperties: ['--grid-column-end'],
+        responsive: true,
+    },
+    /**
    * Sets the CSS **grid-row** property.
    * Supports CSS strings and responsive objects.
    *
@@ -316,13 +316,13 @@ const layoutPropDefs = {
    * @link
    * https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row
    */
-  gridRow: {
-    type: 'string',
-    className: 'rt-r-gr',
-    customProperties: ['--grid-row'],
-    responsive: true,
-  },
-  /**
+    gridRow: {
+        type: 'string',
+        className: 'rt-r-gr',
+        customProperties: ['--grid-row'],
+        responsive: true,
+    },
+    /**
    * Sets the CSS **grid-row-start** property.
    * Supports CSS strings and responsive objects.
    *
@@ -334,13 +334,13 @@ const layoutPropDefs = {
    * @link
    * https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row-start
    */
-  gridRowStart: {
-    type: 'string',
-    className: 'rt-r-grs',
-    customProperties: ['--grid-row-start'],
-    responsive: true,
-  },
-  /**
+    gridRowStart: {
+        type: 'string',
+        className: 'rt-r-grs',
+        customProperties: ['--grid-row-start'],
+        responsive: true,
+    },
+    /**
    * Sets the CSS **grid-row-end** property.
    * Supports CSS strings and responsive objects.
    *
@@ -352,12 +352,12 @@ const layoutPropDefs = {
    * @link
    * https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row-end
    */
-  gridRowEnd: {
-    type: 'string',
-    className: 'rt-r-gre',
-    customProperties: ['--grid-row-end'],
-    responsive: true,
-  },
+    gridRowEnd: {
+        type: 'string',
+        className: 'rt-r-gre',
+        customProperties: ['--grid-row-end'],
+        responsive: true,
+    },
 } satisfies {
   position: PropDef<(typeof positionValues)[number]>;
   inset: PropDef<(typeof positionEdgeValues)[number]>;

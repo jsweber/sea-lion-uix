@@ -18,26 +18,26 @@ interface TabNavRootProps
   MarginProps,
   TabNavOwnProps { }
 const TabNavRoot = React.forwardRef<TabNavRootElement, TabNavRootProps>((props, forwardedRef) => {
-  const { children, className, color, ...rootProps } = extractProps(
-    props,
-    tabNavRootPropDefs,
-    marginPropDefs
-  );
-  return (
-    <NavigationMenu.Root
-      className="rt-TabNavRoot"
-      data-accent-color={color}
-      {...rootProps}
-      asChild={false}
-      ref={forwardedRef}
-    >
-      <NavigationMenu.List
-        className={classNames('rt-reset', 'rt-BaseTabList', 'rt-TabNavList', className)}
-      >
-        {children}
-      </NavigationMenu.List>
-    </NavigationMenu.Root>
-  );
+    const { children, className, color, ...rootProps } = extractProps(
+        props,
+        tabNavRootPropDefs,
+        marginPropDefs,
+    );
+    return (
+        <NavigationMenu.Root
+            className="rt-TabNavRoot"
+            data-accent-color={color}
+            {...rootProps}
+            asChild={false}
+            ref={forwardedRef}
+        >
+            <NavigationMenu.List
+                className={classNames('rt-reset', 'rt-BaseTabList', 'rt-TabNavList', className)}
+            >
+                {children}
+            </NavigationMenu.List>
+        </NavigationMenu.Root>
+    );
 });
 TabNavRoot.displayName = 'TabNav.Root';
 
@@ -47,28 +47,28 @@ interface TabNavLinkProps
   extends ComponentPropsWithout<typeof NavigationMenu.Link, RemovedProps | 'onSelect'>,
   TabNavLinkOwnProps { }
 const TabNavLink = React.forwardRef<TabNavLinkElement, TabNavLinkProps>((props, forwardedRef) => {
-  const { asChild, children, className, ...linkProps } = props;
+    const { asChild, children, className, ...linkProps } = props;
 
-  return (
-    <NavigationMenu.Item className="rt-TabNavItem">
-      <NavigationMenu.Link
-        {...linkProps}
-        ref={forwardedRef}
-        className={classNames('rt-reset', 'rt-BaseTabListTrigger', 'rt-TabNavLink', className)}
-        onSelect={undefined}
-        asChild={asChild}
-      >
-        {getSubtree({ asChild, children }, (children) => (
-          <>
-            <span className="rt-BaseTabListTriggerInner rt-TabNavLinkInner">{children}</span>
-            <span className="rt-BaseTabListTriggerInnerHidden rt-TabNavLinkInnerHidden">
-              {children}
-            </span>
-          </>
-        ))}
-      </NavigationMenu.Link>
-    </NavigationMenu.Item>
-  );
+    return (
+        <NavigationMenu.Item className="rt-TabNavItem">
+            <NavigationMenu.Link
+                {...linkProps}
+                ref={forwardedRef}
+                className={classNames('rt-reset', 'rt-BaseTabListTrigger', 'rt-TabNavLink', className)}
+                onSelect={undefined}
+                asChild={asChild}
+            >
+                {getSubtree({ asChild, children }, (slotContent) => (
+                    <>
+                        <span className="rt-BaseTabListTriggerInner rt-TabNavLinkInner">{slotContent}</span>
+                        <span className="rt-BaseTabListTriggerInnerHidden rt-TabNavLinkInnerHidden">
+                            {slotContent}
+                        </span>
+                    </>
+                ))}
+            </NavigationMenu.Link>
+        </NavigationMenu.Item>
+    );
 });
 TabNavLink.displayName = 'TabNav.Link';
 

@@ -1,12 +1,12 @@
 import { asChildPropDef } from '@sea-lion/react-props';
 
 const tabsRootPropDefs = {
-  ...asChildPropDef,
+    ...asChildPropDef,
 };
 
 const tabsContentPropDefs = {
-  ...asChildPropDef,
+    ...asChildPropDef,
 };
 
 export { baseTabListPropDefs as tabsListPropDefs } from '@sea-lion/react-base-tab-list';
-export { tabsRootPropDefs, tabsContentPropDefs }; 
+export { tabsRootPropDefs, tabsContentPropDefs };

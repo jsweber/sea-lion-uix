@@ -21,14 +21,14 @@ const CheckboxGroupPrimitive = primitive;
 
 type ScopedProps<P> = P & { __scopeCheckboxCards?: Scope };
 const [createCheckboxCardsContext] = createContextScope(CHECKBOX_CARD_GROUP_NAME, [
-  createCheckboxGroupScope,
+    createCheckboxGroupScope,
 ]);
 const useCheckboxGroupScope = createCheckboxGroupScope();
 
-type CheckboxCardsContextValue = {
+interface CheckboxCardsContextValue {
   size?: Responsive<(typeof checkboxCardsRootPropDefs.size.values)[number]>;
   highContrast?: boolean;
-};
+}
 
 const [CheckboxCardsProvider, useCheckboxCardsContext] =
   createCheckboxCardsContext<CheckboxCardsContextValue>(CHECKBOX_CARD_GROUP_NAME);
@@ -43,31 +43,31 @@ interface CheckboxCardsRootProps
   MarginProps,
   CheckboxCardsRootOwnProps { }
 const CheckboxCardsRoot = React.forwardRef<CheckboxCardsRootElement, CheckboxCardsRootProps>(
-  (props: ScopedProps<CheckboxCardsRootProps>, forwardedRef) => {
-    const { __scopeCheckboxCards, className, color, ...rootProps } = extractProps(
-      props,
-      checkboxCardsRootPropDefs,
-      marginPropDefs
-    );
-    const checkboxGroupScope = useCheckboxGroupScope(__scopeCheckboxCards);
-    return (
-      <CheckboxCardsProvider
-        scope={__scopeCheckboxCards}
-        size={props.size}
-        highContrast={props.highContrast}
-      >
-        <Grid asChild>
-          <CheckboxGroupPrimitive.Root
-            {...checkboxGroupScope}
-            data-accent-color={color}
-            {...rootProps}
-            ref={forwardedRef}
-            className={classNames('rt-CheckboxCardsRoot', className)}
-          />
-        </Grid>
-      </CheckboxCardsProvider>
-    );
-  }
+    (props: ScopedProps<CheckboxCardsRootProps>, forwardedRef) => {
+        const { __scopeCheckboxCards, className, color, ...rootProps } = extractProps(
+            props,
+            checkboxCardsRootPropDefs,
+            marginPropDefs,
+        );
+        const checkboxGroupScope = useCheckboxGroupScope(__scopeCheckboxCards);
+        return (
+            <CheckboxCardsProvider
+                scope={__scopeCheckboxCards}
+                size={props.size}
+                highContrast={props.highContrast}
+            >
+                <Grid asChild>
+                    <CheckboxGroupPrimitive.Root
+                        {...checkboxGroupScope}
+                        data-accent-color={color}
+                        {...rootProps}
+                        ref={forwardedRef}
+                        className={classNames('rt-CheckboxCardsRoot', className)}
+                    />
+                </Grid>
+            </CheckboxCardsProvider>
+        );
+    },
 );
 CheckboxCardsRoot.displayName = 'CheckboxCards.Root';
 
@@ -79,38 +79,38 @@ const CheckboxCardsItem = React.forwardRef<
   CheckboxCardsItemElement,
   ScopedProps<CheckboxCardsItemProps>
 >(({ __scopeCheckboxCards, children, className, style, ...props }, forwardedRef) => {
-  const context = useCheckboxCardsContext('CheckboxCardsItem', __scopeCheckboxCards);
-  const checkboxGroupScope = useCheckboxGroupScope(__scopeCheckboxCards);
-  const { className: checkboxClassName } = extractProps(
+    const context = useCheckboxCardsContext('CheckboxCardsItem', __scopeCheckboxCards);
+    const checkboxGroupScope = useCheckboxGroupScope(__scopeCheckboxCards);
+    const { className: checkboxClassName } = extractProps(
     // Pass size / highContrast values from the context and static variant to generate styles
-    { size: context?.size, variant: 'surface', highContrast: context?.highContrast },
-    // Pass size & variant prop defs to allow it to be extracted
-    baseCheckboxPropDefs
-  );
-  return (
-    <label className={classNames('rt-BaseCard', 'rt-CheckboxCardsItem', className)} style={style}>
-      {children}
-      <CheckboxGroupPrimitive.Item
-        {...checkboxGroupScope}
-        {...props}
-        ref={forwardedRef}
-        className={classNames(
-          'rt-reset',
-          'rt-BaseCheckboxRoot',
-          'rt-CheckboxCardCheckbox',
-          checkboxClassName
-        )}
-      >
-        <CheckboxGroupPrimitive.Indicator
-          {...checkboxGroupScope}
-          asChild
-          className="rt-BaseCheckboxIndicator"
-        >
-          <ThickCheckIcon />
-        </CheckboxGroupPrimitive.Indicator>
-      </CheckboxGroupPrimitive.Item>
-    </label>
-  );
+        { size: context?.size, variant: 'surface', highContrast: context?.highContrast },
+        // Pass size & variant prop defs to allow it to be extracted
+        baseCheckboxPropDefs,
+    );
+    return (
+        <label className={classNames('rt-BaseCard', 'rt-CheckboxCardsItem', className)} style={style}>
+            {children}
+            <CheckboxGroupPrimitive.Item
+                {...checkboxGroupScope}
+                {...props}
+                ref={forwardedRef}
+                className={classNames(
+                    'rt-reset',
+                    'rt-BaseCheckboxRoot',
+                    'rt-CheckboxCardCheckbox',
+                    checkboxClassName,
+                )}
+            >
+                <CheckboxGroupPrimitive.Indicator
+                    {...checkboxGroupScope}
+                    asChild
+                    className="rt-BaseCheckboxIndicator"
+                >
+                    <ThickCheckIcon />
+                </CheckboxGroupPrimitive.Indicator>
+            </CheckboxGroupPrimitive.Item>
+        </label>
+    );
 });
 CheckboxCardsItem.displayName = 'CheckboxCards.Item';
 

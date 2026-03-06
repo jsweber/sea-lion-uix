@@ -17,14 +17,14 @@ interface TabsRootProps
   MarginProps,
   TabsRootOwnProps { }
 const TabsRoot = React.forwardRef<TabsRootElement, TabsRootProps>((props, forwardedRef) => {
-  const { className, ...rootProps } = extractProps(props, marginPropDefs);
-  return (
-    <TabsPrimitive.Root
-      {...rootProps}
-      ref={forwardedRef}
-      className={classNames('rt-TabsRoot', className)}
-    />
-  );
+    const { className, ...rootProps } = extractProps(props, marginPropDefs);
+    return (
+        <TabsPrimitive.Root
+            {...rootProps}
+            ref={forwardedRef}
+            className={classNames('rt-TabsRoot', className)}
+        />
+    );
 });
 TabsRoot.displayName = 'Tabs.Root';
 
@@ -35,39 +35,38 @@ interface TabsListProps
   MarginProps,
   TabsListOwnProps { }
 const TabsList = React.forwardRef<TabsListElement, TabsListProps>((props, forwardedRef) => {
-  const { className, color, ...listProps } = extractProps(props, tabsListPropDefs, marginPropDefs);
-  return (
-    <TabsPrimitive.List
-      data-accent-color={color}
-      {...listProps}
-      asChild={false}
-      ref={forwardedRef}
-      className={classNames('rt-BaseTabList', 'rt-TabsList', className)}
-    />
-  );
+    const { className, color, ...listProps } = extractProps(props, tabsListPropDefs, marginPropDefs);
+    return (
+        <TabsPrimitive.List
+            data-accent-color={color}
+            {...listProps}
+            asChild={false}
+            ref={forwardedRef}
+            className={classNames('rt-BaseTabList', 'rt-TabsList', className)}
+        />
+    );
 });
 TabsList.displayName = 'Tabs.List';
 
 type TabsTriggerElement = React.ElementRef<typeof TabsPrimitive.Trigger>;
-interface TabsTriggerProps
-  extends ComponentPropsWithout<typeof TabsPrimitive.Trigger, RemovedProps> { }
+type TabsTriggerProps = ComponentPropsWithout<typeof TabsPrimitive.Trigger, RemovedProps>
 const TabsTrigger = React.forwardRef<TabsTriggerElement, TabsTriggerProps>(
-  (props, forwardedRef) => {
-    const { className, children, ...triggerProps } = props;
-    return (
-      <TabsPrimitive.Trigger
-        {...triggerProps}
-        asChild={false}
-        ref={forwardedRef}
-        className={classNames('rt-reset', 'rt-BaseTabListTrigger', 'rt-TabsTrigger', className)}
-      >
-        <span className="rt-BaseTabListTriggerInner rt-TabsTriggerInner">{children}</span>
-        <span className="rt-BaseTabListTriggerInnerHidden rt-TabsTriggerInnerHidden">
-          {children}
-        </span>
-      </TabsPrimitive.Trigger>
-    );
-  }
+    (props, forwardedRef) => {
+        const { className, children, ...triggerProps } = props;
+        return (
+            <TabsPrimitive.Trigger
+                {...triggerProps}
+                asChild={false}
+                ref={forwardedRef}
+                className={classNames('rt-reset', 'rt-BaseTabListTrigger', 'rt-TabsTrigger', className)}
+            >
+                <span className="rt-BaseTabListTriggerInner rt-TabsTriggerInner">{children}</span>
+                <span className="rt-BaseTabListTriggerInnerHidden rt-TabsTriggerInnerHidden">
+                    {children}
+                </span>
+            </TabsPrimitive.Trigger>
+        );
+    },
 );
 TabsTrigger.displayName = 'Tabs.Trigger';
 
@@ -78,23 +77,23 @@ interface TabsContentProps
   MarginProps,
   TabsContentOwnProps { }
 const TabsContent = React.forwardRef<TabsContentElement, TabsContentProps>(
-  (props, forwardedRef) => {
-    const { className, ...contentProps } = extractProps(props, marginPropDefs);
-    return (
-      <TabsPrimitive.Content
-        {...contentProps}
-        ref={forwardedRef}
-        className={classNames('rt-TabsContent', className)}
-      />
-    );
-  }
+    (props, forwardedRef) => {
+        const { className, ...contentProps } = extractProps(props, marginPropDefs);
+        return (
+            <TabsPrimitive.Content
+                {...contentProps}
+                ref={forwardedRef}
+                className={classNames('rt-TabsContent', className)}
+            />
+        );
+    },
 );
 TabsContent.displayName = 'Tabs.Content';
 
 export { TabsRoot as Root, TabsList as List, TabsTrigger as Trigger, TabsContent as Content, TabsPrimitive };
 export type {
-  TabsRootProps as RootProps,
-  TabsListProps as ListProps,
-  TabsTriggerProps as TriggerProps,
-  TabsContentProps as ContentProps,
+    TabsRootProps as RootProps,
+    TabsListProps as ListProps,
+    TabsTriggerProps as TriggerProps,
+    TabsContentProps as ContentProps,
 };

@@ -45,6 +45,24 @@ body {
     margin-bottom: 50px;
 }
 
+/* 主题调试示例：宽屏多列网格，避免内容过空 */
+.wp-theme-debug-section {
+    width: 100%;
+}
+
+.wp-theme-debug-grid {
+    width: 100%;
+    align-items: start;
+}
+
+.wp-theme-debug-cell {
+    min-width: 0;
+    padding: var(--space-4);
+    border-radius: var(--radius-3);
+    background-color: var(--color-panel-solid);
+    box-shadow: var(--shadow-2);
+}
+
 .wp-theme-float {
     position: fixed;
     top: 30px;

@@ -1,4 +1,4 @@
-# `react-tab-nav`
+﻿# `react-tab-nav`
 
 TabNav is a navigation menu component used to create navigation bars and tab-based navigation.
 
@@ -158,4 +158,4 @@ All components also support standard margin properties.
 
 ## Learn More
 
-View the [documentation](https://www.radix-ui.com/themes/docs/theme/overview) for more information.
+See the [Radix UI documentation](https://www.radix-ui.com/themes/docs/components/tab-nav) for the full API reference and design guidelines.

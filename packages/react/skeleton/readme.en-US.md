@@ -1,4 +1,4 @@
-# `react-skeleton`
+﻿# `react-skeleton`
 
 Skeleton is a loading placeholder component used to display content outlines during data loading to improve user experience.
 
@@ -133,4 +133,4 @@ Also supports all standard margin properties.
 
 ## Learn More
 
-View the [documentation](https://www.radix-ui.com/themes/docs/theme/overview) for more information.
+See the [Radix UI documentation](https://www.radix-ui.com/themes/docs/components/skeleton) for the full API reference and design guidelines.

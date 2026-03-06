@@ -1,14 +1,29 @@
-# `react-radio-group`
+﻿# `react-radio-group`
 
 RadioGroup 是一个单选按钮组组件，用于在一组选项中选择一个选项。
 
 ## 安装
 
 ```sh
-$ yarn add @sea-lion/react-radio-group
+pnpm add @sea-lion/react-radio-group
 # 或者
-$ npm install @sea-lion/react-radio-group
+npm install @sea-lion/react-radio-group
+yarn add @sea-lion/react-radio-group
 ```
+
+## 使用
+
+在代码中引入组件：
+
+```tsx
+import * as RadioGroup from '@sea-lion/react-radio-group';
+```
+
+## 何时使用
+
+- 需要在一组互斥选项中选择一个选项时
+- 选项数量较少且可以同时显示在界面上
+- 需要用户做出明确选择时
 
 ## 基本使用
 
@@ -130,7 +145,8 @@ RadioGroup 组件默认是垂直布局，但您可以使用样式来创建水平
 | -------- | -------- | ------- | ------ | ----- |
 | value    | 选项的值 | string  | -      | 0.2.0 |
 | disabled | 是否禁用 | boolean | false  | 0.2.0 |
+
 
 ## 查看更多
 
-查看[文档](https://gitee.com/summer_sleep/ui-lib-monorepo-template)获取更多信息。
+参考 [Radix UI 官方文档](https://www.radix-ui.com/themes/docs/components/radio-group) 获取完整 API 与设计规范。

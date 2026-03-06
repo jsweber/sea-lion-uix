@@ -15,18 +15,18 @@ interface BlockquoteProps
   MarginProps,
   BlockQuoteOwnProps { }
 const Blockquote = React.forwardRef<BlockquoteElement, BlockquoteProps>((props, forwardedRef) => {
-  const { asChild, children, className, ...blockquoteProps } = props;
-  const Comp = asChild ? Slot : 'blockquote';
-  return (
-    <Text
-      asChild
-      {...blockquoteProps}
-      ref={forwardedRef}
-      className={classNames('rt-Blockquote', className)}
-    >
-      <Comp>{children}</Comp>
-    </Text>
-  );
+    const { asChild, children, className, ...blockquoteProps } = props;
+    const Comp = asChild ? Slot : 'blockquote';
+    return (
+        <Text
+            asChild
+            {...blockquoteProps}
+            ref={forwardedRef}
+            className={classNames('rt-Blockquote', className)}
+        >
+            <Comp>{children}</Comp>
+        </Text>
+    );
 });
 Blockquote.displayName = 'Blockquote';
 

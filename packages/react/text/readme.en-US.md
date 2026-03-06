@@ -1,4 +1,4 @@
-# `react-text`
+﻿# `react-text`
 
 Text is a component for displaying text content in different styles and sizes. The component supports multiple sizes, weights, alignment options, and colors.
 
@@ -130,4 +130,4 @@ Text component can be rendered as different HTML elements:
 
 ## Learn More
 
-View the [documentation](https://gitee.com/summer_sleep/ui-lib-monorepo-template) for more information.
+See the [Radix UI documentation](https://www.radix-ui.com/themes/docs/components/text) for the full API reference and design guidelines.

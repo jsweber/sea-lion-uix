@@ -1,4 +1,4 @@
-# `react-table`
+﻿# `react-table`
 
 Table 是一个表格组件，用于以行和列的形式展示数据。组件支持不同尺寸、变体样式、自定义布局以及单元格对齐方式。
 
@@ -156,7 +156,8 @@ Table 组件支持两种视觉变体：
 | ------- | -------------- | ---------------------------- | ------- | ----- |
 | justify | 单元格内容对齐 | 'start' \| 'center' \| 'end' | 'start' | 0.2.1 |
 | width   | 单元格宽度     | string                       | -       | 0.2.1 |
+
 
 ## 查看更多
 
-查看[文档](https://gitee.com/summer_sleep/ui-lib-monorepo-template)获取更多信息。
+参考 [Radix UI 官方文档](https://www.radix-ui.com/themes/docs/components/table) 获取完整 API 与设计规范。

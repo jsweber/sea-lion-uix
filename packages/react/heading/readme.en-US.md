@@ -5,9 +5,18 @@ Heading is a component for displaying titles, providing various levels, sizes, a
 ## Installation
 
 ```sh
-$ yarn add @sea-lion/react-heading
+pnpm add @sea-lion/react-heading
 # or
-$ npm install @sea-lion/react-heading
+npm install @sea-lion/react-heading
+yarn add @sea-lion/react-heading
+```
+
+## Usage
+
+Import the component in your code:
+
+```tsx
+import { Heading } from '@sea-lion/react-heading';
 ```
 
 ## Basic Usage
@@ -39,52 +48,126 @@ export default () => (
 );
 ```
 
-## Heading Styles
+## Sizes
 
-The Heading component supports various style options:
+Heading provides size options from 1 to 9:
 
 ```jsx
-// Different colors
-<Heading color="blue">Blue Heading</Heading>
-<Heading color="amber">Amber Heading</Heading>
+<Heading size="9">Size 9 (Largest)</Heading>
+<Heading size="8">Size 8</Heading>
+<Heading size="7">Size 7</Heading>
+<Heading size="6">Size 6 (Default)</Heading>
+<Heading size="5">Size 5</Heading>
+<Heading size="4">Size 4</Heading>
+<Heading size="3">Size 3</Heading>
+<Heading size="2">Size 2</Heading>
+<Heading size="1">Size 1 (Smallest)</Heading>
+```
 
-// Different weights
+## Font Weight
+
+```jsx
+<Heading weight="light">Light Weight</Heading>
 <Heading weight="regular">Regular Weight</Heading>
 <Heading weight="medium">Medium Weight</Heading>
-<Heading weight="bold">Bold Weight</Heading>
+<Heading weight="bold">Bold Weight (Default)</Heading>
+```
 
-// Text alignment
+## Colors
+
+```jsx
+<Heading color="blue">Blue Heading</Heading>
+<Heading color="green">Green Heading</Heading>
+<Heading color="red">Red Heading</Heading>
+<Heading color="amber">Amber Heading</Heading>
+<Heading color="gray">Gray Heading</Heading>
+```
+
+## High Contrast
+
+```jsx
+<Heading color="blue">Normal Contrast</Heading>
+<Heading color="blue" highContrast>High Contrast</Heading>
+```
+
+## Text Alignment
+
+```jsx
 <Heading align="left">Left Aligned</Heading>
 <Heading align="center">Center Aligned</Heading>
 <Heading align="right">Right Aligned</Heading>
+```
 
-// Truncate text (add ellipsis)
-<Heading truncate>This is a very long heading that will be truncated with an ellipsis when there isn't enough space...</Heading>
+## Truncation and Text Wrap
 
-// Responsive sizes
-<Heading size={{ initial: '3', sm: '5', lg: '7' }}>
-  Heading with different sizes on different screen sizes
+```jsx
+{/* Truncate text with ellipsis */}
+<div style={{ width: '300px' }}>
+  <Heading truncate>This is a very long heading that will be truncated with an ellipsis when there isn't enough space...</Heading>
+</div>
+
+{/* Text wrapping control */}
+<Heading textWrap="balance">Heading with balance text wrapping</Heading>
+<Heading textWrap="pretty">Heading with pretty text wrapping</Heading>
+```
+
+## Responsive Sizes
+
+```jsx
+<Heading size={{ initial: '3', sm: '5', md: '7', lg: '9' }}>
+  Responsive heading size
 </Heading>
+
+<Heading align={{ initial: 'left', md: 'center', lg: 'right' }}>
+  Responsive text alignment
+</Heading>
+```
+
+## Practical Use Cases
+
+### Blog Article Layout
+
+```jsx
+<article>
+  <Heading size="8" mb="3">Exploring the Evolution of Modern Frontend Architecture</Heading>
+  <Heading as="h2" size="5" mt="5" mb="3">History of Frontend Architecture</Heading>
+  <p>The frontend development field has undergone dramatic changes over the past decade...</p>
+  <Heading as="h3" size="3" mt="4" mb="2">The Rise of Single Page Applications</Heading>
+  <p>With the popularity of Ajax and the development of JavaScript frameworks...</p>
+</article>
+```
+
+### Product Landing Page
+
+```jsx
+<div style={{ textAlign: 'center', padding: '48px', background: 'var(--blue-1)' }}>
+  <Heading color="blue" size="9" align="center" mb="3">
+    The Future is Now
+  </Heading>
+  <Heading color="gray" weight="regular" size="4" align="center">
+    Our innovative products make complex tasks simple, helping you boost productivity
+  </Heading>
+</div>
 ```
 
 ## Props
 
 ### Heading
 
-| Prop         | Description                        | Type                                              | Default | Version |
-| ------------ | ---------------------------------- | ------------------------------------------------- | ------- | ------- |
-| as           | HTML element to render             | 'h1' \| 'h2' \| 'h3' \| 'h4' \| 'h5' \| 'h6'      | 'h1'    | 0.2.0   |
-| asChild      | Whether to pass component as child | boolean                                           | false   | 0.2.0   |
-| size         | Heading text size                  | '1' - '9'                                         | '6'     | 0.2.0   |
-| weight       | Text weight                        | 'light' \| 'regular' \| 'medium' \| 'bold'        | 'bold'  | 0.2.0   |
-| align        | Text alignment                     | 'left' \| 'center' \| 'right'                     | -       | 0.2.0   |
-| color        | Text color                         | 'gray' \| 'blue' \| 'green' \| ... (theme colors) | -       | 0.2.0   |
-| highContrast | Whether to use high contrast color | boolean                                           | false   | 0.2.0   |
-| truncate     | Whether to truncate text           | boolean                                           | false   | 0.2.0   |
-| textWrap     | Text wrapping behavior             | 'wrap' \| 'nowrap' \| 'balance' \| 'pretty'       | -       | 0.2.0   |
+| Prop         | Description                        | Type                                              | Default |
+| ------------ | ---------------------------------- | ------------------------------------------------- | ------- |
+| as           | HTML element to render             | 'h1' \| 'h2' \| 'h3' \| 'h4' \| 'h5' \| 'h6'      | 'h1'    |
+| asChild      | Whether to pass component as child | boolean                                           | false   |
+| size         | Heading text size                  | '1' - '9'                                         | '6'     |
+| weight       | Text weight                        | 'light' \| 'regular' \| 'medium' \| 'bold'        | 'bold'  |
+| align        | Text alignment                     | 'left' \| 'center' \| 'right'                     | -       |
+| color        | Text color                         | 'gray' \| 'blue' \| 'green' \| ... (theme colors) | -       |
+| highContrast | Whether to use high contrast color | boolean                                           | false   |
+| truncate     | Whether to truncate text           | boolean                                           | false   |
+| textWrap     | Text wrapping behavior             | 'wrap' \| 'nowrap' \| 'balance' \| 'pretty'       | -       |
 
 The Heading component also supports all standard margin props, such as `m`, `mt`, `mb`, etc.
 
 ## Learn More
 
-View the [documentation](https://gitee.com/summer_sleep/ui-lib-monorepo-template) for more information.
+See the [Radix UI documentation](https://www.radix-ui.com/themes/docs/components/heading) for the full API reference and design guidelines.

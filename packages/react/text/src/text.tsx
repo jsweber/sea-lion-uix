@@ -19,24 +19,24 @@ type TextPProps = { as: 'p' } & ComponentPropsWithout<'p', RemovedProps>;
 type TextProps = CommonTextProps & (TextSpanProps | TextDivProps | TextLabelProps | TextPProps);
 
 const Text = React.forwardRef<TextElement, TextProps>((props, forwardedRef) => {
-  const {
-    children,
-    className,
-    asChild,
-    as: Tag = 'span',
-    color,
-    ...textProps
-  } = extractProps(props, textPropDefs, marginPropDefs);
-  return (
-    <Slot
-      data-accent-color={color}
-      {...textProps}
-      ref={forwardedRef}
-      className={classNames('rt-Text', className)}
-    >
-      {asChild ? children : <Tag>{children}</Tag>}
-    </Slot>
-  );
+    const {
+        children,
+        className,
+        asChild,
+        as: Tag = 'span',
+        color,
+        ...textProps
+    } = extractProps(props, textPropDefs, marginPropDefs);
+    return (
+        <Slot
+            data-accent-color={color}
+            {...textProps}
+            ref={forwardedRef}
+            className={classNames('rt-Text', className)}
+        >
+            {asChild ? children : <Tag>{children}</Tag>}
+        </Slot>
+    );
 });
 Text.displayName = 'Text';
 
