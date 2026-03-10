@@ -238,7 +238,7 @@ CustomOssUrl.args = {
 };
 
 /** 多色图标示例（Symbol 模式下可见多色） */
-const MULTICOLOR_ICONS = ['icon-guanjianzhen', 'icon-huggingfaceColor', 'icon-jushenzhineng'] as const;
+const MULTICOLOR_ICONS = ['icon-NewOC_Cross-domain', 'icon-huggingfaceColor', 'icon-jushenzhineng'] as const;
 
 /** useSymbol 切换：不传 ossUrl 时用内置链接，useSymbol 决定 Font-class 还是 Symbol */
 export const UseSymbolSwitch = () => {
@@ -257,7 +257,6 @@ export const UseSymbolSwitch = () => {
                             {MULTICOLOR_ICONS.map((name) => (
                                 <IconFont key={name} icon={name} color="var(--gray-11)" style={{ fontSize: 28 }} />
                             ))}
-                            <IconFont icon="icon-guanjianzhen" color="#1890ff" style={{ fontSize: 28 }} />
                         </Flex>
                     </Box>
                     <Box>
