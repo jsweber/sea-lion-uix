@@ -9,7 +9,10 @@ import { IconFont } from '@sea-lion/react-oss-icon';
 
 import './oss-icon-picker.less';
 
-const ICONFONT_ICONS_CSS_URL = '//at.alicdn.com/t/c/font_3858115_hwwfmyoy6t7.css';
+/** Font-class 图标资源（.css） */
+export const ICONFONT_ICONS_CSS_URL = '//at.alicdn.com/t/c/font_3858115_hwwfmyoy6t7.css';
+/** Symbol 多色图标资源（.js），用于 <svg><use xlink:href="#icon-xxx" /></svg> */
+export const ICONFONT_SYMBOL_JS_URL = '//at.alicdn.com/t/c/font_3858115_hwwfmyoy6t7.js';
 const PAGE_SIZE = 7 * 7; // 49
 
 function parseIconNamesFromCss(cssText: string): string[] {
@@ -17,9 +20,27 @@ function parseIconNamesFromCss(cssText: string): string[] {
     return [...new Set(matches.map((m) => m[1]))];
 }
 
+function loadSymbolScript(src: string): Promise<void> {
+    const normalized = src.startsWith('//') ? `https:${src}` : src;
+    const id = `oip-symbol-${normalized.replace(/[^a-zA-Z0-9._-]/g, '_').slice(0, 60)}`;
+    if (typeof document === 'undefined') return Promise.resolve();
+    const existing = document.getElementById(id);
+    if (existing) return Promise.resolve();
+    return new Promise((resolve, reject) => {
+        const script = document.createElement('script');
+        script.id = id;
+        script.src = normalized;
+        script.async = true;
+        script.onload = () => resolve();
+        script.onerror = () => reject(new Error(`Failed to load: ${normalized}`));
+        document.head.appendChild(script);
+    });
+}
+
 export const OssIconPicker: FC = () => {
     const [iconList, setIconList] = useState<string[]>([]);
     const [loading, setLoading] = useState(true);
+    const [symbolLoaded, setSymbolLoaded] = useState(false);
     const [search, setSearch] = useState('');
     const [page, setPage] = useState(1);
     const [copiedId, setCopiedId] = useState<string | null>(null);
@@ -31,6 +52,10 @@ export const OssIconPicker: FC = () => {
             .then((cssText) => setIconList(parseIconNamesFromCss(cssText)))
             .catch(() => setIconList([]))
             .finally(() => setLoading(false));
+    }, []);
+
+    useEffect(() => {
+        loadSymbolScript(ICONFONT_SYMBOL_JS_URL).then(() => setSymbolLoaded(true)).catch(() => setSymbolLoaded(false));
     }, []);
 
     const filteredIcons = useMemo(() => {
@@ -71,10 +96,12 @@ export const OssIconPicker: FC = () => {
                     <header className="oip-header">
                         <Heading size="8" mb="2">Oss Icon 选择器</Heading>
                         <Text size="2" color="gray" mb="4">
-                            从 iconfont 项目加载图标，悬停卡片可见「点击复制」提示，点击即可复制类名，用于 <code className="oip-code">IconFont</code> 的 <code className="oip-code">icon</code> 属性。
+                            从 iconfont 项目加载图标，列表按 <strong>Symbol 多色</strong> 方式渲染；悬停卡片可见「点击复制」，
+                            复制类名用于 <code className="oip-code">IconFont</code> 的 <code className="oip-code">icon</code>，
+                            多色时 <code className="oip-code">ossUrl</code> 传 Symbol 的 .js。
                         </Text>
                         <Text size="1" color="gray">
-                            资源：{ICONFONT_ICONS_CSS_URL}
+                            Font-class：{ICONFONT_ICONS_CSS_URL} · Symbol：{ICONFONT_SYMBOL_JS_URL}
                         </Text>
                     </header>
 
@@ -116,7 +143,19 @@ export const OssIconPicker: FC = () => {
                                             {copiedId === name ? '已复制' : '点击复制'}
                                         </div>
                                         <div className="oip-card-icon">
-                                            <IconFont ossUrl={ICONFONT_ICONS_CSS_URL} icon={name} style={{ fontSize: 28 }} />
+                                            {symbolLoaded ? (
+                                                <svg
+                                                    className="icon oip-icon-symbol"
+                                                    aria-hidden
+                                                    width="28"
+                                                    height="28"
+                                                    style={{ display: 'block', overflow: 'hidden' }}
+                                                >
+                                                    <use xlinkHref={`#${name}`} />
+                                                </svg>
+                                            ) : (
+                                                <IconFont ossUrl={ICONFONT_ICONS_CSS_URL} icon={name} style={{ fontSize: 28 }} />
+                                            )}
                                         </div>
                                         <Text size="1" className="oip-card-name" title={name}>
                                             {name}
