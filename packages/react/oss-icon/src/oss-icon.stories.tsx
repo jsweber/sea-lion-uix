@@ -2,19 +2,23 @@ import type { Meta } from '@storybook/react';
 import { Theme } from '../../theme/src';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 
-import { IconFont } from '@sea-lion/react-oss-icon';
+import {
+    IconFont,
+    defaultOssIconCssUrl,
+    defaultOssIconJsUrl,
+} from '@sea-lion/react-oss-icon';
 import { Box } from '@sea-lion/react-box';
 import { Flex } from '@sea-lion/react-flex';
 import { Text } from '@sea-lion/react-text';
 
 /** Iconfont 平台常用资源类型：Font-class 用 .css，Symbol 用 .js */
 const ICONFONT_PLATFORM_URLS = {
-    css: '//at.alicdn.com/t/c/font_3858115_hwwfmyoy6t7.css',
-    js: '//at.alicdn.com/t/c/font_3858115_hwwfmyoy6t7.js',
+    css: defaultOssIconCssUrl,
+    js: defaultOssIconJsUrl,
 } as const;
 
-/** 图标库 Story 使用的 CSS 地址 */
-const ICONFONT_ICONS_CSS_URL = '//at.alicdn.com/t/c/font_3858115_hwwfmyoy6t7.css';
+/** 图标库 Story 使用的 CSS 地址（与内置 Font-class 一致） */
+const ICONFONT_ICONS_CSS_URL = defaultOssIconCssUrl;
 
 /** 从 iconfont 生成的 CSS 文本中解析出所有图标类名（用捕获组动态提取，避免写死截取长度） */
 function parseIconNamesFromCss(cssText: string): string[] {
@@ -56,8 +60,10 @@ function parseIconNamesFromCss(cssText: string): string[] {
  *
  * ## 与 iconfont 平台对接
  *
- * - **Font-class 引用**：`ossUrl` 传入项目生成的 **.css** 链接（如 `//at.alicdn.com/t/c/font_xxx.css`），使用方式为 `<IconFont icon="icon-图标名" />`。
- * - **Symbol 引用**：`ossUrl` 传入项目生成的 **.js** 链接（如 `//at.alicdn.com/t/c/font_xxx.js`），组件会动态注入脚本；Symbol 多色图标需配合 SVG `<use>` 使用，本组件主要用于 Font-class 类名展示。
+ * - **内置链接**：不传 `ossUrl` 时使用默认 Font-class（.css）或 Symbol（.js），由 **useSymbol** 切换，默认 `useSymbol: false` 即 Font-class。
+ * - **Font-class**：`ossUrl` 传 .css 或 `useSymbol: false` 且不传 ossUrl，单色，用 `<IconFont icon="icon-xxx" />`。
+ * - **Symbol 多色**：`ossUrl` 传 .js 或 `useSymbol: true` 且不传 ossUrl，组件内部用 SVG `<use>` 渲染。
+ * - **自定义 ossUrl**：传了 `ossUrl` 后按链接后缀自动判断（.js → Symbol，否则 → Font-class），此时 `useSymbol` 不参与判断。
  * - 支持协议相对地址（`//...`），会自动补全为 `https:`。
  */
 const meta: Meta<typeof IconFont> = {
@@ -95,7 +101,11 @@ const meta: Meta<typeof IconFont> = {
         },
         ossUrl: {
             control: 'text',
-            description: 'iconfont 资源地址：.css（Font-class）或 .js（Symbol），支持 // 开头的协议相对地址',
+            description: 'iconfont 资源地址：.css（Font-class）或 .js（Symbol）；不传时用内置链接，由 useSymbol 决定',
+        },
+        useSymbol: {
+            control: 'boolean',
+            description: '是否用 Symbol 多色渲染；仅在不传 ossUrl 时生效，默认 false（Font-class）',
         },
     },
 };
@@ -225,6 +235,82 @@ CustomOssUrl.storyName = '自定义资源地址';
 CustomOssUrl.args = {
     icon: 'icon-CompassionOutlined',
     ossUrl: ICONFONT_PLATFORM_URLS.css,
+};
+
+/** 多色图标示例（Symbol 模式下可见多色） */
+const MULTICOLOR_ICONS = ['icon-NewOC_Cross-domain', 'icon-huggingfaceColor', 'icon-jushenzhineng'] as const;
+
+/** useSymbol 切换：不传 ossUrl 时用内置链接，useSymbol 决定 Font-class 还是 Symbol */
+export const UseSymbolSwitch = () => {
+    return (
+        <Theme>
+            <Box p="5">
+                <Text mb="2">不传 <code>ossUrl</code> 时使用内置链接，通过 <code>useSymbol</code> 切换渲染方式。</Text>
+                <Text mb="4" size="1" color="gray">
+                    内置 Font-class：{defaultOssIconCssUrl} · 内置 Symbol：{defaultOssIconJsUrl}
+                </Text>
+                <Flex direction="column" gap="5">
+                    <Box>
+                        <Text size="2" weight="bold" mb="2">useSymbol=false（默认）— Font-class 单色</Text>
+                        <Text size="1" color="gray" mb="2">多色图标在 Font-class 下呈单色，可设置 color</Text>
+                        <Flex gap="4" align="center" wrap="wrap">
+                            {MULTICOLOR_ICONS.map((name) => (
+                                <IconFont key={name} icon={name} color="var(--gray-11)" style={{ fontSize: 28 }} />
+                            ))}
+                        </Flex>
+                    </Box>
+                    <Box>
+                        <Text size="2" weight="bold" mb="2">useSymbol=true — Symbol 多色</Text>
+                        <Text size="1" color="gray" mb="2">icon-guanjianzhen、icon-huggingfaceColor、icon-jushenzhineng 为多色图标</Text>
+                        <Flex gap="4" align="center" wrap="wrap">
+                            {MULTICOLOR_ICONS.map((name) => (
+                                <IconFont key={name} icon={name} useSymbol style={{ fontSize: 28 }} />
+                            ))}
+                        </Flex>
+                    </Box>
+                </Flex>
+            </Box>
+        </Theme>
+    );
+};
+
+UseSymbolSwitch.storyName = 'useSymbol 切换（内置链接）';
+
+/** 控件演示：useSymbol 与 ossUrl；传了 ossUrl 时按链接类型渲染，useSymbol 不生效 */
+export const UseSymbolArgs = (args: { icon: string; useSymbol?: boolean; ossUrl?: string }) => {
+    const ossUrl = args.ossUrl?.trim() || undefined;
+    return (
+        <Theme>
+            <Box p="5">
+                <Text mb="2">在控件中切换 <code>useSymbol</code> 或填写 <code>ossUrl</code>。不传 ossUrl 时 useSymbol 控制内置 Font-class / Symbol。</Text>
+                <Flex gap="4" align="center" mt="3">
+                    <IconFont
+                        icon={args.icon || 'icon-CompassionOutlined'}
+                        useSymbol={args.useSymbol}
+                        ossUrl={ossUrl}
+                        style={{ fontSize: 32 }}
+                    />
+                    <Text size="1" color="gray">
+                        useSymbol={String(args.useSymbol)} {ossUrl ? `· ossUrl 已设置` : '· 使用内置链接'}
+                    </Text>
+                </Flex>
+            </Box>
+        </Theme>
+    );
+};
+
+UseSymbolArgs.storyName = 'useSymbol / ossUrl 控件';
+UseSymbolArgs.args = {
+    icon: 'icon-guanjianzhen',
+    useSymbol: true,
+    ossUrl: '',
+};
+UseSymbolArgs.argTypes = {
+    icon: {
+        control: 'select',
+        options: [...MULTICOLOR_ICONS, 'icon-CompassionOutlined'],
+    },
+    ossUrl: { control: 'text' },
 };
 
 /** 图标库：从 iconfont CSS 解析并网格展示，点击复制图标名 */
