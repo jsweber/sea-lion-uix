@@ -44,6 +44,11 @@ const config: StorybookConfig = {
     options: {},
   },
   webpackFinal: async (config) => {
+    const basePath = process.env.STORYBOOK_BASE_PATH;
+    if (basePath && config.output) {
+      const normalized = basePath.startsWith('/') && basePath.endsWith('/') ? basePath : `/${(basePath || '').replace(/^\/|\/$/g, '')}/`;
+      config.output = { ...config.output, publicPath: normalized };
+    }
 
     if (!Array.isArray(config.plugins)) {
       config.plugins = [];
