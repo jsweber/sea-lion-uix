@@ -7,7 +7,7 @@ export function isSymbolOssUrl(ossUrl: string | undefined): boolean {
     return Boolean(ossUrl?.trim() && /\.js$/i.test(ossUrl.trim()));
 }
 
-interface IconFontProps {
+export interface IconFontProps {
     /** 图标名，Font-class 为类名如 icon-xxx，Symbol 为 id 如 icon-xxx（会补 #） */
     icon: string;
     color?: string;
@@ -107,8 +107,4 @@ export {
     defaultOssIconUrl,
     defaultOssIconCssUrl,
     defaultOssIconJsUrl,
-}
-
-export type {
-    IconFontProps,
 }

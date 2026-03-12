@@ -67,6 +67,21 @@ pnpm build
 pnpm publish-stable
 ```
 
+### 文档站点（GitHub Pages）
+
+Storybook 支持通过 GitHub Actions 自动构建并发布到 GitHub Pages，便于在线浏览组件文档。
+
+1. **开启 GitHub Pages**  
+   仓库 **Settings → Pages → Build and deployment** 中，**Source** 选择 **GitHub Actions**。
+
+2. **触发部署**  
+   推送代码到 `main` 分支或手动在 **Actions** 页执行 workflow「Deploy Storybook to GitHub Pages」。构建产物会发布到 Pages。
+
+3. **访问地址**  
+   发布完成后，文档地址为：`https://<owner>.github.io/<repo>/`（例如 `https://yourname.github.io/sea-lion-uix/`）。
+
+构建时通过环境变量 `STORYBOOK_BASE_PATH` 设置子路径（如 `/sea-lion-uix/`），本地 `pnpm run build-storybook` 不设置该变量，产出适合本地或根路径部署。
+
 ## 交流
 
 如有疑问或建议，欢迎联系：**dxqweber@gmail.com**。

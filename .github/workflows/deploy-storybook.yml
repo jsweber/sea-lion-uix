@@ -1,0 +1,61 @@
+# 构建并发布 Storybook 到 GitHub Pages
+# 仓库 Settings -> Pages -> Source 选择 "GitHub Actions"
+name: Deploy Storybook to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: 'pages'
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build Storybook
+        env:
+          # GitHub Pages 项目站点的 base 路径，例如 /sea-lion-uix/
+          STORYBOOK_BASE_PATH: /${{ github.event.repository.name }}/
+        run: pnpm run build-storybook
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: storybook-static
+
+      - name: Deploy to GitHub Pages
+        id: deploy
+        uses: actions/deploy-pages@v4
+        with:
+          token: ${{ github.token }}
