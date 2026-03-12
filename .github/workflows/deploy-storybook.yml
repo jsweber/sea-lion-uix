@@ -43,6 +43,10 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      # 生成 theme 的 dist/index.css，供 preview 中 @sea-lion/react-theme-style/index.css 解析
+      - name: Build theme CSS
+        run: pnpm run build:theme
+
       - name: Build Storybook
         env:
           # GitHub Pages 项目站点的 base 路径，例如 /sea-lion-uix/
