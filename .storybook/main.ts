@@ -44,10 +44,10 @@ const config: StorybookConfig = {
     options: {},
   },
   webpackFinal: async (config) => {
+    // 子路径部署（如 GitHub Pages）：用相对路径使 manager 与 iframe 的 chunk 都能正确加载
     const basePath = process.env.STORYBOOK_BASE_PATH;
     if (basePath && config.output) {
-      const normalized = basePath.startsWith('/') && basePath.endsWith('/') ? basePath : `/${(basePath || '').replace(/^\/|\/$/g, '')}/`;
-      config.output = { ...config.output, publicPath: normalized };
+      config.output = { ...config.output, publicPath: './' };
     }
 
     if (!Array.isArray(config.plugins)) {
@@ -81,9 +81,11 @@ const config: StorybookConfig = {
       disable: true,
     },
   },
-  managerHead: (head) => `
+  managerHead: (head) => {
+    const base = process.env.STORYBOOK_BASE_PATH ? './' : '';
+    return `
     ${head}
-    <link rel="icon" type="image/svg+xml" href="/images/favicon.jpg" />
+    <link rel="icon" type="image/svg+xml" href="${base}images/favicon.jpg" />
     <script>
       window.STORYBOOK_CATEGORIES = {
         '总览': ['web-playground'],
@@ -99,7 +101,8 @@ const config: StorybookConfig = {
         '其他': ['*']
       };
     </script>
-  `,
+  `;
+  },
   previewAnnotations: (entry = []) => {
     return [
       ...entry,
