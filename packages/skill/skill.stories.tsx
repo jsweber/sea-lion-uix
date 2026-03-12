@@ -125,7 +125,7 @@ const REFERENCE_MD = `# Sea-Lion 组件速查（业务项目用）
 | @sea-lion/react-inset | \`import { Inset } from '@sea-lion/react-inset'\` | 内边距/裁切 |
 | @sea-lion/react-kbd | \`import { Kbd } from '@sea-lion/react-kbd'\` | 键盘按键样式 |
 | @sea-lion/react-link | \`import { Link } from '@sea-lion/react-link'\` | 链接 |
-| @sea-lion/react-oss-icon | 见包内导出 | OSS 图标 |
+| @sea-lion/react-oss-icon | \`import { IconFont } from '@sea-lion/react-oss-icon'\` | OSS/iconfont 图标，支持 useSymbol 多色、内置链接 |
 | @sea-lion/react-popover | \`import * as Popover from '@sea-lion/react-popover'\` | 弹出层 |
 | @sea-lion/react-progress | \`import { Progress } from '@sea-lion/react-progress'\` | 进度条 |
 | @sea-lion/react-radio | \`import { Radio } from '@sea-lion/react-radio'\` | 单选框 |
