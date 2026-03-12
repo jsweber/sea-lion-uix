@@ -46,6 +46,7 @@ import * as DropdownMenu from '@sea-lion/react-dropdown-menu';
 import { Radio } from '@sea-lion/react-radio';
 import { Slider } from '@sea-lion/react-slider';
 import { IconButton } from '@sea-lion/react-icon-button';
+import { IconFont } from '@sea-lion/react-oss-icon';
 import { ComponentsDemo } from './components-demo';
 import AntdImage from './images/antd.jpg';
 import ArcoImage from './images/arco.jpg';
@@ -71,10 +72,26 @@ const WebPlayground: FC<WebPlaygroundProps> = ({ mode }) => {
                     setOpen={setOpen}
                 />
                 <Container>
+                    <div className="wp-float-actions">
+                        <a
+                            href="https://github.com/jsweber/sea-lion-uix"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="wp-github-link"
+                            aria-label="GitHub"
+                        >
+                            <IconFont icon="icon-GithubFilled" style={{ fontSize: 36 }} />
+                        </a>
+                        <Button
+                            onClick={() => setOpen(true)}
+                        >
+                            <MagicWandIcon />
+                        </Button>
+                    </div>
                     <header className="wp-header">
                         <Heading>
                             <div>
-                                <img src={logoImage} width="380" />
+                                <img src={logoImage} width="380" alt="Sea-lion-uix" />
                             </div>
                         </Heading>
 
@@ -85,14 +102,6 @@ const WebPlayground: FC<WebPlaygroundProps> = ({ mode }) => {
                             <Badge color="sky">组件使用灵活</Badge>
                             <Badge color="red">符合团队技术栈</Badge>
                         </Flex>
-                        <div className="wp-theme-float">
-                            <Button
-                                onClick={() => {
-                                    setOpen(true);
-                                }}
-                            ><MagicWandIcon />
-                            </Button>
-                        </div>
                     </header>
 
                     <div>

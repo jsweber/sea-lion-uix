@@ -16,6 +16,19 @@ body {
     align-items: center;
 }
 
+.wp-float-actions .wp-github-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gray-11);
+    text-decoration: none;
+    border-radius: var(--radius-2);
+    transition: color 0.15s ease;
+    &:hover {
+        color: var(--gray-12);
+    }
+}
+
 .block-section {
     padding: 1rem;
     margin-bottom: 30px;
@@ -63,10 +76,14 @@ body {
     box-shadow: var(--shadow-2);
 }
 
-.wp-theme-float {
+.wp-float-actions {
     position: fixed;
     top: 30px;
     right: 30px;
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    z-index: 100;
 }
 
 .wp-comp-section-title {
