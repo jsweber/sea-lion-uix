@@ -1032,6 +1032,9 @@ importers:
       '@sea-lion/react-base-button':
         specifier: workspace:*
         version: link:../base-button
+      '@sea-lion/react-oss-icon':
+        specifier: '*'
+        version: 0.3.3(@types/react-dom@18.3.1)(@types/react@18.3.12)(classnames@2.5.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@types/react':
         specifier: '*'
         version: 18.3.12
@@ -1813,6 +1816,9 @@ importers:
       '@sea-lion/react-helpers':
         specifier: workspace:*
         version: link:../helpers
+      '@sea-lion/react-popover':
+        specifier: workspace:*
+        version: link:../popover
       '@sea-lion/react-props':
         specifier: workspace:*
         version: link:../props
@@ -3530,6 +3536,20 @@ packages:
 
   '@rtsao/scc@1.1.0':
     resolution: {integrity: sha512-zt6OdqaDoOnJ1ZYsCYGt9YmWzDXl4vQdKTyJev62gFhRGKdx7mcT54V9KIjg+d2wi9EXsPvAPKe7i7WjfVWB8g==}
+
+  '@sea-lion/react-oss-icon@0.3.3':
+    resolution: {integrity: sha512-UnlaypUAKrSmcio1FJ5Z5JAzynP41GiKFHovxK59LIkwQkiGJhVfdyB5BV004R85cgMcPARZZGj441prRt9qmg==}
+    peerDependencies:
+      '@types/react': '*'
+      '@types/react-dom': '*'
+      classnames: '*'
+      react: ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+      react-dom: ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      '@types/react-dom':
+        optional: true
 
   '@sindresorhus/merge-streams@2.3.0':
     resolution: {integrity: sha512-LtoMMhxAlorcGhmFYI+LhPgbPZCkgP6ra1YL604EeF6U98pLlQ3iWIGMdWSC+vWmPBWBNgmDBAhnAobLROJmwg==}
@@ -9017,6 +9037,15 @@ snapshots:
     optional: true
 
   '@rtsao/scc@1.1.0': {}
+
+  '@sea-lion/react-oss-icon@0.3.3(@types/react-dom@18.3.1)(@types/react@18.3.12)(classnames@2.5.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      classnames: 2.5.1
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+    optionalDependencies:
+      '@types/react': 18.3.12
+      '@types/react-dom': 18.3.1
 
   '@sindresorhus/merge-streams@2.3.0': {}
 
