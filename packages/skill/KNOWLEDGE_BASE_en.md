@@ -5760,7 +5760,7 @@ See the [Radix UI documentation](https://www.radix-ui.com/themes/docs/components
 
 # `react-oss-icon`
 
-OssIcon (IconFont) is an icon component based on the [iconfont platform](https://www.iconfont.cn/). It loads icons via **Font-class** (.css) or **Symbol** (.js) resource URLs.
+OssIcon (IconFont) is an icon component based on the [iconfont platform](https://www.iconfont.cn/). It loads icons via **Font-class** (.css) or **Symbol** (.js) resource URLs. When no URL is provided, it uses built-in default links and you can switch between single-color and multicolor modes with `useSymbol`.
 
 ## Installation
 
@@ -5776,27 +5776,55 @@ yarn add @sea-lion/react-oss-icon
 Import the component in your code:
 
 ```tsx
-import { IconFont } from "@sea-lion/react-oss-icon";
+import { IconFont, defaultOssIconCssUrl, defaultOssIconJsUrl } from "@sea-lion/react-oss-icon";
 ```
 
-### Basic Usage
+### Basic usage (built-in links)
+
+When `ossUrl` is not passed, the component uses the built-in Font-class (single-color) or Symbol (multicolor) link, controlled by `useSymbol`. Default is `useSymbol: false`.
+
+```jsx
+<IconFont icon="icon-xxx" />
+<IconFont icon="icon-xxx" color="#1890ff" fontSize="24px" />
+<IconFont icon="icon-guanjianzhen" useSymbol style={{ fontSize: 28 }} />
+```
+
+### Custom resource URL
+
+When `ossUrl` is provided, the component infers the mode from the URL: `.js` → Symbol (multicolor), `.css` → Font-class (single-color). In this case `useSymbol` is ignored.
 
 ```jsx
 <IconFont ossUrl="//at.alicdn.com/t/c/font_xxx.css" icon="icon-xxx" />
-<IconFont ossUrl={cssUrl} icon="icon-name" size="2" color="blue" />
+<IconFont ossUrl="//at.alicdn.com/t/c/font_xxx.js" icon="icon-xxx" />
 ```
 
 ### Integrating with iconfont
 
-- **Font-class**: pass the project’s **.css** URL to `ossUrl`, and use `<IconFont icon="icon-name" />`.
-- **Symbol**: pass the project’s **.js** URL to `ossUrl`; the component will inject the script.
-- Protocol-relative URLs (`//...`) are supported and will be completed with `https:`.
+- **Built-in links**: Without `ossUrl`, uses `defaultOssIconCssUrl` (Font-class) or `defaultOssIconJsUrl` (Symbol), toggled by **useSymbol** (default `false`).
+- **Font-class**: Single-color; set `color` and `fontSize`.
+- **Symbol**: Multicolor; component renders with SVG `<use>`. Use `<IconFont icon="icon-xxx" useSymbol />`.
+- **Custom ossUrl**: When set, mode is inferred from URL suffix (.js → Symbol, otherwise → Font-class).
+- Protocol-relative URLs (`//...`) are supported and completed with `https:`.
+
+## API
+
+| Prop       | Type      | Default       | Description |
+|------------|-----------|---------------|-------------|
+| icon       | string    | —             | Icon name, e.g. icon-xxx |
+| ossUrl     | string    | see above     | Resource URL; when omitted, built-in link is used (see useSymbol) |
+| useSymbol  | boolean   | false         | Use Symbol multicolor; only when ossUrl is not set |
+| color      | string    | currentColor  | Icon color (Font-class) |
+| fontSize   | string    | 1em           | Icon size |
+| style / className | —     | —             | Style |
+
+Exported constants: `defaultOssIconCssUrl`, `defaultOssIconJsUrl`, `defaultOssIconUrl` (deprecated), `isSymbolOssUrl(url)`.
 
 ## When to Use
 
-- When using icons from your team’s iconfont project
+- When using icons from your team's iconfont project
 - When staying consistent with an existing iconfont setup
 - When you need lightweight, color- and size-configurable icons
+- When you need multicolor icons: use `useSymbol` or pass a .js `ossUrl`
 
 ----- split line -----
 
