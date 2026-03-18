@@ -1,6 +1,6 @@
 
 #FROM dony435/pnpm:20-alpine AS builder
-FROM eng-center-registry-vpc.cn-shanghai.cr.aliyuncs.com/cloud/nodejs20_pnpm:0.1.0 AS builder
+FROM acr-openxlab-prod-registry-vpc.cn-shanghai.cr.aliyuncs.com/public/node:20-alpine AS builder
 WORKDIR /build/
 ADD ./ /build/
 
