@@ -6,7 +6,7 @@
 
 基于 Radix Primitives 的 React 组件库，支持主题与 Headless 双模式。
 
-[📖 文档](https://jsweber.github.io/sea-lion-uix/?path=/story/%E6%80%BB%E8%A7%88-web-playground--app) · [GitHub](https://github.com/jsweber/sea-lion-uix)
+[📖 组件库文档](https://jsweber.github.io/sea-lion-uix/?path=/story/%E6%80%BB%E8%A7%88-web-playground--app)
 
 </div>
 
@@ -41,8 +41,8 @@ pnpm add @sea-lion/react-theme
 ## 快速开始
 
 ```tsx
-import { Theme } from '@sea-lion/react-theme';
-import { Button } from '@sea-lion/react-button';
+import { Theme } from "@sea-lion/react-theme";
+import { Button } from "@sea-lion/react-button";
 
 export default function App() {
   return (
@@ -75,12 +75,12 @@ pnpm dev
 
 ### 常用脚本
 
-| 命令 | 说明 |
-|------|------|
-| `pnpm dev` | 构建 Theme 并启动 Storybook |
-| `pnpm build` | 构建所有包与 Theme 样式 |
-| `pnpm build-storybook` | 仅构建 Storybook 静态产物 |
-| `pnpm publish-stable` | 构建 + changeset + 发布 |
+| 命令                   | 说明                        |
+| ---------------------- | --------------------------- |
+| `pnpm dev`             | 构建 Theme 并启动 Storybook |
+| `pnpm build`           | 构建所有包与 Theme 样式     |
+| `pnpm build-storybook` | 仅构建 Storybook 静态产物   |
+| `pnpm publish-stable`  | 构建 + changeset + 发布     |
 
 ### 文档部署（GitHub Pages）
 

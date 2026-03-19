@@ -81,11 +81,47 @@ const config: StorybookConfig = {
       disable: true,
     },
   },
+  /** GA4 测量 ID，用于统计 Storybook 文档/示例的浏览（manager 壳层 + SPA 路由） */
   managerHead: (head) => {
     const base = process.env.STORYBOOK_BASE_PATH ? './' : '';
+    const gaMeasurementId = 'G-FC1RYBDE30';
     return `
     ${head}
     <link rel="icon" type="image/svg+xml" href="${base}images/favicon.jpg" />
+    <!-- Google tag (gtag.js) - 文档站点浏览统计 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '${gaMeasurementId}');
+      (function () {
+        var gaId = '${gaMeasurementId}';
+        var lastPath = location.pathname + location.search + location.hash;
+        function sendPageViewIfChanged() {
+          var path = location.pathname + location.search + location.hash;
+          if (path === lastPath) return;
+          lastPath = path;
+          if (typeof gtag === 'function') {
+            gtag('config', gaId, {
+              page_path: path,
+              page_title: document.title || undefined,
+            });
+          }
+        }
+        var _pushState = history.pushState;
+        history.pushState = function () {
+          _pushState.apply(history, arguments);
+          setTimeout(sendPageViewIfChanged, 0);
+        };
+        window.addEventListener('popstate', function () {
+          setTimeout(sendPageViewIfChanged, 0);
+        });
+        window.addEventListener('hashchange', function () {
+          setTimeout(sendPageViewIfChanged, 0);
+        });
+      })();
+    </script>
     <script>
       window.STORYBOOK_CATEGORIES = {
         '总览': ['web-playground'],
