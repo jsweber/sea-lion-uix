@@ -17,10 +17,21 @@
     "publish-fix": "pnpm changeset && pnpm changeset publish",
     "preinstall": "npx only-allow pnpm"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "react",
+    "component-library",
+    "radix",
+    "radix-primitives",
+    "theme",
+    "headless",
+    "ui",
+    "typescript",
+    "less",
+    "css-variables"
+  ],
+  "author": "jsweber <dxqweber@gmail.com>",
   "license": "ISC",
-  "description": "",
+  "description": "React component library on Radix Primitives. Install packages on demand; use with theme or headless.",
   "engines": {
     "node": ">=18",
     "pnpm": ">=9"

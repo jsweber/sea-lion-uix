@@ -6,7 +6,7 @@
 
 React component library built on Radix Primitives. Theme and Headless modes.
 
-[📖 Documentation](https://jsweber.github.io/sea-lion-uix/?path=/story/%E6%80%BB%E8%A7%88-web-playground--app) · [GitHub](https://github.com/jsweber/sea-lion-uix)
+[📖 Documentation](https://jsweber.github.io/sea-lion-uix/?path=/story/%E6%80%BB%E8%A7%88-web-playground--app)
 
 </div>
 
@@ -41,8 +41,8 @@ Without Theme, components run in headless mode (no default styles).
 ## Quick Start
 
 ```tsx
-import { Theme } from '@sea-lion/react-theme';
-import { Button } from '@sea-lion/react-button';
+import { Theme } from "@sea-lion/react-theme";
+import { Button } from "@sea-lion/react-button";
 
 export default function App() {
   return (
@@ -75,12 +75,12 @@ pnpm dev
 
 ### Scripts
 
-| Command | Description |
-|---------|-------------|
-| `pnpm dev` | Build Theme and start Storybook |
-| `pnpm build` | Build all packages and Theme |
+| Command                | Description                        |
+| ---------------------- | ---------------------------------- |
+| `pnpm dev`             | Build Theme and start Storybook    |
+| `pnpm build`           | Build all packages and Theme       |
 | `pnpm build-storybook` | Build Storybook static output only |
-| `pnpm publish-stable` | Build, run changeset, and publish |
+| `pnpm publish-stable`  | Build, run changeset, and publish  |
 
 ### Documentation (GitHub Pages)
 
