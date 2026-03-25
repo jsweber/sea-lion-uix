@@ -4,6 +4,8 @@
 
 [![Sea-lion-uix](packages/web-playground/images/logo.svg)](https://github.com/jsweber/sea-lion-uix)
 
+[![npm](https://img.shields.io/badge/npm-v10-brightgreen?style=flat-square&logo=npm&logoColor=white)](https://www.npmjs.com/) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](LICENSE) [![Deploy Storybook](https://github.com/jsweber/sea-lion-uix/actions/workflows/deploy-storybook.yml/badge.svg)](https://github.com/jsweber/sea-lion-uix/actions/workflows/deploy-storybook.yml)
+
 基于 Radix Primitives 的 React 组件库，支持主题与 Headless 双模式。
 
 [📖 组件库文档](https://jsweber.github.io/sea-lion-uix/?path=/story/%E6%80%BB%E8%A7%88-web-playground--app)
@@ -23,6 +25,17 @@ Sea-lion-uix（以下简称 **x**）是 sea-lion-ui 的下一代版本，基于 
 - **Theme 面板**：可视化调试品牌色、中性色、深色模式、圆角、字体、阴影等
 - **灵活定制**：asChild、Slot、开放 state，基于 Radix 样式体系
 - **技术栈友好**：Less + CSS 变量，集成 eslint-config-ali、iconfont
+
+## 环境支持
+
+与主流 React 组件库一致，浏览器范围可参考 [browsersl.ist（defaults）](https://browsersl.ist/#q=defaults)。
+
+- 现代浏览器
+- 服务端渲染（SSR）
+
+| [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="Edge" width="24px" height="24px" />](https://godban.github.io/browsers-support-badges/)<br/>Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](https://godban.github.io/browsers-support-badges/)<br/>Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](https://godban.github.io/browsers-support-badges/)<br/>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](https://godban.github.io/browsers-support-badges/)<br/>Safari |
+| --- | --- | --- | --- |
+| 最近 2 个版本 | 最近 2 个版本 | 最近 2 个版本 | 最近 2 个版本 |
 
 ## 安装
 
@@ -94,4 +107,4 @@ pnpm dev
 
 ## License
 
-ISC
+[MIT](LICENSE)
