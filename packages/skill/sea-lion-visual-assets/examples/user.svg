@@ -1,0 +1,16 @@
+<svg width="400" height="200" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="200" fill="#f9f0ff" rx="12"/>
+  <circle cx="110" cy="90" r="52" fill="#722ed1" opacity="0.07"/>
+  <circle cx="110" cy="70" r="24" fill="#722ed1" opacity="0.5"/>
+  <ellipse cx="110" cy="132" rx="34" ry="22" fill="#722ed1" opacity="0.3"/>
+  <circle cx="195" cy="90" r="52" fill="#722ed1" opacity="0.05"/>
+  <circle cx="195" cy="70" r="24" fill="#722ed1" opacity="0.35"/>
+  <ellipse cx="195" cy="132" rx="34" ry="22" fill="#722ed1" opacity="0.22"/>
+  <circle cx="280" cy="90" r="52" fill="#722ed1" opacity="0.03"/>
+  <circle cx="280" cy="70" r="24" fill="#722ed1" opacity="0.18"/>
+  <ellipse cx="280" cy="132" rx="34" ry="22" fill="#722ed1" opacity="0.12"/>
+  <line x1="134" y1="98" x2="171" y2="98" stroke="#722ed1" stroke-width="1.5" opacity="0.25" stroke-dasharray="3 3"/>
+  <line x1="219" y1="98" x2="256" y2="98" stroke="#722ed1" stroke-width="1.5" opacity="0.18" stroke-dasharray="3 3"/>
+  <circle cx="360" cy="35" r="38" fill="#722ed1" opacity="0.06"/>
+  <circle cx="40" cy="170" r="28" fill="#722ed1" opacity="0.05"/>
+</svg>
