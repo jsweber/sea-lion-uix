@@ -1,0 +1,17 @@
+<svg width="400" height="200" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="200" fill="#f0f5ff" rx="12"/>
+  <rect x="118" y="50" width="164" height="112" fill="#2f54eb" opacity="0.07" rx="6"/>
+  <rect x="105" y="42" width="164" height="112" fill="#e8edff" rx="6"/>
+  <rect x="105" y="42" width="164" height="112" fill="none" stroke="#2f54eb" stroke-width="1" opacity="0.18" rx="6"/>
+  <rect x="88" y="36" width="164" height="112" fill="white" rx="6"/>
+  <rect x="88" y="36" width="164" height="112" fill="none" stroke="#2f54eb" stroke-width="1.5" opacity="0.28" rx="6"/>
+  <line x1="108" y1="64" x2="236" y2="64" stroke="#2f54eb" stroke-width="2.5" opacity="0.52" stroke-linecap="round"/>
+  <line x1="108" y1="82" x2="226" y2="82" stroke="#2f54eb" stroke-width="2" opacity="0.34" stroke-linecap="round"/>
+  <line x1="108" y1="100" x2="218" y2="100" stroke="#2f54eb" stroke-width="2" opacity="0.34" stroke-linecap="round"/>
+  <line x1="108" y1="118" x2="200" y2="118" stroke="#2f54eb" stroke-width="2" opacity="0.24" stroke-linecap="round"/>
+  <line x1="108" y1="130" x2="176" y2="130" stroke="#2f54eb" stroke-width="2" opacity="0.14" stroke-linecap="round"/>
+  <polygon points="236,36 252,36 252,52" fill="#2f54eb" opacity="0.22"/>
+  <line x1="236" y1="36" x2="252" y2="52" stroke="white" stroke-width="1"/>
+  <circle cx="332" cy="128" r="46" fill="#2f54eb" opacity="0.06"/>
+  <circle cx="46" cy="52" r="24" fill="#2f54eb" opacity="0.05"/>
+</svg>

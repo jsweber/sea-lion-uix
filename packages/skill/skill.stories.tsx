@@ -405,7 +405,6 @@ function SkillDocs() {
 const meta = {
     title: 'Agent/use-sea-lion-components',
     component: SkillDocs,
-    tags: ['autodocs'],
     parameters: {
         layout: 'fullscreen',
     },
