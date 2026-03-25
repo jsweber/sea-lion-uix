@@ -30,7 +30,7 @@
     "css-variables"
   ],
   "author": "jsweber <dxqweber@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "description": "React component library on Radix Primitives. Install packages on demand; use with theme or headless.",
   "engines": {
     "node": ">=18",

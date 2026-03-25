@@ -4,6 +4,8 @@
 
 [![Sea-lion-uix](packages/web-playground/images/logo.svg)](https://github.com/jsweber/sea-lion-uix)
 
+[![npm](https://img.shields.io/badge/npm-v10-brightgreen?style=flat-square&logo=npm&logoColor=white)](https://www.npmjs.com/) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](LICENSE) [![Deploy Storybook](https://github.com/jsweber/sea-lion-uix/actions/workflows/deploy-storybook.yml/badge.svg)](https://github.com/jsweber/sea-lion-uix/actions/workflows/deploy-storybook.yml)
+
 React component library built on Radix Primitives. Theme and Headless modes.
 
 [📖 Documentation](https://jsweber.github.io/sea-lion-uix/?path=/story/%E6%80%BB%E8%A7%88-web-playground--app)
@@ -23,6 +25,17 @@ Sea-lion-uix (or **x**) is the next generation of [sea-lion-ui](https://github.c
 - **Theme panel**: Visually tune brand colors, neutrals, dark mode, radius, fonts, shadows, and more
 - **Flexible API**: asChild, Slot, exposed state; follows Radix’s styling approach
 - **Stack-friendly**: Less + CSS custom properties; works with eslint-config-ali, iconfont
+
+## Environment Support
+
+Browser coverage is in line with typical React libraries; see [browsersl.ist (defaults)](https://browsersl.ist/#q=defaults) for a concrete query.
+
+- Modern browsers
+- Server-side Rendering
+
+| [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="Edge" width="24px" height="24px" />](https://godban.github.io/browsers-support-badges/)<br/>Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](https://godban.github.io/browsers-support-badges/)<br/>Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](https://godban.github.io/browsers-support-badges/)<br/>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](https://godban.github.io/browsers-support-badges/)<br/>Safari |
+| --- | --- | --- | --- |
+| last 2 versions | last 2 versions | last 2 versions | last 2 versions |
 
 ## Installation
 
@@ -94,4 +107,4 @@ Questions or suggestions: **dxqweber@gmail.com**.
 
 ## License
 
-ISC
+[MIT](LICENSE)
